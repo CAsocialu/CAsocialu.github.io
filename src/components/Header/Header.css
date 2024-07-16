@@ -1,0 +1,15 @@
+div#header {
+    font-size: 32px;
+    font-family: var(--font-brand);
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+    font-weight: 700;
+    text-transform: none;
+    background: #0F0F0F;
+    color: #F0F0F0;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}

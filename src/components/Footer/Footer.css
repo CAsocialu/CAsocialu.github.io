@@ -1,0 +1,18 @@
+div#footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    background: #0F0F0F;
+    color: #F0F0F0;
+    padding-left: 16px;
+    padding-right: 2px;
+    font-family: var(--font-mono);
+    bottom: 0px;
+    position: absolute;
+    width: -webkit-fill-available;
+}
+
+div#footer>img {
+    width: 50px;
+}

@@ -26,3 +26,40 @@ noscript {
         font-weight: 300;
     }
 }
+
+div#header, div#footer {
+    background-color: transparent !important;
+}
+
+div#Hero {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+}
+
+div#Hero>*>*, div#Hero>*>*>div>* {
+    height: 100% !important;
+}
+
+div#Hero>*>*>div>*>*>img {
+    aspect-ratio: 16/9;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+div#Hero div.carousel-content-package {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+html {
+    overflow: hidden;
+    background-color: black;
+}

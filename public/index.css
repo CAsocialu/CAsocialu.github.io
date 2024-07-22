@@ -42,7 +42,7 @@ div#Hero {
     justify-content: center;
 }
 
-div#Hero>*>*, div#Hero>*>*>div>* {
+div#Hero>*>*, div#Hero>*>*>div.carousel-content-wrapper>* {
     height: 100% !important;
 }
 

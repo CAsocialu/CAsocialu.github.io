@@ -11,6 +11,10 @@ div#footer {
     bottom: 0px;
     position: absolute;
     width: -webkit-fill-available;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 div#footer>img {

@@ -50,6 +50,8 @@
     background-color: black;
     border: 3px solid #ddd;
     cursor: pointer;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .left-arrow {

@@ -17,6 +17,12 @@ div#footer {
     -ms-user-select: none;
 }
 
+@supports not (width: -webkit-fill-available) {
+    div#footer {
+        width: calc(100% - 18px)
+    }
+}
+
 div#footer>img {
     width: 50px;
 }

@@ -1,0 +1,24 @@
+div#členové {
+    color: white;
+    max-width: 800px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+div#členové>div.člen {
+    margin-bottom: 16px;
+    & h1 {
+        font-family: var(--font-brand);
+        font-size: 48px;
+        margin-top: 0;
+        margin-bottom: 16px;
+    }
+    & ul {
+        font-family: var(--font-mono);
+        & li::marker {
+            content: "- ";
+        }
+    }
+}

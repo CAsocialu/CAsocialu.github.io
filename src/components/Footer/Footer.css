@@ -9,7 +9,7 @@ div#footer {
     padding-right: 2px;
     font-family: var(--font-mono);
     bottom: 0px;
-    position: absolute;
+    position: fixed;
     width: -webkit-fill-available;
     user-select: none;
     -webkit-user-select: none;

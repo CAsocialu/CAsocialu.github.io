@@ -1,5 +1,3 @@
-@import url(fonts.css);
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 body {
     margin: 0;
 }
@@ -27,39 +25,14 @@ noscript {
     }
 }
 
-div#header, div#footer {
-    background-color: transparent !important;
+@supports not (-moz-appearance: none) {
+    .JSFixFirefox {
+        display: none;
+    }
 }
-
-div#Hero {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
-    display: flex;
-    justify-content: center;
-}
-
-div#Hero>*>*, div#Hero>*>*>div.carousel-content-wrapper>* {
-    height: 100% !important;
-}
-
-div#Hero>*>*>div>*>*>img {
-    aspect-ratio: 16/9;
-    max-height: 100%;
-    max-width: 100%;
-}
-
-div#Hero div.carousel-content-package {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-html {
-    overflow: hidden;
-    background-color: black;
+  
+@supports (-moz-appearance: none) {
+    .JSFixChromeWebkitBlink {
+        display: none;
+    }
 }

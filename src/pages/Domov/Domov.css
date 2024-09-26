@@ -1,0 +1,49 @@
+div#Hero {
+    height: 367px;
+    display: flex;
+    justify-content: center;
+}
+
+div#Hero>*>*, div#Hero>*>*>div.carousel-content-wrapper>* {
+    height: 100% !important;
+}
+
+div#Hero>*>*>div>*>*>img {
+    aspect-ratio: 16/9;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+div#Hero div.carousel-content-package {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+a:visited, a:not(:visited):hover::after {
+    color: var(--asexual-purple-light);
+}
+
+a:not(:visited), a:visited:hover::after {
+    color: var(--asocial-green-light);
+}
+
+a::after {
+    content: "open_in_new";
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -moz-font-feature-settings: 'liga';
+    font-feature-settings: "liga";
+    -moz-osx-font-smoothing: grayscale;
+    position: absolute;
+}

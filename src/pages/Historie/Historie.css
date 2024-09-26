@@ -1,0 +1,22 @@
+div#historyContent {
+	padding: 16px 96px 0;
+	color: white;
+	font-size: 21px;
+	font-family: var(--font-mono);
+}
+
+ol {
+    list-style: none;
+    counter-reset: listCounter;
+    padding-left: 256px;
+}
+
+ol li {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+ol li::marker {
+    content: attr(data-date) " - ";
+    font-weight: bold;
+}

@@ -1,0 +1,27 @@
+@import url(fonts.css);
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+html {
+    overflow-y: scroll;
+    background-color: black;
+}
+
+div#content {
+    padding-bottom: 50px;
+}
+
+div#mainContent {
+	padding: 16px 96px 0;
+	color: white;
+	font-size: 24px;
+	font-family: var(--font-mono);
+    & .twitter {
+        font-family: "Noto Sans Math";
+        font-weight: normal;
+    }
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0px;
+}

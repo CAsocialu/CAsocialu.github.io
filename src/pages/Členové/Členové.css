@@ -57,7 +57,3 @@ div#členové>div.člen:nth-child(odd) {
 div#členové>div.člen:nth-child(even) {
     flex-direction: row-reverse;
 }
-
-div.člen.jokečlen, div.člen.jokečlen * {
-    font-family: cursive !important;
-}

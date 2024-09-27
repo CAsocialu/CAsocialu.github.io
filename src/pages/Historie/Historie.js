@@ -1,4 +1,5 @@
 import './Historie.css'
+import Argonaut from "../../images/history/argonautmemory.png"
 
 export default function Historie() {
     return (
@@ -16,6 +17,7 @@ export default function Historie() {
                 <li data-date="14. 8. 2024">Filip Slovan byl zvolen druhým místopředsedou.</li>
                 <li data-date="2025">Plánované založení strany a sbírání podpisů potřebných na vznik.</li>
             </ol>
+            <img src={ Argonaut } id='argonaut' alt="Hospoda Argonaut, 24. Srpna '24"/>
         </div>
     )
 }

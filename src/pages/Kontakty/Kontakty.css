@@ -44,3 +44,13 @@ div#contactsContent {
     row-gap: 8px;
     flex-wrap: wrap;
 }
+
+#profilesWrapper {
+	display: flex;
+	flex-direction: row;
+	column-gap: 32px;
+	align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 16px;
+}

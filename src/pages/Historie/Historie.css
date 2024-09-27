@@ -20,3 +20,11 @@ ol li::marker {
     content: attr(data-date) " - ";
     font-weight: bold;
 }
+
+img#argonaut {
+    width: 75%;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    padding-bottom: 82px;
+}

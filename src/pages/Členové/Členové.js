@@ -48,8 +48,7 @@ const members = [
             "vyřešil světovou plotovou krizi",
             "jeho jméno se píše s malými písmeny",
             "důchodce"
-        ],
-        joke: true
+        ]
     },
     {
         img: Sisina,
@@ -60,14 +59,13 @@ const members = [
             "má vlastní kult osobnosti",
             "celej den nic nedělá",
             ":3"
-        ],
-        joke: true
+        ]
     }
 ];
 
-function Člen({ img, name, description, joke }) {
+function Člen({ img, name, description}) {
     return (
-        <div className={'člen' + (joke ? " jokečlen" : "")}>
+        <div className='člen'>
             <img src={img} alt="" />
             <div className="členInfo">
                 <h1>{name}</h1>

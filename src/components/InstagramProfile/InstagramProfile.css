@@ -1,0 +1,129 @@
+.igprofile-header {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-gap: 15px;
+    padding: 0;
+    max-width: 935px;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: white;
+    color: black;
+    text-align: left;
+    border-radius: 16px 16px 32px 32px;
+}
+
+.igprofile-profile-picture {
+    grid-column: 1 / 2;
+    grid-row: 1 / span 2;
+    margin-left: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.igprofile-profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.igprofile-info {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    padding-right: 8px;
+}
+
+.igprofile-username {
+    font-size: 28px;
+    font-weight: 300;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 16px;
+    margin-bottom: 0;
+}
+
+.igprofile-actions {
+    display: flex;
+    align-items: center;
+}
+
+.igprofile-follow-btn {
+    background-color: #0095f6;
+    color: white !important;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.igprofile-follow-btn:has(input#instagramFollowButton:not(:checked)) {
+    padding: 5px 15px 5px 15px;
+}
+
+.igprofile-follow-btn:has(input#instagramFollowButton:checked) {
+    padding: 5px 12.5px 5px 15px;
+}
+
+.igprofile-follow-btn:has(input#instagramFollowButton:not(:checked))::before {
+    content: "Sledujte nás!";
+}
+
+.igprofile-follow-btn:has(input#instagramFollowButton:checked)::before {
+    content: "Děkujeme! 🤍";
+}
+
+.igprofile-header a::after, a.igprofile-follow-btn::after {
+    display: none;
+}
+
+.igprofile-options-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.igprofile-details {
+    grid-row: 2 / 3;
+}
+
+.igprofile-full-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.igprofile-category {
+    color: #8e8e8e;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.igprofile-bio {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.igprofile-link {
+    display: flex;
+    align-items: center;
+    color: #00376b !important;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.igprofile-link::after {
+    content: none;
+}
+
+.igprofile-link svg {
+    margin-right: 5px;
+}

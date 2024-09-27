@@ -10,7 +10,7 @@ export default function Header() {
         const htmlElement = document.documentElement;
   
         // Update the data-location attribute with the current pathname
-        htmlElement.setAttribute('data-location', location.pathname);
+        htmlElement.setAttribute('data-location', "#" + location.pathname);
         
         document.querySelector("div#header").querySelectorAll('a').forEach(link => {
             if (link.getAttribute('href') === document.documentElement.getAttribute('data-location')) {
@@ -29,7 +29,7 @@ export default function Header() {
                 <Link to="kontakty"><em>Fuj, </em>Kontakt</Link>
                 <Link to="foto" className='disabled'>Fotogalerie</Link>
                 <Link to="historie">Historie</Link>
-                <Link to="pomoc" className='disabled'>Chci pomoci</Link>
+                <Link to="pomoc">Chci pomoci</Link>
             </div>
         </div>
     )

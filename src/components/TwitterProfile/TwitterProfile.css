@@ -1,0 +1,113 @@
+.twtprofile-profile-container {
+    background-color: color-mix(in srgb, var(--black) 90%, var(--asexual-purple));
+    max-width: 600px;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    text-align: initial;
+    border-radius: 16px 16px 32px 32px;
+}
+
+.twtprofile-profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.twtprofile-profile-photo {
+    width: 124px;
+    height: 124px;
+    border-radius: 50%;
+    border: 4px solid #000;
+    margin-bottom: 8px;
+}
+
+.twtprofile-profile-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    column-gap: 8px;
+    row-gap: 8px;
+}
+
+.twtprofile-follow-btn {
+    background-color: transparent;
+    border: 1px solid #536471;
+    border-radius: 9999px;
+    color: #e7e9ea;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 8px 16px;
+    transition: background-color 0.2s;
+}
+
+.twtprofile-follow-btn:has(input#twitterFollowButton:not(:checked))::before {
+    content: "Sledujte nás!";
+}
+
+.twtprofile-follow-btn:has(input#twitterFollowButton:checked)::before {
+    content: "Děkujeme! 🖤";
+}
+
+.twtprofile-profile-details svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.twtprofile-follow-btn:not(:hover):not(:has(input#twitterFollowButton:checked)) {
+    background-color: #e7e9ea;
+    color: #000;
+}
+
+.twtprofile-follow-btn:hover {
+    color: var(--asocial-green)
+}
+
+.twtprofile-profile-info h1 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 0px;
+    margin-top: 4px;
+    text-align: left;
+}
+
+.twtprofile-username {
+    color: #71767b;
+    font-size: 15px;
+    margin: 0;
+}
+
+.twtprofile-description {
+    margin-top: 12px !important;
+    font-size: 15px;
+    margin-bottom: 12px !important;
+}
+
+.twtprofile-profile-details {
+    color: #71767b;
+    font-size: 15px;
+}
+
+.twtprofile-profile-details > * {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 12px;
+}
+
+.twtprofile-profile-details a {
+    color: #1d9bf0;
+    text-decoration: none;
+}
+
+.twtprofile-profile-details a::after, a.twtprofile-follow-btn::after {
+    display: none;
+}
+
+.twtprofile-follow-btn {
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.twtprofile-profile-details svg {
+    margin-right: 4px;
+}

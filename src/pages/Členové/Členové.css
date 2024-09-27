@@ -1,14 +1,41 @@
+div#membersContent {
+	padding: 16px 96px 32px;
+	color: white;
+	font-family: var(--font-mono);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 24px;
+    &>h1 {
+        font-size: 42px;
+    }
+}
+
+div#content:has(div#členové) {
+	display: flex;
+	justify-content: center;
+}
+
 div#členové {
     color: white;
-    max-width: 800px;
-    left: 50%;
-    position: absolute;
-    transform: translateX(-50%);
+    max-width: 850px;
+    width: fit-content;
+    row-gap: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+div.členInfo {
     width: 100%;
 }
 
 div#členové>div.člen {
-    margin-bottom: 16px;
+    display: flex;
+    column-gap: 16px;
+    & img {
+        width: 150px;
+        border-radius: 16px;
+    }
     & h1 {
         font-family: var(--font-brand);
         font-size: 48px;
@@ -21,4 +48,16 @@ div#členové>div.člen {
             content: "- ";
         }
     }
+}
+
+div#členové>div.člen:nth-child(odd) {
+    flex-direction: row;
+}
+
+div#členové>div.člen:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+div.člen.jokečlen, div.člen.jokečlen * {
+    font-family: cursive !important;
 }

@@ -4,6 +4,7 @@ import Konrád from "../../images/main-page-carousel/konrad.png"
 import Filip from "../../images/main-page-carousel/filip.png"
 import pepa from "../../images/main-page-carousel/pepa.png"
 import hovno from "../../images/main-page-carousel/hovno.png"
+import Sisina from "../../images/main-page-carousel/sisina.png"
 import './Domov.css'
 
 export default function Domov() {
@@ -16,6 +17,7 @@ export default function Domov() {
                     <img src={Filip} alt="" />
                     <img src={pepa} alt="" />
                     <img src={hovno} alt="" />
+                    <img src={Sisina} alt="" />
                 </Carousel>
             </div>
             <div id="mainContent">

@@ -25,7 +25,7 @@ export default function Header() {
             <span>Česká Strana Asociálů</span>
             <div id="headerLinks">
                 <Link to="/">Co je ČSA?</Link>
-                <Link to="clenove" className='disabled'>Členové</Link>
+                <Link to="clenove">Členové</Link>
                 <Link to="kontakty"><em>Fuj, </em>Kontakt</Link>
                 <Link to="foto" className='disabled'>Fotogalerie</Link>
                 <Link to="historie">Historie</Link>

@@ -1,48 +1,93 @@
 import './Členové.css'
+import Konrád from '../../images/members/konrad.png'
+import Karel from '../../images/members/karel.png'
+import Filip from '../../images/members/filip.png'
+import pepa from '../../images/members/pepa.png'
+import Sisina from '../../images/members/sisina.png'
 
-export default function Členové() {
+const members = [
+    {
+        img: Konrád,
+        name: "Konrád Koulemastník",
+        description: [
+            "předseda strany",
+            "student zdravotnické školy",
+            "pastafarián",
+            "správce stranického instagramu",
+            "zajímá se o politiku, psychologii, filozofii a fotbal"
+        ]
+    },
+    {
+        img: Karel,
+        name: "Karel Hrubián",
+        description: [
+            "první místopředseda",
+            "student průmyslové školy (nenávidí svoji školu)",
+            "kočkokluk",
+            "správce stranického twitteru",
+            "zajímá se o filozofii a umění, reálně nic neumí"
+        ]
+    },
+    {
+        img: Filip,
+        name: "Filip Slovan",
+        description: [
+            "druhý místopředseda",
+            "student práva, psychologie a ekonomie",
+            "memer",
+            "vesničan",
+            "ke všemu má poznámku"
+        ]
+    },
+    {
+        img: pepa,
+        name: "pepa troska",
+        description: [
+            "neúspěšný kandidát na prezidenta",
+            "bývalý potápěč do fazolí a řezač motorovou pilou",
+            "vyřešil světovou plotovou krizi",
+            "jeho jméno se píše s malými písmeny",
+            "důchodce"
+        ],
+        joke: true
+    },
+    {
+        img: Sisina,
+        name: "Sisina",
+        description: [
+            "mňau",
+            "Kájova kočka",
+            "má vlastní kult osobnosti",
+            "celej den nic nedělá",
+            ":3"
+        ],
+        joke: true
+    }
+];
+
+function Člen({ img, name, description, joke }) {
     return (
-        <div id="členové">
-            <div className="člen">
-                <h1>Konrád Koulemastník</h1>
+        <div className={'člen' + (joke ? " jokečlen" : "")}>
+            <img src={img} alt="" />
+            <div className="členInfo">
+                <h1>{name}</h1>
                 <ul>
-                    <li>předseda strany</li>
-                    <li>student zdravotnické školy</li>
-                    <li>pastafarián</li>
-                    <li>správce stranického instagramu</li>
-                    <li>zajímá se o politiku, psychologii, filozofii a fotbal</li>
-                </ul>
-            </div>
-            <div className="člen">
-                <h1>Karel Hrubián</h1>
-                <ul>
-                    <li>první místopředseda</li>
-                    <li>student průmyslové školy (nenávidí svoji školu)</li>
-                    <li>kočkokluk</li>
-                    <li>správce stranického twitteru</li>
-                    <li>zajímá se o filozofii a umění, reálně nic neumí</li>
-                </ul>
-            </div>
-            <div className="člen">
-                <h1>Filip Slovan</h1>
-                <ul>
-                    <li>druhý místopředseda</li>
-                    <li>student práva, psychologie a ekonomie</li>
-                    <li>memer</li>
-                    <li>vesničan</li>
-                    <li>ke všemu má poznámku</li>
-                </ul>
-            </div>
-            <div className="člen">
-                <h1>pepa troska</h1>
-                <ul>
-                    <li>neúspěšný kandidát na prezidenta</li>
-                    <li>bývalý potápěč do fazolí a řezač motorovou pilou</li>
-                    <li>vyřešil světovou plotovou krizi</li>
-                    <li>jeho jméno se píše s malými písmeny</li>
-                    <li>důchodce</li>
+                    {description.map((item, index) => <li key={index}>{item}</li>)}
                 </ul>
             </div>
         </div>
     )
+}
+
+export default function Členové() {
+    return (
+        <div id="membersContent">
+            <h1>Členové</h1>
+            <div id="členové">
+                {members.map((member, index) => (
+                    <Člen key={index} {...member} />
+                ))}
+            </div>
+        </div>
+    );
 }

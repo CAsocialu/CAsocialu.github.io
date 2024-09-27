@@ -1,0 +1,46 @@
+div#contactsContent {
+	padding: 16px 96px 0;
+	color: white;
+	font-size: 21px;
+	font-family: var(--font-mono);
+    text-align: center;
+    & .twitter {
+        font-family: "Noto Sans Math";
+        font-weight: normal;
+    }
+    & p {
+        margin: 0;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 24px;
+}
+
+.contactLine {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: -8px;
+
+    &>span {
+        margin-right: 4px;
+        padding-top: 8px;
+    }
+    &>span.twitter, img {
+        margin-right: 8px;
+        padding-top: 8px;
+    }
+}
+
+#contactsMain {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    column-gap: 24px;
+    row-gap: 8px;
+    flex-wrap: wrap;
+}

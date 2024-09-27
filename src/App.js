@@ -13,9 +13,9 @@ function App() {
         <div id='content'>
         <Routes>
           <Route path="/" element={ <Domov /> } />
-      {/* <Route path="clenove" element={ <Členové /> } />
+      {/* <Route path="clenove" element={ <Členové /> } />*/}
           <Route path="kontakty" element={ <Kontakty /> } />
-          <Route path="foto" element={ <Fotogalerie /> } /> */}
+      {/* <Route path="foto" element={ <Fotogalerie /> } /> */}
           <Route path="historie" element={ <Historie /> } />
       {/* <Route path="pomoc" element={ <Pomoc /> } />      */}
           <Route path="*" element={ <Navigate to="/" replace /> } />

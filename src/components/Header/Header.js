@@ -26,7 +26,7 @@ export default function Header() {
             <div id="headerLinks">
                 <Link to="/">Co je ČSA?</Link>
                 <Link to="clenove" className='disabled'>Členové</Link>
-                <Link to="kontakty" className='disabled'>Kontakty</Link>
+                <Link to="kontakty"><em>Fuj, </em>Kontakt</Link>
                 <Link to="foto" className='disabled'>Fotogalerie</Link>
                 <Link to="historie">Historie</Link>
                 <Link to="pomoc" className='disabled'>Chci pomoci</Link>

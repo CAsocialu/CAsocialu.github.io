@@ -11,10 +11,17 @@ div#footer {
     bottom: 0px;
     position: fixed;
     width: -webkit-fill-available;
+    height: 50px;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+    font-size: 16px;
+    transition: height 0.5s cubic-bezier(.79,.14,.15,.86);
+}
+
+div#footer:hover {
+    height: 75px;
 }
 
 @supports not (width: -webkit-fill-available) {
@@ -24,5 +31,67 @@ div#footer {
 }
 
 div#footer>img {
-    width: 50px;
+    height: 50px;
+    transition: height 0.5s cubic-bezier(.79,.14,.15,.86);
+}
+
+div#footer:hover>img {
+    height: 75px;
+}
+
+div#footer>div#footerInfo {
+    display: flex;
+    flex-direction: column;
+    transition: row-gap 0.5s cubic-bezier(.79,.14,.15,.86);
+    row-gap: 0px;
+    white-space-collapse: preserve-spaces;
+}
+
+div#footer>div#footerInfo>span:first-child {
+    font-size: 16px;
+    transition: font-size 0.5s cubic-bezier(.79,.14,.15,.86);
+}
+
+div#footer:hover>div#footerInfo>span:first-child {
+    font-size: 14px;
+}
+
+div#footer>div#footerInfo>span:first-child>span#footerDevInfo {
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(.79,.14,.15,.86), font-size 0.5s cubic-bezier(.79,.14,.15,.86)
+}
+
+div#footer:hover>div#footerInfo>span:first-child>span#footerDevInfo {
+    opacity: 1;
+}
+
+a#footerDevInfoDEADCODELogo {
+    font-family: "Uni Sans CAPS";
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+a#footerDevInfoDEADCODELogo::after, a#footerDevInfoDEADCODELogo::before {
+    all: unset;
+    font-family: "Montserrat";
+    content: "×";
+}
+a#footerDevInfoDEADCODELogo::before {padding-right: 1.25px;} a#footerDevInfoDEADCODELogo::after {padding-left: 1.25px;}
+
+div#footer>div#footerInfo>span:not(:first-child) {
+    font-size: 16px;
+    opacity: 0;
+    height: 0;
+    transition: opacity 0.5s cubic-bezier(.79,.14,.15,.86), height 0.5s cubic-bezier(.79,.14,.15,.86), font-size 0.5s cubic-bezier(.79,.14,.15,.86);
+}
+
+div#footer:hover>div#footerInfo>span:not(:first-child) {
+    font-size: 18px;
+    height: 23px;
+    opacity: 1;
+}
+
+div#footer:hover>div#footerInfo {
+    row-gap: 4px;
 }

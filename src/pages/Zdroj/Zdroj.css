@@ -1,0 +1,18 @@
+div#content:has(div#sourceContent) {
+    height: calc(100vh - 100px);
+}
+
+div#sourceContent {
+	color: white;
+	font-size: 21px;
+	font-family: var(--font-mono);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 128px;
+    & h1 {
+        margin-bottom: 0;
+    }
+}

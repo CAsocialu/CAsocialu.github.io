@@ -1,5 +1,7 @@
 import { useEffect } from "react";
-import './Zdroj.css'
+import './Zdroj.css';
+import Title from "../../components/Title/Title";
+
 export default function Zdroj() {
     useEffect(() => {
         // Set a 3-second delay before redirecting
@@ -15,7 +17,7 @@ export default function Zdroj() {
 
     return (
         <div id="sourceContent">
-            <h1>Dejte nám sekundu :3</h1>
+            <Title>Dejte nám sekundu :3</Title>
             <p>Sisina tvrdě spí, a JavaScript pracuje na tom, aby ste se dostali na náš GitHub.</p>
         </div>
     );

@@ -1,0 +1,6 @@
+h1.nadpis {
+    font-family: var(--font-title);
+    text-align: center;
+    margin-top: 0px;
+    width: 100%;
+}

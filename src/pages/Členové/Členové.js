@@ -4,6 +4,7 @@ import Karel from '../../images/members/karel.png'
 import Filip from '../../images/members/filip.png'
 import pepa from '../../images/members/pepa.png'
 import Sisina from '../../images/members/sisina.png'
+import Title from '../../components/Title/Title'
 
 const members = [
     {
@@ -80,7 +81,7 @@ function Člen({ img, name, description}) {
 export default function Členové() {
     return (
         <div id="membersContent">
-            <h1>Členové</h1>
+            <Title>Členové</Title>
             <div id="členové">
                 {members.map((member, index) => (
                     <Člen key={index} {...member} />

@@ -5,7 +5,7 @@ div#contactsContent {
 	font-family: var(--font-mono);
     text-align: center;
     & .twitter {
-        font-family: "Noto Sans Math";
+        font-family: "chirp";
         font-weight: normal;
     }
     & p {

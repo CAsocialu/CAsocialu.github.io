@@ -1,10 +1,11 @@
-import './Historie.css'
+import './Historie.css';
+import Title from '../../components/Title/Title';
 import Argonaut from "../../images/history/argonautmemory.png"
 
 export default function Historie() {
     return (
         <div id="historyContent">
-            <h1>Historie</h1>
+            <Title>Historie</Title>
             <ol>
                 <li data-date="13. 5. 2022">Vznik strany založením účtů na Twitteru a Instagramu. Zprvu byly koláže graficky jednoduché ale nápady geniální. Tím získalo ČSA kousek po kousku úspěch.</li>
                 <li data-date="14. 7. 2022">Vznik Discordu ČSA, který se stal prakticky ihned chronicky aktivní minimálně 5, někdy i 10 hodin denně. Za historii Discordu se stalo několik kontroverzí, včetně podpory antisemitismu od některých členů, za což se nestydíme, ovšem tyto problémy řešíme rychle. Discord se skládá z modů, neboli ministrů, kteří dohlíží na chod strany a jsou demokraticky voleni.</li>

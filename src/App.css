@@ -1,6 +1,7 @@
 :root {
     --font-brand: "Neue Machina", "JetBrains Mono", monospace;
     --font-mono: "JetBrains Mono", monospace;
+    --font-title: "Bebas Neue", "JetBrains Mono", monospace;
     --black: #000000;
     --night: #0F0F0F;
     --asocial-green-light: #8CB8AA;

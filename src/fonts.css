@@ -55,3 +55,17 @@
     font-feature-settings: "liga";
     -moz-osx-font-smoothing: grayscale;
 }
+
+@font-face {
+    font-family: 'chirp';
+    src: url('./fonts/chirp.ttf') format('truetype');    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Bebas Neue";
+    src: url(./fonts/BebasNeue-Regular.ttf);
+    font-weight: 400;
+    font-display: swap;
+}

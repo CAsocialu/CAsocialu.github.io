@@ -11,7 +11,7 @@ export default function Title({children}) {
             const textWidth = h1Span.offsetWidth;
             if (textWidth) h1.style.backgroundSize = `${(2.5) * textWidth}px 333%`;
         }
-    }, []);
+    }, [children]);
     return (
         <h1 className="nadpis" style={{
             backgroundImage: `url(${Šmuha})`,

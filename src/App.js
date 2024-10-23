@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import "./App.css";
 import Header from "./components/Header/Header.js";
@@ -5,6 +6,19 @@ import Footer from "./components/Footer/Footer.js";
 import { Domov, Členové, Kontakty, Fotogalerie, Historie, Pomoc, Zdroj } from './pages/pages.js';
 
 function App() {
+  document.documentElement.style.setProperty('--scroll-level', '0px');
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollLevel = window.scrollY;
+      document.documentElement.style.setProperty('--scroll-level', `${scrollLevel}px`);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <div id="App">
       <Router basename='/'>

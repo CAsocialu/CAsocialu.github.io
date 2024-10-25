@@ -6,6 +6,12 @@ div#Hero {
     width: 100vw;
 }
 
+@media screen and (max-width: 907px) {
+    div#Hero {
+        height: auto;
+    }
+}
+
 div#Hero::after {
     content: "";
     width: 100%;
@@ -71,14 +77,35 @@ a::after {
     position: absolute;
 }
 
-div#mainContent>div#mainACTUALContent {
-    display: grid;
-    grid-template-columns: 350px calc(100vw - 350px - 600px - 96px - 96px) 600px;
-    grid-template-rows: 80px 150px 90px auto;
-    gap: 16px;
-    margin-bottom: 50px;
+@media screen and (max-width: 907px) {
+    div#mainContent>div#mainACTUALContent {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+
+    div#mainContent>div#mainACTUALContent>p {
+        margin: 0px;
+    }
+
+    div#mainContent>div#mainACTUALContent>div.image-container[data-alt="Logo ČSA"],
+    div#mainContent>div#mainACTUALContent>div.image-container[data-alt="Logo ČSA"]>img {
+        width: 250px !important;
+        height: 250px;
+    }
 }
 
-div#mainACTUALContent>p {
-    margin: 16px;
+@media screen and (min-width: 908px) {
+    div#mainContent>div#mainACTUALContent {
+        display: grid;
+        grid-template-columns: 350px calc(100vw - 350px - 600px - 96px - 96px - 32px) 600px;
+        grid-template-rows: 80px 150px 90px auto;
+        gap: 16px;
+        margin-bottom: 50px;
+    }
+    
+    div#mainACTUALContent>p {
+        margin: 16px;
+    }
 }

@@ -20,11 +20,32 @@ export default function Header() {
             }
           });
     }, [location]);
+
+    useEffect(() => {
+        function handleClickOutside(e) {
+            const headerMenuTrigger = document.querySelector('input#headerMenuTrigger');
+            const contentDiv = e.target.localName === 'div' && e.target.id === 'content';
+
+            if (headerMenuTrigger?.checked && contentDiv) {
+                headerMenuTrigger.checked = false;
+            }
+        }
+    
+        document.addEventListener('click', handleClickOutside);
+    
+        return () => {
+          document.removeEventListener('click', handleClickOutside);
+        };
+    }, []);
     return (
         <div id="header">
-            <span>Česká Strana Asociálů</span>
+            <span>
+                <span>Česká Strana Asociálů</span>
+                <input type="checkbox" id="headerMenuTrigger" />
+                <label className='material-symbols-outlined' htmlFor="headerMenuTrigger">menu</label>
+            </span>
             <div id="headerLinks">
-                <Link to="/">Co je ČSA?</Link>
+                <Link to="/" onClick={() => document.querySelector("div#header input#headerMenuTrigger").checked = false}>Co je ČSA?</Link>
                 <Link to="clenove">Členové</Link>
                 <Link to="kontakty"><em>Fuj, </em>Kontakt</Link>
                 <Link to="foto" className='disabled'>Fotogalerie</Link>

@@ -8,10 +8,10 @@ div#footer {
     padding-left: 16px;
     padding-right: 2px;
     font-family: var(--font-mono);
-    bottom: 0px;
+    bottom: 0vh;
     position: fixed;
-    width: -webkit-fill-available;
     height: 50px;
+    width: calc(100vw - 18px);
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -22,12 +22,6 @@ div#footer {
 
 div#footer:hover {
     height: 75px;
-}
-
-@supports not (width: -webkit-fill-available) {
-    div#footer {
-        width: calc(100% - 18px)
-    }
 }
 
 div#footer>img {
@@ -94,4 +88,10 @@ div#footer:hover>div#footerInfo>span:not(:first-child) {
 
 div#footer:hover>div#footerInfo {
     row-gap: 4px;
+}
+
+@media screen and (max-width: 907px) {
+    div#footer {
+        display: none;
+    }
 }

@@ -5,6 +5,7 @@ div#membersContent {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
     row-gap: 24px;
     &>h1 {
         font-size: 42px;
@@ -18,23 +19,25 @@ div#content:has(div#členové) {
 
 div#členové {
     color: white;
-    max-width: 850px;
-    width: fit-content;
-    row-gap: 32px;
+    width: 100%;
+    column-gap: 32px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 2*(50px) - (16px + 32px) - (55px + 25px) - 24px);
 }
 
 div.členInfo {
     width: 100%;
 }
 
-div#členové>div.člen {
+div#členové>div.člen:not(.open) {
     display: flex;
     column-gap: 16px;
     & img {
         width: 150px;
-        border-radius: 16px;
+        border-radius: 32px;
     }
     & h1 {
         font-family: var(--font-brand);
@@ -50,10 +53,93 @@ div#členové>div.člen {
     }
 }
 
-div#členové>div.člen:nth-child(odd) {
+div#členové>div.člen:not(.open) {
+    cursor: pointer;
+    height: fit-content;
+    padding-right: 0;
+}
+
+div#členové>div.člen:not(.open),
+div#členové>div.člen:not(.open)>img {
+    width: calc((100vw - 2*(96px) - 4*(32px))/5);
+    filter: grayscale(50%);
+    transition: width 0.333s cubic-bezier(0.19, 1, 0.22, 1), filter 0.333s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+div#členové:not(:has(div.člen.open)):has(div.člen:hover)>div.člen:not(:hover),
+div#členové:not(:has(div.člen.open)):has(div.člen:hover)>div.člen:not(:hover)>img {
+    width: calc((100vw - 2*(96px) - 4*(32px))/5 - 12.5px);
+    filter: grayscale(100%);
+}
+
+div#členové:not(:has(div.člen.open)):has(div.člen:hover)>div.člen:hover,
+div#členové:not(:has(div.člen.open)):has(div.člen:hover)>div.člen:hover>img {
+    width: calc((100vw - 2*(96px) - 4*(32px))/5 + 50px);
+    filter: grayscale(0%);
+}
+
+div#členové>div.člen:not(.open)>div.členInfo {
+    display: none;
+}
+
+div#členové>div.člen {
     flex-direction: row;
 }
 
-div#členové>div.člen:nth-child(even) {
-    flex-direction: row-reverse;
+div#členové>div.člen.open {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+}
+
+div#členové>div.člen.open>div.členContent {
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 90vw;
+    width: fit-content;
+    transform: translate(-50%, -50%);
+    border-radius: 64px;
+    overflow: hidden;
+    background-color: var(--asocial-green-dark);
+    column-gap: 32px;
+    padding-right: 64px;
+    & img {
+        height: 50vh;
+        background-image: linear-gradient(-90deg, var(--asocial-green-dark), var(--asexual-purple-dark));
+    }
+    & h1 {
+        font-family: var(--font-brand);
+        font-size: 48px;
+        margin-top: 0;
+        margin-top: 32px;
+        margin-bottom: 0px;
+        text-wrap: nowrap;
+        background-color: var(--asexual-purple);
+        padding: 8px 16px;
+        display: inline-block;
+    }
+    & ul {
+        font-family: var(--font-mono);
+        font-size: 20px;
+        & li::marker {
+            content: "- ";
+        }
+    }
+}
+
+div#členové>div.člen.open>div.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
 }

@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './Členové.css'
 import Konrád from '../../images/members/konrad.png'
 import Karel from '../../images/members/karel.png'
@@ -64,16 +65,24 @@ const members = [
     }
 ];
 
-function Člen({ img, name, description}) {
+function Člen({ img, name, description }) {
+    const [isOpen, setIsOpen] = useState(false);
+    const toggleOpen = () => setIsOpen((prev) => !prev);
     return (
-        <div className='člen'>
-            <img src={img} alt="" />
-            <div className="členInfo">
-                <h1>{name}</h1>
-                <ul>
-                    {description.map((item, index) => <li key={index}>{item}</li>)}
-                </ul>
-            </div>
+        <div className={`člen ${isOpen ? 'open' : ''}`}>
+            {!isOpen && <img src={img} alt="" onClick={toggleOpen} />}
+            {isOpen && <div className="backdrop" onClick={toggleOpen} />}
+            {isOpen &&
+                <div className='členContent'>
+                    <img src={img} alt="" onClick={toggleOpen} />
+                    <div className="členInfo">
+                    <h1>{name}</h1>
+                    <ul>
+                        {description.map((item, index) => <li key={index}>{item}</li>)}
+                    </ul>
+                </div>
+                </div>
+            }
         </div>
     )
 }

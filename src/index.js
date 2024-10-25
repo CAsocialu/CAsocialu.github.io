@@ -18,7 +18,7 @@ function rawr(event) {
   if (stringcolonthree.includes(":3")) {
     stringcolonthree = "";
     document.removeEventListener("keypress", event => rawr(event));
-    document.querySelector("body").innerHTML += `<img id="číča" src="/číča.png" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; z-index: -1">`;
+    document.querySelector("body").innerHTML += `<img id="číča" src="/číča.png" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; z-index: -1" draggable="false">`;
     document.querySelector("head").innerHTML = "";
     document.querySelector("div#root").remove()
   }
@@ -32,7 +32,7 @@ function rawr(event) {
     rawrx3.id = "rawrx3";
     rawrx3.style = "width: 100%; height: 100%; display: flex; flex-direction: row; justify-content: center; align-items: center;"
     rawrx3.innerHTML = 
-    `<img id="whOwOps" src="/assets/whOwOps/whOwOps0.png" style="aspect-ratio: 16/9; max-height: 100%; max-width: 100%;">`
+    `<img id="whOwOps" src="/assets/whOwOps/whOwOps0.png" style="aspect-ratio: 16/9; max-height: 100%; max-width: 100%;" draggable="false">`
     console.log(rawrx3)
     document.querySelector("html").style = "background: #0078d7; height: 100%; width: 100%; cursor: none; user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;";
     document.querySelector("body").style = "height: 100%; margin: 0; display: flex; cursor: none; user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;"

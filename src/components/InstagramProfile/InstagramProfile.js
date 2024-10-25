@@ -4,7 +4,7 @@ export default function InstagramProfile() {
     return (
         <header className="igprofile-header">
             <div className="igprofile-profile-picture">
-                <img src="https://pbs.twimg.com/profile_images/1808894731323068418/FuzEA1mW_200x200.jpg" alt="" />
+                <img src="https://pbs.twimg.com/profile_images/1808894731323068418/FuzEA1mW_200x200.jpg" alt="" draggable="false" />
             </div>
             <div className="igprofile-info">
                 <h2 className="igprofile-username">

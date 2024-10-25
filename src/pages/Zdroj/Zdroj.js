@@ -6,7 +6,7 @@ export default function Zdroj() {
     useEffect(() => {
         // Set a 3-second delay before redirecting
         const timer = setTimeout(() => {
-            document.querySelector("body").innerHTML = `<img id="číčaspí" src="/číčaspí.png" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 99999;">`
+            document.querySelector("body").innerHTML = `<img id="číčaspí" src="/číčaspí.png" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 99999;" draggable="false">`
             setTimeout(() => {
                 window.location.replace('https://github.com/CAsocialu/CAsocialu.github.io');
             }, 500);

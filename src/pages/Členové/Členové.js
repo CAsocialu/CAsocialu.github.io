@@ -70,11 +70,11 @@ function Člen({ img, name, description }) {
     const toggleOpen = () => setIsOpen((prev) => !prev);
     return (
         <div className={`člen ${isOpen ? 'open' : ''}`}>
-            {!isOpen && <img src={img} alt="" onClick={toggleOpen} />}
+            {!isOpen && <img src={img} alt="" onClick={toggleOpen} draggable="false"/>}
             {isOpen && <div className="backdrop" onClick={toggleOpen} />}
             {isOpen &&
                 <div className='členContent'>
-                    <img src={img} alt="" onClick={toggleOpen} />
+                    <img src={img} alt="" onClick={toggleOpen} draggable="false" />
                     <div className="členInfo">
                     <h1>{name}</h1>
                     <ul>

@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import './Zdroj.css';
 import Title from "../../components/Title/Title";
 
@@ -17,6 +18,9 @@ export default function Zdroj() {
 
     return (
         <div id="sourceContent">
+            <Helmet>
+                <title>Zdroj · ČSA</title>
+            </Helmet>
             <Title>Dejte nám sekundu :3</Title>
             <p>Sisina tvrdě spí, a JavaScript pracuje na tom, aby ste se dostali na náš GitHub.</p>
         </div>

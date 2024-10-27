@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Helmet } from 'react-helmet'
 import './Členové.css'
 import Konrád from '../../images/members/konrad.png'
 import Karel from '../../images/members/karel.png'
@@ -90,6 +91,9 @@ function Člen({ img, name, description }) {
 export default function Členové() {
     return (
         <div id="membersContent">
+            <Helmet>
+                <title>Členové · ČSA</title>
+            </Helmet>
             <Title>Členové</Title>
             <div id="členové">
                 {members.map((member, index) => (

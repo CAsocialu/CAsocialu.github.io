@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Carousel from "../../components/Carousel/Carousel.js";
 import HlavníBanner from "../../images/main-page-carousel/banner.png";
 import Kája from "../../images/main-page-carousel/kaja.png";
@@ -15,6 +16,9 @@ import './Domov.css'
 export default function Domov() {
     return (
         <>
+            <Helmet>
+                <title>Česká Strana Asociálů</title>
+            </Helmet>
             <div id="Hero">
                 <Carousel show={1}>
                     <img src={HlavníBanner} alt="" draggable="false"/>

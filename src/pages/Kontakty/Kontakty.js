@@ -1,4 +1,5 @@
 import './Kontakty.css';
+import { Helmet } from 'react-helmet';
 import Title from '../../components/Title/Title';
 import Instagram from '../../images/instagramLogo.svg';
 import TwitterProfile from '../../components/TwitterProfile/TwitterProfile';
@@ -7,6 +8,9 @@ import InstagramProfile from '../../components/InstagramProfile/InstagramProfile
 export default function Kontakty() {
     return (
         <div id="contactsContent">
+            <Helmet>
+                <title>Kontakty · ČSA</title>
+            </Helmet>
             <Title><em>Fuj, </em>Kontakty!</Title>
             <p>Můžete más kdykoliv kontaktovat přes email, Twitter, a Instagram.</p>
             <div id='contactsMain'>

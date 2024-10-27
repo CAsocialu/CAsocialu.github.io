@@ -1,10 +1,14 @@
 import './Historie.css';
+import { Helmet } from 'react-helmet';
 import Title from '../../components/Title/Title';
 import Argonaut from "../../images/history/argonautmemory.png"
 
 export default function Historie() {
     return (
         <div id="historyContent">
+            <Helmet>
+                <title>Historie · ČSA</title>
+            </Helmet>
             <Title>Historie</Title>
             <ol>
                 <li data-date="13. 5. 2022">Vznik strany založením účtů na Twitteru a Instagramu. Zprvu byly koláže graficky jednoduché ale nápady geniální. Tím získalo ČSA kousek po kousku úspěch.</li>

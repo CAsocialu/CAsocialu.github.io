@@ -23,7 +23,7 @@ export default function Header() {
     useEffect(() => {
         const htmlElement = document.documentElement;
   
-        htmlElement.setAttribute('data-location', "#" + location.pathname);
+        htmlElement.setAttribute('data-location',  location.pathname.replace(/\/$/, ''));
         
         document.querySelector("div#header").querySelectorAll('a').forEach(link => {
             if (link.getAttribute('href') === document.documentElement.getAttribute('data-location')) {

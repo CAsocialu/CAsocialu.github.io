@@ -10,6 +10,15 @@ export default function Kontakty() {
         <div id="contactsContent">
             <Helmet>
                 <title>Kontakty · ČSA</title>
+                <meta name="description" content="ČSA je recesistická politická strana, v tento moment chystající se vzniknout a poté začít nabírat členy. Více než strana je ČSA internetová mikrokomunita, kde každý člověk náhodně z internetu může přispět svým dílem." />
+                <meta property="og:title" content="Kontakty · ČSA" />
+                <meta property="og:description" content="ČSA je recesistická politická strana, v tento moment chystající se vzniknout a poté začít nabírat členy. Více než strana je ČSA internetová mikrokomunita, kde každý člověk náhodně z internetu může přispět svým dílem." />
+                <meta property="og:image" content="/assets/banner.png" />
+                <meta property="og:url" content="https://www.ceskastranaasocialu.cz/#/path" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Kontakty · ČSA" />
+                <meta name="twitter:description" content="ČSA je recesistická politická strana, v tento moment chystající se vzniknout a poté začít nabírat členy. Více než strana je ČSA internetová mikrokomunita, kde každý člověk náhodně z internetu může přispět svým dílem." />
+                <meta name="twitter:image" content="/assets/banner.png" />
             </Helmet>
             <Title><em>Fuj, </em>Kontakty!</Title>
             <p>Můžete más kdykoliv kontaktovat přes email, Twitter, a Instagram.</p>

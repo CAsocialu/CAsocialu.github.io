@@ -6,7 +6,6 @@ export default function Title({children}) {
     useEffect(() => {
         const h1 = document.querySelector('div#content h1');
         const h1Span = h1.querySelector('span');
-        console.log(h1, h1Span, h1.style.backgroundSizeX)
         if (h1Span) {
             const textWidth = h1Span.offsetWidth;
             if (textWidth) h1.style.backgroundSize = `${(2.5) * textWidth}px 333%`;

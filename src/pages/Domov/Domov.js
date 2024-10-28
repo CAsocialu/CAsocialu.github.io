@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import { Helmet } from "react-helmet";
 import Carousel from "../../components/Carousel/Carousel.js";
 import HlavníBanner from "../../images/main-page-carousel/banner.png";
@@ -7,13 +8,16 @@ import Filip from "../../images/main-page-carousel/filip.png"
 import pepa from "../../images/main-page-carousel/pepa.png"
 import hovno from "../../images/main-page-carousel/hovno.png"
 import Sisina from "../../images/main-page-carousel/sisina.png"
+import Československo from "../../images/main-page-carousel/ceskoslovensko.png"
 import Title from "../../components/Title/Title.js";
 import {default as Image} from "../../components/ImageWithText/ImageWithText.js";
 import logoPainting from "../../images/home/logoPainting.png";
 import předsedovéPainting from "../../images/home/předsedovéPainting.png";
 import './Domov.css'
+import { CelebrationContext } from "../../App.js";
 
 export default function Domov() {
+    const celebrationStatus = useContext(CelebrationContext)
     return (
         <>
             <Helmet>
@@ -30,6 +34,7 @@ export default function Domov() {
             </Helmet>
             <div id="Hero">
                 <Carousel show={1}>
+                    { celebrationStatus.czechoslovakIndependency && (<img src={Československo} alt="" draggable="false"/>) }
                     <img src={HlavníBanner} alt="" draggable="false"/>
                     <img src={Kája} alt="" draggable="false"/>
                     <img src={Konrád} alt="" draggable="false"/>

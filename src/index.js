@@ -33,7 +33,6 @@ function rawr(event) {
     rawrx3.style = "width: 100%; height: 100%; display: flex; flex-direction: row; justify-content: center; align-items: center;"
     rawrx3.innerHTML = 
     `<img id="whOwOps" src="/assets/whOwOps/whOwOps0.png" style="aspect-ratio: 16/9; max-height: 100%; max-width: 100%;" draggable="false">`
-    console.log(rawrx3)
     document.querySelector("html").style = "background: #0078d7; height: 100%; width: 100%; cursor: none; user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;";
     document.querySelector("body").style = "height: 100%; margin: 0; display: flex; cursor: none; user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;"
     document.querySelector("html").requestFullscreen()

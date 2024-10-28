@@ -1,25 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useContext } from 'react';
 import "./Header.css"
 import { Link, useLocation } from 'react-router-dom';
+import { CelebrationContext } from '../../App';
 
 export default function Header() {
     const location = useLocation();
-    const [currentDate, setCurrentDate] = useState(new Date());
-
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-          const newDate = new Date();
-          // Check if the date has changed
-          if (newDate.toDateString() !== currentDate.toDateString()) {
-            setCurrentDate(newDate);
-          }
-        }, 1000);
+    const celebrationStatus = useContext(CelebrationContext)
     
-
-        return () => clearInterval(intervalId);
-      }, [currentDate]);
-    
-
     useEffect(() => {
         const htmlElement = document.documentElement;
   
@@ -51,25 +38,8 @@ export default function Header() {
         };
     }, []);
 
-    const [isAceCelebration, setIsAceCelebration] = useState(false);
-
-    useEffect(() => {
-        const today = new Date(),
-            lastDayOfOctober = new Date(today.getFullYear(), 9, 31),
-            lastDayOfAceWeek = new Date(lastDayOfOctober.getFullYear(), 9, lastDayOfOctober.getDay() === 6 ? lastDayOfOctober.getDate() : lastDayOfOctober.getDate() - (lastDayOfOctober.getDay() + 1), 23, 59, 59, 999),
-            firstDayOfAceWeek = new Date(lastDayOfAceWeek.getFullYear(), 9, lastDayOfAceWeek.getDate() - 6, 0, 0, 0, 0);
-        
-        if (today >= firstDayOfAceWeek && today <= lastDayOfAceWeek) {
-            setIsAceCelebration(true);
-        } else if (today.getMonth() === 3 && today.getDate() === 6) {
-            setIsAceCelebration(true)
-        } else {
-            setIsAceCelebration(false);
-        }
-    }, [currentDate])
-
     return (
-        <div id="header" className={isAceCelebration ? 'ace' : ''}>
+        <div id="header" className={celebrationStatus.aceWeek ? 'ace' : ''}>
             <span>
                 <span>Česká Strana Asociálů</span>
                 <input type="checkbox" id="headerMenuTrigger" />

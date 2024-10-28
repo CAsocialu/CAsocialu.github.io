@@ -11,6 +11,7 @@ import pepa from '../../images/members/pepa.png'
 import pepaFull from '../../images/members/pepaFull.png'
 import Sisina from '../../images/members/sisina.png'
 import SisinaFull from '../../images/members/sisinaFull.png'
+import InstagramLogo from '../../images/instagramLogo.svg'
 import Title from '../../components/Title/Title'
 
 const members = [
@@ -24,7 +25,10 @@ const members = [
             "pastafarián",
             "správce stranického instagramu",
             "zajímá se o politiku, psychologii, filozofii a fotbal"
-        ]
+        ],
+        sns: {
+            ig: "konrad_z_csa"
+        }
     },
     {
         img: Karel,
@@ -36,7 +40,10 @@ const members = [
             "kočkokluk",
             "správce stranického twitteru",
             "zajímá se o filozofii a umění, reálně nic neumí"
-        ]
+        ],
+        sns: {
+            ig: "karel_hrubian",
+        }
     },
     {
         img: Filip,
@@ -48,7 +55,10 @@ const members = [
             "memer",
             "vesničan",
             "ke všemu má poznámku"
-        ]
+        ],
+        sns: {
+            ig: "filip_slovan",
+        }
     },
     {
         img: pepa,
@@ -60,7 +70,10 @@ const members = [
             "vyřešil světovou plotovou krizi",
             "jeho jméno se píše s malými písmeny",
             "důchodce"
-        ]
+        ],
+        sns: {
+            ig: "pepa_troska",
+        }
     },
     {
         img: Sisina,
@@ -72,11 +85,12 @@ const members = [
             "má vlastní kult osobnosti",
             "celej den nic nedělá",
             ":3"
-        ]
+        ],
+        sns: {}
     }
 ];
 
-function Člen({ img, bg, name, description }) {
+function Člen({ img, bg, name, sns, description }) {
     const [isOpen, setIsOpen] = useState(false);
     const toggleOpen = () => setIsOpen((prev) => !prev);
     return (
@@ -87,11 +101,14 @@ function Člen({ img, bg, name, description }) {
                 <div className='členContent' style={{ backgroundImage: `url(${bg.src})`, backgroundPositionX: bg.align, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
                     <img src={img} alt="" onClick={toggleOpen} draggable="false" />
                     <div className="členInfo">
-                    {/*<h1>{name}</h1>*/}
-                    <ul>
-                        {description.map((item, index) => <li key={index}>{item}</li>)}
-                    </ul>
-                </div>
+                        {/*<h1>{name}</h1>*/}
+                        <ul>
+                            {description.map((item, index) => <li key={index}>{item}</li>)}
+                        </ul>
+                        <div className="sns">
+                            {sns.ig && <a href={`https://instagram.com/${sns.ig}`} target="_blank" rel="noopener noreferrer"><img src={InstagramLogo} alt="Instagram Logo" />@{sns.ig}</a> }
+                        </div>
+                    </div>
                 </div>
             }
         </div>

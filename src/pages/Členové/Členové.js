@@ -2,15 +2,21 @@ import { useState } from 'react'
 import { Helmet } from 'react-helmet'
 import './Členové.css'
 import Konrád from '../../images/members/konrad.png'
+import KonrádFull from '../../images/members/konradFull.png'
 import Karel from '../../images/members/karel.png'
+import KarelFull from '../../images/members/karelFull.png'
 import Filip from '../../images/members/filip.png'
+import FilipFull from '../../images/members/filipFull.png'
 import pepa from '../../images/members/pepa.png'
+import pepaFull from '../../images/members/pepaFull.png'
 import Sisina from '../../images/members/sisina.png'
+import SisinaFull from '../../images/members/sisinaFull.png'
 import Title from '../../components/Title/Title'
 
 const members = [
     {
         img: Konrád,
+        bg: { src: KonrádFull, align: "-31.28179043743642vh" },
         name: "Konrád Koulemastník",
         description: [
             "předseda strany",
@@ -22,6 +28,7 @@ const members = [
     },
     {
         img: Karel,
+        bg: { src: KarelFull, align: "-33.36724313326551vh" },
         name: "Karel Hrubián",
         description: [
             "první místopředseda",
@@ -33,6 +40,7 @@ const members = [
     },
     {
         img: Filip,
+        bg: { src: FilipFull, align: "-40.691759918616484vh" },
         name: "Filip Slovan",
         description: [
             "druhý místopředseda",
@@ -44,6 +52,7 @@ const members = [
     },
     {
         img: pepa,
+        bg: { src: pepaFull, align: "-47.50762970498474vh" },
         name: "pepa troska",
         description: [
             "neúspěšný kandidát na prezidenta",
@@ -55,6 +64,7 @@ const members = [
     },
     {
         img: Sisina,
+        bg: { src: SisinaFull, align: "-33.06205493387589vh" },
         name: "Sisina",
         description: [
             "mňau",
@@ -66,7 +76,7 @@ const members = [
     }
 ];
 
-function Člen({ img, name, description }) {
+function Člen({ img, bg, name, description }) {
     const [isOpen, setIsOpen] = useState(false);
     const toggleOpen = () => setIsOpen((prev) => !prev);
     return (
@@ -74,10 +84,10 @@ function Člen({ img, name, description }) {
             {!isOpen && <img src={img} alt="" onClick={toggleOpen} draggable="false"/>}
             {isOpen && <div className="backdrop" onClick={toggleOpen} />}
             {isOpen &&
-                <div className='členContent'>
+                <div className='členContent' style={{ backgroundImage: `url(${bg.src})`, backgroundPositionX: bg.align, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
                     <img src={img} alt="" onClick={toggleOpen} draggable="false" />
                     <div className="členInfo">
-                    <h1>{name}</h1>
+                    {/*<h1>{name}</h1>*/}
                     <ul>
                         {description.map((item, index) => <li key={index}>{item}</li>)}
                     </ul>

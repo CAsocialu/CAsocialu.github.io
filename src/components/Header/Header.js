@@ -40,7 +40,7 @@ export default function Header() {
     }, []);
 
     return (
-        <div id="header" className={celebrationStatus.aceWeek ? 'ace' : ''}>
+        <div id="header" className={celebrationStatus.aceCelebration ? 'ace' : ''}>
             <span>
                 <span>Česká Strana Asociálů</span>
                 <input type="checkbox" id="headerMenuTrigger" />

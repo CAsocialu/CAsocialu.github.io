@@ -9,7 +9,7 @@ export const CelebrationContext = createContext()
 
 function App() {
   const [celebrationStatus, setCelebrationStatus] = useState({
-    aceWeek: false,
+    aceCelebration: false,
     czechoslovakIndependency: false
   });
 
@@ -34,7 +34,7 @@ function App() {
           lastDayOfAceWeek = new Date(lastDayOfOctober.getFullYear(), 9, lastDayOfOctober.getDay() === 6 ? lastDayOfOctober.getDate() : lastDayOfOctober.getDate() - (lastDayOfOctober.getDay() + 1), 23, 59, 59, 999),
           firstDayOfAceWeek = new Date(lastDayOfAceWeek.getFullYear(), 9, lastDayOfAceWeek.getDate() - 6, 0, 0, 0, 0);
       
-      setCelebrationStatus({aceWeek: (today >= firstDayOfAceWeek && today <= lastDayOfAceWeek) || (today.getMonth() === 3 && today.getDate() === 6), czechoslovakIndependency: (today.getMonth() === 9 && today.getDate() === 28)});
+      setCelebrationStatus({aceCelebration: (today >= firstDayOfAceWeek && today <= lastDayOfAceWeek) || (today.getMonth() === 3 && today.getDate() === 6) || (today.getMonth() === 4 && today.getDate() === 8), czechoslovakIndependency: (today.getMonth() === 9 && today.getDate() === 28)});
   }, [currentDate])
 
   document.documentElement.style.setProperty('--scroll-level', '0px');

@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import "./Carousel.css"
 
 export default function Carousel(props) {
-    const { children, show  } = props;
+    const { children, show } = props;
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [length, setLength] = useState(children.length);
+    const [length, setLength] = useState(children.filter(child => child !== false).length);
     const [touchPosition, setTouchPosition] = useState(null);
     const [autoScrollEnabled, setAutoScrollEnabled] = useState(true);
 
@@ -59,7 +59,7 @@ export default function Carousel(props) {
     }
 
     useEffect(() => {
-        setLength(children.length);
+        setLength(children.filter(child => child !== false).length);
     }, [children]);
 
     useEffect(() => {
@@ -83,7 +83,7 @@ export default function Carousel(props) {
                         className="carousel-content"
                         style={{ transform: `translateX(-${currentIndex * 100 / show}%)`, "--show": show }}
                     > 
-                        {children.map((child, index) => (
+                        {children.filter(child => child !== false).map((child, index) => (
                             <div key={index} className="carousel-content-package" style={{ "--carousel-id": index }}>
                                 {child}
                             </div>

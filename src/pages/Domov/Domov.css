@@ -6,6 +6,11 @@ div#Hero {
     width: 100vw;
 }
 
+div#header.ace~div#content>div#Hero {
+    height: calc(100vh - 100px);
+    margin-top: 50px;
+}
+
 @media screen and (max-width: 907px) {
     div#Hero {
         height: auto;

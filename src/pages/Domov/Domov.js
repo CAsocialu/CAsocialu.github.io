@@ -9,6 +9,7 @@ import pepa from "../../images/main-page-carousel/pepa.png"
 import hovno from "../../images/main-page-carousel/hovno.png"
 import Sisina from "../../images/main-page-carousel/sisina.png"
 import Československo from "../../images/main-page-carousel/ceskoslovensko.png"
+import Ace from "../../images/main-page-carousel/asexualita.png"
 import Title from "../../components/Title/Title.js";
 import {default as Image} from "../../components/ImageWithText/ImageWithText.js";
 import logoPainting from "../../images/home/logoPainting.png";
@@ -34,6 +35,7 @@ export default function Domov() {
             </Helmet>
             <div id="Hero">
                 <Carousel show={1}>
+                    { celebrationStatus.aceCelebration && (<img src={Ace} alt="" draggable="false"/>) }
                     { celebrationStatus.czechoslovakIndependency && (<img src={Československo} alt="" draggable="false"/>) }
                     <img src={HlavníBanner} alt="" draggable="false"/>
                     <img src={Kája} alt="" draggable="false"/>

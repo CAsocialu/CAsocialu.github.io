@@ -7,37 +7,31 @@ const description = "ČSA je recesistická politická strana, v tento moment chy
 const routes = [
     {
         path: '/',
-        hash: '#/',
         title: 'Česká Strana Asociálů',
         canonical: 'https://www.ceskastranaasocialu.cz/'
     },
     {
         path: '/clenove',
-        hash: '#/clenove',
         title: 'Členové · ČSA',
         canonical: 'https://www.ceskastranaasocialu.cz/clenove'
     },
     {
         path: '/kontakty',
-        hash: '#/kontakty',
         title: 'Kontakty · ČSA',
         canonical: 'https://www.ceskastranaasocialu.cz/kontakty'
     },
     {
         path: '/historie',
-        hash: '#/historie',
         title: 'Historie · ČSA',
         canonical: 'https://www.ceskastranaasocialu.cz/historie'
     },
     {
         path: '/pomoc',
-        hash: '#/pomoc',
         title: 'Chci pomoci · ČSA',
         canonical: 'https://www.ceskastranaasocialu.cz/pomoc'
     },
     {
         path: '/source',
-        hash: '#/source',
         title: 'Zdroj · ČSA',
         canonical: 'https://www.ceskastranaasocialu.cz/source'
     }
@@ -55,8 +49,8 @@ async function prerender() {
         const dir = path.dirname(filePath);
         await fs.mkdir(dir, { recursive: true });
 
-        // Load the page with hash routing
-        const fullUrl = `file://${path.join(__dirname, 'build', 'index.html')}${route.hash}`;
+        // Load the page
+        const fullUrl = `file://${path.join(__dirname, 'build', 'index.html')}`;
         await page.goto(fullUrl);
         await page.waitForSelector('#root');
 
@@ -148,7 +142,7 @@ async function prerender() {
                 document.head.appendChild(stylesheetLink);
             }
 
-            document.documentElement.setAttribute('data-location', new URL(canonical).pathname.replace(/\/$/, ''));
+            document.documentElement.setAttribute('data-location', new URL(canonical).pathname.replace(/(?<!^)\/$/, ''));
         }, { ...route, description });
 
         const html = await page.content();

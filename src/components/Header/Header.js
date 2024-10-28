@@ -9,8 +9,9 @@ export default function Header() {
     
     useEffect(() => {
         const htmlElement = document.documentElement;
+        console.log(location.pathname)
   
-        htmlElement.setAttribute('data-location',  location.pathname.replace(/\/$/, ''));
+        htmlElement.setAttribute('data-location',  location.pathname.replace(/(?<!^)\/$/, ''));
         
         document.querySelector("div#header").querySelectorAll('a').forEach(link => {
             if (link.getAttribute('href') === document.documentElement.getAttribute('data-location')) {

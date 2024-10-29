@@ -1,18 +1,29 @@
 import React, { useEffect } from "react";
 import "./Title.css";
 import Šmuha from "./smuha.png"
+import ŠmuhaAleAsociální from "./smuhaaleasociální.png"
 
-export default function Title({children}) {
+export default function Title({ children, small }) {
+    const TitleID = "title-" + Math.round(Math.random() * 1000000000000000).toString(36);
     useEffect(() => {
-        const h1 = document.querySelector('div#content h1');
-        const h1Span = h1.querySelector('span');
-        if (h1Span) {
-            const textWidth = h1Span.offsetWidth;
-            if (textWidth) h1.style.backgroundSize = `${(2.5) * textWidth}px 333%`;
+        const title = document.querySelector(`#${TitleID}`);
+        const titleSpan = title.querySelector('span');
+        if (titleSpan) {
+            const textWidth = titleSpan.offsetWidth;
+            if (textWidth) title.style.backgroundSize = `${(small ? 1.5 : 2.5) * textWidth}px ${small ? "150%" : "333%"}`;
         }
-    }, [children]);
-    return (
-        <h1 className="nadpis" style={{
+    }, [children, small, TitleID]);
+    return small ? (
+        <h3 className="nadpis" id={ TitleID } style={{
+            backgroundImage: `url(${ŠmuhaAleAsociální})`,
+            backgroundRepeat: "no-repeat",
+            backgroundPositionX: "center",
+            backgroundPositionY: "calc(50% + 5px)",
+            backgroundSize: "contain",
+            padding: "16px 0",
+        }}><span>{children}</span></h3>
+    ) : (
+            <h1 className="nadpis" id={ TitleID } style={{
             backgroundImage: `url(${Šmuha})`,
             backgroundRepeat: "no-repeat",
             backgroundPositionX: "center",

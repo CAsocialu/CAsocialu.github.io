@@ -1,7 +1,13 @@
-h1.nadpis {
+.nadpis {
     font-family: var(--font-title);
     text-align: center;
     margin-top: 0px;
     width: 100%;
     margin-bottom: 25px;
+    z-index: 3;
+    position: relative;
+}
+
+h3.nadpis {
+    font-size: 32px;
 }

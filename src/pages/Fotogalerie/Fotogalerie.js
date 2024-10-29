@@ -1,5 +1,5 @@
 import "./Fotogalerie.css";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Title from "../../components/Title/Title.js";
 
 export default function Fotogalerie() {

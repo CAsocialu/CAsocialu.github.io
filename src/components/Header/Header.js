@@ -9,7 +9,6 @@ export default function Header() {
     
     useEffect(() => {
         const htmlElement = document.documentElement;
-        console.log(location.pathname)
   
         htmlElement.setAttribute('data-location',  location.pathname.replace(/(?<!^)\/$/, ''));
         

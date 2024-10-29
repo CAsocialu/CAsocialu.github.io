@@ -1,5 +1,5 @@
 import './Kontakty.css';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import Title from '../../components/Title/Title';
 import Instagram from '../../images/instagramLogo.svg';
 import TwitterProfile from '../../components/TwitterProfile/TwitterProfile';

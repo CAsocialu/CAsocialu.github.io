@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Carousel from "../../components/Carousel/Carousel.js";
 import HlavníBanner from "../../images/main-page-carousel/banner.png";
 import Kája from "../../images/main-page-carousel/kaja.png";

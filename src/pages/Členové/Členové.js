@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet-async'
 import './Členové.css'
 import Konrád from '../../images/members/konrad.png'
 import KonrádFull from '../../images/members/konradFull.png'

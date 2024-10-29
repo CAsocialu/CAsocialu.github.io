@@ -1,5 +1,5 @@
 import './Historie.css';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import Title from '../../components/Title/Title';
 import Argonaut from "../../images/history/argonautmemory.png"
 

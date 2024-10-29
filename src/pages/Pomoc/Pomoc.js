@@ -1,6 +1,6 @@
 import './Pomoc.css'
 import { Link } from 'react-router-dom'
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet-async'
 import Title from "../../components/Title/Title"
 import Sisina from "../../images/help/jů hele, Sisina(výkřičník) (dvojtečka tři).jpg"
 

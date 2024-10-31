@@ -49,8 +49,9 @@ export default function Header() {
                 <Link to="/" onClick={() => document.querySelector("div#header input#headerMenuTrigger").checked = false}>Co je ČSA?</Link>
                 <Link to="clenove" onClick={() => document.querySelector("div#header input#headerMenuTrigger").checked = false}>Členové</Link>
                 <Link to="kontakty" onClick={() => document.querySelector("div#header input#headerMenuTrigger").checked = false}><em>Fuj, </em>Kontakt</Link>
-                <Link to="foto" className='disabled' onClick={() => document.querySelector("div#header input#headerMenuTrigger").checked = false}>Fotogalerie</Link>
                 <Link to="historie" onClick={() => document.querySelector("div#header input#headerMenuTrigger").checked = false}>Historie</Link>
+                <Link to="pravo" onClick={() => document.querySelector("div#header input#headerMenuTrigger").checked = false} className={/*process.env.NODE_ENV === "production" ? "" : */"disabled"}>Právo</Link>
+
                 <Link to="pomoc" onClick={() => document.querySelector("div#header input#headerMenuTrigger").checked = false}>Chci pomoci</Link>
             </div>
         </div>

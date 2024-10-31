@@ -18,6 +18,7 @@ div#footer {
     -ms-user-select: none;
     font-size: 16px;
     transition: height 0.5s cubic-bezier(.79,.14,.15,.86);
+    z-index: 100;
 }
 
 div#footer:hover {

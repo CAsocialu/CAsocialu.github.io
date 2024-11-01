@@ -17,7 +17,7 @@
     <meta name="theme-color" content="#009074" />
     <meta name="robots" content="index, follow" />
     <link href="%PUBLIC_URL%/favicon.png" rel="icon">
-    <!-- uwu -->
+    <!-- uwu --->
     <link rel="preload" href="%PUBLIC_URL%/číča.png" as="image">
     <link rel="preload" href="%PUBLIC_URL%/číčaspí.png" as="image">
     <link rel="preload" href="%PUBLIC_URL%/assets/whOwOps/whOwOps0.png" as="image">
@@ -29,6 +29,24 @@
     <link rel="preload" href="%PUBLIC_URL%/assets/whOwOps/whOwOps6.png" as="image">
     <link rel="preload" href="%PUBLIC_URL%/assets/whOwOps/whOwOps7.png" as="image">
     <link rel="stylesheet" href="index.css">
+    <!-- CSP --->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' 'unsafe-eval' blob:
+            'sha256-G4NDT5+z2VIj+3FB9Q+jXBda38In14rZMJOAS32zxsU=';
+        style-src 'self' 'unsafe-inline' 
+            https://fonts.googleapis.com 
+            https://deadcode.is-a.dev;
+        font-src 'self' 
+            https://fonts.gstatic.com 
+            https://deadcode.is-a.dev;
+        img-src 'self' data: blob:;
+        connect-src 'self' blob:;
+        base-uri 'self';
+        form-action 'self';
+        object-src 'none';
+        upgrade-insecure-requests;
+    ">
   </head>
   <body>
     <noscript>

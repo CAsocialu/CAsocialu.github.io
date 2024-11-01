@@ -43,6 +43,7 @@ div#Hero>*>*, div#Hero>*>*>div.carousel-content-wrapper>* {
 }
 
 div#Hero>*>*>div>*>*>img {
+    aspect-ratio: 16/9;
     max-height: 100%;
     max-width: 100%;
 }

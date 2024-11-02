@@ -3,7 +3,7 @@ div#header {
     display: flex;
     align-items: center;
     text-transform: none;
-    color: #F0F0F0 !important;
+    color: #F0F0F0;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;

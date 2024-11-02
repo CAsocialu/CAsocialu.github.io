@@ -10,6 +10,7 @@
     "react-scripts": "5.0.1"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
     "puppeteer": "^23.6.1"
   },
   "scripts": {
@@ -34,7 +35,8 @@
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
-      "last 1 safari version"
+      "last 1 safari version",
+      "last 1 ie version"
     ]
   }
 }

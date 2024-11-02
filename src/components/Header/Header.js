@@ -1,4 +1,4 @@
-import { useEffect, useContext } from 'react';
+import { useEffect, useLayoutEffect, useContext } from 'react';
 import "./Header.css"
 import { Link, useLocation } from 'react-router-dom';
 import { CelebrationContext } from '../../App';
@@ -7,7 +7,7 @@ export default function Header() {
     const location = useLocation();
     const celebrationStatus = useContext(CelebrationContext)
     
-    useEffect(() => {
+    useLayoutEffect(() => {
         const htmlElement = document.documentElement;
   
         htmlElement.setAttribute('data-location',  location.pathname.replace(/(?<!^)\/$/, ''));

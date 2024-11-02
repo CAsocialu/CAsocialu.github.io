@@ -25,7 +25,7 @@ div#Hero::after {
     bottom: 0px;
     border-top: solid 5px var(--asexual-purple);
     border-bottom: solid 5px var(--asocial-green);
-    transition: bottom 0.5s cubic-bezier(.79,.14,.15,.86);
+    transition: bottom var(--transition-footer);
 }
 
 div#root:has(div#footer:hover) div#Hero::after {
@@ -68,16 +68,6 @@ a::after {
     font-weight: normal;
     font-style: normal;
     font-size: 12px;
-    line-height: 1;
-    letter-spacing: normal;
-    text-transform: none;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
-    -moz-font-feature-settings: 'liga';
-    font-feature-settings: "liga";
-    -moz-osx-font-smoothing: grayscale;
     position: absolute;
 }
 

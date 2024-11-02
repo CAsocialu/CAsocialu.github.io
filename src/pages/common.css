@@ -1,0 +1,9 @@
+div#galleryContent, div#helpContent {
+	padding: 16px 96px 0;
+	color: var(--ghost);
+	font-size: 21px;
+	font-family: var(--font-mono);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

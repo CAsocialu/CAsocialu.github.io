@@ -1,5 +1,5 @@
 div#historyContent {
-	color: white;
+	color: var(--ghost);
 	font-size: 21px;
 	font-family: var(--font-mono);
 }

@@ -1,6 +1,6 @@
 div#contactsContent {
 	padding: 16px 96px 0;
-	color: white;
+	color: var(--ghost);
 	font-size: 21px;
 	font-family: var(--font-mono);
     text-align: center;

@@ -8,7 +8,7 @@ html {
 
 div#mainContent {
 	padding: 16px 96px 0;
-	color: white;
+	color: var(--ghost);
 	font-size: 22px;
 	font-family: var(--font-mono);
     & .twitter {

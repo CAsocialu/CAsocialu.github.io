@@ -4,7 +4,7 @@ div#footer {
     justify-content: space-between;
     flex-direction: row;
     background: #0F0F0F;
-    color: #F0F0F0;
+    color: var(--ghost);
     padding-left: 16px;
     padding-right: 2px;
     font-family: var(--font-mono);
@@ -13,11 +13,8 @@ div#footer {
     height: 50px;
     width: calc(100vw - 18px);
     user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     font-size: 16px;
-    transition: height 0.5s cubic-bezier(.79,.14,.15,.86);
+    transition: height var(--transition-footer);
     z-index: 100;
 }
 
@@ -27,7 +24,7 @@ div#footer:hover {
 
 div#footer>img {
     height: 50px;
-    transition: height 0.5s cubic-bezier(.79,.14,.15,.86);
+    transition: height var(--transition-footer);
 }
 
 div#footer:hover>img {
@@ -37,14 +34,14 @@ div#footer:hover>img {
 div#footer>div#footerInfo {
     display: flex;
     flex-direction: column;
-    transition: row-gap 0.5s cubic-bezier(.79,.14,.15,.86);
+    transition: row-gap var(--transition-footer);
     row-gap: 0px;
     white-space-collapse: preserve-spaces;
 }
 
 div#footer>div#footerInfo>span:first-child {
     font-size: 16px;
-    transition: font-size 0.5s cubic-bezier(.79,.14,.15,.86);
+    transition: font-size var(--transition-footer);
 }
 
 div#footer:hover>div#footerInfo>span:first-child {
@@ -53,7 +50,7 @@ div#footer:hover>div#footerInfo>span:first-child {
 
 div#footer>div#footerInfo>span:first-child>span#footerDevInfo {
     opacity: 0;
-    transition: opacity 0.5s cubic-bezier(.79,.14,.15,.86), font-size 0.5s cubic-bezier(.79,.14,.15,.86)
+    transition: opacity var(--transition-footer), font-size var(--transition-footer)
 }
 
 div#footer:hover>div#footerInfo>span:first-child>span#footerDevInfo {
@@ -63,7 +60,7 @@ div#footer:hover>div#footerInfo>span:first-child>span#footerDevInfo {
 a#footerDevInfoDEADCODELogo {
     font-family: "Uni Sans CAPS";
     font-weight: bold;
-    color: white;
+    color: var(--ghost);
     text-decoration: none;
 }
 
@@ -78,7 +75,7 @@ div#footer>div#footerInfo>span:not(:first-child) {
     font-size: 16px;
     opacity: 0;
     height: 0;
-    transition: opacity 0.5s cubic-bezier(.79,.14,.15,.86), height 0.5s cubic-bezier(.79,.14,.15,.86), font-size 0.5s cubic-bezier(.79,.14,.15,.86);
+    transition: opacity var(--transition-footer), height var(--transition-footer), font-size var(--transition-footer);
 }
 
 div#footer:hover>div#footerInfo>span:not(:first-child) {

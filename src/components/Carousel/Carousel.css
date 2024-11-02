@@ -3,9 +3,6 @@
     display: flex;
     flex-direction: column;
     user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     -webkit-user-drag: none;
 }
 
@@ -29,7 +26,7 @@
 }
 
 /* hide scrollbar in webkit browser */
-.carousel-content::-webkit-scrollbar, .carousel-content::-webkit-scrollbar {
+.carousel-content::-webkit-scrollbar {
     display: none;
 }
 
@@ -51,7 +48,7 @@
     background-color: black;
     border: 3px solid #ddd;
     cursor: pointer;
-    color: white;
+    color: var(--ghost);
     font-family: Arial, Helvetica, sans-serif;
 }
 

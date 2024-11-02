@@ -1,6 +1,6 @@
 div#membersContent {
 	padding: 1.627670396744659vh calc(6*1.627670396744659vh) calc(2*1.627670396744659vh);
-	color: white;
+	color: var(--ghost);
 	font-family: var(--font-mono);
     display: flex;
     flex-direction: column;
@@ -18,7 +18,7 @@ div#content:has(div#členové) {
 }
 
 div#členové {
-    color: white;
+    color: var(--ghost);
     width: 100%;
     column-gap: min(3.255340793489318vh, 1.953601953601954vw);
     display: flex;
@@ -44,6 +44,12 @@ div.členInfo {
 div#členové>div.člen:not(.open) {
     display: flex;
     column-gap: 16px;
+    cursor: pointer;
+    padding-right: 0;
+    height: 85%;
+    filter: grayscale(50%);
+    aspect-ratio: 9/16;
+    transition: height var(--transition-members), filter var(--transition-members);
     & img {
         border-radius: min(3.255340793489318vh, 1.953601953601954vw);
     }
@@ -59,19 +65,6 @@ div#členové>div.člen:not(.open) {
             content: "- ";
         }
     }
-}
-
-div#členové>div.člen:not(.open) {
-    cursor: pointer;
-    height: fit-content;
-    padding-right: 0;
-}
-
-div#členové>div.člen:not(.open) {
-    height: 85%;
-    filter: grayscale(50%);
-    aspect-ratio: 9/16;
-    transition: height 0.333s cubic-bezier(0.19, 1, 0.22, 1), filter 0.333s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 div#členové:not(:has(div.člen.open)):has(div.člen:hover)>div.člen:not(:hover) {
@@ -154,7 +147,7 @@ div#členové>div.člen.open>div.členContent {
         column-gap: 1.627670396744659vh;
         & a {
             font-size: 2vh;
-            color: white;
+            color: var(--ghost);
             display: flex;
             flex-direction: row;
             column-gap: 0.8138351983723296vh;

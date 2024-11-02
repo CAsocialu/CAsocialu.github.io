@@ -6,7 +6,7 @@
     max-width: 935px;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: white;
+    background-color: var(--ghost);
     color: black;
     text-align: left;
     border-radius: 16px 16px 32px 32px;
@@ -53,7 +53,7 @@
 
 .igprofile-follow-btn {
     background-color: #0095f6;
-    color: white !important;
+    color: var(--ghost) !important;
     border: none;
     border-radius: 4px;
     font-weight: 600;

@@ -3,7 +3,7 @@ div#header {
     display: flex;
     align-items: center;
     text-transform: none;
-    color: #F0F0F0;
+    color: var(--ghost);
     user-select: none;
     text-align: center;
     column-gap: 12px;
@@ -17,7 +17,7 @@ div#header {
     }
     &>div#headerLinks {
         &>* {
-            color: white;
+            color: var(--ghost);
             text-decoration: none;
             position: relative;
             transition: color 0.3s ease 0s
@@ -28,7 +28,7 @@ div#header {
         }
         &>*::after {
             content: "";
-            background-color: white;
+            background-color: var(--ghost);
             position: absolute;
             bottom: -2px;
             left: 50%;

@@ -3,7 +3,7 @@ div#content:has(div#sourceContent) {
 }
 
 div#sourceContent {
-	color: white;
+	color: var(--ghost);
 	font-size: 21px;
 	font-family: var(--font-mono);
     display: flex;

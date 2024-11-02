@@ -25,7 +25,7 @@ div#Hero::after {
     bottom: 0px;
     border-top: solid 5px var(--asexual-purple);
     border-bottom: solid 5px var(--asocial-green);
-    transition: bottom 0.5s cubic-bezier(.79,.14,.15,.86);
+    transition: bottom var(--transition-footer);
 }
 
 div#root:has(div#footer:hover) div#Hero::after {

@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useLayoutEffect } from "react";
 import "./Title.css";
 import Šmuha from "./smuha.png"
 import ŠmuhaAleAsociální from "./smuhaaleasociální.png"
 
 export default function Title({ children, small }) {
     const TitleID = "title-" + Math.round(Math.random() * 1000000000000000).toString(36);
-    useEffect(() => {
+    useLayoutEffect(() => {
         const title = document.querySelector(`#${TitleID}`);
         const titleSpan = title.querySelector('span');
         if (titleSpan) {

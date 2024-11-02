@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useLayoutEffect } from 'react';
 import { Link } from 'react-router-dom';
 import "./Footer.css"
 import logoWhite from "../../images/logo-white.png"
 
 export default function Footer() {
-    useEffect(() => {
+    useLayoutEffect(() => {
         const linkUniSans = document.createElement('link');
         linkUniSans.rel = 'stylesheet';
         linkUniSans.href = 'https://deadcode.is-a.dev/fonts/Uni%20Sans/stylesheet.css';

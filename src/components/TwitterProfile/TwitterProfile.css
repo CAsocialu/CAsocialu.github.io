@@ -38,6 +38,8 @@
     font-weight: bold;
     padding: 8px 16px;
     transition: background-color 0.2s;
+    text-decoration: none;
+    font-size: 14px;
 }
 
 .twtprofile-follow-btn:has(input#twitterFollowButton:not(:checked))::before {
@@ -52,6 +54,7 @@
     width: 20px;
     height: 20px;
     fill: currentColor;
+    margin-right: 4px;
 }
 
 .twtprofile-follow-btn:not(:hover):not(:has(input#twitterFollowButton:checked)) {
@@ -101,13 +104,4 @@
 
 .twtprofile-profile-details a::after, a.twtprofile-follow-btn::after {
     display: none;
-}
-
-.twtprofile-follow-btn {
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.twtprofile-profile-details svg {
-    margin-right: 4px;
 }

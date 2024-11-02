@@ -45,7 +45,6 @@ div#členové>div.člen:not(.open) {
     display: flex;
     column-gap: 16px;
     cursor: pointer;
-    height: fit-content;
     padding-right: 0;
     height: 85%;
     filter: grayscale(50%);

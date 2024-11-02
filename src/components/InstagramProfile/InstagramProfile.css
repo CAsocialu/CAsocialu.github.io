@@ -63,7 +63,7 @@
 }
 
 .igprofile-follow-btn:has(input#instagramFollowButton:not(:checked)) {
-    padding: 5px 15px 5px 15px;
+    padding: 5px 15px;
 }
 
 .igprofile-follow-btn:has(input#instagramFollowButton:checked) {

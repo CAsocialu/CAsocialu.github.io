@@ -44,6 +44,13 @@ div.členInfo {
 div#členové>div.člen:not(.open) {
     display: flex;
     column-gap: 16px;
+    cursor: pointer;
+    height: fit-content;
+    padding-right: 0;
+    height: 85%;
+    filter: grayscale(50%);
+    aspect-ratio: 9/16;
+    transition: height 0.333s cubic-bezier(0.19, 1, 0.22, 1), filter 0.333s cubic-bezier(0.19, 1, 0.22, 1);
     & img {
         border-radius: min(3.255340793489318vh, 1.953601953601954vw);
     }
@@ -59,19 +66,6 @@ div#členové>div.člen:not(.open) {
             content: "- ";
         }
     }
-}
-
-div#členové>div.člen:not(.open) {
-    cursor: pointer;
-    height: fit-content;
-    padding-right: 0;
-}
-
-div#členové>div.člen:not(.open) {
-    height: 85%;
-    filter: grayscale(50%);
-    aspect-ratio: 9/16;
-    transition: height 0.333s cubic-bezier(0.19, 1, 0.22, 1), filter 0.333s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 div#členové:not(:has(div.člen.open)):has(div.člen:hover)>div.člen:not(:hover) {

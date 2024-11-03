@@ -1,35 +1,33 @@
-import React, { useLayoutEffect } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import "./Title.css";
 import Šmuha from "./smuha.png"
 import ŠmuhaAleAsociální from "./smuhaaleasociální.png"
 
 export default function Title({ children, small }) {
-    const TitleID = "title-" + Math.round(Math.random() * 1000000000000000).toString(36);
+    const title = useRef(null), titleSpan = useRef(null);
     useLayoutEffect(() => {
-        const title = document.querySelector(`#${TitleID}`);
-        const titleSpan = title.querySelector('span');
         if (titleSpan) {
-            const textWidth = titleSpan.offsetWidth;
-            if (textWidth) title.style.backgroundSize = `${(small ? 1.5 : 2.5) * textWidth}px ${small ? "150%" : "333%"}`;
+            const textWidth = titleSpan.current.offsetWidth;
+            if (textWidth) title.current.style.backgroundSize = `${(small ? 1.5 : 2.5) * textWidth}px ${small ? "150%" : "333%"}`;
         }
-    }, [children, small, TitleID]);
+    }, [children, small]);
     return small ? (
-        <h3 className="nadpis" id={ TitleID } style={{
+        <h3 className="nadpis" ref={title} style={{
             backgroundImage: `url(${ŠmuhaAleAsociální})`,
             backgroundRepeat: "no-repeat",
             backgroundPositionX: "center",
             backgroundPositionY: "calc(50% + 5px)",
             backgroundSize: "contain",
             padding: "16px 0",
-        }}><span>{children}</span></h3>
+        }}><span ref={titleSpan}>{children}</span></h3>
     ) : (
-            <h1 className="nadpis" id={ TitleID } style={{
+            <h1 className="nadpis" ref={title} style={{
             backgroundImage: `url(${Šmuha})`,
             backgroundRepeat: "no-repeat",
             backgroundPositionX: "center",
             backgroundPositionY: "calc(50% + 2.5px)",
         }}>
-            <span>{children}</span>
+            <span ref={titleSpan}>{children}</span>
         </h1>
     )
 }

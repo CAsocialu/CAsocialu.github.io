@@ -62,22 +62,6 @@
     text-decoration: none;
 }
 
-.igprofile-follow-btn:has(input#instagramFollowButton:not(:checked)) {
-    padding: 5px 15px;
-}
-
-.igprofile-follow-btn:has(input#instagramFollowButton:checked) {
-    padding: 5px 12.5px 5px 15px;
-}
-
-.igprofile-follow-btn:has(input#instagramFollowButton:not(:checked))::before {
-    content: "Sledujte nás!";
-}
-
-.igprofile-follow-btn:has(input#instagramFollowButton:checked)::before {
-    content: "Děkujeme! 🤍";
-}
-
 .igprofile-header a::after, a.igprofile-follow-btn::after {
     display: none;
 }

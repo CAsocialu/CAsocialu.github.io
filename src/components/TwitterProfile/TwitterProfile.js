@@ -1,16 +1,17 @@
-import React from 'react';
+import { useState } from 'react';
 import './TwitterProfile.css'
 
 function TwitterProfile() {
+    const [clickedFollowed, setClickedFollowed] = useState(false), handleFollow = () => setClickedFollowed(true);
     return (
         <div className="twtprofile-profile-container">
             <div className="twtprofile-profile-header">
                 <img
-                    src="https://pbs.twimg.com/profile_images/1808894731323068418/FuzEA1mW_200x200.jpg"
+                    src="/assets/pfpCAsocialu.jpg"
                     alt="PFP"
                     className="twtprofile-profile-photo" />
                 <div className="twtprofile-profile-actions">
-                    <a className="twtprofile-follow-btn" href="https://x.com/CAsocialu" target='_blank' rel='noreferrer' onClick={() => document.querySelector("input#twitterFollowButton").checked = true}><input type='radio' hidden id='twitterFollowButton'/></a>
+                    <a className="twtprofile-follow-btn" href="https://x.com/CAsocialu" target='_blank' rel='noreferrer' onClick={handleFollow} style={{ padding: clickedFollowed ? "8px 12px 8px 16px" : "8px 16px" }}>{ clickedFollowed ? "Děkujeme! 🖤" : "Sledujte nás!" }</a>
                 </div>
             </div>
             <div className="twtprofile-profile-info">

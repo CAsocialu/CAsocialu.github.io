@@ -1,16 +1,18 @@
+import { useState } from "react";
 import "./InstagramProfile.css"
 
 export default function InstagramProfile() {
+    const [clickedFollowed, setClickedFollowed] = useState(false), handleFollow = () => setClickedFollowed(true);
     return (
         <header className="igprofile-header">
             <div className="igprofile-profile-picture">
-                <img src="https://pbs.twimg.com/profile_images/1808894731323068418/FuzEA1mW_200x200.jpg" alt="" draggable="false" />
+                <img src="/assets/pfpCAsocialu.jpg" alt="" draggable="false" />
             </div>
             <div className="igprofile-info">
                 <h2 className="igprofile-username">
                     ceska_strana_asocialu
                     <div className="igprofile-actions">
-                        <a className="igprofile-follow-btn" href="https://www.instagram.com/ceska_strana_asocialu/" target="_blank" rel="noreferrer" onClick={() => document.querySelector("input#instagramFollowButton").checked = true}><input type='radio' hidden id='instagramFollowButton'/></a>
+                        <a className="igprofile-follow-btn" href="https://www.instagram.com/ceska_strana_asocialu/" target="_blank" rel="noreferrer" onClick={handleFollow} style={{ padding: clickedFollowed ? "5px 12.5px 5px 15px" : "5px 15px" }}>{ clickedFollowed ? "Děkujeme! 🤍" : "Sledujte nás!" }</a>
                     </div>
                 </h2>
                 <div className="igprofile-details">

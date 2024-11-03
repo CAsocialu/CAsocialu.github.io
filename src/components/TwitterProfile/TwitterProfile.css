@@ -36,18 +36,9 @@
     color: #e7e9ea;
     cursor: pointer;
     font-weight: bold;
-    padding: 8px 16px;
     transition: background-color 0.2s;
     text-decoration: none;
     font-size: 14px;
-}
-
-.twtprofile-follow-btn:has(input#twitterFollowButton:not(:checked))::before {
-    content: "Sledujte nás!";
-}
-
-.twtprofile-follow-btn:has(input#twitterFollowButton:checked)::before {
-    content: "Děkujeme! 🖤";
 }
 
 .twtprofile-profile-details svg {

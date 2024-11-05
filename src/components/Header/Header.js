@@ -49,7 +49,7 @@ export default function Header() {
                 <Link to="clenove" onClick={() => headerMenuTriggerRef.current.checked = false}>Členové</Link>
                 <Link to="kontakty" onClick={() => headerMenuTriggerRef.current.checked = false}><em>Fuj, </em>Kontakt</Link>
                 <Link to="historie" onClick={() => headerMenuTriggerRef.current.checked = false}>Historie</Link>
-                <Link to="pravo" onClick={() => headerMenuTriggerRef.current.checked = false} className={/*process.env.NODE_ENV === "production" ? "" : */"disabled"}>Právo</Link>
+                <a href="/pravo" target="_blank" onClick={() => headerMenuTriggerRef.current.checked = false} className={process.env.NODE_ENV === "production" ? "" : "disabled"}>Právo</a>
 
                 <Link to="pomoc" onClick={() => headerMenuTriggerRef.current.checked = false}>Chci pomoci</Link>
             </div>

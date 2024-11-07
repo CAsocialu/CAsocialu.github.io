@@ -30,6 +30,12 @@ jobs:
         
       - name: Build project
         run: npm run build
+
+      - name: Upload extra artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: webpify-results
+          path: ./webp-conversion-results.json
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

@@ -27,7 +27,6 @@ function rawr(event) {
     stringcolonthree = "";
     document.removeEventListener("keypress", event => rawr(event));
     document.querySelector("html").style = "background: black";
-    var i = 0;
     var rawrx3 = document.createElement("div");
     rawrx3.id = "rawrx3";
     rawrx3.style = "width: 100%; height: 100%; display: flex; flex-direction: row; justify-content: center; align-items: center;"
@@ -40,19 +39,19 @@ function rawr(event) {
     document.querySelector("head").innerHTML = "";
     document.querySelector("div#root").remove()
     setTimeout(() => {
-      document.querySelector("img#whOwOps").setAttribute("src", `/assets/whOwOps/whOwOps${++i}.png`);
+      document.querySelector("img#whOwOps").setAttribute("src", document.querySelector("img#whOwOps").getAttribute("src").replace(/(\D+)(\d+)(\.png$)/, (match, prefix, num, suffix) => `${prefix}${parseInt(num, 10) + 1}${suffix}`));
       setTimeout(() => {
-        document.querySelector("img#whOwOps").setAttribute("src", `/assets/whOwOps/whOwOps${++i}.png`);
+        document.querySelector("img#whOwOps").setAttribute("src", document.querySelector("img#whOwOps").getAttribute("src").replace(/(\D+)(\d+)(\.png$)/, (match, prefix, num, suffix) => `${prefix}${parseInt(num, 10) + 1}${suffix}`));
         setTimeout(() => {
-          document.querySelector("img#whOwOps").setAttribute("src", `/assets/whOwOps/whOwOps${++i}.png`);
+          document.querySelector("img#whOwOps").setAttribute("src", document.querySelector("img#whOwOps").getAttribute("src").replace(/(\D+)(\d+)(\.png$)/, (match, prefix, num, suffix) => `${prefix}${parseInt(num, 10) + 1}${suffix}`));
           setTimeout(() => {
-            document.querySelector("img#whOwOps").setAttribute("src", `/assets/whOwOps/whOwOps${++i}.png`);
+            document.querySelector("img#whOwOps").setAttribute("src", document.querySelector("img#whOwOps").getAttribute("src").replace(/(\D+)(\d+)(\.png$)/, (match, prefix, num, suffix) => `${prefix}${parseInt(num, 10) + 1}${suffix}`));
             setTimeout(() => {
-              document.querySelector("img#whOwOps").setAttribute("src", `/assets/whOwOps/whOwOps${++i}.png`);
+              document.querySelector("img#whOwOps").setAttribute("src", document.querySelector("img#whOwOps").getAttribute("src").replace(/(\D+)(\d+)(\.png$)/, (match, prefix, num, suffix) => `${prefix}${parseInt(num, 10) + 1}${suffix}`));
               setTimeout(() => {
-                document.querySelector("img#whOwOps").setAttribute("src", `/assets/whOwOps/whOwOps${++i}.png`);
+                document.querySelector("img#whOwOps").setAttribute("src", document.querySelector("img#whOwOps").getAttribute("src").replace(/(\D+)(\d+)(\.png$)/, (match, prefix, num, suffix) => `${prefix}${parseInt(num, 10) + 1}${suffix}`));
                 setTimeout(() => {
-                  document.querySelector("img#whOwOps").setAttribute("src", `/assets/whOwOps/whOwOps${++i}.png`);
+                  document.querySelector("img#whOwOps").setAttribute("src", document.querySelector("img#whOwOps").getAttribute("src").replace(/(\D+)(\d+)(\.png$)/, (match, prefix, num, suffix) => `${prefix}${parseInt(num, 10) + 1}${suffix}`));
                   setTimeout(() => {
                     document.querySelector("html").style = "background: black"
                     setTimeout(() => {

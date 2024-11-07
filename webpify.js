@@ -135,7 +135,7 @@ async function convertToWebP() {
 
             try {
                 await sharp(imagePath)
-                    .webp({ quality: 100 })
+                    .webp({ quality: 80 })
                     .toFile(outputPath);
 
                 convertedFiles.push({

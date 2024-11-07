@@ -43,7 +43,6 @@ async function replaceInFiles() {
             for (const conversion of convertedFiles) {
                 const { original, webp } = conversion;
                 const fileName = path.basename(original);
-                const webpFileName = path.basename(webp);
 
                 if (original.includes('public/')) {
                     // Create the absolute path version (starting with /)
@@ -73,7 +72,7 @@ async function replaceInFiles() {
 
                 // Original relative path handling
                 const absoluteOriginalPath = path.resolve(original);
-                const regex = new RegExp(`(["'\\(])([^"']*${fileName.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')})\\1`, 'g');
+                const regex = new RegExp(`(["'\\(])([^"']*${fileName.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&')})\\1`, 'g');
                 let match;
                 while ((match = regex.exec(content)) !== null) {
                     const matchedPath = match[2];

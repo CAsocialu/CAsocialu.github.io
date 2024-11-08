@@ -16,10 +16,16 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "16"
+          node-version: "18"
           
       - name: Install dependencies
         run: npm i
     
       - name: Build React app
         run: CI=true npm run build
+
+      - name: Upload extra artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: webpify-results
+          path: ./webp-conversion-results.json

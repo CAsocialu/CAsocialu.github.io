@@ -11,10 +11,13 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
-    "puppeteer": "^23.7.0"
+    "puppeteer": "^23.7.0",
+    "sharp": "^0.33.5",
+    "glob": "^10.3.10"
   },
   "scripts": {
     "start": "react-scripts start",
+    "prebuild": "node webpify.js",
     "build": "react-scripts build",
     "postbuild": "node pre-render.js",
     "test": "react-scripts test",
@@ -37,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "engines": {
+    "node": ">=18"
   }
 }

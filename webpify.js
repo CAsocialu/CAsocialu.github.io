@@ -10,13 +10,15 @@ const convertedFiles = [];
 async function deleteOriginalFiles() {
     console.log('\nDeleting original files...');
     for (const conversion of convertedFiles) {
-        if (conversion.status === 'converted' || conversion.status === 'skipped') {
+        if (conversion.status === 'converted') {
             try {
                 await fs.unlink(conversion.original);
                 console.log(`Deleted: ${conversion.original}`);
             } catch (error) {
                 console.error(`Error deleting ${conversion.original}:`, error);
             }
+        } else if (conversion.status === 'skipped' || conversion.status === 'error') {
+            console.log(`${conversion.original} could not be deleted - ${conversion.status === 'skipped' ? `Conversion of ${conversion.original} has been skipped.` : `There has been an error converting ${conversion.original}: ${conversion.error}`}`);
         }
     }
     console.log('Original file deletion complete!');
@@ -41,6 +43,7 @@ async function replaceInFiles() {
 
             // Replace each image reference
             for (const conversion of convertedFiles) {
+                if (conversion.status === 'skipped') continue;
                 const { original, webp } = conversion;
                 const fileName = path.basename(original);
 

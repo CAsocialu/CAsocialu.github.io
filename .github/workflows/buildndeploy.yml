@@ -4,6 +4,8 @@ on:
     branches:
       - main
   workflow_dispatch:
+  # schedule:
+    
 permissions:
   contents: read
   pages: write

@@ -13,11 +13,12 @@
     "autoprefixer": "^10.4.20",
     "puppeteer": "^23.7.0",
     "sharp": "^0.33.5",
-    "glob": "^10.3.10"
+    "glob": "^10.3.10",
+    "child_process": "^1.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
-    "prebuild": "node webpify.js",
+    "prebuild": "node expire-old-content.js && node webpify.js",
     "build": "react-scripts build",
     "postbuild": "node pre-render.js",
     "test": "react-scripts test",

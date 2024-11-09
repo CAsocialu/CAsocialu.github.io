@@ -3,7 +3,7 @@ const { execSync } = require('child_process');
 const path = require('path');
 
 // File paths
-const componentPath = './src/pages/Domov.js'; // React component with images
+const componentPath = './src/pages/Domov/Domov.js'; // React component with images
 const workflowPath = './.github/workflows/buildndeploy.yml'; // GitHub Actions workflow
 
 // Get today's date for comparison

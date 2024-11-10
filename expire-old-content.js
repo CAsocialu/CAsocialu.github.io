@@ -11,21 +11,34 @@ const today = new Date();
 
 // Step 1: Parse and update the React component
 function updateComponentFile() {
-    const content = fs.readFileSync(componentPath, 'utf8');
+    let content;
+    try {
+        content = fs.readFileSync(componentPath, 'utf8');
+    } catch (error) {
+        console.error(`Error reading component file ${componentPath}:`, error);
+        return false;
+    }
     let hasChanges = false;
     let removedImages = new Set();
 
     // First pass: collect image names that should be removed
     content.replace(/<img [^>]*src=\{([^}]+)\}[^>]*valid-until="([^"]+)"[^>]*>/g, (match, imgVar, dateStr) => {
         const expirationDate = new Date(dateStr);
+        if (isNaN(expirationDate.getTime())) {
+            console.log(`WARNING! Invalid date format - ${dateStr} - This will be ignored, but should be fixed ASAP.`);
+            return match; // Keep the image or handle accordingly
+        }
         if (expirationDate < today) {
-            removedImages.add(imgVar.trim());
         }
     });
 
     // Second pass: remove expired image elements and their trailing whitespace
     let updatedContent = content.replace(/<img [^>]*valid-until="([^"]+)"[^>]*>(\s*(?=<|$))?/g, (match, dateStr) => {
         const expirationDate = new Date(dateStr);
+        if (isNaN(expirationDate.getTime())) {
+            console.log(`WARNING! Invalid date format - ${dateStr} - This will be ignored, but should be fixed ASAP.`);
+            return match; // Keep the image or handle accordingly
+        }
         if (expirationDate < today) {
             hasChanges = true;
             return ''; // Remove expired image and its trailing whitespace
@@ -35,7 +48,10 @@ function updateComponentFile() {
 
     // Third pass: remove imports for expired images
     if (removedImages.size > 0) {
-        const importRegex = new RegExp(`import\\s+(${Array.from(removedImages).join('|')})\\s+from\\s+"([^"]+)";?[ \t]*\r?\n`, 'g');
+        const importRegex = new RegExp(
+            `import\\s+(${Array.from(removedImages).map(name => name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})\\s+from\\s+["']([^"']+)["'];?[ \\t]*\\r?\\n`,
+            'g'
+        );
         updatedContent = updatedContent.replace(importRegex, (match, importVar, importPath) => {
             // Convert relative path to absolute path
             const componentDir = path.dirname(path.resolve(componentPath));
@@ -68,7 +84,13 @@ function updateComponentFile() {
 
 // Step 2: Update the cron schedule in the workflow file
 function updateCronSchedule() {
-    const content = fs.readFileSync(componentPath, 'utf8');
+    let content;
+    try {
+        content = fs.readFileSync(componentPath, 'utf8');
+    } catch (error) {
+        console.error(`Error reading component file ${componentPath}:`, error);
+        return;
+    }
     const cronDates = new Set();
 
     // Collect upcoming expiration dates for cron scheduling
@@ -86,21 +108,29 @@ function updateCronSchedule() {
     });
 
     // Read the workflow file
-    let workflowContent = fs.readFileSync(workflowPath, 'utf8');
+    let workflowContent, oldWorkflowContent;
+    try {
+        oldWorkflowContent = fs.readFileSync(workflowPath, 'utf8');
+    } catch (error) {
+        console.error(`Error reading workflow file ${workflowPath}:`, error);
+        return;
+    }
+    workflowContent = oldWorkflowContent
 
     // Remove old cron schedules
     workflowContent = workflowContent.replace(/cron:\s*\[(.*?)\]/s, `cron: [${cronEntries.map(cron => `"${cron}"`).join(', ')}]`);
     
     fs.writeFileSync(workflowPath, workflowContent, 'utf8');
     console.log('Workflow cron schedule updated.');
+    return workflowContent == oldWorkflowContent
 }
 
 // Step 3: Commit and push changes if any files were modified
 function commitAndPushChanges(hasComponentChanges) {
     try {
         if (hasComponentChanges) {
-            execSync(`git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"`);
-            execSync(`git config --global user.name "Anti-Social Bot"`);
+            execSync(`git config user.email "41898282+github-actions[bot]@users.noreply.github.com"`);
+            execSync(`git config user.name "Anti-Social Bot"`);
             execSync(`git add ${componentPath} ${workflowPath}`);
             execSync(`git commit -m "Remove expired images and update cron schedule"`);
             execSync('git push');
@@ -115,5 +145,5 @@ function commitAndPushChanges(hasComponentChanges) {
 
 // Run steps
 const hasComponentChanges = updateComponentFile();
-updateCronSchedule();
-commitAndPushChanges(hasComponentChanges);
+const hasWorkflowChanges = updateCronSchedule();
+commitAndPushChanges(hasComponentChanges || hasWorkflowChanges);

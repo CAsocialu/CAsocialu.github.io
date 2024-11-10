@@ -2,6 +2,7 @@ name: React Build Check
 
 permissions:
   contents: write
+  actions: write
 
 on:
   pull_request:
@@ -17,6 +18,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.ACTIONS_TOKEN }}
 
       - name: Determine Workflow Branch
         run: echo "TARGET_BRANCH=${{ github.event.pull_request.head.ref || github.ref_name }}" >> $GITHUB_ENV

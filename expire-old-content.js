@@ -24,7 +24,7 @@ function updateOldComponents() {
     // First pass: collect expired image names that should be removed
     content.replace(/<img [^>]*src=\{([^}]+)\}[^>]*valid-until="([^"]+)"[^>]*>/g, (match, imgVar, dateStr) => {
         const expirationDate = new Date(dateStr);
-        if (isNaN(expirationDate.getTime())) {
+        if (Number.isNaN(expirationDate.getTime())) {
             console.log(`WARNING! Invalid date format - ${dateStr}`);
             return match;
         }
@@ -155,8 +155,18 @@ function updateCronSchedule() {
     // Format dates for cron
     const cronEntries = Array.from(cronDates).map(dateStr => {
         const date = new Date(dateStr);
+        if (Number.isNaN(date.getTime())) {
+            console.log(`WARNING! Invalid date format - ${dateStr} - Skipping cron entry.`);
+            return null;
+        }
+        const day = date.getDate();
+        const month = date.getMonth() + 1;
+        if (day < 1 || day > 31 || month < 1 || month > 12) {
+            console.log(`WARNING! Invalid date values - ${dateStr} - Skipping cron entry.`);
+            return null;
+        }
         return `    - cron: "0 0 ${date.getDate()} ${date.getMonth() + 1} *"`;
-    }).join('\n');
+    }).filter(Boolean).join('\n');
 
     // Read and update the workflow file
     try {

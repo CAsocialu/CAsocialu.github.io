@@ -127,13 +127,17 @@ function updateCronSchedule() {
 
 // Step 3: Commit and push changes if any files were modified
 function commitAndPushChanges(hasComponentChanges) {
+    if (process.env.TARGET_BRANCH === undefined) {
+        console.error('TARGET_BRANCH is not set. Not committing or pushing changes.');
+        return;
+    }
     try {
         if (hasComponentChanges) {
             execSync(`git config user.email "41898282+github-actions[bot]@users.noreply.github.com"`);
             execSync(`git config user.name "Anti-Social Bot"`);
             execSync(`git add .`);
             execSync(`git commit -m "Remove expired images and update cron schedule"`);
-            execSync('git push');
+            execSync(`git push origin HEAD:${process.env.TARGET_BRANCH}`);
             console.log('Changes pushed to repository.');
         } else {
             console.log('No changes to commit.');

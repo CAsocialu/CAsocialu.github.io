@@ -1,4 +1,5 @@
 name: Deploy to GitHub Pages
+
 on:
   push:
     branches:
@@ -7,7 +8,7 @@ on:
   # schedule:
     
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 concurrency:
@@ -21,6 +22,14 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Determine Workflow Branch
+        run: echo "TARGET_BRANCH=${{ github.event.pull_request.head.ref || github.ref_name }}" >> $GITHUB_ENV
+
+      - name: Switch to Workflow Branch
+        run: git checkout ${{ env.TARGET_BRANCH }}
 
       - name: Setup Node
         uses: actions/setup-node@v4

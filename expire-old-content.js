@@ -140,7 +140,7 @@ function updateCronSchedule() {
         content = fs.readFileSync(componentPath, 'utf8');
     } catch (error) {
         console.error(`Error reading component file ${componentPath}:`, error);
-        return;
+        return false;
     }
     const cronDates = new Set();
 
@@ -155,18 +155,45 @@ function updateCronSchedule() {
     // Format dates for cron
     const cronEntries = Array.from(cronDates).map(dateStr => {
         const date = new Date(dateStr);
-        return `0 0 ${date.getDate()} ${date.getMonth() + 1} *`;
-    });
+        return `    - cron: "0 0 ${date.getDate()} ${date.getMonth() + 1} *"`;
+    }).join('\n');
 
-    // Update workflow file
-    let workflowContent, oldWorkflowContent;
+    // Read and update the workflow file
     try {
-        oldWorkflowContent = fs.readFileSync(workflowPath, 'utf8');
-        workflowContent = oldWorkflowContent.replace(
-            /cron:\s*\[(.*?)\]/s, 
-            `cron: [${cronEntries.map(cron => `"${cron}"`).join(', ')}]`
-        );
-        
+        let workflowContent = fs.readFileSync(workflowPath, 'utf8');
+        const oldWorkflowContent = workflowContent;
+
+        if (cronDates.size === 0) {
+            // No dates to schedule - comment out the schedule section
+            if (workflowContent.includes('  schedule:')) {
+                workflowContent = workflowContent.replace(
+                    /(\s*schedule:[\s\S]*?(?=\n\s*[a-z]))/m,
+                    '\n  # schedule:'
+                );
+            }
+        } else {
+            // Has dates to schedule
+            if (workflowContent.includes('  # schedule:')) {
+                // Uncomment and update the schedule section
+                workflowContent = workflowContent.replace(
+                    /\s*# schedule:[\s\S]*?(?=\n\s*[a-z])/m,
+                    `\n  schedule:\n${cronEntries}`
+                );
+            } else if (workflowContent.includes('  schedule:')) {
+                // Update existing schedule section
+                workflowContent = workflowContent.replace(
+                    /\s*schedule:[\s\S]*?(?=\n\s*[a-z])/m,
+                    `\n  schedule:\n${cronEntries}`
+                );
+            } else {
+                // Add new schedule section after 'on:'
+                workflowContent = workflowContent.replace(
+                    /(on:.*?\n)/s,
+                    `$1  schedule:\n${cronEntries}\n`
+                );
+            }
+        }
+
         fs.writeFileSync(workflowPath, workflowContent, 'utf8');
         console.log('Workflow cron schedule updated.');
         return workflowContent !== oldWorkflowContent;

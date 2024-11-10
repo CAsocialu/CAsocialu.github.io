@@ -48,7 +48,7 @@ jobs:
           name: webpify-results
           path: ./webp-conversion-results.json
         
-      - name: Upload artifact
+      - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./build

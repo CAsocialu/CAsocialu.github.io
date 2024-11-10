@@ -122,23 +122,24 @@ function updateCronSchedule() {
     
     fs.writeFileSync(workflowPath, workflowContent, 'utf8');
     console.log('Workflow cron schedule updated.');
-    return workflowContent == oldWorkflowContent
+    return workflowContent !== oldWorkflowContent
 }
 
 // Step 3: Commit and push changes if any files were modified
-function commitAndPushChanges(hasComponentChanges) {
+function commitAndPushChanges(hasChanges) {
     if (process.env.TARGET_BRANCH === undefined) {
         console.error('TARGET_BRANCH is not set. Not committing or pushing changes.');
         return;
     }
     try {
-        if (hasComponentChanges) {
-            execSync(`git config user.email "41898282+github-actions[bot]@users.noreply.github.com"`);
-            execSync(`git config user.name "Anti-Social Bot"`);
-            execSync(`git add .`);
+        if (hasChanges) {
+            execSync(`git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"`);
+            execSync(`git config --global user.name "Anti-Social Bot"`);
+            execSync(`git add ${path.resolve(componentPath)} ${path.resolve(workflowPath)}`);
             execSync(`git commit -m "Remove expired images and update cron schedule"`);
             execSync(`git push origin HEAD:${process.env.TARGET_BRANCH}`);
-            console.log('Changes pushed to repository.');
+            console.log('Changes pushed to repository. Stopping further build process execution in favour of the new commit.');
+            process.exit(1);
         } else {
             console.log('No changes to commit.');
         }

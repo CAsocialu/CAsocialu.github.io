@@ -131,7 +131,7 @@ function commitAndPushChanges(hasComponentChanges) {
         if (hasComponentChanges) {
             execSync(`git config user.email "41898282+github-actions[bot]@users.noreply.github.com"`);
             execSync(`git config user.name "Anti-Social Bot"`);
-            execSync(`git add ${componentPath} ${workflowPath}`);
+            execSync(`git add .`);
             execSync(`git commit -m "Remove expired images and update cron schedule"`);
             execSync('git push');
             console.log('Changes pushed to repository.');

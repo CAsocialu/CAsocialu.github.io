@@ -14,6 +14,8 @@ import Title from "../../components/Title/Title.js";
 import {default as Image} from "../../components/ImageWithText/ImageWithText.js";
 import logoPainting from "../../images/home/logoPainting.png";
 import předsedovéPainting from "../../images/home/předsedovéPainting.png";
+import Vánoce from "../../images/main-page-carousel/vánoce.png";
+import rozdělení from "../../images/main-page-carousel/rozdělení.png";
 import './Domov.css'
 import { CelebrationContext } from "../../App.js";
 
@@ -35,6 +37,8 @@ export default function Domov() {
             </Helmet>
             <div id="Hero">
                 <Carousel show={1}>
+                    <img src={Vánoce} alt="" draggable="false" valid-from="2024-12-24" valid-until="2024-12-27" />
+                    <img src={rozdělení} alt="" draggable="false" valid-from="2025-01-01" valid-until="2025-01-02" />
                     { celebrationStatus.aceCelebration && (<img src={Ace} alt="" draggable="false"/>) }
                     { celebrationStatus.czechoslovakIndependency && (<img src={Československo} alt="" draggable="false"/>) }
                     <img src={HlavníBanner} alt="" draggable="false"/>

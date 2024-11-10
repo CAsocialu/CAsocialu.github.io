@@ -9,8 +9,8 @@ const workflowPath = './.github/workflows/buildndeploy.yml'; // GitHub Actions w
 // Get today's date for comparison
 const today = new Date();
 
-// Step 1: Parse and update the React component
-function updateComponentFile() {
+// Step 1a: Parse and update the React component - handle expired content
+function updateOldComponents() {
     let content;
     try {
         content = fs.readFileSync(componentPath, 'utf8');
@@ -21,68 +21,119 @@ function updateComponentFile() {
     let hasChanges = false;
     let removedImages = new Set();
 
-    // First pass: collect image names that should be removed
+    // First pass: collect expired image names that should be removed
     content.replace(/<img [^>]*src=\{([^}]+)\}[^>]*valid-until="([^"]+)"[^>]*>/g, (match, imgVar, dateStr) => {
         const expirationDate = new Date(dateStr);
         if (isNaN(expirationDate.getTime())) {
-            console.log(`WARNING! Invalid date format - ${dateStr} - This will be ignored, but should be fixed ASAP.`);
-            return match; // Keep the image or handle accordingly
+            console.log(`WARNING! Invalid date format - ${dateStr}`);
+            return match;
         }
         if (expirationDate < today) {
+            removedImages.add(imgVar.trim());
         }
     });
 
-    // Second pass: remove expired image elements and their trailing whitespace
+    // Second pass: remove expired image elements
     let updatedContent = content.replace(/<img [^>]*valid-until="([^"]+)"[^>]*>(\s*(?=<|$))?/g, (match, dateStr) => {
         const expirationDate = new Date(dateStr);
         if (isNaN(expirationDate.getTime())) {
-            console.log(`WARNING! Invalid date format - ${dateStr} - This will be ignored, but should be fixed ASAP.`);
-            return match; // Keep the image or handle accordingly
+            console.log(`WARNING! Invalid date format - ${dateStr}`);
+            return match;
         }
         if (expirationDate < today) {
             hasChanges = true;
-            return ''; // Remove expired image and its trailing whitespace
+            return ''; // Remove expired image and trailing whitespace
         }
-        return match; // Keep unexpired image
+        return match;
     });
 
-    // Third pass: remove imports for expired images
+    // Handle imports and file deletion for expired images
     if (removedImages.size > 0) {
         const importRegex = new RegExp(
             `import\\s+(${Array.from(removedImages).map(name => name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})\\s+from\\s+["']([^"']+)["'];?[ \\t]*\\r?\\n`,
             'g'
         );
         updatedContent = updatedContent.replace(importRegex, (match, importVar, importPath) => {
-            // Convert relative path to absolute path
             const componentDir = path.dirname(path.resolve(componentPath));
             const fullImagePath = path.resolve(componentDir, importPath);
 
             try {
                 if (fs.existsSync(fullImagePath)) {
                     fs.unlinkSync(fullImagePath);
-                    console.log(`Deleted image file: ${fullImagePath}`);
-                } else {
-                    console.log(`Image file not found: ${fullImagePath}`);
+                    console.log(`Deleted expired image file: ${fullImagePath}`);
                 }
             } catch (error) {
                 console.error(`Error deleting image file ${fullImagePath}:`, error);
             }
-            return ''; // Remove the import statement and its newline
+            return '';
         });
         hasChanges = true;
     }
 
-    // Final pass: clean up any double newlines created by our removals
     updatedContent = updatedContent.replace(/\n\n\n+/g, '\n\n');
 
     if (hasChanges) {
         fs.writeFileSync(componentPath, updatedContent, 'utf8');
-        console.log('Expired images and imports removed from component file.');
+        console.log('Expired images and imports removed.');
     }
     return hasChanges;
 }
 
-// Step 2: Update the cron schedule in the workflow file
+// Step 1b: Handle future content (don't commit these changes)
+function updateUpcomingComponents() {
+    let content;
+    try {
+        content = fs.readFileSync(componentPath, 'utf8');
+    } catch (error) {
+        console.error(`Error reading component file ${componentPath}:`, error);
+        return;
+    }
+    let removedImages = new Set();
+
+    // Collect future images that should be temporarily removed
+    content.replace(/<img [^>]*src=\{([^}]+)\}[^>]*valid-from="([^"]+)"[^>]*>/g, (match, imgVar, dateStr) => {
+        const startDate = new Date(dateStr);
+        if (!isNaN(startDate.getTime()) && startDate > today) {
+            removedImages.add(imgVar.trim());
+        }
+    });
+
+    // Remove future image elements
+    let updatedContent = content.replace(/<img [^>]*valid-from="([^"]+)"[^>]*>(\s*(?=<|$))?/g, (match, dateStr) => {
+        const startDate = new Date(dateStr);
+        if (!isNaN(startDate.getTime()) && startDate > today) {
+            return ''; // Remove future image and trailing whitespace
+        }
+        return match;
+    });
+
+    // Handle imports and file deletion for future images
+    if (removedImages.size > 0) {
+        const importRegex = new RegExp(
+            `import\\s+(${Array.from(removedImages).map(name => name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})\\s+from\\s+["']([^"']+)["'];?[ \\t]*\\r?\\n`,
+            'g'
+        );
+        updatedContent = updatedContent.replace(importRegex, (match, importVar, importPath) => {
+            const componentDir = path.dirname(path.resolve(componentPath));
+            const fullImagePath = path.resolve(componentDir, importPath);
+
+            try {
+                if (fs.existsSync(fullImagePath)) {
+                    fs.unlinkSync(fullImagePath);
+                    console.log(`Temporarily removed future image file: ${fullImagePath}`);
+                }
+            } catch (error) {
+                console.error(`Error handling future image file ${fullImagePath}:`, error);
+            }
+            return '';
+        });
+    }
+
+    updatedContent = updatedContent.replace(/\n\n\n+/g, '\n\n');
+    fs.writeFileSync(componentPath, updatedContent, 'utf8');
+}
+
+// Update updateCronSchedule to handle both valid-from and valid-until dates
 function updateCronSchedule() {
     let content;
     try {
@@ -93,36 +144,36 @@ function updateCronSchedule() {
     }
     const cronDates = new Set();
 
-    // Collect upcoming expiration dates for cron scheduling
-    content.replace(/valid-until="([^"]+)"/g, (match, dateStr) => {
-        const expirationDate = new Date(dateStr);
-        if (expirationDate > today) {
+    // Collect both start and end dates
+    content.replace(/valid-(from|until)="([^"]+)"/g, (match, type, dateStr) => {
+        const date = new Date(dateStr);
+        if (!isNaN(date.getTime())) {
             cronDates.add(dateStr);
         }
     });
 
-    // Format dates to cron-compatible syntax
+    // Format dates for cron
     const cronEntries = Array.from(cronDates).map(dateStr => {
         const date = new Date(dateStr);
         return `0 0 ${date.getDate()} ${date.getMonth() + 1} *`;
     });
 
-    // Read the workflow file
+    // Update workflow file
     let workflowContent, oldWorkflowContent;
     try {
         oldWorkflowContent = fs.readFileSync(workflowPath, 'utf8');
+        workflowContent = oldWorkflowContent.replace(
+            /cron:\s*\[(.*?)\]/s, 
+            `cron: [${cronEntries.map(cron => `"${cron}"`).join(', ')}]`
+        );
+        
+        fs.writeFileSync(workflowPath, workflowContent, 'utf8');
+        console.log('Workflow cron schedule updated.');
+        return workflowContent !== oldWorkflowContent;
     } catch (error) {
-        console.error(`Error reading workflow file ${workflowPath}:`, error);
-        return;
+        console.error(`Error updating workflow file ${workflowPath}:`, error);
+        return false;
     }
-    workflowContent = oldWorkflowContent
-
-    // Remove old cron schedules
-    workflowContent = workflowContent.replace(/cron:\s*\[(.*?)\]/s, `cron: [${cronEntries.map(cron => `"${cron}"`).join(', ')}]`);
-    
-    fs.writeFileSync(workflowPath, workflowContent, 'utf8');
-    console.log('Workflow cron schedule updated.');
-    return workflowContent !== oldWorkflowContent
 }
 
 // Step 3: Commit and push changes if any files were modified
@@ -148,7 +199,8 @@ function commitAndPushChanges(hasChanges) {
     }
 }
 
-// Run steps
-const hasComponentChanges = updateComponentFile();
+// Run steps in the correct order
+const hasOldComponentChanges = updateOldComponents();
 const hasWorkflowChanges = updateCronSchedule();
-commitAndPushChanges(hasComponentChanges || hasWorkflowChanges);
+commitAndPushChanges(hasOldComponentChanges || hasWorkflowChanges);
+updateUpcomingComponents(); // Run after commit, changes won't be committed

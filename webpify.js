@@ -7,12 +7,16 @@ const fs = require('fs').promises;
 const originalFiles = [];
 const convertedFiles = [];
 
+function normalizePath(filePath) {
+    return filePath.split(path.sep).join(path.posix.sep);
+}
+
 async function deleteOriginalFiles() {
     console.log('\nDeleting original files...');
     for (const conversion of convertedFiles) {
         if (conversion.status === 'converted') {
             try {
-                await fs.unlink(conversion.original);
+                await fs.rm(conversion.original, { force: true, maxRetries: 5, retryDelay: 1000 });
                 console.log(`Deleted: ${conversion.original}`);
             } catch (error) {
                 console.error(`Error deleting ${conversion.original}:`, error);
@@ -82,11 +86,19 @@ async function replaceInFiles() {
                     const absoluteMatchedPath = path.resolve(path.dirname(filePath), matchedPath);
 
                     if (absoluteMatchedPath === absoluteOriginalPath) {
-                        const relativeWebPPath = path.posix.relative(path.posix.dirname(filePath), webp);
-                        const leadingPath = matchedPath.startsWith('./') ? './' : matchedPath.startsWith('/') ? '/' : '';
-                        content = content.replace(matchedPath, leadingPath + relativeWebPPath);
+                        // Calculate the relative path from the source file to the webp file
+                        const relativeWebPPath = path.relative(
+                            path.dirname(filePath),
+                            webp
+                        ).split(path.sep).join(path.posix.sep); // Ensure forward slashes
+
+                        // Preserve the original path style (with or without ./)
+                        const leadingPath = matchedPath.startsWith('./') ? './' : '';
+                        const newPath = leadingPath + relativeWebPPath;
+                        
+                        content = content.replace(matchedPath, newPath);
                         hasChanges = true;
-                        console.log(`Replaced reference in ${filePath}: ${matchedPath} → ${leadingPath + relativeWebPPath}`);
+                        console.log(`Replaced reference in ${filePath}: ${matchedPath} → ${newPath}`);
                     }
                 }
             }
@@ -112,7 +124,7 @@ async function convertToWebP() {
                 'public/favicon.png',
                 'public/assets/banner.png'
             ]
-        });
+        }).map(normalizePath);
 
         console.log(`Found ${String(images.length).padStart(images.length.toString().length, '0')} images to convert.\n`, ...(images.map((image, i) => `Conversion Queue [${String(i + 1).padStart(images.length.toString().length, '0')}/${images.length}]: ${image} \n`)));
 

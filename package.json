@@ -17,7 +17,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "prebuild": "node webpify.js",
+    "prebuild": "node expire-old-content.js && node webpify.js",
     "build": "react-scripts build",
     "postbuild": "node pre-render.js",
     "test": "react-scripts test",

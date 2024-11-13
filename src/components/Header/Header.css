@@ -108,6 +108,12 @@ div#header {
         height: 31px;
         overflow: hidden;
         transition: height 0.3s ease 0s;
+        &>div#headerLinks {
+            display: flex;
+            flex-direction: column;
+            row-gap: 8px;
+            margin-top: 12px;
+        }
         &>span {
             display: flex;
             flex-direction: row;

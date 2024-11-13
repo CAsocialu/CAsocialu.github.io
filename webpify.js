@@ -122,7 +122,8 @@ async function convertToWebP() {
                 'build/**',
                 'dist/**',
                 'public/favicon.png',
-                'public/assets/banner.png'
+                'public/assets/banner.png',
+                'public/assets/bannerDEJTENÁMVAŠEVŠECHNYPRACHY.png'
             ]
         }).map(normalizePath);
 

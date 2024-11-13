@@ -3,6 +3,10 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 import './index.css'
 
+export const capitalizeString = function(string, everyWord = false) {
+  return everyWord ? string.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') : string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 const root = createRoot(document.getElementById('root'));
 root.render(
   <StrictMode>

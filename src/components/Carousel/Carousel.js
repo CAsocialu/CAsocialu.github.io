@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import "./Carousel.css"
 
 export default function Carousel(props) {
-    const { children, show } = props;
+    const { children, show = 1 } = props;
     const [currentIndex, setCurrentIndex] = useState(0);
     const [length, setLength] = useState(children.filter(child => child !== false).length);
     const [touchPosition, setTouchPosition] = useState(null);
@@ -39,6 +39,7 @@ export default function Carousel(props) {
     }
 
     const next = () => {
+        console.log('boop!')
         if (currentIndex < (length - show)) {
             setCurrentIndex(prevState => prevState + 1);
         } else {
@@ -47,6 +48,7 @@ export default function Carousel(props) {
     }
     
     const prev = () => {
+        console.log('bap!')
         setAutoScrollEnabled(false);
         if (currentIndex > 0) {
             setCurrentIndex(prevState => prevState - 1);

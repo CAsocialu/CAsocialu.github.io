@@ -1,10 +1,87 @@
 @import url(../common.css);
 
 div#helpContent {
-    text-align: center;
+    margin: 0 16px;
+    padding: 20px;
 }
 
-img#juHeleSisina {
-    height: 555px;
+div#help-page-carousel {
+    width: calc(100%);
+    height: calc((100vw - 540px - 24px - 32px - 40px) / 16 * 9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     border-radius: 16px;
+    overflow: hidden;
+    & *:not(button) {
+        height: 100%;
+    }
+}
+
+div#helpContentWrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 24px;
+    & > div#helpContentColOne {
+        width: calc(100vw - 540px - 24px - 32px - 40px);
+        & > p {
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+        & > div.image-container {
+            width: 100%;
+            border-radius: 16px;
+            overflow: hidden;
+            & > img {
+                width: 100%;
+                object-fit: cover;
+                border-radius: 16px;
+            }
+        }
+        & > div.image-container::after {
+            bottom: 48px;
+        }
+        & > h3 {
+            font-size: 1.5rem;
+            margin-top: 8px;
+        }
+    }
+    & > div#helpContentColTwo {
+        display: flex;
+        flex-direction: column;
+        width: 540px;
+        flex-shrink: 0;
+        position: sticky;
+        top: 50px;
+        height: fit-content;
+        align-self: flex-start;
+        row-gap: 16px;
+        & > :not(:last-child) {
+            margin-bottom: 45px;
+        }
+    }
+}
+
+@media (max-width: 1235px) {
+    div#helpContent {
+        margin: 0 0;
+    }
+    div#helpContentWrapper {
+        flex-direction: column;
+        & div#help-page-carousel {
+            width: 100%;
+            height: calc((100vw - 40px) / 16 * 9);
+            & :not(button) {
+                height: 100%;
+            }
+            & div.carousel-content-package {
+                display: flex;
+                justify-content: center;
+            }
+        }
+        & > * {
+            width: 100% !important;
+        }
+    }
 }

@@ -28,7 +28,8 @@ const routes = [
     {
         path: '/pomoc',
         title: 'Chci pomoci · ČSA',
-        canonical: 'https://www.ceskastranaasocialu.cz/pomoc'
+        canonical: 'https://www.ceskastranaasocialu.cz/pomoc',
+        image: '/assets/bannerDEJTENÁMVAŠEVŠECHNYPRACHY.png'
     },
     {
         path: '/source',
@@ -55,7 +56,7 @@ async function prerender() {
         await page.waitForSelector('#root');
 
         // Inject meta tags
-        await page.evaluate(({ title, description, canonical }) => {
+        await page.evaluate(({ title, description, canonical, image }) => {
             // Set title
             document.title = title;
 
@@ -72,7 +73,7 @@ async function prerender() {
             const ogTags = {
                 'og:title': title,
                 'og:description': description,
-                'og:image': '/assets/banner.png',
+                'og:image': image || '/assets/banner.png',
                 'og:url': canonical,
                 'og:type': 'website'
             };
@@ -91,7 +92,7 @@ async function prerender() {
             const TwitterTags = {
                 'twitter:title': title,
                 'twitter:description': description,
-                'twitter:image': 'https://ceskastranaasocialu.cz/assets/banner.png',
+                'twitter:image': image || '/assets/banner.png',
                 'twitter:site': '@CASocialu',
                 'twitter:card': 'summary_large_image'
             };

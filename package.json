@@ -11,9 +11,9 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
+    "glob": "^11.0.0",
     "puppeteer": "^23.7.1",
-    "sharp": "^0.33.5",
-    "glob": "^11.0.0"
+    "sharp": "^0.33.5"
   },
   "scripts": {
     "start": "react-scripts start",

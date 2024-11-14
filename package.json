@@ -12,7 +12,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "glob": "^11.0.0",
-    "puppeteer": "^23.7.1",
+    "puppeteer": "^23.8.0",
     "sharp": "^0.33.5"
   },
   "scripts": {

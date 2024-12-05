@@ -6,13 +6,13 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-helmet-async": "^2.0.5",
-    "react-router-dom": "^6.28.0",
+    "react-router-dom": "^7.0.2",
     "react-scripts": "5.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "glob": "^11.0.0",
-    "puppeteer": "^23.7.1",
+    "puppeteer": "^23.10.1",
     "sharp": "^0.33.5"
   },
   "scripts": {

@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { capitalizeString } from '../../index.js';
 import './StartovacPanel.css';
+import Confetti from 'react-confetti';
 
 const CACHE_KEY = 'startovac_data';
 const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes in milliseconds
@@ -22,7 +24,7 @@ const calculatePercentage = (reached, requested) => {
     const requestedNum = extractNumber(requested);
     const percentage = (reachedNum / requestedNum) * 100;
     console.log(percentage, percentage % 1 === 0);
-    
+
     // If the percentage is a whole number, return it without decimals
     return percentage % 1 === 0 ? percentage : percentage.toFixed(1);
 };
@@ -87,7 +89,7 @@ export default function StartovacPanel() {
             try {
                 // Get cache data and expired status
                 const { data: cachedData, isExpired } = getFromCache();
-                
+
                 // Show cached data immediately, even if expired
                 if (cachedData) {
                     setProjectData(cachedData);
@@ -157,6 +159,14 @@ export default function StartovacPanel() {
 
     return (
         <div className="startovac-panel">
+            {createPortal(<Confetti
+                count={2000}
+                size={20}
+                gravity={0.1}
+                colors={['#8CB8AA', '#009074', '#005C41', '#955895', '#800080', '#4C004C']}
+                recycle={false}
+                style={{zIndex:100}}
+            />, document.body)}
             <h2>Podpořte nás na Startovači</h2>
             <div className="project-stats">
                 <div className="progress-header">

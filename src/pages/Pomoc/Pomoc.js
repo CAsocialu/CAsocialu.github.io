@@ -15,7 +15,7 @@ import tier2 from '../../images/help/Tiers/tier2.jpg'
 import tier3 from '../../images/help/Tiers/tier3.jpg'
 import Konference from '../../images/help/Konference.jpg'
 import KonrádSNovourVlajkouČeska from '../../images/help/Konrád na Filipínách.jpg'
-import ImageWithText from '../../components/ImageWithText/ImageWithText'
+import ImageWithText from '../../components/ImageWithText/ImageWithText';
 
 export default function Pomoc() {
 

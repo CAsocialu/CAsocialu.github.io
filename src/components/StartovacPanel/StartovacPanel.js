@@ -165,7 +165,7 @@ export default function StartovacPanel() {
                 gravity={0.1}
                 colors={['#8CB8AA', '#009074', '#005C41', '#955895', '#800080', '#4C004C']}
                 recycle={false}
-                style={{zIndex:100}}
+                style={{zIndex:100, position:'fixed'}}
             />, document.body)}
             <h2>Podpořte nás na Startovači</h2>
             <div className="project-stats">

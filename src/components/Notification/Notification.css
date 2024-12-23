@@ -1,0 +1,31 @@
+a:has(div.notificationBanner) {
+    all: unset;
+    cursor: pointer;
+    width: -webkit-fill-available;
+    width: -moz-available;
+}
+
+a:has(div.notificationBanner)::after {
+    all: unset;
+}
+
+div.notificationBanner {
+    background: var(--asexual-purple-dark);
+    border-radius: 8px;
+    text-align: center;
+    border: 2px var(--asexual-purple) solid;
+    padding: 8px;
+    margin-bottom: 32px;
+    width: -webkit-fill-available;
+    width: -moz-available;
+
+    & > h1 {
+        font-size: 24px;
+        margin: 0px 0 2px 0;
+    }
+
+    & > p {
+        font-size: 16px;
+        margin: 0;
+    }
+}

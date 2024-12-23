@@ -27,8 +27,14 @@ const routes = [
     },
     {
         path: '/pomoc',
-        title: 'Chci pomoci · ČSA',
+        title: 'Sbíráme podpisy! · ČSA',
         canonical: 'https://www.ceskastranaasocialu.cz/pomoc',
+        image: '/assets/bannerDEJTENÁMVAŠEVŠECHNYPRACHY.png'
+    },
+    {
+        path: '/pomoc/podpisy',
+        title: 'Sbíráme podpisy! · ČSA',
+        canonical: 'https://www.ceskastranaasocialu.cz/pomoc/podpisy',
         image: '/assets/bannerDEJTENÁMVAŠEVŠECHNYPRACHY.png'
     },
     {

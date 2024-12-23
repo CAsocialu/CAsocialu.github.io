@@ -13,7 +13,11 @@ export default function Header() {
         document.documentElement.setAttribute('data-location',  location.pathname.replace(/(?<!^)\/$/, ''));
         
         headerLinksRef.current?.querySelectorAll('a').forEach(link => {
-            if (link.getAttribute('href') === document.documentElement.getAttribute('data-location')) {
+            if (
+                (link.getAttribute('href') === "/" && document.documentElement.getAttribute('data-location') === "/")
+                ||
+                (document.documentElement.getAttribute('data-location') !== "/" && link.getAttribute('href') !== "/" && document.documentElement.getAttribute('data-location').startsWith(link.getAttribute('href')))
+            ) {
                 link.classList.add('active');
             } else {
                 link.classList.remove('active');

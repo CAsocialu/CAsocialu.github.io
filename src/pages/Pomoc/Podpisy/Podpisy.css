@@ -1,0 +1,15 @@
+@import '../../common.css';
+
+div#signaturesContentWrapper {
+    display: flex;
+    flex-direction: column;
+    & > p {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+    & > h3 {
+        font-size: 1.5rem;
+        margin: 0;
+        margin-top: 8px;
+    }
+}

@@ -1,4 +1,4 @@
-div#galleryContent, div#helpContent {
+div#galleryContent, div#helpContent, div#signaturesContent {
 	padding: 16px 96px 0;
 	color: var(--ghost);
 	font-size: 21px;

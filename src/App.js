@@ -4,7 +4,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import "./App.css";
 import Header from "./components/Header/Header.js";
 import Footer from "./components/Footer/Footer.js";
-import { Domov, Členové, Kontakty, Fotogalerie, Historie, Pomoc, Zdroj } from './pages/pages.js';
+import { Domov, Členové, Kontakty, Fotogalerie, Historie, Pomoc, Podpisy, Zdroj } from './pages/pages.js';
 
 export const CelebrationContext = createContext()
 
@@ -65,6 +65,7 @@ function App() {
                 <Route path="historie" element={<Historie />} />
                 <Route path="foto" element={<Fotogalerie />} />
                 <Route path="pomoc" element={<Pomoc />} />
+                <Route path="pomoc/podpisy" element={<Podpisy />} />
                 <Route path='source' element={<Zdroj />} />
                 <Route path="*" element={<Navigate to="/" replace />} />
               </Routes>

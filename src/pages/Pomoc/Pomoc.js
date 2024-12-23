@@ -16,6 +16,7 @@ import tier3 from '../../images/help/Tiers/tier3.jpg'
 import Konference from '../../images/help/Konference.jpg'
 import KonrádSNovourVlajkouČeska from '../../images/help/Konrád na Filipínách.jpg'
 import ImageWithText from '../../components/ImageWithText/ImageWithText';
+import Notification from '../../components/Notification/Notification'
 
 export default function Pomoc() {
 
@@ -65,6 +66,7 @@ export default function Pomoc() {
                 <meta name="twitter:image" content={`${process.env.PUBLIC_URL}/assets/bannerDEJTENÁMVŠECHNYVAŠEPRACHY.png`} />
             </Helmet>
             <Title>Chci pomoci</Title>
+            <Notification title="Sbíráme podpisy!" message="Proč, jak, a zo pomoct se dovíte tady!" link="/pomoc/podpisy" isLinkInternal={true} />
             <div id="helpContentWrapper">
                 <div id="helpContentColOne">
                     <div id="help-page-carousel">

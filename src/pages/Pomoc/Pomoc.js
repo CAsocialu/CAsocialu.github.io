@@ -66,7 +66,7 @@ export default function Pomoc() {
                 <meta name="twitter:image" content={`${process.env.PUBLIC_URL}/assets/bannerDEJTENÁMVŠECHNYVAŠEPRACHY.png`} />
             </Helmet>
             <Title>Chci pomoci</Title>
-            <Notification title="Sbíráme podpisy!" message="Proč, jak, a zo pomoct se dovíte tady!" link="/pomoc/podpisy" isLinkInternal={true} />
+            <Notification title="Sbíráme podpisy!" message="Proč, jak, a za co pomoct se dovíte tady!" link="/pomoc/podpisy" isLinkInternal={true} />
             <div id="helpContentWrapper">
                 <div id="helpContentColOne">
                     <div id="help-page-carousel">

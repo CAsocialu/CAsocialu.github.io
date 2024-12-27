@@ -3,6 +3,7 @@ a:has(div.notificationBanner) {
     cursor: pointer;
     width: -webkit-fill-available;
     width: -moz-available;
+    margin-bottom: 32px;
 }
 
 a:has(div.notificationBanner)::after {
@@ -15,7 +16,6 @@ div.notificationBanner {
     text-align: center;
     border: 2px var(--asexual-purple) solid;
     padding: 8px;
-    margin-bottom: 32px;
     width: -webkit-fill-available;
     width: -moz-available;
 

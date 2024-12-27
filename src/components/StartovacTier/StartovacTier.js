@@ -17,7 +17,7 @@ export default function StartovacTier({ reward, price, description, link, image 
 
     return (
         <div className="startovac-tier">
-            <div className="tier-header">
+            <div className="tier-header" style={{backgroundImage: `url(${image})`, backgroundSize: '100% 100%', backgroundPosition: 'center'}}>
                 <img src={image} alt={reward} />
                 <div className="tier-header-content">
                     <div className="tier-price">{price} Kč</div>

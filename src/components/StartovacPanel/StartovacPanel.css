@@ -76,8 +76,11 @@
 
 @media screen and (max-width: 570px) {
     .stats-grid {
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        display: flex;
+        flex-direction: column;
+        & > .stat-item {
+            text-align: center !important;
+        }
     }
 
     .progress-header {

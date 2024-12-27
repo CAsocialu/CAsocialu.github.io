@@ -30,21 +30,21 @@ export default function Pomoc() {
         },
         {
             price: 200,
-            reward: "4 karty, 4 samolepky a 1 placka",
+            reward: "4 karty, 4 samolepky a 1 placka",
             description: "Karty na způsob hry Pokémon nebo Magic: The Gathering. Pošleme vám náhodné karty, přičemž to, kolik přispějete určuje to, kolik jich dostanete. O kartách vás budeme informovat až po skončení sbírky, pouze až budeme mít peníze a budeme vědět počet karet, které budeme vyrábět. Způsob doručení pořešíme po sbírce, tudíž zachovejte si své potvrzení o platbě.\nS těmito kartami se bude moct skutečně hrát, ovšem my víme, že jste praví asociálové a s nikým to hrát nebudete. Karty jsou automatický repelent na kamarády.",
             link: "https://www.startovac.cz/projekty/ceskastranaasocialu-2/prispet/XKbz7DaGJ",
             image: tier1
         },
         {
             price: 600,
-            reward: "7 karet, 7 samolepek, 2 placky",
+            reward: "7 karet, 7 samolepek, a 2 placky",
             description: "Krásné nádherné zbrusunové samolepky s tak moc zbrusunovým designem, že jsme je ještě ani nestihli navrhnout. Respektive máme jeden design a mnoho dalších nás čeká.",
             link: "https://www.startovac.cz/projekty/ceskastranaasocialu-2/prispet/GQg9WR81e",
             image: tier2
         },
         {
             price: 1000,
-            reward: "10 karet, 10 samolepek, 3 placky",
+            reward: "10 karet, 10 samolepek, a 3 placky",
             description: "Staré dobré placky. Rozdávali jsme je na ČSA srazu a rozdáváme je i teď! No nejsme my prostě skvělí lidé, které byste měli volit?",
             link: "https://www.startovac.cz/projekty/ceskastranaasocialu-2/prispet/jYLMxDOEz",
             image: tier3

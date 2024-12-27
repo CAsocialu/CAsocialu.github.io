@@ -6,8 +6,6 @@ on:
       - main
   workflow_dispatch:
   schedule:
-    - cron: "0 0 24 12 *"
-    - cron: "0 0 27 12 *"
     - cron: "0 0 1 1 *"
     - cron: "0 0 2 1 *"
     

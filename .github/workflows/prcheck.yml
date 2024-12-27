@@ -2,6 +2,7 @@ name: React Build Check
 
 permissions:
   contents: write
+  id-token: write
   actions: write
 
 on:
@@ -29,7 +30,7 @@ jobs:
           node-version: "18"
           
       - name: Install dependencies
-        run: npm i
+        run: npm i --force
     
       - name: Build React app
         run: CI=true npm run build

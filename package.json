@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "react": "^19.0.0",
-    "react-confetti": "^6.1.0",
+    "react-confetti": "^6.2.2",
     "react-dom": "^19.0.0",
     "react-helmet-async": "^2.0.5",
     "react-router-dom": "^7.1.1",

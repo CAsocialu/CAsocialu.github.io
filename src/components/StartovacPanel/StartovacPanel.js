@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { capitalizeString } from '../../index.js';
 import './StartovacPanel.css';
+import startovacHistory from './startovacFinishData.json';
 import Confetti from 'react-confetti';
 
 const CACHE_KEY = 'startovac_data';
@@ -61,7 +62,7 @@ const getFromCache = () => {
     return { data, isExpired };
 };
 
-export default function StartovacPanel() {
+export default function StartovacPanel({ finished, index }) {
     const [projectData, setProjectData] = useState({
         reached: '0',
         percentage: '0',
@@ -143,10 +144,23 @@ export default function StartovacPanel() {
             }
         };
 
-        fetchStartovacData();
-        const interval = setInterval(fetchStartovacData, CACHE_DURATION);
-        return () => clearInterval(interval);
-    }, []);
+        if (!finished) {
+            fetchStartovacData();
+            const interval = setInterval(fetchStartovacData, CACHE_DURATION);
+            return () => clearInterval(interval);
+        } else if (index !== undefined) {
+            console.log(startovacHistory)
+            const newData = {
+                reached: formatCurrency(startovacHistory[index].reached),
+                percentage: calculatePercentage(startovacHistory[index].reached, startovacHistory[index].requested),
+                requested: formatCurrency(startovacHistory[index].requested),
+                contributors: `${startovacHistory[index].contributors}`,
+                daysLeft: 0,
+            }
+            setProjectData(newData);
+            saveToCache(newData);
+        }
+    }, [finished, index]);
 
     // In the return statement, update the progress bar section:
     const totalPercentage = parseFloat(projectData.percentage);
@@ -159,7 +173,7 @@ export default function StartovacPanel() {
 
     return (
         <div className="startovac-panel">
-            {createPortal(<Confetti
+            {totalPercentage > 100 && createPortal(<Confetti
                 count={2000}
                 size={20}
                 gravity={0.1}
@@ -167,7 +181,7 @@ export default function StartovacPanel() {
                 recycle={false}
                 style={{zIndex:100, position:'fixed'}}
             />, document.body)}
-            <h2>Podpořte nás na Startovači</h2>
+            <h2>{finished ? "Děkujeme za vaši podporu!" : "Podpořte nás na Startovači"}</h2>
             <div className="project-stats">
                 <div className="progress-header">
                     <span>Vybráno</span>
@@ -205,18 +219,18 @@ export default function StartovacPanel() {
                         <strong>{projectData.contributors}</strong>
                         <span>{capitalizeString(getContributorsForm(projectData.contributors))}</span>
                     </div>
-                    <div className="stat-item">
+                    {!finished && <div className="stat-item">
                         <span>Zbývá</span>
                         <strong>{projectData.daysLeft} {getDaysForm(projectData.daysLeft)}</strong>
-                    </div>
+                    </div>}
                 </div>
-                <a
+                {!finished && <a
                     href="https://www.startovac.cz/projects/ceskastranaasocialu-2/contribute"
                     className="contribute-button"
                     onClick={openStartovacPopup}
                 >
                     Přispět
-                </a>
+                </a>}
             </div>
         </div>
     );

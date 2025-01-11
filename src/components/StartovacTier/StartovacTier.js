@@ -1,6 +1,6 @@
 import './StartovacTier.css';
 
-export default function StartovacTier({ reward, price, description, link, image }) {
+export default function StartovacTier({ reward, price, description, link, image, finished }) {
     const openStartovacPopup = (e) => {
         e.preventDefault();
         const width = (window.outerWidth / 2);
@@ -28,7 +28,7 @@ export default function StartovacTier({ reward, price, description, link, image 
                 <p className="tier-description">{description}</p>
                 <div className="tier-footer">
                     <span className="tier-footer-notice">Počet odměn není omezen</span>
-                    <a href={link} className="tier-button" onClick={openStartovacPopup}>Zvolit odměnu</a>
+                    {!finished && <a href={link} className="tier-button" onClick={openStartovacPopup}>Zvolit odměnu</a>}
                 </div>
             </div>
         </div>

@@ -1,9 +1,16 @@
-a:has(div.notificationBanner) {
+.notificationsStack {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    row-gap: 16px;
+    margin-bottom: 32px;
+}
+
+a.notificationContainer {
     all: unset;
     cursor: pointer;
     width: -webkit-fill-available;
     width: -moz-available;
-    margin-bottom: 32px;
 }
 
 a:has(div.notificationBanner)::after {

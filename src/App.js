@@ -64,7 +64,7 @@ function App() {
                 <Route path="kontakty" element={<Kontakty />} />
                 <Route path="historie" element={<Historie />} />
                 <Route path="foto" element={<Fotogalerie />} />
-                <Route path="pomoc" element={<Pomoc />} />
+                <Route path="pomoc" element={<Pomoc finished index={0} />} />
                 <Route path="pomoc/podpisy" element={<Podpisy />} />
                 <Route path='source' element={<Zdroj />} />
                 <Route path="*" element={<Navigate to="/" replace />} />

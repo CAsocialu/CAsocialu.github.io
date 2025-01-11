@@ -7,12 +7,16 @@
     color: color-mix(in srgb, darkslateblue, black);
     & h2 {
         margin-top: 0;
+        text-align: center;
     }
 }
 
 .project-stats {
     max-width: 600px;
     margin: 0 auto;
+    &>:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .progress-header {
@@ -63,13 +67,19 @@
     & > .stat-item {
         flex: 1;
     }
-    & > .stat-item:nth-child(1) {
+    &>.stat-item * {
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+    &>.stat-item:first-child {
+        text-align: left;
+    } &>.stat-item:first-child * {
         text-align: left;
     }
-    & > .stat-item:nth-child(2) {
-        text-align: center;
-    }
-    & > .stat-item:nth-child(3) {
+    &>.stat-item:last-child {
+        text-align: right;
+    } &>.stat-item:last-child * {
         text-align: right;
     }
 }
@@ -78,9 +88,7 @@
     .stats-grid {
         display: flex;
         flex-direction: column;
-        & > .stat-item {
-            text-align: center !important;
-        }
+        text-align: center !important;
     }
 
     .progress-header {

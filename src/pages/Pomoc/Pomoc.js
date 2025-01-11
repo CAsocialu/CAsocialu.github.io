@@ -18,7 +18,7 @@ import KonrádSNovourVlajkouČeska from '../../images/help/Konrád na Filipíná
 import ImageWithText from '../../components/ImageWithText/ImageWithText';
 import Notification from '../../components/Notification/Notification'
 
-export default function Pomoc() {
+export default function Pomoc({ finished }) {
 
     const STARTOVAC_TIERS = [
         {
@@ -66,7 +66,10 @@ export default function Pomoc() {
                 <meta name="twitter:image" content={`${process.env.PUBLIC_URL}/assets/bannerDEJTENÁMVŠECHNYVAŠEPRACHY.png`} />
             </Helmet>
             <Title>Chci pomoci</Title>
-            <Notification title="Sbíráme podpisy!" message="Proč, jak, a za co pomoct se dovíte tady!" link="/pomoc/podpisy" isLinkInternal={true} />
+            <div className="notificationsStack">
+                <Notification title="Sbíráme podpisy!" message="Proč, jak, a za co pomoct se dovíte tady!" link="/pomoc/podpisy" isLinkInternal={true} />
+                <Notification title="Děkujeme vám za vaši podporu!" message="S vaší pomocí se nám povedlo vysbírat 12 467Kč na vznik strany." />
+            </div>
             <div id="helpContentWrapper">
                 <div id="helpContentColOne">
                     <div id="help-page-carousel">
@@ -95,9 +98,9 @@ export default function Pomoc() {
                     <p>ČSA &lt;3</p>
                 </div>
                 <div id="helpContentColTwo">
-                    <StartovacPanel />
+                    <StartovacPanel finished index={0} />
                     {STARTOVAC_TIERS.map((tier, index) => (
-                        <StartovacTier key={index} {...tier} />
+                        <StartovacTier key={index} {...tier} finished={finished} />
                     ))}
                 </div>
             </div>

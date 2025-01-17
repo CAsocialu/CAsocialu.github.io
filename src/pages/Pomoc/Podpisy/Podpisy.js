@@ -1,7 +1,16 @@
 import './Podpisy.css';
 import { Helmet } from 'react-helmet-async';
 import Title from '../../../components/Title/Title';
+import Notification from '../../../components/Notification/Notification';
 
+export function PodpisyTitle() {
+    return (<Title>Sbírame Podpisy!</Title>)
+}
+export function PodpisyNotifikace() {
+    return (<div className="notificationsStack">
+        <Notification title="Děkujeme vám za vaši podporu!" message="S vaší pomocí se nám povedlo vysbírat 12 467Kč na vznik strany." link="/pomoc/zbirka" isLinkInternal={true} />
+    </div>)
+}
 export default function Podpisy() {
     return (
         <div id='signaturesContent'>
@@ -10,15 +19,16 @@ export default function Podpisy() {
                 <meta name="description" content="ČSA je recesistická politická strana, v tento moment chystající se vzniknout a poté začít nabírat členy. Více než strana je ČSA internetová mikrokomunita, kde každý člověk náhodně z internetu může přispět svým dílem." />
                 <meta property="og:title" content="Sbíráme podpisy! · ČSA" />
                 <meta property="og:description" content="ČSA je recesistická politická strana, v tento moment chystající se vzniknout a poté začít nabírat členy. Více než strana je ČSA internetová mikrokomunita, kde každý člověk náhodně z internetu může přispět svým dílem." />
-                <meta property="og:image" content={`${process.env.PUBLIC_URL}/assets/bannerDEJTENÁMVŠECHNYVAŠEPRACHY.png`} />
+                <meta property="og:image" content={`${process.env.PUBLIC_URL}/assets/bannerNECHCETEMIPODEPSATPETICI.png`} />
                 <meta property="og:url" content="https://www.ceskastranaasocialu.cz/pomoc/podpisy" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Sbíráme podpisy! · ČSA" />
                 <meta name="twitter:description" content="ČSA je recesistická politická strana, v tento moment chystající se vzniknout a poté začít nabírat členy. Více než strana je ČSA internetová mikrokomunita, kde každý člověk náhodně z internetu může přispět svým dílem." />
-                <meta name="twitter:image" content={`${process.env.PUBLIC_URL}/assets/bannerDEJTENÁMVŠECHNYVAŠEPRACHY.png`} />
+                <meta name="twitter:image" content={`${process.env.PUBLIC_URL}/assets/bannerNECHCETEMIPODEPSATPETICI.png`} />
             </Helmet>
-            <Title>Sbíráme podpisy!</Title>
             <div id="signaturesContentWrapper">
+                <iframe height="480" src="https://maphub.net/embed_h/JlwLZJsSqoqig5XX?panel=1&panel_closed=1" frameBorder="0" title="Mapa sběru podpisů" style={{ borderRadius: '10px', border: '2.5px solid #ccc', marginBottom: "20px" }}></iframe>
+                <Notification message={(<>Petici stáhnete <em><strong>tady!</strong></em></>)} link="/assets/Petice.pdf" isLinkInternal={false} style={{marginBottom: "12px"}} contentStyle={{background: 'var(--asocial-green-dark)', border: '2px var(--asocial-green) solid'}} />
                 <h3>PROČ BÝT DOBROVOLNÍKEM</h3>
                 <p>POMŮŽETE STRANĚ! To by měl být hlavní důvod proč do toho jít. Potkáte nové lidi, což není motivace... Potkáte nové lidi s těžkou sociální úzkostí, takže mluvení s lidmi bude méně bolestivé! To už je motivace! A samozřejmě další motivací je, že nebudete jen doma sedět na prdeli, budete v osmdesáti pravnoučatům vyprávět, jak vás zbili bezdomovci před nádražím, protože chtěli z podpisových archů ubalit brka...</p>
 

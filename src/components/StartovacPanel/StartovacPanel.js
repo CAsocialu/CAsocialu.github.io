@@ -24,7 +24,6 @@ const calculatePercentage = (reached, requested) => {
     const reachedNum = extractNumber(reached);
     const requestedNum = extractNumber(requested);
     const percentage = (reachedNum / requestedNum) * 100;
-    console.log(percentage, percentage % 1 === 0);
 
     // If the percentage is a whole number, return it without decimals
     return percentage % 1 === 0 ? percentage : percentage.toFixed(1);
@@ -149,7 +148,6 @@ export default function StartovacPanel({ finished, index }) {
             const interval = setInterval(fetchStartovacData, CACHE_DURATION);
             return () => clearInterval(interval);
         } else if (index !== undefined) {
-            console.log(startovacHistory)
             const newData = {
                 reached: formatCurrency(startovacHistory[index].reached),
                 percentage: calculatePercentage(startovacHistory[index].reached, startovacHistory[index].requested),

@@ -4,7 +4,11 @@ import Kontakty from './Kontakty/Kontakty.js';
 import Fotogalerie from './Fotogalerie/Fotogalerie.js';
 import Historie from './Historie/Historie.js';
 import Pomoc from './Pomoc/Pomoc.js';
-import Podpisy from './Pomoc/Podpisy/Podpisy.js';
+import Zbírka, { ZbírkaTitle, ZbírkaNotifikace } from './Pomoc/Zbírka/Zbírka.js';
+import Podpisy, { PodpisyTitle, PodpisyNotifikace } from './Pomoc/Podpisy/Podpisy.js';
 import Zdroj from './Zdroj/Zdroj.js';
 
-export { Domov, Členové, Kontakty, Fotogalerie, Historie, Pomoc, Podpisy, Zdroj }
+const ZbírkaPack = { Page: Zbírka, Title: ZbírkaTitle, NotificationsStack: ZbírkaNotifikace }
+const PodpisyPack = { Page: Podpisy, Title: PodpisyTitle, NotificationsStack: PodpisyNotifikace }
+
+export { Domov, Členové, Kontakty, Fotogalerie, Historie, Pomoc, ZbírkaPack, PodpisyPack, Zdroj }

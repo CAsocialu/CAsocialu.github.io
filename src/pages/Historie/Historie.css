@@ -4,13 +4,13 @@ div#historyContent {
 	font-family: var(--font-mono);
 }
 
-@media screen and (max-width: 907px) {
+@media screen and (max-width: 949px) {
     div#historyContent {
         padding: 16px 32px 0;
     }
 }
 
-@media screen and (min-width: 908px) {
+@media screen and (min-width: 950px) {
     div#historyContent {
         padding: 16px 96px 0;
     }

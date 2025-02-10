@@ -1,0 +1,32 @@
+div#programmeContent {
+	color: var(--ghost);
+	font-size: 21px;
+	font-family: var(--font-mono);
+}
+
+@media screen and (max-width: 949px) {
+    div#programmeContent {
+        padding: 16px 16px 0;
+    }
+}
+
+@media screen and (min-width: 950px) {
+    div#programmeContent {
+        padding: 16px 32px 0;
+    }
+}
+
+ul {
+    list-style: none;
+    counter-reset: listCounter;
+}
+
+ul li {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+ul li::marker {
+    content: " - ";
+    font-weight: bold;
+}

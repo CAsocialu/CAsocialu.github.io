@@ -53,7 +53,7 @@ div#header {
     }
 }
 
-@media screen and (min-width: 908px) {
+@media screen and (min-width: 950px) {
     div#header {
         justify-content: space-between;
         padding: 9.5px 24px 9.5px 13px;
@@ -98,7 +98,7 @@ div#header {
     }
 }
 
-@media screen and (max-width: 907px) {
+@media screen and (max-width: 949px) {
     div#header {
         flex-direction: column;
         justify-content: flex-start;

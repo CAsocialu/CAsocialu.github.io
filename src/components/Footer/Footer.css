@@ -88,7 +88,7 @@ div#footer:hover>div#footerInfo {
     row-gap: 4px;
 }
 
-@media screen and (max-width: 907px) {
+@media screen and (max-width: 949px) {
     div#footer {
         display: none;
     }

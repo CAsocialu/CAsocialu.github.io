@@ -11,7 +11,7 @@ div#header.ace~div#content>div#Hero {
     margin-top: 50px;
 }
 
-@media screen and (max-width: 907px) {
+@media screen and (max-width: 949px) {
     div#Hero {
         height: auto;
     }
@@ -71,7 +71,7 @@ a::after {
     position: absolute;
 }
 
-@media screen and (max-width: 907px) {
+@media screen and (max-width: 949px) {
     div#mainContent>div#mainACTUALContent {
         display: flex;
         flex-direction: column;
@@ -90,7 +90,7 @@ a::after {
     }
 }
 
-@media screen and (min-width: 908px) {
+@media screen and (min-width: 950px) {
     div#mainContent>div#mainACTUALContent {
         display: grid;
         grid-template-columns: 350px calc(100vw - 350px - 600px - 96px - 96px - 32px) 600px;

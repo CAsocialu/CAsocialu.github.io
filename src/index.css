@@ -17,7 +17,7 @@ div#mainContent {
     }
 }
 
-@media only screen and (max-width: 907px) {
+@media only screen and (max-width: 949px) {
     div#content {
         position: absolute;
         left: 0px;
@@ -33,7 +33,7 @@ div#mainContent {
     }
 } 
 
-@media only screen and (min-width: 908px) {
+@media only screen and (min-width: 950px) {
     div#content {
         padding-bottom: 50px;
     }

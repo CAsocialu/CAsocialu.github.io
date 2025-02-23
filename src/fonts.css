@@ -69,3 +69,19 @@
     font-weight: 400;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Yaro';
+    src: url('./fonts/Yaro.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'VL Gothic';
+    src: url('./fonts/VL-Gothic-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

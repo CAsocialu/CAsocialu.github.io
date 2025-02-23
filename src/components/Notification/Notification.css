@@ -3,7 +3,8 @@
     flex-direction: column;
     width: 100%;
     row-gap: 16px;
-    margin-bottom: 32px;
+    margin-top: 8px;
+    margin-bottom: 16px;
 }
 
 a.notificationContainer {

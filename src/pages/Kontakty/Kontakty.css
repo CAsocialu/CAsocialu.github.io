@@ -2,7 +2,7 @@ div#contactsContent {
 	padding: 16px 96px 0;
 	color: var(--ghost);
 	font-size: 21px;
-	font-family: var(--font-mono);
+	font-family: var(--font-main-text);
     text-align: center;
     & .twitter {
         font-family: "chirp";

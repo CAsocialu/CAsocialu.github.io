@@ -1,9 +1,11 @@
 :root {
     --font-brand: "Neue Machina", "JetBrains Mono", monospace;
+    --font-main-text: "VL Gothic", monospace;
+    --font-title: "Yaro", "JetBrains Mono", monospace;
     --font-mono: "JetBrains Mono", monospace;
-    --font-title: "Bebas Neue", "JetBrains Mono", monospace;
     --night: #0F0F0F;
     --ghost: #F0F0F0;
+    --title: #EBC445;
     --asocial-green-light: #8CB8AA;
     --asocial-green: #009074;
     --asocial-green-dark: #005C41;

@@ -2,20 +2,44 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 html {
-    overflow-y: scroll;
+    overflow-y: auto;
     background-color: black;
 }
 
 div#mainContent {
-	padding: 16px 96px 0;
+	padding: 16px 96px 32px;
 	color: var(--ghost);
 	font-size: 22px;
-	font-family: var(--font-mono);
+	font-family: var(--font-main-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     & .twitter {
         font-family: "Noto Sans Math";
         font-weight: normal;
     }
 }
+
+::-webkit-scrollbar {
+    width: 0px;
+    position: absolute;
+    background: transparent;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 
 @media only screen and (max-width: 949px) {
     div#content {

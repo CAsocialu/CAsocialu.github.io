@@ -1,13 +1,28 @@
 .nadpis {
     font-family: var(--font-title);
+    text-transform: uppercase;
     text-align: center;
-    margin-top: 0px;
-    width: 100%;
-    margin-bottom: 25px;
-    z-index: 3;
+    margin-top: 12px;
+    margin-bottom: 6px;
     position: relative;
+    width: fit-content;
+    & div.nadpisPozadi {
+        position: absolute;
+        user-select: none;
+        color: transparent;
+        padding: 6px 0px;
+        width: 100%;
+        z-index: 0;
+        background-color: var(--night);
+        transform: rotate(-1.5deg) scale(0.9) translateY(-8px);
+    } 
+    &>span {
+        transform: none;
+        z-index: 0;
+        position: relative;
+    }
 }
 
-h3.nadpis {
-    font-size: 32px;
-}
+h1.nadpis { color: var(--title); }
+
+h3.nadpis { color: white; }

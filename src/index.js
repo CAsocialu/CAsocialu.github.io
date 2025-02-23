@@ -7,6 +7,10 @@ export const capitalizeString = function(string, everyWord = false) {
   return everyWord ? string.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') : string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+export const randomItem = function (...items) {
+  return items[Math.floor((Math.random()*items.length))];
+}
+
 const root = createRoot(document.getElementById('root'));
 root.render(
   <StrictMode>

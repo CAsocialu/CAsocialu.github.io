@@ -18,7 +18,7 @@ export default function Program() {
         (<>Snížení počtu obcí na jednu</>),
         (<>Každá budova bude svoje vlastní obec</>),
         (<>Zrušíme stáří</>),
-        (<>Přejmenujeme všechny ulice na „Cimrmanova“</>),
+        (<>Přejmenujeme všechny ulice na „Cimrmanova”</>),
         (<>Peníze budou zdarma</>),
         (<>Zrušíme gravitaci</>),
         (<>Dobytí Slovenska, Podkarpadské Rusi, Lužického Srbska, Královce, Slezska, Jiříkova, Grónska a Dalmácie</>),

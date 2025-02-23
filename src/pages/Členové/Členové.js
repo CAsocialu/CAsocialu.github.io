@@ -2,22 +2,16 @@ import { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import './Členové.css'
 import Konrád from '../../images/members/konrad.png'
-import KonrádFull from '../../images/members/konradFull.png'
 import Karel from '../../images/members/karel.png'
-import KarelFull from '../../images/members/karelFull.png'
 import Filip from '../../images/members/filip.png'
-import FilipFull from '../../images/members/filipFull.png'
 import pepa from '../../images/members/pepa.png'
-import pepaFull from '../../images/members/pepaFull.png'
-import Sisina from '../../images/members/sisina.png'
-import SisinaFull from '../../images/members/sisinaFull.png'
 import InstagramLogo from '../../images/instagramLogo.svg'
 import Title from '../../components/Title/Title'
 
 const members = [
     {
         img: Konrád,
-        bg: { src: KonrádFull, align: "-31.28179043743642vh" },
+        color: "#F2FC24",
         name: "Konrád Koulemastník",
         description: [
             "předseda strany",
@@ -32,7 +26,7 @@ const members = [
     },
     {
         img: Karel,
-        bg: { src: KarelFull, align: "-33.36724313326551vh" },
+        color: "#A81F3D",
         name: "Karel Hrubián",
         description: [
             "první místopředseda",
@@ -47,7 +41,7 @@ const members = [
     },
     {
         img: Filip,
-        bg: { src: FilipFull, align: "-40.691759918616484vh" },
+        color: "#00ff89",
         name: "Filip Slovan",
         description: [
             "druhý místopředseda",
@@ -62,7 +56,7 @@ const members = [
     },
     {
         img: pepa,
-        bg: { src: pepaFull, align: "-47.50762970498474vh" },
+        color: "#1E74FD",
         name: "pepa troska",
         description: [
             "neúspěšný kandidát na prezidenta",
@@ -74,39 +68,25 @@ const members = [
         sns: {
             ig: "pepa_troska",
         }
-    },
-    {
-        img: Sisina,
-        bg: { src: SisinaFull, align: "-33.06205493387589vh" },
-        name: "Sisina",
-        description: [
-            "mňau",
-            "Kájova kočka",
-            "má vlastní kult osobnosti",
-            "celej den nic nedělá",
-            ":3"
-        ],
-        sns: {}
     }
 ];
 
-function Člen({ img, bg, name, sns, description }) {
+function Člen({ img, color, name, sns, description }) {
     const [isOpen, setIsOpen] = useState(false);
     const toggleOpen = () => setIsOpen((prev) => !prev);
     return (
         <div className={`člen ${isOpen ? 'open' : ''}`}>
-            {!isOpen && <img src={img} alt="" onClick={toggleOpen} draggable="false"/>}
+            {!isOpen && <img src={img} alt="" onClick={toggleOpen} draggable="false" />}
             {isOpen && <div className="backdrop" onClick={toggleOpen} />}
             {isOpen &&
-                <div className='členContent' style={{ backgroundImage: `url(${bg.src})`, backgroundPositionX: bg.align, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+                <div className='členContent' style={{borderColor: color}}   >
                     <img src={img} alt="" onClick={toggleOpen} draggable="false" />
                     <div className="členInfo">
-                        {/*<h1>{name}</h1>*/}
                         <ul>
                             {description.map((item, index) => <li key={index}>{item}</li>)}
                         </ul>
                         <div className="sns">
-                            {sns.ig && <a href={`https://instagram.com/${sns.ig}`} target="_blank" rel="noopener noreferrer"><img src={InstagramLogo} alt="Instagram Logo" />@{sns.ig}</a> }
+                            {sns.ig && <a href={`https://instagram.com/${sns.ig}`} target="_blank" rel="noopener noreferrer"><img src={InstagramLogo} alt="Instagram Logo" />@{sns.ig}</a>}
                         </div>
                     </div>
                 </div>

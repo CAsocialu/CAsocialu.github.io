@@ -1,11 +1,9 @@
 import { useEffect, useLayoutEffect, useContext, useRef } from 'react';
 import "./Header.css"
 import { Link, useLocation } from 'react-router-dom';
-import { CelebrationContext } from '../../App';
 
 export default function Header() {
     const location = useLocation(),
-        celebrationStatus = useContext(CelebrationContext),
         headerMenuTriggerRef = useRef(null),
         headerLinksRef = useRef(null);
     
@@ -42,7 +40,7 @@ export default function Header() {
     }, []);
 
     return (
-        <div id="header" className={celebrationStatus.aceCelebration ? 'ace' : ''}>
+        <div id="header">
             <span>
                 <span>Česká Strana Asociálů</span>
                 <input type="checkbox" id="headerMenuTrigger" ref={headerMenuTriggerRef} />

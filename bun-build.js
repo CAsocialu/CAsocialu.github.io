@@ -36,6 +36,10 @@ const result = await Bun.build({
     minify: true,
     sourcemap: "linked",
     format: 'iife',
+    define: {
+        'process.env.NODE_ENV': '"production"',
+        'process.env.PUBLIC_URL': PUBLIC_URL
+    }
 });
 
 if (!result.success) {

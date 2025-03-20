@@ -35,7 +35,7 @@ const result = await Bun.build({
     outdir: 'build',
     minify: true,
     sourcemap: "linked",
-    format: 'cjs'
+    format: 'iife',
 });
 
 if (!result.success) {

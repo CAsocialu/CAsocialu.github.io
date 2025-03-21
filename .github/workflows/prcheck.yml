@@ -12,7 +12,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     
     steps:
       - name: Checkout Repository
@@ -24,16 +24,14 @@ jobs:
       - name: Determine Workflow Branch
         run: echo "TARGET_BRANCH=${{ github.event.pull_request.head.ref || github.ref_name }}" >> $GITHUB_ENV
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "18"
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
           
       - name: Install dependencies
-        run: npm i --force
+        run: bun install --force
     
       - name: Build React app
-        run: CI=true npm run build
+        run: CI=true bun run bun:build
 
       - name: Upload post-build repo state
         uses: actions/upload-artifact@v4

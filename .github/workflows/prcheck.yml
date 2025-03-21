@@ -45,7 +45,7 @@ jobs:
       - name: Upload extra artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: webpify-results
+          name: webpify-results-node
           path: ./webp-conversion-results.json
 
       
@@ -87,5 +87,5 @@ jobs:
       - name: Upload extra artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: webpify-results
+          name: webpify-results-bun
           path: ./webp-conversion-results.json

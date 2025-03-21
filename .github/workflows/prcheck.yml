@@ -12,7 +12,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2204
     
     steps:
       - name: Checkout Repository
@@ -25,7 +25,7 @@ jobs:
         run: echo "TARGET_BRANCH=${{ github.event.pull_request.head.ref || github.ref_name }}" >> $GITHUB_ENV
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: useblacksmith/setup-node@v5
         with:
           node-version: "18"
           

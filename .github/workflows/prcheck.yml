@@ -33,7 +33,7 @@ jobs:
       - name: Upload post-build repo state
         uses: actions/upload-artifact@v4
         with:
-          name: "Repo after Build"
+          name: "Repo after Build - node.js"
           path: ./
 
       - name: Upload Pages Artifact
@@ -75,7 +75,7 @@ jobs:
       - name: Upload post-build repo state
         uses: actions/upload-artifact@v4
         with:
-          name: "Repo after Build"
+          name: "Repo after Build - Bun"
           path: ./
 
       - name: Upload Pages Artifact

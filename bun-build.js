@@ -10,8 +10,6 @@ rmSync(BUILD_PATH, { recursive: true, force: true });
 mkdirSync(BUILD_PATH, { recursive: true });
 cpSync('public', BUILD_PATH, { recursive: true });
 
-// Ensure font directory exists
-mkdirSync(join(BUILD_PATH, 'fonts'), { recursive: true });
 
 let finalPublicUrl;
 
@@ -28,7 +26,7 @@ try {
     const headMatch = indexContent.match(/(.*)(<\/head>)/);
     if (headMatch) {
         const indent = headMatch[1].match(/^\s*/)?.[0] || '';
-        const scriptTag = `${indent}<script src="${finalPublicUrl}/index.js"></script>\n`;
+        const scriptTag = `${indent}<script defer="defer" src="${finalPublicUrl}/index.js"></script>\n`;
         indexContent = indexContent.replace(/<\/head>/, scriptTag + '</head>');
     }
 
@@ -41,7 +39,13 @@ const result = await Bun.build({
     publicPath: PUBLIC_URL,
     entrypoints: ['src/index.js'],
     outdir: 'build',
-    minify: true
+    minify: true,
+    sourcemap: "linked",
+    format: 'iife',
+    define: {
+        'process.env.NODE_ENV': '"production"',
+        'process.env.PUBLIC_URL': PUBLIC_URL
+    }
 });
 
 if (!result.success) {
@@ -66,7 +70,7 @@ try {
         const fontStyle = fontFaceBlock.match(/font-style:\s*(\w+);/)?.[1] || 'normal';
 
         // Extract base64 font
-        const fontMatch = fontFaceBlock.match(/url\((data:font\/.*?);/);
+        const fontMatch = fontFaceBlock.match(/url\((data:font\/.*?)\);/);
         if (!fontMatch) continue;
 
         const base64Data = fontMatch[1]; // Extract base64 string
@@ -79,8 +83,8 @@ try {
 
         // Create font filename in the new format
         const fontFileName = `${sanitizedFontName}-${fontWeight}-${fontStyle}.fromBase64.${extension}`;
-        const fontFilePath = join(BUILD_PATH, 'fonts', fontFileName);
-        const fontUrl = `${finalPublicUrl}/fonts/${fontFileName}`;
+        const fontFilePath = join(BUILD_PATH, fontFileName);
+        const fontUrl = `${finalPublicUrl}/${fontFileName}`;
 
         // Decode base64 and write font file
         const base64String = base64Data.replace(/^data:.*;base64,/, '');

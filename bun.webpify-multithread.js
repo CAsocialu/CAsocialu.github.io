@@ -2,6 +2,7 @@ const sharp = require('sharp');
 const glob = require('glob');
 const path = require('path');
 const fs = require('fs').promises;
+const cpus = require('os').cpus().length;
 
 // Array to store original file paths
 const originalFiles = [];
@@ -157,7 +158,7 @@ async function convertToWebP() {
         originalFiles.push(...images);
         
         // Calculate number of threads
-        const maxThreads = Math.min(Infinity/*, Math.floor(images.length / 2)*/);
+        const maxThreads = Math.min(images.length, cpus);
         const numThreads = Math.max(1, maxThreads); // At least 1 thread
         
         console.log(`Found ${String(images.length).padStart(images.length.toString().length, '0')} images to convert.`);

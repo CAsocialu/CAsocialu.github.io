@@ -157,7 +157,7 @@ async function convertToWebP() {
         originalFiles.push(...images);
         
         // Calculate number of threads
-        const maxThreads = Math.min(10, Math.floor(images.length / 2));
+        const maxThreads = Math.min(Infinity, Math.floor(images.length / 2));
         const numThreads = Math.max(1, maxThreads); // At least 1 thread
         
         console.log(`Found ${String(images.length).padStart(images.length.toString().length, '0')} images to convert.`);

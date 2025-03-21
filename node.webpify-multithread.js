@@ -1,3 +1,4 @@
+/* eslint-disable no-loop-func */
 const sharp = require('sharp');
 const glob = require('glob');
 const path = require('path');

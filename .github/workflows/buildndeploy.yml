@@ -19,7 +19,7 @@ jobs:
 
   # Build job
   build:
-    runs-on: blacksmith-2vcpu-ubuntu-2204
+    runs-on: blacksmith-2vcpu-ubuntu-2204-arm
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4

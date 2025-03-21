@@ -19,11 +19,11 @@
   "scripts": {
     "start": "react-scripts start",
 
-    "prebuild": "node expire-old-content.js && node webpify.js",
-    "build": "react-scripts build",
-    "postbuild": "node pre-render.js",
+    "prenode:build": "node expire-old-content.js && node node.webpify-multithread.js",
+    "node:build": "react-scripts build",
+    "postnode:build": "node pre-render.js",
 
-    "prebun:build": "bun run expire-old-content.js && bun run webpify.js",
+    "prebun:build": "bun run expire-old-content.js && bun run bun.webpify-multithread.js",
     "bun:build": "bun run bun-build.js",
     "postbun:build": "bun run pre-render.js",
 

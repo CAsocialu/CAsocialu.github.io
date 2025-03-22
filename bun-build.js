@@ -82,7 +82,7 @@ try {
         const sanitizedFontName = fontFamily.replace(/\s+/g, '-'); // Replace spaces with dashes
 
         // Create font filename in the new format
-        const fontFileName = `${sanitizedFontName}-${fontWeight}-${fontStyle}-fromBase64-${extension}`;
+        const fontFileName = `${sanitizedFontName}-${fontWeight}-${fontStyle}-fromBase64.${extension}`;
         const fontFilePath = join(BUILD_PATH, fontFileName);
         const fontUrl = `${finalPublicUrl}/${fontFileName}`;
 

@@ -1,7 +1,7 @@
 import Bun from 'bun';
 import { rmSync, mkdirSync, cpSync, readFileSync, writeFileSync } from "fs";
 import { join } from "path";
-import { Buffer } from "buffer";
+// import { Buffer } from "buffer";
 
 const PUBLIC_URL = '/', // Change this to the desired public URL
       BUILD_PATH = 'build';
@@ -46,7 +46,7 @@ const result = await Bun.build({
         'process.env.NODE_ENV': '"production"',
         'process.env.PUBLIC_URL': PUBLIC_URL
     },
-    drop: ["console"]
+    banner: `console.log('%c"nečum sem a choď sa mrknúť na zdroják :3" - richard, developer webu čsa (%czlý zlovák%c)\\n%chttps://ceskastranaasocialu.cz/source %c|%c https://github.com/CAsocialu/CAsocialu.github.io%c\\n\\nTwitter: https://twitter.com/CAsocialu\\nInstagram: https://www.instagram.com/ceska_strana_asocialu\\nDiscord: https://discord.gg/7TtJuwuCr9\\n\\n%cToto je funkcia prehliadača určená pre developerov. Ak vám niekto povedal, aby ste sem niečo vložili, %cpravdepodobne sa jedná o scam%c.\\nNevkladajte do konzole prehliadač kód, ktorému nerozumiete, a dodržujte pravidlá internetovej bezpečnosti.','font-size:2rem;font-family:cursive;','font-size:2rem;font-family:cursive;color:red;','font-size:2rem;font-family:cursive;','font-size:1.5rem;font-family:cursive;color:#009074','font-size:2rem;font-family:cursive;','font-size:1.5rem;font-family:cursive;color:#009074','font-size:2rem;font-family:cursive;','font-size:1.25rem;font-family:monospace;color:#009074','font-size:1.5rem;font-family:monospace;color:#A30000','font-size:1.25rem;font-family:monospace;color:#009074');`
 });
 
 if (!result.success) {

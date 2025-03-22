@@ -39,7 +39,6 @@ export default function Carousel(props) {
     }
 
     const next = () => {
-        console.log('boop!')
         if (currentIndex < (length - show)) {
             setCurrentIndex(prevState => prevState + 1);
         } else {
@@ -48,7 +47,6 @@ export default function Carousel(props) {
     }
     
     const prev = () => {
-        console.log('bap!')
         setAutoScrollEnabled(false);
         if (currentIndex > 0) {
             setCurrentIndex(prevState => prevState - 1);

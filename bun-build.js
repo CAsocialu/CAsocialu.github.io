@@ -55,6 +55,16 @@ if (!result.success) {
 
 // Process CSS files for base64 fonts
 const cssPath = join(BUILD_PATH, 'index.css'); // Adjust if needed
+const fontFormats = {
+    "otc": "collection",
+    "ttc": "collection",
+    "eot": "embedded-opentype",
+    "otf": "opentype",
+    "ttf": "truetype",
+    "svg": "svg",
+    "woff": "woff",
+    "woff2": "woff2"
+}
 try {
     let cssContent = readFileSync(cssPath, 'utf-8');
     const fontFaceRegex = /@font-face\s*{([^}]+)}/g;
@@ -109,7 +119,7 @@ try {
 
         // Replace base64 reference in CSS with the new file path
         cssContent = cssContent.replace(base64Data, fontUrl);
-        cssContent = cssContent.replace(`url(${fontUrl})`, `url(${fontUrl}) format("${mimeType.split("/")[1]}")`);
+        cssContent = cssContent.replace(`url(${fontUrl})`, `url(${fontUrl}) format("${fontFormats[mimeType.split("/")[1]]}")`);
         fontCount++;
     }
 

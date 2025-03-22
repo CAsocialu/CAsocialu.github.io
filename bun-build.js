@@ -45,7 +45,8 @@ const result = await Bun.build({
     define: {
         'process.env.NODE_ENV': '"production"',
         'process.env.PUBLIC_URL': PUBLIC_URL
-    }
+    },
+    drop: ["console"]
 });
 
 if (!result.success) {

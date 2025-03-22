@@ -19,7 +19,7 @@ try {
     let indexContent = readFileSync(indexPath, 'utf-8');
     
     // Replace %PUBLIC_URL%
-    finalPublicUrl = PUBLIC_URL === '/' ? '' : PUBLIC_URL;
+    finalPublicUrl = PUBLIC_URL.replace(/\/*$/, '');
     indexContent = indexContent.replace(/%PUBLIC_URL%/g, finalPublicUrl);
 
     // Find the last indented line before </head> and copy its indentation
@@ -82,7 +82,7 @@ try {
         const sanitizedFontName = fontFamily.replace(/\s+/g, '-'); // Replace spaces with dashes
 
         // Create font filename in the new format
-        const fontFileName = `${sanitizedFontName}-${fontWeight}-${fontStyle}.fromBase64.${extension}`;
+        const fontFileName = `${sanitizedFontName}-${fontWeight}-${fontStyle}-fromBase64-${extension}`;
         const fontFilePath = join(BUILD_PATH, fontFileName);
         const fontUrl = `${finalPublicUrl}/${fontFileName}`;
 

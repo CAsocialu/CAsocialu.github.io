@@ -4,7 +4,7 @@ import { join } from "path";
 import { Buffer } from "buffer";
 
 const PUBLIC_URL = '/', // Change this to the desired public URL
-      BUILD_PATH = 'build'; 
+      BUILD_PATH = 'build';
 
 rmSync(BUILD_PATH, { recursive: true, force: true });
 mkdirSync(BUILD_PATH, { recursive: true });
@@ -17,7 +17,7 @@ let finalPublicUrl;
 const indexPath = join(BUILD_PATH, 'index.html');
 try {
     let indexContent = readFileSync(indexPath, 'utf-8');
-    
+
     // Replace %PUBLIC_URL%
     finalPublicUrl = PUBLIC_URL.replace(/\/*$/, '');
     indexContent = indexContent.replace(/%PUBLIC_URL%/g, finalPublicUrl);
@@ -89,6 +89,22 @@ try {
         // Decode base64 and write font file
         const base64String = base64Data.replace(/^data:.*;base64,/, '');
         const fontBuffer = Buffer.from(base64String, 'base64');
+        let fontBufferSanitized = fontBuffer;
+
+        if (mimeType === 'font/woff2') {
+            // Check for the trailing 8-byte sequence
+            // because for SOME REASON Bun.build appends 7E 8A E6 6A DC 28 7D FD at the end of SOME WOFF2 fonts and it BREAKS EVERYTHING
+            const trailingBytes = Buffer.from([0x7E, 0x8A, 0xE6, 0x6A, 0xDC, 0x28, 0x7D, 0xFD]);
+
+            if (fontBufferSanitized.length >= 8) {
+                const last8Bytes = fontBufferSanitized.subarray(fontBufferSanitized.length - 8);
+
+                if (last8Bytes.equals(trailingBytes)) {
+                    fontBufferSanitized = fontBufferSanitized.subarray(0, fontBufferSanitized.length - 8);
+                }
+            }
+        }
+
         writeFileSync(fontFilePath, fontBuffer);
 
         // Replace base64 reference in CSS with the new file path

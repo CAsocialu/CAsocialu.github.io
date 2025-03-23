@@ -54,7 +54,7 @@ if (!result.success) {
     process.exit(1);
 }
 
-/* fuck my stupid faggot life </3
+
 // Process CSS files for base64 fonts
 const cssPath = join(BUILD_PATH, 'index.css'); // Adjust if needed
 const fontFormats = {
@@ -86,6 +86,7 @@ try {
         if (!fontMatch) continue;
 
         const base64Data = fontMatch[1]; // Extract base64 string
+        console.log(base64Data)
         const mimeMatch = base64Data.match(/^data:(font\/[a-z0-9-]+);base64,/);
         if (!mimeMatch) continue;
 
@@ -129,4 +130,4 @@ try {
     console.log(`✅ Extracted ${fontCount} base64 fonts into separate files.`);
 } catch (err) {
     console.warn('Warning: CSS file not found or could not be modified.');
-}*/
+}

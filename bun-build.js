@@ -129,5 +129,5 @@ try {
     writeFileSync(cssPath, cssContent, 'utf-8');
     console.log(`✅ Extracted ${fontCount} base64 fonts into separate files.`);
 } catch (err) {
-    console.warn('Warning: CSS file not found or could not be modified.');
+    console.warn('⚠️ Warning: CSS file not found or could not be modified.');
 }

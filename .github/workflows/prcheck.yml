@@ -19,7 +19,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          token: ${{ secrets.ACTIONS_TOKEN }}
 
       - name: Determine Workflow Branch
         run: echo "TARGET_BRANCH=${{ github.event.pull_request.head.ref || github.ref_name }}" >> $GITHUB_ENV
@@ -29,12 +28,12 @@ jobs:
 
       - name: Build React app
         run: CI=true npm run node:build
-
-      - name: Upload post-build repo state
+        
+      - name: Upload extra artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: "Repo after Build - node.js"
-          path: ./
+          name: webpify-results-node
+          path: ./webp-conversion-results.json
 
       - name: Upload Pages Artifact
         uses: actions/upload-artifact@v4
@@ -42,13 +41,13 @@ jobs:
           name: build-node
           path: ./build
 
-      - name: Upload extra artifacts
+      - name: Upload post-build repo state
         uses: actions/upload-artifact@v4
         with:
-          name: webpify-results-node
-          path: ./webp-conversion-results.json
+          name: "Repo after Build - node.js"
+          path: ./
 
-      
+  
 
   build-bun:
     runs-on: ubuntu-22.04
@@ -72,11 +71,11 @@ jobs:
       - name: Build React app
         run: CI=true bun run bun:build
 
-      - name: Upload post-build repo state
+      - name: Upload extra artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: "Repo after Build - Bun"
-          path: ./
+          name: webpify-results-bun
+          path: ./webp-conversion-results.json
 
       - name: Upload Pages Artifact
         uses: actions/upload-artifact@v4
@@ -84,8 +83,8 @@ jobs:
           name: build-bun
           path: ./build
 
-      - name: Upload extra artifacts
+      - name: Upload post-build repo state
         uses: actions/upload-artifact@v4
         with:
-          name: webpify-results-bun
-          path: ./webp-conversion-results.json
+          name: "Repo after Build - Bun"
+          path: ./

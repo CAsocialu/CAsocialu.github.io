@@ -121,7 +121,6 @@ try {
 
         // Replace base64 reference in CSS with the new file path
         cssContent = cssContent.replace(base64Data, fontUrl);
-        cssContent = cssContent.replace(`url(${fontUrl})`, `url(${fontUrl}) format("${fontFormats[mimeType.split("/")[1]]}")`);
         fontCount++;
     }
 

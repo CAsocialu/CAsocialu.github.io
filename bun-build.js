@@ -54,9 +54,10 @@ if (!result.success) {
     process.exit(1);
 }
 
-/* fuck my stupid faggot life </3
+
 // Process CSS files for base64 fonts
 const cssPath = join(BUILD_PATH, 'index.css'); // Adjust if needed
+/* IT FINALLY FUCKING WORKS
 const fontFormats = {
     "otc": "collection",
     "ttc": "collection",
@@ -67,6 +68,7 @@ const fontFormats = {
     "woff": "woff",
     "woff2": "woff2"
 }
+*/
 try {
     let cssContent = readFileSync(cssPath, 'utf-8');
     const fontFaceRegex = /@font-face\s*{([^}]+)}/g;
@@ -82,7 +84,7 @@ try {
         const fontStyle = fontFaceBlock.match(/font-style:\s*(\w+);/)?.[1] || 'normal';
 
         // Extract base64 font
-        const fontMatch = fontFaceBlock.match(/url\((data:font\/.*?)\);/);
+        const fontMatch = fontFaceBlock.match(/url\((data:font\/.*?)\)(?:;|format)/);
         if (!fontMatch) continue;
 
         const base64Data = fontMatch[1]; // Extract base64 string
@@ -117,16 +119,15 @@ try {
             }
         }
 
-        writeFileSync(fontFilePath, Bun.gzipSync(fontBufferSanitized), 'binary');;
+        writeFileSync(fontFilePath, fontBufferSanitized);
 
         // Replace base64 reference in CSS with the new file path
         cssContent = cssContent.replace(base64Data, fontUrl);
-        cssContent = cssContent.replace(`url(${fontUrl})`, `url(${fontUrl}) format("${fontFormats[mimeType.split("/")[1]]}")`);
         fontCount++;
     }
 
     writeFileSync(cssPath, cssContent, 'utf-8');
     console.log(`✅ Extracted ${fontCount} base64 fonts into separate files.`);
 } catch (err) {
-    console.warn('Warning: CSS file not found or could not be modified.');
-}*/
+    console.warn('⚠️ Warning: CSS file not found or could not be modified.');
+}

@@ -117,7 +117,7 @@ try {
             }
         }
 
-        writeFileSync(fontFilePath, Bun.gzipSync(fontBufferSanitized), 'binary');;
+        writeFileSync(fontFilePath, fontBufferSanitized);
 
         // Replace base64 reference in CSS with the new file path
         cssContent = cssContent.replace(base64Data, fontUrl);

@@ -57,6 +57,7 @@ if (!result.success) {
 
 // Process CSS files for base64 fonts
 const cssPath = join(BUILD_PATH, 'index.css'); // Adjust if needed
+/* IT FINALLY FUCKING WORKS
 const fontFormats = {
     "otc": "collection",
     "ttc": "collection",
@@ -67,6 +68,7 @@ const fontFormats = {
     "woff": "woff",
     "woff2": "woff2"
 }
+*/
 try {
     let cssContent = readFileSync(cssPath, 'utf-8');
     const fontFaceRegex = /@font-face\s*{([^}]+)}/g;

@@ -6,7 +6,7 @@ import Argonaut from "../../images/history/argonautmemory.png"
 export default function Historie() {
     const historyEntries = {
         main: [
-            { date: "13. 5. 2022", text: "Vznik strany založením účtů na Twitteru a Instagramu. Zprvu byly koláže graficky jednoduché ale nápady geniální. Tím získalo ČSA kousek po kousku úspěch." },
+            { date: "24. 5. 2022", text: "Vznik strany založením účtů na Twitteru a Instagramu. Zprvu byly koláže graficky jednoduché ale nápady geniální. Tím získalo ČSA kousek po kousku úspěch." },
             { date: "14. 7. 2022", text: "Vznik Discordu ČSA, který se stal prakticky ihned chronicky aktivní minimálně 5, někdy i 10 hodin denně. Za historii Discordu se stalo několik kontroverzí, včetně podpory antisemitismu od některých členů, za což se nestydíme, ovšem tyto problémy řešíme rychle. Discord se skládá z modů, neboli ministrů, kteří dohlíží na chod strany a jsou demokraticky voleni." },
             { date: "18. 9. 2022", text: "První video na YouTube kanále ze srazu SPD v Liberci. I přestože členy ČSA ochranka vyhodila, video jsme zveřejnili. Tento moment rozhodl o druhé hlavní činnosti ČSA, po kolážové politické satiře, a to satirické rozhovory s politiky. Za tu dobu byly natáčeny rozhovory například s Adamem Hankou, Václavem Láskou, Martinem Uzou, Matějem Ondřejem Havlem, Mladými monarchisty a spoustou dalších…" },
             { date: "22. 7. 2023", text: "V Liberci proběhl první ČSA sraz, neboli setkání fanoušků ČSA a politické satiry, proběhl v podniku Argonaut na Chrastavské ulici v Liberci a setkalo se spolu asi 12 lidí." },

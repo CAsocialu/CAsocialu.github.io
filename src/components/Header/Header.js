@@ -50,6 +50,7 @@ export default function Header() {
             </span>
             <div id="headerLinks" ref={headerLinksRef}>
                 <Link to="/" onClick={() => headerMenuTriggerRef.current.checked = false}>Co je ČSA?</Link>
+                <Link to="/sraz2025" onClick={() => headerMenuTriggerRef.current.checked = false}>ČSA Sraz 2025</Link>
                 <Link to="clenove" onClick={() => headerMenuTriggerRef.current.checked = false}>Členové</Link>
                 <Link to="program" onClick={() => headerMenuTriggerRef.current.checked = false}>Program</Link>
                 <Link to="kontakty" onClick={() => headerMenuTriggerRef.current.checked = false}><em>Fuj, </em>Kontakt</Link>

@@ -151,7 +151,9 @@ async function convertToWebP() {
                 'dist/**',
                 'public/favicon.png',
                 'public/assets/banner.png',
-                'public/assets/bannerDEJTENÁMVAŠEVŠECHNYPRACHY.png'
+                'public/assets/bannerDEJTENÁMVAŠEVŠECHNYPRACHY.png',
+                'public/assets/bannerNECHCETEMIPODEPSATPETICI.png',
+                'public/assets/bannerSRAZ2025.png'
             ]
         }).map(normalizePath);
         

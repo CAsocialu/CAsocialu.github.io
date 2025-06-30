@@ -11,6 +11,12 @@ const routes = [
         canonical: 'https://www.ceskastranaasocialu.cz/'
     },
     {
+        path: '/sraz2025',
+        title: 'ČSA Sraz 2025 · ČSA',
+        canonical: 'https://www.ceskastranaasocialu.cz/sraz2025',
+        image: '/assets/bannerSRAZ2025.png'
+    },
+    {
         path: '/clenove',
         title: 'Členové · ČSA',
         canonical: 'https://www.ceskastranaasocialu.cz/clenove'

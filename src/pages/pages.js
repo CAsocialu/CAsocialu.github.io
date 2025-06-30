@@ -8,8 +8,10 @@ import Zbírka, { ZbírkaTitle, ZbírkaNotifikace } from './Pomoc/Zbírka/Zbírk
 import Podpisy, { PodpisyTitle, PodpisyNotifikace } from './Pomoc/Podpisy/Podpisy.js';
 import Zdroj from './Zdroj/Zdroj.js';   
 import Program from './Program/Program.js';
+import Sraz2025, { Sraz2025Title, Sraz2025Notification } from './Sraz2025/Sraz2025.js';
 
 const ZbírkaPack = { Page: Zbírka, Title: ZbírkaTitle, NotificationsStack: ZbírkaNotifikace }
 const PodpisyPack = { Page: Podpisy, Title: PodpisyTitle, NotificationsStack: PodpisyNotifikace }
+const Sraz2025Pack = { Page: Sraz2025, Title: Sraz2025Title, NotificationsStack: Sraz2025Notification }
 
-export { Domov, Členové, Kontakty, Fotogalerie, Historie, Pomoc, ZbírkaPack, PodpisyPack, Zdroj, Program }
+export { Domov, Členové, Kontakty, Fotogalerie, Historie, Pomoc, ZbírkaPack, PodpisyPack, Sraz2025Pack, Zdroj, Program }

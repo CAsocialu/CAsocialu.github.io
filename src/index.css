@@ -8,6 +8,11 @@ html {
 
 html,body {
     margin: 0;
+    --extraheaderpaddingstuff: 0px;
+}
+
+html:has(div#header.headerWithExtraNews),body:has(div#header.headerWithExtraNews) {
+    --extraheaderpaddingstuff: 33px;
 }
 
 div#mainContent {

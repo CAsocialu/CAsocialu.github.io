@@ -1,14 +1,15 @@
 div#Hero {
-    height: calc(100vh - 50px);
+    height: calc(100vh - 50px - var(--extraheaderpaddingstuff));
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100vw;
+    margin-top: var(--extraheaderpaddingstuff);
 }
 
 div#header.ace~div#content>div#Hero {
-    height: calc(100vh - 100px);
-    margin-top: 50px;
+    height: calc(100vh - 100px - var(--extraheaderpaddingstuff));
+    margin-top: calc(50px + var(--extraheaderpaddingstuff));
 }
 
 @media screen and (max-width: 949px) {

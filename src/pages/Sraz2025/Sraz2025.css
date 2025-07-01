@@ -118,4 +118,63 @@
     .sraz2025-details {
         margin: 24px 0;
     }
-} 
+}
+
+@media (max-width: 1074px) {
+    .sraz2025-events {
+        display: grid;
+        grid-template-areas:
+            "details details"
+            "event1 event2";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr;
+        gap: 16px;
+        width: 100%;
+        align-items: start;
+    }
+    .sraz2025-details {
+        grid-area: details;
+        order: -1;
+        min-width: 0;
+        max-width: 100vw;
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .sraz2025-event-info>p:not(:has(strong)) {
+        font-size: 14px;
+    }
+    .sraz2025-event {
+        min-width: 0;
+        max-width: 100vw;
+        width: 100%;
+        padding: 16px;
+        box-sizing: border-box;
+    }
+    .sraz2025-event:first-of-type {
+        grid-area: event1;
+    }
+    .sraz2025-event:last-of-type {
+        grid-area: event2;
+    }
+    .sraz2025-poster {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 588px) {
+    .sraz2025-events {
+        grid-template-areas:
+        "details"
+        "eventA"
+        "eventB";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr 1fr;
+    }
+    .sraz2025-event:first-of-type {
+        grid-area: eventA;
+    }
+    .sraz2025-event:last-of-type {
+        grid-area: eventB;
+    }
+}

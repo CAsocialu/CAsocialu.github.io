@@ -38,7 +38,8 @@ export default function Sraz2025() {
                         <img src={Praha} alt="Plakát Praha 2025" className="sraz2025-poster" />
                         <div className="sraz2025-event-info">
                             <h2>PRAHA</h2>
-                            <p><strong>19. ČERVENEC</strong>, ŠLIKOVA ULICE 402/15</p>
+                            <p><strong>19. ČERVENEC</strong></p>
+                            <p>ŠLIKOVA ULICE 402/15</p>
                         </div>
                     </div>
                     <div className="sraz2025-details">
@@ -57,7 +58,8 @@ export default function Sraz2025() {
                         <img src={Liberec} alt="Plakát Liberec 2025" className="sraz2025-poster" />
                         <div className="sraz2025-event-info">
                             <h2>LIBEREC</h2>
-                            <p><strong>16. SRPEN</strong>, CHRASTAVSKÁ ULICE 513/16a</p>
+                            <p><strong>16. SRPEN</strong></p>
+                            <p>CHRASTAVSKÁ ULICE 513/16a</p>
                         </div>
                     </div>
                 </div>

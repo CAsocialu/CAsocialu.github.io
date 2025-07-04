@@ -1,15 +1,10 @@
 div#Hero {
-    height: calc(100vh - 50px - var(--extraheaderpaddingstuff));
+    height: calc(100vh - 90px - var(--extraheaderpaddingstuff));
+    margin-top: calc(40px + var(--extraheaderpaddingstuff));
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100vw;
-    margin-top: var(--extraheaderpaddingstuff);
-}
-
-div#header.ace~div#content>div#Hero {
-    height: calc(100vh - 100px - var(--extraheaderpaddingstuff));
-    margin-top: calc(50px + var(--extraheaderpaddingstuff));
 }
 
 @media screen and (max-width: 949px) {
@@ -24,8 +19,8 @@ div#Hero::after {
     height: 0;
     position: relative;
     bottom: 0px;
-    border-top: solid 5px var(--asexual-purple);
-    border-bottom: solid 5px var(--asocial-green);
+    border-top: solid 5px var(--asocial-green);
+    border-bottom: solid 5px var(--žlutavě-žlutá);
     transition: bottom var(--transition-footer);
 }
 
@@ -56,11 +51,11 @@ div#Hero div.carousel-content-package {
 }
 
 a:visited, a:not(:visited):hover::after {
-    color: var(--asexual-purple-light);
+    color: var(--červená-z-loga);
 }
 
 a:not(:visited), a:visited:hover::after {
-    color: var(--asocial-green-light);
+    color: var(--žlutavě-žlutá);
 }
 
 a::after {
@@ -93,14 +88,24 @@ a::after {
 
 @media screen and (min-width: 950px) {
     div#mainContent>div#mainACTUALContent {
-        display: grid;
-        grid-template-columns: 350px calc(100vw - 350px - 600px - 96px - 96px - 32px) 600px;
-        grid-template-rows: 80px 150px 90px auto;
-        gap: 16px;
-        margin-bottom: 50px;
-    }
-    
-    div#mainACTUALContent>p {
-        margin: 16px;
+        display: flex;
+        flex-direction: column;
+        font-size: 30px;
+        margin-bottom: 7px;
+        &>div.mainACTUALContentContainer {
+            display: flex;
+            flex-direction: row;
+            gap: 32px;
+            &>div.mainACTUALContentTextContainer {
+                height: fit-content;
+            };
+            &>img {
+                height: 300px;
+            }
+        }
+        &>div.mainACTUALContentContainer:nth-child(even) {
+            flex-direction: row-reverse;
+            text-align: right;
+        }
     }
 }

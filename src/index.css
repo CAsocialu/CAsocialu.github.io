@@ -16,10 +16,14 @@ html:has(div#header.headerWithExtraNews),body:has(div#header.headerWithExtraNews
 }
 
 div#mainContent {
-	padding: 16px 96px 0;
+	padding: 0 96px 0;
 	color: var(--ghost);
 	font-size: 22px;
-	font-family: var(--font-mono);
+	font-family: var(--font-vl-gothic);
+    background-color: var(--asociální-zeleň);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     & .twitter {
         font-family: "Noto Sans Math";
         font-weight: normal;

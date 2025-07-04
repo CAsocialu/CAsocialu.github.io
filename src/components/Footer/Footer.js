@@ -25,7 +25,7 @@ export default function Footer() {
     return (
         <div id="footer">
             <div id='footerInfo'>
-                <span>© Česká Strana Asociálů 2024<span id="footerDevInfo"> · Vyvinuto a udržováno Richardem z týmu <a id='footerDevInfoDEADCODELogo' href='https://deadcode.is-a.dev' target='_blank' rel='noreferrer'>DEADCODE</a> uwu</span></span>
+                <span>© Česká Strana Asociálů 2024-2025<span id="footerDevInfo"> · Vyvinuto a udržováno Richardem z týmu <a id='footerDevInfoDEADCODELogo' href='https://deadcode.is-a.dev' target='_blank' rel='noreferrer'>DEADCODE</a></span></span>
                 <span>Tento web je open-source! Více najdete na <Link to="source">našem GitHubu</Link>  :3</span>
             </div>
             <img alt='Logo České Strany Asociálů' src={logoWhite} id='footerLogo' draggable="false" />

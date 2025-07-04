@@ -45,24 +45,24 @@ export default function Header() {
         <>
             <Link to="/sraz2025">
                 <div id="extraHeaderNews" data-target-path="/sraz2025">
-                    Máme datumy pro <strong>ČSA Sraz 2025</strong>!
+                    !!! INFORMACE K ČSA SRAZU !!!
                 </div>
             </Link>
             <div id="header" className={`headerWithExtraNews${celebrationStatus.aceCelebration ? ' ace' : ''}`}>
                 <span>
-                    <span>Česká Strana Asociálů</span>
+                    <span>česká strana asociálů</span>
                     <input type="checkbox" id="headerMenuTrigger" ref={headerMenuTriggerRef} />
                     <label className='material-symbols-outlined' htmlFor="headerMenuTrigger">menu</label>
                 </span>
                 <div id="headerLinks" ref={headerLinksRef}>
-                    <Link to="/" onClick={() => headerMenuTriggerRef.current.checked = false}>Co je ČSA?</Link>
+                    <Link to="/" onClick={() => headerMenuTriggerRef.current.checked = false}>co je to ČSA?</Link>
                     <Link to="/sraz2025" onClick={() => headerMenuTriggerRef.current.checked = false}>ČSA Sraz 2025</Link>
-                    <Link to="clenove" onClick={() => headerMenuTriggerRef.current.checked = false}>Členové</Link>
-                    <Link to="program" onClick={() => headerMenuTriggerRef.current.checked = false}>Program</Link>
-                    <Link to="kontakty" onClick={() => headerMenuTriggerRef.current.checked = false}><em>Fuj, </em>Kontakt</Link>
-                    <Link to="historie" onClick={() => headerMenuTriggerRef.current.checked = false}>Historie</Link>
-                    <a href="/pravo" target="_blank" onClick={() => headerMenuTriggerRef.current.checked = false} className={process.env.NODE_ENV === "production" ? "" : "disabled"}>Právo</a>
-                    <Link to="pomoc" onClick={() => headerMenuTriggerRef.current.checked = false}>Chci pomoci</Link>
+                    <Link to="clenove" onClick={() => headerMenuTriggerRef.current.checked = false}>členové</Link>
+                    <Link to="program" onClick={() => headerMenuTriggerRef.current.checked = false}>program</Link>
+                    <Link to="kontakty" onClick={() => headerMenuTriggerRef.current.checked = false}>kontakt</Link>
+                    <Link to="historie" onClick={() => headerMenuTriggerRef.current.checked = false}>historie</Link>
+                    <a href="/pravo" target="_blank" onClick={() => headerMenuTriggerRef.current.checked = false} className={process.env.NODE_ENV === "production" ? "" : "disabled"}>právo</a>
+                    <Link to="pomoc" onClick={() => headerMenuTriggerRef.current.checked = false}>chci pomoci</Link>
                 </div>
             </div>
         </>

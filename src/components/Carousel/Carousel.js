@@ -76,7 +76,7 @@ export default function Carousel(props) {
         <div className='carousel-container'>
             <div className="carousel-wrapper">
                 <button className="left-arrow" onClick={prev}>
-                    &lt;
+                    arrow_back_ios_new
                 </button>
                 <div className="carousel-content-wrapper" onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}>
                     <div
@@ -91,7 +91,7 @@ export default function Carousel(props) {
                     </div>
                 </div>
                 <button className="right-arrow" onClick={next}>
-                    &gt;
+                    arrow_forward_ios
                 </button>
             </div>
         </div>

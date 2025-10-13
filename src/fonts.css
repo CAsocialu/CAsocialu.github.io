@@ -69,3 +69,77 @@
     font-weight: 400;
     font-display: swap;
 }
+
+/* new */
+
+@font-face {
+    font-family: 'Arundina Sans Mono';
+    src: url('./fonts/ArundinaSansMono-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arundina Sans Mono';
+    src: url('./fonts/ArundinaSansMono.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arundina Sans Mono';
+    src: url('./fonts/ArundinaSansMono-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arundina Sans Mono';
+    src: url('./fonts/ArundinaSansMono-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AvantGarde';
+    src: url('./fonts/AvantGardeITCbyBT-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AvantGarde';
+    src: url('./fonts/AvantGardeITCbyBT-DemiOblique.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AvantGarde';
+    src: url('./fonts/AvantGardeITCbyBT-Demi.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'VL Gothic';
+    src: url('./fonts/VL-Gothic-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'VL PGothic';
+    src: url('./fonts/VL-PGothic-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

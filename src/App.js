@@ -1,4 +1,3 @@
-import { useEffect, useState, createContext } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import "./App.css";
@@ -6,10 +5,10 @@ import Header from "./components/Header/Header.js";
 import Footer from "./components/Footer/Footer.js";
 import { Domov, Členové, Kontakty, Fotogalerie, Historie, ZbírkaPack, PodpisyPack, Sraz2025Pack, Zdroj, Pomoc, Program } from './pages/pages.js';
 
-export const CelebrationContext = createContext()
+// export const CelebrationContext = createContext()
 
 function App() {
-  const [celebrationStatus, setCelebrationStatus] = useState({
+/*  const [celebrationStatus, setCelebrationStatus] = useState({
     aceCelebration: false,
     czechoslovakIndependency: false
   });
@@ -50,10 +49,10 @@ function App() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, []);*/
   return (
     <HelmetProvider>
-      <CelebrationContext.Provider value={celebrationStatus}>
+      {/*<CelebrationContext.Provider value={celebrationStatus}>*/}
         <div id="App">
           <Router basename='/'>
             <Header />
@@ -76,7 +75,7 @@ function App() {
             <Footer />
           </Router>
         </div>
-        </CelebrationContext.Provider>
+        {/*</CelebrationContext.Provider>*/}
       </HelmetProvider>
   );
 }

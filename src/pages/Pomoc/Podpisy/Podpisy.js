@@ -30,7 +30,7 @@ export default function Podpisy() {
             </Helmet>
             <div id="signaturesContentWrapper">
                 <div id="signaturesNote">Aktuálně nám nejlépe pomůžete podepsáním petice na vznik.<br/>Níže naleznete odkaz na stažení a pokyny k jejímu vyplnění.<br/>O sběrech dáváme předem vědět na našem Twitteru a Instagramu.</div>
-                <a download={true} id="petitionDL" href="/assets/Petice.pdf" target={"_blank"} style={{marginBottom: "12px"}} contentStyle={{background: 'var(--asocial-green-dark)', border: '2px var(--asocial-green) solid'}}>[kliknutím na tento odkaz stáhnete petici]</a>
+                <a download={true} id="petitionDL" href="/assets/Petice.pdf" target="_blank" rel="noreferrer noopener" style={{marginBottom: "12px"}} contentStyle={{background: 'var(--asocial-green-dark)', border: '2px var(--asocial-green) solid'}}>[kliknutím na tento odkaz stáhnete petici]</a>
                 <div id="signaturesInstructionsWrapper">
                     <div className="signaturesInstructionWrapper">
                         <img src={Step1} alt=""/>

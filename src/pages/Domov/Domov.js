@@ -87,7 +87,7 @@ export default function Domov() {
                         <img src={logoPainting} alt="Logo ČSA" draggable="false"/>
                     </div>
                     <div className="mainACTUALContentContainer">
-                        <div className="mainACTUALContentImageContainer"><img src={randomPicsArray[0]} draggable="false"/></div>
+                        <div className="mainACTUALContentImageContainer"><img src={randomPicsArray[0]} draggable="false" alt="" /></div>
                         <div className="mainACTUALContentTextContainer">
                             <p>Všechno začalo roku -5 před naším letopočtem, kdy svět byl ještě v pořádku. Nikdo nechodil ven, svět byl bez válek... Ale poté vstal Ježíš Kristus a nutil lidi se mít rádi. To se nelíbilo mnoha lidem, a tak vzniká Odboj proti socializaci (tzv. <i>Antikristi</i>), tímto tž vzniká první předchůdce ČSA, což z nás dělá nejstarší stranu.</p>
                         </div>
@@ -96,16 +96,16 @@ export default function Domov() {
                         <div className="mainACTUALContentTextContainer">
                             <p>Přesuneme se do 24. května 2022, kdy se třem lidem řed očima zjevili předchozí antikristi a řekli: „Nyní je Váš kol bojovat proti socializaci!“<br />Hned se udělali účty na sociálních sítích na šíření asocialismu a po dvou měsících mínus deset dní i Discord.</p>
                         </div>
-                        <div className="mainACTUALContentImageContainer"><img src={randomPicsArray[1]} draggable="false"/></div>
+                        <div className="mainACTUALContentImageContainer"><img src={randomPicsArray[1]} draggable="false" alt="" /></div>
                     </div>
                     <div className="mainContactsContainer" style={{backgroundImage: `url(${RandomPic9})`, backgroundSize: 'cover', backgroundPosition: 'center 70%', backgroundRepeat: 'no-repeat'}}>
                         <div className="mainACTUALContactsContainer">
                             <Title>KONTAKTY</Title>
-                            <a href="https://www.instagram.com/ceska_strana_asocialu/" target="_blank" htmlRef="noreferrer norenderer">instagram</a>
-                            <a href="https://twitter.com/CAsocialu" target="_blank" htmlRef="noreferrer norenderer">twitter</a>
-                            <a href="https://discord.gg/E5RK8VKpyT" target="_blank" htmlRef="noreferrer norenderer">discord</a>
-                            <a href="https://www.youtube.com/@ceskastranaasocialu7353" target="_blank" htmlRef="noreferrer norenderer">youtube</a>
-                            <a href="mailto:ceskastrana.asocialu@gmail.com" target="_blank" htmlRef="noreferrer norenderer">ceskastrana.asocialu@gmail.com</a>
+                            <a href="https://www.instagram.com/ceska_strana_asocialu/" target="_blank" rel="noreferrer noopener">instagram</a>
+                            <a href="https://twitter.com/CAsocialu" target="_blank" rel="noreferrer noopener">twitter</a>
+                            <a href="https://discord.gg/E5RK8VKpyT" target="_blank" rel="noreferrer noopener">discord</a>
+                            <a href="https://www.youtube.com/@ceskastranaasocialu7353" target="_blank" rel="noreferrer noopener">youtube</a>
+                            <a href="mailto:ceskastrana.asocialu@gmail.com" target="_blank" rel="noreferrer noopener">ceskastrana.asocialu@gmail.com</a>
                         </div>
                     </div>
                 </div>

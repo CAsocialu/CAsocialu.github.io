@@ -12,7 +12,7 @@ export default function InstagramProfile() {
                 <h2 className="igprofile-username">
                     ceska_strana_asocialu
                     <div className="igprofile-actions">
-                        <a className="igprofile-follow-btn" href="https://www.instagram.com/ceska_strana_asocialu/" target="_blank" rel="noreferrer" onClick={handleFollow} style={{ padding: clickedFollowed ? "5px 12.5px 5px 15px" : "5px 15px" }}>{ clickedFollowed ? "Děkujeme! 🤍" : "Sledujte nás!" }</a>
+                        <a className="igprofile-follow-btn" href="https://www.instagram.com/ceska_strana_asocialu/" target="_blank" rel="noreferrer noopener" onClick={handleFollow} style={{ padding: clickedFollowed ? "5px 12.5px 5px 15px" : "5px 15px" }}>{ clickedFollowed ? "Děkujeme! 🤍" : "Sledujte nás!" }</a>
                     </div>
                 </h2>
                 <div className="igprofile-details">

@@ -65,7 +65,7 @@ div#header.headerWithExtraNews {
 
 @media screen and (min-width: 1235px) {
     div#header {
-        padding: 4px 13px 4px 13px;
+        padding: 4px 13px;
         background: black;
         width: calc(100vw - 26px);
         &>span {

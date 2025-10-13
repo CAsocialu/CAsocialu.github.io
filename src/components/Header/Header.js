@@ -1,4 +1,4 @@
-import { useLayoutEffect, useContext, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import "./Header.css"
 import { Link, useLocation } from 'react-router-dom';
 // import { CelebrationContext } from '../../App';

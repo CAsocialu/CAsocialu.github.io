@@ -1,16 +1,59 @@
 import { Helmet } from "react-helmet-async";
-import Carousel from "../../components/Carousel/Carousel.js";
+/* import Carousel from "../../components/Carousel/Carousel.js";
 import HlavníBanner from "../../images/main-page-carousel/banner.png";
 import Kája from "../../images/main-page-carousel/kaja.png";
 import Konrád from "../../images/main-page-carousel/konrad.png"
 import Filip from "../../images/main-page-carousel/filip.png"
-import pepa from "../../images/main-page-carousel/pepa.png"
-import Title from "../../components/Title/Title.js";
+import pepa from "../../images/main-page-carousel/pepa.png" */
 import logoPainting from "../../images/home/logoPainting.png";
-import předsedovéPainting from "../../images/home/předsedovéPainting.png";
 import './Domov.css'
 
+import RandomPic0 from "../../images/home/randompics/0.jpg";
+import RandomPic1 from "../../images/home/randompics/1.jpg";
+import RandomPic2 from "../../images/home/randompics/2.jpg";
+import RandomPic3 from "../../images/home/randompics/3.jpg";
+import RandomPic4 from "../../images/home/randompics/4.jpg";
+import RandomPic5 from "../../images/home/randompics/5.png";
+import RandomPic6 from "../../images/home/randompics/6.png";
+import RandomPic7 from "../../images/home/randompics/7.jpg";
+import RandomPic8 from "../../images/home/randompics/8.jpg";
+import RandomPic9 from "../../images/home/randompics/9.jpg";
+import RandomPic10 from "../../images/home/randompics/10.png";
+import RandomPic11 from "../../images/home/randompics/11.jpg";
+import RandomPic12 from "../../images/home/randompics/12.png";
+import RandomPic13 from "../../images/home/randompics/13.jpg";
+import RandomPic14 from "../../images/home/randompics/14.jpg";
+import RandomPic15 from "../../images/home/randompics/15.jpg";
+import RandomPic16 from "../../images/home/randompics/16.jpg";
+import RandomPic17 from "../../images/home/randompics/17.jpg";
+import RandomPic18 from "../../images/home/randompics/18.jpg";
+import RandomPic19 from "../../images/home/randompics/19.jpg";
+import RandomPic20 from "../../images/home/randompics/20.png";
+import RandomPic21 from "../../images/home/randompics/21.png";
+import RandomPic22 from "../../images/home/randompics/22.png";
+import RandomPic23 from "../../images/home/randompics/23.jpg";
+import RandomPic24 from "../../images/home/randompics/24.png";
+import RandomPic25 from "../../images/home/randompics/25.png";
+import RandomPic26 from "../../images/home/randompics/26.jpg";
+import RandomPic27 from "../../images/home/randompics/27.jpg";
+import RandomPic28 from "../../images/home/randompics/28.jpg";
+import RandomPic29 from "../../images/home/randompics/29.jpg";
+import Title from "../../components/Title/Title";
+
+const randomPics = [RandomPic0, RandomPic1, RandomPic2, RandomPic3, RandomPic4, RandomPic5, RandomPic6, RandomPic7, RandomPic8, RandomPic9, RandomPic10, RandomPic11, RandomPic12, RandomPic13, RandomPic14, RandomPic15, RandomPic16, RandomPic17, RandomPic18, RandomPic19, RandomPic20, RandomPic21, RandomPic22, RandomPic23, RandomPic24, RandomPic25, RandomPic26, RandomPic27, RandomPic28, RandomPic29,]
+
+
 export default function Domov() {
+    let usedImageIndexes = [];
+    let randomPicsArray = [];
+    for (let i = 0; i < 2; i++) {
+        let randomIndex = Math.floor(Math.random() * randomPics.length);
+        while (usedImageIndexes.includes(randomIndex)) {
+            randomIndex = Math.floor(Math.random() * randomPics.length);
+        }
+        usedImageIndexes.push(randomIndex);
+        randomPicsArray.push(randomPics[randomIndex]);
+    }
     return (
         <>
             <Helmet>
@@ -25,7 +68,7 @@ export default function Domov() {
                 <meta name="twitter:description" content="ČSA je recesistická politická strana, v tento moment chystající se vzniknout a poté začít nabírat členy. Více než strana je ČSA internetová mikrokomunita, kde každý člověk náhodně z internetu může přispět svým dílem." />
                 <meta name="twitter:image" content={`${process.env.PUBLIC_URL}/assets/banner.png`} />
             </Helmet>
-            <div id="Hero">
+            {/* <div id="Hero">
                 <Carousel show={1}>
                     <img src={HlavníBanner} alt="" draggable="false"/>
                     <img src={Kája} alt="" draggable="false"/>
@@ -33,20 +76,37 @@ export default function Domov() {
                     <img src={Filip} alt="" draggable="false"/>
                     <img src={pepa} alt="" draggable="false"/>
                 </Carousel>
-            </div>
+            </div> */}
             <div id="mainContent">
-                <Title>Co je to ČSA?!?</Title>
+                {/* <Title>Co je to ČSA?!?</Title> */}
                 <div id="mainACTUALContent">
                     <div className="mainACTUALContentContainer">
-                        <img src={logoPainting} alt="Logo ČSA" draggable="false"/>
                         <div className="mainACTUALContentTextContainer">
-                            <p><b>ČSA</b> je recesistická politická strana, v tento moment chystající se vzniknout a poté začít nabírat členy.</p>
-                            <p>Více než strana je ČSA <b>internetová mikrokomunita</b>, kde každý člověk náhodně z internetu může přispět svým dílem. Grafické výtvory se pak dávají na sítě <a className="twitter" href="https://x.com/CAsocialu" target="_blank" rel="noreferrer">𝕏</a> a <a href="https://www.instagram.com/ceska_strana_asocialu/" target="_blank" rel="noreferrer">Instagram</a>. Někteří členové natáčí i videa na <a href="https://www.youtube.com/@ceskastranaasocialu7353" target="_blank" rel="noreferrer">YouTube</a>.</p>
+                            <p>Česká strana asociálů je 100% skutečná strana, která vše rozhodně bere vážně fr fr. Hlavní aktivita je na discordu, protože chodit ven je SOCIALIZACE. Je chronicky aktivní, můžete tam najít zastání každého politického smýšlení. Taky má sociální sítě, instagram a twitter, kde nás sledují skuteční lidé včetně politiků se smyslem pro humor. Stranu aktivně podporuje Židovsko-zednářské spiknutí, Ilumináti, Hamás, Izrael, tajný BDSM klubík pana Zeleného a taky vláda Kepleru-22b.</p>
+                        </div>
+                        <img src={logoPainting} alt="Logo ČSA" draggable="false"/>
+                    </div>
+                    <div className="mainACTUALContentContainer">
+                        <div className="mainACTUALContentImageContainer"><img src={randomPicsArray[0]} draggable="false"/></div>
+                        <div className="mainACTUALContentTextContainer">
+                            <p>Všechno začalo roku -5 před naším letopočtem, kdy svět byl ještě v pořádku. Nikdo nechodil ven, svět byl bez válek... Ale poté vstal Ježíš Kristus a nutil lidi se mít rádi. To se nelíbilo mnoha lidem, a tak vzniká Odboj proti socializaci (tzv. <i>Antikristi</i>), tímto tž vzniká první předchůdce ČSA, což z nás dělá nejstarší stranu.</p>
                         </div>
                     </div>
                     <div className="mainACTUALContentContainer">
-                        <img src={předsedovéPainting} alt="Předsedové strany na tiskovce" draggable="false"/>
-                        <p>Srdcem celé komunity je <a href="https://discord.gg/7TtJuwuCr9" target="_blank" rel="noreferrer">Discord server</a>, který je často aktivní a plný nadšenců do politiky. Cíl ČSA není vyhrávat volby, ale vytvořit platformu pro mladé lidi s <em><strong>neextrémistickými</strong></em> názory, kde mohou debatovat, zajímat se a dozvídat se o politice skrze vrstevníky s respektem a pro starší občany být platformou, kde mohou parodovat politiku a bavit se tím nebo dokonce dělat seriózní, <em>hlavně komunální</em>, politiku, pokud jim vadí všechny tradiční strany.</p>
+                        <div className="mainACTUALContentTextContainer">
+                            <p>Přesuneme se do 24. května 2022, kdy se třem lidem řed očima zjevili předchozí antikristi a řekli: „Nyní je Váš kol bojovat proti socializaci!“<br />Hned se udělali účty na sociálních sítích na šíření asocialismu a po dvou měsících mínus deset dní i Discord.</p>
+                        </div>
+                        <div className="mainACTUALContentImageContainer"><img src={randomPicsArray[1]} draggable="false"/></div>
+                    </div>
+                    <div className="mainContactsContainer" style={{backgroundImage: `url(${RandomPic9})`, backgroundSize: 'cover', backgroundPosition: 'center 70%', backgroundRepeat: 'no-repeat'}}>
+                        <div className="mainACTUALContactsContainer">
+                            <Title>KONTAKTY</Title>
+                            <a href="https://www.instagram.com/ceska_strana_asocialu/" target="_blank" htmlRef="noreferrer norenderer">instagram</a>
+                            <a href="https://twitter.com/CAsocialu" target="_blank" htmlRef="noreferrer norenderer">twitter</a>
+                            <a href="https://discord.gg/E5RK8VKpyT" target="_blank" htmlRef="noreferrer norenderer">discord</a>
+                            <a href="https://www.youtube.com/@ceskastranaasocialu7353" target="_blank" htmlRef="noreferrer norenderer">youtube</a>
+                            <a href="mailto:ceskastrana.asocialu@gmail.com" target="_blank" htmlRef="noreferrer norenderer">ceskastrana.asocialu@gmail.com</a>
+                        </div>
                     </div>
                 </div>
             </div>

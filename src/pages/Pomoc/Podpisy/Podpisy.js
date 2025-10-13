@@ -1,15 +1,17 @@
 import './Podpisy.css';
 import { Helmet } from 'react-helmet-async';
-import Title from '../../../components/Title/Title';
-import Notification from '../../../components/Notification/Notification';
+import Step1 from "../../../images/help/signatures1.webp";
+import Step2 from "../../../images/help/signatures2.webp";
+import Step3 from "../../../images/help/signatures3.webp";
+import Step4 from "../../../images/help/signatures4.webp";
 
 export function PodpisyTitle() {
-    return (<Title>Sbírame Podpisy!</Title>)
+    return (<></>)
 }
 export function PodpisyNotifikace() {
-    return (<div className="notificationsStack">
-        <Notification title="Děkujeme vám za vaši podporu!" message="S vaší pomocí se nám povedlo vysbírat 12 467Kč na vznik strany." link="/pomoc/zbirka" isLinkInternal={true} />
-    </div>)
+    return (
+        <></>
+    )
 }
 export default function Podpisy() {
     return (
@@ -27,26 +29,34 @@ export default function Podpisy() {
                 <meta name="twitter:image" content={`${process.env.PUBLIC_URL}/assets/bannerNECHCETEMIPODEPSATPETICI.png`} />
             </Helmet>
             <div id="signaturesContentWrapper">
-                <iframe height="480" src="https://maphub.net/embed_h/JlwLZJsSqoqig5XX?panel=1&panel_closed=1" frameBorder="0" title="Mapa sběru podpisů" style={{ borderRadius: '10px', border: '2.5px solid #ccc', marginBottom: "20px" }}></iframe>
-                <Notification message={(<>Petici stáhnete <em><strong>tady!</strong></em></>)} link="/assets/Petice.pdf" isLinkInternal={false} style={{marginBottom: "12px"}} contentStyle={{background: 'var(--asocial-green-dark)', border: '2px var(--asocial-green) solid'}} />
-                <h3>PROČ BÝT DOBROVOLNÍKEM</h3>
-                <p>POMŮŽETE STRANĚ! To by měl být hlavní důvod proč do toho jít. Potkáte nové lidi, což není motivace... Potkáte nové lidi s těžkou sociální úzkostí, takže mluvení s lidmi bude méně bolestivé! To už je motivace! A samozřejmě další motivací je, že nebudete jen doma sedět na prdeli, budete v osmdesáti pravnoučatům vyprávět, jak vás zbili bezdomovci před nádražím, protože chtěli z podpisových archů ubalit brka...</p>
-
-                <h3>JAK TO PROBÍHÁ</h3>
-                <p>U nás na discordu se domlouvají data a místa kde podpisy sbírat, ve stanoveném datumu prostě můžete, ale nemusíte, přijet na místo a sbírat podpisy. Skvělé je, že my jako strana vám nebudeme kecat do toho kdy, kde a jak podpisy sbírat. To si domlouváte jako místní mezi sebou.</p>
-
-                <h3>JAK SE PŘIHLÁSIT</h3>
-                <p>Na webu i v linktree máme → <a href="https://docs.google.com/forms/d/e/1FAIpQLScR7vYZjbuzH8do5-OYTCfQR18WmnuNvie-u3Z9aqAW41R71A/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">odkaz na přihlášku</a> ←. Sami se ozveme po tom, co ji vyplníte. Pozveme vás na discord a dáme vám roli, díky které potom budete moct komunikovat ve speciálních kanálech.</p>
-
-                <h3>CO DOSTANETE?</h3>
-                <p>NIC! <em>Počkej, jakože ani dobrý poc-</em><strong>NIC!</strong> DOBRÝ POCIT SI NECHÁVÁME PRO SEBE! SAMI MÁME MÁLO! Nic nedostanete!</p>
-
-                <h3>V JAKÉM ČASOVÉM ROZMEZÍ SE BUDOU SBÍRAT PODPISY</h3>
-                <p>Od prakticky nyní do dubna. Nemusíte sbírat všude a nemusíte být všude. Vše záleží na domluvě a na vás.</p>
-
-                <h3>JAK SE DOVÍM, ŽE SE BUDE SBÍRAT V MÉM MĚSTĚ?</h3>
-                <p>Pokud chcete pomoci straně ale je hrozně těžký dojít na místo a sbírat je, můžete se prostě jen dostavit, podepsat petici a odejít! Budeme stále rádi! Všechny datumy budou na našem webu a budeme je sdílet i na všech sociálních sítích</p>
-
+                <div id="signaturesNote">Aktuálně nám nejlépe pomůžete podepsáním petice na vznik.<br/>Níže naleznete odkaz na stažení a pokyny k jejímu vyplnění.<br/>O sběrech dáváme předem vědět na našem Twitteru a Instagramu.</div>
+                <a download={true} id="petitionDL" href="/assets/Petice.pdf" target={"_blank"} style={{marginBottom: "12px"}} contentStyle={{background: 'var(--asocial-green-dark)', border: '2px var(--asocial-green) solid'}}>[kliknutím na tento odkaz stáhnete petici]</a>
+                <div id="signaturesInstructionsWrapper">
+                    <div className="signaturesInstructionWrapper">
+                        <img src={Step1} alt=""/>
+                        <span>Stačí kliknout akorát na tlačítko stáhnutí petice, nic na tom není, pokud jste pokazili toto, jste dementi.</span>
+                    </div>
+                    <div className="signaturesInstructionWrapper">
+                        <img src={Step2} style={{transform: 'scale(1.25) translateY(-10px)'}} alt=""/>
+                        <span>Nyní otevřete soubor PDF a dejte tisknout. Snad víte, jak se tisknout soubory, ne?</span>
+                    </div>
+                    <div className="signaturesInstructionWrapper">
+                        <img src={Step3} alt=""/>
+                        <span>Když petici vytisknete, musíte ji vyplnit (nejlépe čitelně).</span>
+                        <ul>
+                            <li>Do kolonky jméno napište vaše jméno. Pokud máte jména dvě, napište to první.</li>
+                            <li>Do kolonky příjmení napište vaše aktuální příjmení.</li>
+                            <li>Do kolonky dat. narození vyplňte vaše datum narození.</li>
+                            <li>Do kolonky bydliště napište vaše trvalé bydliště, nejlépe napište ulici, číslo popisné a město.</li>
+                            <li>Do kolonky podpis udělejte váš podpis.</li>
+                            <li>ZAŠLETE!</li>
+                        </ul>
+                    </div>
+                    <div className="signaturesInstructionWrapper">
+                        <img src={Step4} alt=""/>
+                        <span>Kontaktujte nás ohledně vyplněné petice, my vám poté dáme adresu, kam petici zaslat.</span>
+                    </div>
+                </div>
             </div>
         </div>
     )

@@ -16,19 +16,12 @@ div#footer {
     font-size: 16px;
     transition: height var(--transition-footer);
     z-index: 100;
-}
-
-div#footer:hover {
-    height: 75px;
+    overflow: hidden;
 }
 
 div#footer>img {
     height: 50px;
     transition: height var(--transition-footer);
-}
-
-div#footer:hover>img {
-    height: 75px;
 }
 
 div#footer>div#footerInfo {
@@ -41,47 +34,27 @@ div#footer>div#footerInfo {
 
 div#footer>div#footerInfo>span:first-child {
     font-size: 16px;
-    transition: font-size var(--transition-footer);
-}
-
-div#footer:hover>div#footerInfo>span:first-child {
-    font-size: 14px;
-}
-
-div#footer>div#footerInfo>span:first-child>span#footerDevInfo {
-    opacity: 0;
-    transition: opacity var(--transition-footer), font-size var(--transition-footer)
-}
-
-div#footer:hover>div#footerInfo>span:first-child>span#footerDevInfo {
+    transition: font-size var(--transition-footer), transform var(--transition-footer), opacity var(--transition-footer);
+    transform: translateY(0%) scaleY(1);
     opacity: 1;
 }
 
-a#footerDevInfoDEADCODELogo {
-    font-family: "Uni Sans CAPS";
-    font-weight: bold;
-    color: var(--ghost);
-    text-decoration: none;
+div#footer:hover>div#footerInfo>span:first-child {
+    transform: translateY(-67%) scaleY(0);
+    opacity: 0;
 }
-
-a#footerDevInfoDEADCODELogo::after {
-    all: unset;
-    font-family: "Montserrat";
-    content: " ××";
-}
-a#footerDevInfoDEADCODELogo::before {padding-right: 1.25px;} a#footerDevInfoDEADCODELogo::after {padding-left: 1.25px;}
 
 div#footer>div#footerInfo>span:not(:first-child) {
     font-size: 16px;
     opacity: 0;
-    height: 0;
-    transition: opacity var(--transition-footer), height var(--transition-footer), font-size var(--transition-footer);
+    position: absolute;
+    transform: translateY(67%) scaleY(0);
+    transition: opacity var(--transition-footer), font-size var(--transition-footer), transform var(--transition-footer);
 }
 
 div#footer:hover>div#footerInfo>span:not(:first-child) {
-    font-size: 18px;
-    height: 23px;
     opacity: 1;
+    transform: translateY(0%) scaleY(1);
 }
 
 div#footer:hover>div#footerInfo {

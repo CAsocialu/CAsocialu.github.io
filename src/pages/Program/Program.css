@@ -1,5 +1,6 @@
 div#programmeContent {
 	color: var(--ghost);
+    background-color: var(--asociální-zeleň);
 	font-size: 21px;
 	font-family: var(--font-mono);
 }
@@ -7,12 +8,18 @@ div#programmeContent {
 @media screen and (max-width: 949px) {
     div#programmeContent {
         padding: 16px 16px 0;
+        &>h1 {
+            width: calc(100% - 32px);
+        }
     }
 }
 
 @media screen and (min-width: 950px) {
     div#programmeContent {
         padding: 16px 32px 0;
+        &>h1 {
+            width: calc(100% - 64px);
+        }
     }
 }
 
@@ -27,6 +34,97 @@ ul li {
 }
 
 ul li::marker {
-    content: " - ";
+    content: "";
     font-weight: bold;
+}
+
+label.rokKarta {
+    width: 30vw;
+    height: 30vh;
+    display: block;
+    background-color: black;
+    border: 24px solid white;
+    margin: -24px 0;
+    transition: border-color 0.3s ease;
+}
+
+label.rokKarta:hover {
+    border-color: var(--mint);
+}
+
+label.rokKarta input {
+    visibility: hidden;
+    height: 0; width: 0;
+    position: absolute;
+}
+
+div.rokFront {
+    font-size: 7.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.rokBack {
+    position: fixed;
+    top: 64px;
+    left: 64px;
+    width: calc(100vw - 128px - 32px - 32px);
+    height: calc(100vh - 128px - 32px - 32px);
+    border: 16px solid var(--mint);
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: min(1.5vw, 2vh);
+    text-align: center;
+    z-index: 100;
+    padding: 16px;
+}
+
+label.rokKarta .rokBack, label.rokKarta .rokKartaBackdrop {
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+label.rokKarta:has(input:checked) .rokBack, label.rokKarta:has(input:checked) .rokKartaBackdrop {
+    pointer-events: auto;
+    opacity: 100;
+}
+
+label.rokKarta div.rokKartaBackdrop {
+    background-color: black;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    transition: opacity 0.3s ease;
+}
+
+label.rokKarta:has(input:checked) div.rokKartaBackdrop {
+    opacity: 0.5;
+}
+
+.rokBack h3.nadpis {
+    width: fit-content;
+    margin-bottom: 16px;
+    margin-top: -24px;
+}
+
+div.rokyContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 64px;
+    height: calc(100vh - 32px - 24px - 32px - 32px - 64px);
+    padding: 32px 0;
 }

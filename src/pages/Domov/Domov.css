@@ -67,45 +67,82 @@ a::after {
     position: absolute;
 }
 
-@media screen and (max-width: 949px) {
-    div#mainContent>div#mainACTUALContent {
+div.mainACTUALContentContainer {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 48px;
+    padding: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 32px;
+    &>div.mainACTUALContentTextContainer {
+        padding: 32px;
+        border-radius: 8px;
+        border: 1px solid var(--mint);
+        height: fit-content;
         display: flex;
-        flex-direction: column;
-        gap: 16px;
         align-items: center;
+        text-wrap: balance;
+        &>p:first-child {
+            margin-top: 0;
+        }
+        &>p:last-child {
+            margin-bottom: 0;
+        }
     }
-
-    div#mainContent>div#mainACTUALContent>p {
-        margin: 0px;
+    & img {
+        max-height: 24rem;
+        flex-shrink: 1;
     }
-
-    div#mainContent>div#mainACTUALContent>div.image-container[data-alt="Logo ČSA"],
-    div#mainContent>div#mainACTUALContent>div.image-container[data-alt="Logo ČSA"]>img {
-        width: 250px !important;
-        height: 250px;
+    &>div.mainACTUALContentImageContainer>img:not([alt="Logo ČSA"]) {
+        background-color: var(--asociální-zeleň);
+        border-radius: 8px;
+        border: 16px solid white;
+        padding: 16px;
     }
 }
 
-@media screen and (min-width: 950px) {
-    div#mainContent>div#mainACTUALContent {
-        display: flex;
-        flex-direction: column;
-        font-size: 30px;
-        margin-bottom: 7px;
-        &>div.mainACTUALContentContainer {
-            display: flex;
-            flex-direction: row;
-            gap: 32px;
-            &>div.mainACTUALContentTextContainer {
-                height: fit-content;
-            };
-            &>img {
-                height: 300px;
-            }
-        }
-        &>div.mainACTUALContentContainer:nth-child(even) {
-            flex-direction: row-reverse;
-            text-align: right;
-        }
+div.mainACTUALContentContainer:not(:first-of-type) {
+    background-color: var(--ne-tak-úplně-černá);
+    >* {
+        margin-top: -60px;
     }
+}
+
+div.mainACTUALContentContainer:nth-of-type(3) {
+    >* {
+        margin-top: -90px;
+    }
+}
+
+div.mainContactsContainer {
+    padding: 64px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.mainACTUALContactsContainer {
+    background: var(--asociální-zeleň);
+    border-radius: 16px;
+    border: 12px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: white;
+    padding: 0 64px 16px;
+    font-size: 32px;
+    &>* {
+        color: white !important;
+        font-weight: bold;
+    }
+}
+
+div.mainACTUALContactsContainer > .nadpis {
+    background: none;
+    width: fit-content;
 }

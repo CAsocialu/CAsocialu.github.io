@@ -5,7 +5,7 @@ import Kája from "../../images/main-page-carousel/kaja.png";
 import Konrád from "../../images/main-page-carousel/konrad.png"
 import Filip from "../../images/main-page-carousel/filip.png"
 import pepa from "../../images/main-page-carousel/pepa.png" */
-import logoPainting from "../../images/home/logoPainting.png";
+import logo from "../../images/home/logo.webp";
 import './Domov.css'
 
 import RandomPic0 from "../../images/home/randompics/0.jpg";
@@ -84,7 +84,7 @@ export default function Domov() {
                         <div className="mainACTUALContentTextContainer">
                             <p>Česká strana asociálů je 100% skutečná strana, která vše rozhodně bere vážně fr fr. Hlavní aktivita je na discordu, protože chodit ven je SOCIALIZACE. Je chronicky aktivní, můžete tam najít zastání každého politického smýšlení. Taky má sociální sítě, instagram a twitter, kde nás sledují skuteční lidé včetně politiků se smyslem pro humor. Stranu aktivně podporuje Židovsko-zednářské spiknutí, Ilumináti, Hamás, Izrael, tajný BDSM klubík pana Zeleného a taky vláda Kepleru-22b.</p>
                         </div>
-                        <img src={logoPainting} alt="Logo ČSA" draggable="false"/>
+                        <img src={logo} alt="Logo ČSA" draggable="false"/>
                     </div>
                     <div className="mainACTUALContentContainer">
                         <div className="mainACTUALContentImageContainer"><img src={randomPicsArray[0]} draggable="false" alt="" /></div>
@@ -94,14 +94,14 @@ export default function Domov() {
                     </div>
                     <div className="mainACTUALContentContainer">
                         <div className="mainACTUALContentTextContainer">
-                            <p>Přesuneme se do 24. května 2022, kdy se třem lidem řed očima zjevili předchozí antikristi a řekli: „Nyní je Váš kol bojovat proti socializaci!“<br />Hned se udělali účty na sociálních sítích na šíření asocialismu a po dvou měsících mínus deset dní i Discord.</p>
+                            <p>Přesuneme se do 24. května 2022, kdy se třem lidem řed očima zjevili předchozí antikristi a řekli: „Nyní je Váš úkol bojovat proti socializaci!“<br />Hned se udělali účty na sociálních sítích na šíření asocialismu a po dvou měsících mínus deset dní i Discord.</p>
                         </div>
                         <div className="mainACTUALContentImageContainer"><img src={randomPicsArray[1]} draggable="false" alt="" /></div>
                     </div>
                     <div className="mainContactsContainer" style={{backgroundImage: `url(${RandomPic9})`, backgroundSize: 'cover', backgroundPosition: 'center 70%', backgroundRepeat: 'no-repeat'}}>
                         <div className="mainACTUALContactsContainer">
                             <Title>KONTAKTY</Title>
-                            <a href="https://www.instagram.com/ceska_strana_asocialu/" target="_blank" rel="noreferrer noopener">instagram</a>
+                            <a href="https://www.instagram.com/ceska_strana_antisocialni/" target="_blank" rel="noreferrer noopener">instagram</a>
                             <a href="https://twitter.com/CAsocialu" target="_blank" rel="noreferrer noopener">twitter</a>
                             <a href="https://discord.gg/E5RK8VKpyT" target="_blank" rel="noreferrer noopener">discord</a>
                             <a href="https://www.youtube.com/@ceskastranaasocialu7353" target="_blank" rel="noreferrer noopener">youtube</a>

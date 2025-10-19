@@ -54,7 +54,7 @@ export default function Podpisy() {
                     </div>
                     <div className="signaturesInstructionWrapper">
                         <img src={Step4} alt=""/>
-                        <span>Kontaktujte nás ohledně vyplněné petice, my vám poté dáme adresu, kam petici zaslat.</span>
+                        <span>Petici zašlete na adresu:<br /><strong><i>Svornosti 881, Liberec 30, 463 11</i></strong></span>
                     </div>
                 </div>
             </div>

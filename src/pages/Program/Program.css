@@ -23,22 +23,22 @@ div#programmeContent {
     }
 }
 
-ul {
+div#programmeContent ul {
     list-style: none;
     counter-reset: listCounter;
 }
 
-ul li {
+div#programmeContent ul li {
     position: relative;
     margin-bottom: 10px;
 }
 
-ul li::marker {
+div#programmeContent ul li::marker {
     content: "";
     font-weight: bold;
 }
 
-label.rokKarta {
+div#programmeContent label.rokKarta {
     width: 30vw;
     height: 30vh;
     display: block;
@@ -48,17 +48,17 @@ label.rokKarta {
     transition: border-color 0.3s ease;
 }
 
-label.rokKarta:hover {
+div#programmeContent label.rokKarta:hover {
     border-color: var(--mint);
 }
 
-label.rokKarta input {
+div#programmeContent label.rokKarta input {
     visibility: hidden;
     height: 0; width: 0;
     position: absolute;
 }
 
-div.rokFront {
+div#programmeContent div.rokFront {
     font-size: 7.5vw;
     display: flex;
     justify-content: center;
@@ -67,7 +67,7 @@ div.rokFront {
     height: 100%;
 }
 
-.rokBack {
+div#programmeContent .rokBack {
     position: fixed;
     top: 64px;
     left: 64px;
@@ -86,18 +86,18 @@ div.rokFront {
     padding: 16px;
 }
 
-label.rokKarta .rokBack, label.rokKarta .rokKartaBackdrop {
+div#programmeContent label.rokKarta .rokBack, label.rokKarta .rokKartaBackdrop {
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
-label.rokKarta:has(input:checked) .rokBack, label.rokKarta:has(input:checked) .rokKartaBackdrop {
+div#programmeContent label.rokKarta:has(input:checked) .rokBack, label.rokKarta:has(input:checked) .rokKartaBackdrop {
     pointer-events: auto;
     opacity: 100;
 }
 
-label.rokKarta div.rokKartaBackdrop {
+div#programmeContent label.rokKarta div.rokKartaBackdrop {
     background-color: black;
     opacity: 0;
     top: 0;
@@ -108,17 +108,17 @@ label.rokKarta div.rokKartaBackdrop {
     transition: opacity 0.3s ease;
 }
 
-label.rokKarta:has(input:checked) div.rokKartaBackdrop {
+div#programmeContent label.rokKarta:has(input:checked) div.rokKartaBackdrop {
     opacity: 0.5;
 }
 
-.rokBack h3.nadpis {
+div#programmeContent .rokBack h3.nadpis {
     width: fit-content;
     margin-bottom: 16px;
     margin-top: -24px;
 }
 
-div.rokyContainer {
+div#programmeContent div.rokyContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

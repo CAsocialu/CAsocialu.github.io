@@ -89,7 +89,7 @@ export default function Domov() {
                     <div className="mainACTUALContentContainer">
                         <div className="mainACTUALContentImageContainer"><img src={randomPicsArray[0]} draggable="false" alt="" /></div>
                         <div className="mainACTUALContentTextContainer">
-                            <p>Všechno začalo roku -5 před naším letopočtem, kdy svět byl ještě v pořádku. Nikdo nechodil ven, svět byl bez válek... Ale poté vstal Ježíš Kristus a nutil lidi se mít rádi. To se nelíbilo mnoha lidem, a tak vzniká Odboj proti socializaci (tzv. <i>Antikristi</i>), tímto tž vzniká první předchůdce ČSA, což z nás dělá nejstarší stranu.</p>
+                            <p>Všechno začalo roku -5 před naším letopočtem, kdy svět byl ještě v pořádku. Nikdo nechodil ven, svět byl bez válek... Ale poté vstal Ježíš Kristus a nutil lidi se mít rádi. To se nelíbilo mnoha lidem, a tak vzniká Odboj proti socializaci (tzv. <i>Antikristi</i>), tímto též vzniká první předchůdce ČSA, což z nás dělá nejstarší stranu.</p>
                         </div>
                     </div>
                     <div className="mainACTUALContentContainer">

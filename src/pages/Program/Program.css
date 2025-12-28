@@ -2,7 +2,7 @@ div#programmeContent {
 	color: var(--ghost);
     background-color: var(--asociální-zeleň);
 	font-size: 21px;
-	font-family: var(--font-mono);
+	font-family:AvantGarde;
 }
 
 @media screen and (max-width: 949px) {

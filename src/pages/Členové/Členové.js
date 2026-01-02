@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async'
 import './Členové.css'
 import Konrád from '../../images/members/konrad.webp'
 import Karel from '../../images/members/kaja.webp'
-import Filip from '../../images/members/filip.webp'
+import Tomáš from '../../images/members/tomas.webp'
 import pepa from '../../images/members/pepa.webp'
 import InstagramLogo from '../../images/instagramLogo.svg'
 import Title from '../../components/Title/Title'
@@ -29,26 +29,26 @@ const members = [
         description: [
             "první místopředseda",
             "student průmyslové školy (nenávidí svoji školu)",
-            "kočkokluk",
+            "nemá personalitu, jen posílá obrázky kočky",
             "správce stranického twitteru",
-            "zajímá se o filozofii a umění, reálně nic neumí"
+            "reálně nic neumí"
         ],
         sns: {
             ig: "karel_hrubian",
         }
     },
     {
-        img: Filip,
-        name: "Filip Slovan",
+        img: Tomáš,
+        name: "Tomáš Novák",
         description: [
             "druhý místopředseda",
-            "student práva, psychologie a ekonomie",
-            "memer",
-            "vesničan",
-            "ke všemu má poznámku"
+            "student IT",
+            "vyskytuje se všude jen ne ve svém domě",
+            "hrdý uživatel Fabie 1.2 HTP 2006",
+            "umí udělat prdel z čehokoliv a z kohokoliv"
         ],
         sns: {
-            ig: "filip_slovan",
+	    ig: "girix_ii",
         }
     },
     {

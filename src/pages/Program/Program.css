@@ -141,7 +141,7 @@ div#programmeContent label.rokKarta:hover .rokFront {
     color: white;
     font-family: monospace;
     font-weight: 600;
-    font-size: 37px;
+    font-size: 28px;
     text-align: justify;
     text-align-last: center;
     box-sizing: border-box;
@@ -155,10 +155,11 @@ div#programmeContent label.rokKarta:hover .rokFront {
     z-index: 1000;
     height: auto;
     min-height: 90px;
-    padding: 65px 65px 65px 0;
+    padding: 16px 60px;
     display: flex;
     align-items: center;
     justify-content: center;
+	width: fit-content;
 }
 
 div#programmeContent .nadrokovybox {

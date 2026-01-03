@@ -78,9 +78,9 @@ div.mainACTUALContentContainer {
     align-items: center;
     column-gap: 32px;
     &>div.mainACTUALContentTextContainer {
-        padding: 32px;
+        padding: 16px 24px;
         border-radius: 8px;
-        border: 1px solid var(--mint);
+        border: 3px solid var(--mint);
         height: fit-content;
         display: flex;
         align-items: center;

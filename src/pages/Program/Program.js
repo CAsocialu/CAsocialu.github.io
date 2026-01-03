@@ -106,7 +106,7 @@ export default function Program() {
                 <meta name="twitter:image" content={`${process.env.PUBLIC_URL}/assets/banner.png`} />
             </Helmet>
     <div className="nadrokovybox">
-        Klikni na rok, aby jsi zjistil program pro daný rok starana si totiž tyčí<br />
+        Klikni na rok, abys zjistil program pro daný rok. Strana si totiž tyčí<br />
         nové cíle každý rok. Zvládneš kliknout na obdélníček, ne..?
     </div>
             <div className="rokyContainer">

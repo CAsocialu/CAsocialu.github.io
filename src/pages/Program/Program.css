@@ -2,7 +2,7 @@ div#programmeContent {
 	color: var(--ghost);
     background-color: var(--asociální-zeleň);
 	font-size: 21px;
-	font-family: AvantGarde;
+	font-family: var(--font-avant-garde);
 }
 
 @media screen and (max-width: 949px) {
@@ -134,31 +134,31 @@ div#programmeContent label.rokKarta:hover .rokFront {
 }
 
 
-.nadrokovybox{
+.nadrokovybox {
     background-color: var(--asociální-zeleň);
-  border: 3px solid var(--mint);
-  border-radius: 10px;
-  color: white;
-  font-family: monospace;
-  font-weight: 600;
-  font-size: 37px;
-  text-align: justify;
-  text-align-last: center;
-  box-sizing: border-box;
-  width: 65%;
-  line-height: 1.4;
-  white-space: pre-wrap;
-  margin: 50px auto 20px;
-position: absolute;
-top: 25px;
-left: 30px;
-right: 30px;
-z-index: 1000;
-height: 90px; 
-padding: 65px 65px 65px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    border: 3px solid var(--mint);
+    border-radius: 10px;
+    color: white;
+    font-family: monospace;
+    font-weight: 600;
+    font-size: 37px;
+    text-align: justify;
+    text-align-last: center;
+    box-sizing: border-box;
+    line-height: 1.4;
+    white-space: pre-wrap;
+    margin: 50px auto 20px;
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    right: 30px;
+    z-index: 1000;
+    height: auto;
+    min-height: 90px;
+    padding: 65px 65px 65px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 div#programmeContent .nadrokovybox {

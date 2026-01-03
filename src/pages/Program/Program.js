@@ -1,6 +1,10 @@
 import './Program.css';
 import { Helmet } from 'react-helmet-async';
-import Title from '../../components/Title/Title';
+import Title from '../../components/Title/Title'; 
+
+
+
+    
 
 
 export default function Program() {
@@ -87,7 +91,7 @@ export default function Program() {
             "Znělka z kouzelné školky jako státní hymna."
         ]
     }
-    return (
+     return (
         <div id="programmeContent">
             <Helmet>
                 <title>Program · ČSA</title>
@@ -101,11 +105,15 @@ export default function Program() {
                 <meta name="twitter:description" content="ČSA je recesistická politická strana, v tento moment chystající se vzniknout a poté začít nabírat členy. Více než strana je ČSA internetová mikrokomunita, kde každý člověk náhodně z internetu může přispět svým dílem." />
                 <meta name="twitter:image" content={`${process.env.PUBLIC_URL}/assets/banner.png`} />
             </Helmet>
+    <div className="nadrokovybox">
+        Klikni na rok, aby jsi zjistil program pro daný rok starana si totiž tyčí<br />
+        nové cíle každý rok. Zvládneš kliknout na obdélníček, ne..?
+    </div>
             <div className="rokyContainer">
                 {Object.entries(programEntries).map(([year, entries]) => (
                     <label className="rokKarta" key={year}>
                         <input type="checkbox" className="rokKartaTrigger" />
-                        <div className="rokFront">{year}</div>
+                        <div className="rokFront" >{year}</div>
                         <div className="rokKartaBackdrop"></div>
                         <ul className="rokBack">
                             <Title small>Program na rok {year}</Title>
@@ -117,5 +125,5 @@ export default function Program() {
                 ))}
             </div>
         </div>
-    )
+    );
 }

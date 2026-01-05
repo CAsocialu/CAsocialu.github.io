@@ -1,3 +1,4 @@
+
 div#Hero {
     height: calc(100vh - 90px - var(--extraheaderpaddingstuff));
     margin-top: calc(40px + var(--extraheaderpaddingstuff));
@@ -93,14 +94,8 @@ div.mainACTUALContentContainer {
         }
     }
     & img {
-        max-height: 24rem;
+       height:600px;
         flex-shrink: 1;
-    }
-    &>div.mainACTUALContentImageContainer>img:not([alt="Logo ČSA"]) {
-        background-color: var(--asociální-zeleň);
-        border-radius: 8px;
-        border: 16px solid white;
-        padding: 16px;
     }
 }
 
@@ -146,3 +141,93 @@ div.mainACTUALContactsContainer > .nadpis {
     background: none;
     width: fit-content;
 }
+
+.mainACTUALcontentStanovy {
+  display: flex;
+  gap: 24px;
+  left: 10px;
+  padding: 24px;
+  position: relative;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  max-width: 900px;
+  height: 400px;
+  margin: 24px auto;
+}
+
+.stanovy {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  flex-shrink: 0;
+ width: 220px;
+ position: absolute;
+ left: -250px;
+ user-select: none;
+}
+
+.stanovy > a {
+  background-color: black;     
+  padding: 24px 36px;          
+  color: var(--mint);              
+  font-size: 30px;           
+  width: 450px;                
+  height: 42px;                 
+  display: flex;
+  align-items: center;           
+  justify-content: center;       
+  text-align: center;
+  text-decoration: none; 
+}
+.stanovy a::after {
+    content: none !important;
+}
+
+.pravýtext {
+    position: relative;
+    left:550px;
+    bottom: 25px;
+    width: 500px;
+    height: 420px;
+    font-size: 37px;
+    background: var(--asociální-zeleň);
+    border-radius: 7px;
+    border: 2px solid var(--mint);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--mint);
+    padding: 0 64px 16px;
+    &>* {
+        color: white !important;
+        font-weight: bold;
+    }
+}
+.časnovýroman {
+    font-family: "Times New Roman", Times, serif
+}
+
+.komickýsans {
+    font-family: "Comic Sans MS", cursive, sans-serif; 
+}
+
+.třetífont {
+    font-family: "Courier New", Courier, monospace; 
+}
+
+.logocsa{
+    width: 10px !important;
+
+}
+
+
+
+
+
+
+
+
+

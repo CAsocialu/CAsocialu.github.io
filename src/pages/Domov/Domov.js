@@ -99,7 +99,7 @@ export default function Domov() {
                             <p>Všechno začalo roku -5 před naším letopočtem, kdy svět byl ještě v pořádku. Nikdo nechodil ven, svět byl bez válek... Ale poté vstal Ježíš Kristus a nutil lidi se mít rádi. To se nelíbilo mnoha lidem, a tak vzniká Odboj proti socializaci (tzv. <i>Antikristi</i>), tímto též vzniká první předchůdce ČSA, což z nás dělá nejstarší stranu.</p>
                         </div>
                     </div>
-                    <div id="aa" className="mainACTUALContentContainer">
+                    <div className="mainACTUALContentContainer">
                         <div className="mainACTUALContentTextContainer">
                             <p>Přesuneme se do 24. května 2022, kdy se třem lidem řed očima zjevili předchozí antikristi a řekli: „Nyní je Váš úkol bojovat proti socializaci!“<br />Hned se udělali účty na sociálních sítích na šíření asocialismu a po dvou měsících mínus deset dní i Discord.</p>
                         </div>
@@ -115,7 +115,7 @@ export default function Domov() {
                         <p>Jelikož nás stát nemá rád, jsme zákonem povinni na naše webovky dát stanovy. Nebylo ale nikým řečeno, jak musí vypadat, takže si můžete vybrat ze tří oku lahodících designů. </p>
                         </div>
                     </div>
-                    <div className="mainContactsContainer" style={{backgroundImage: `url(${Hafík})`, backgroundSize: 'cover', backgroundPosition: 'center 60%', backgroundRepeat: 'no-repeat'}}>
+                    <div className="mainContactsContainer" style={{backgroundImage: `url(${Hafík})`, backgroundSize: 'cover', backgroundPosition: 'center 50%', backgroundRepeat: 'no-repeat'}}>
                         <div className="mainACTUALContactsContainer">
                             <Title>KONTAKTY</Title>
                             <a href="https://www.instagram.com/ceska_strana_antisocialni/" target="_blank" rel="noreferrer noopener">stranický instagram</a>

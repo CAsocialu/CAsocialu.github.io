@@ -99,8 +99,6 @@ div.mainACTUALContentContainer {
         flex-shrink: 1;
     }
 }
-
-
 div.mainACTUALContentContainer:not(:first-of-type) {
     background-color: var(--ne-tak-úplně-černá);
     >* {
@@ -228,8 +226,9 @@ div.mainACTUALContactsContainer > .nadpis {
     justify-content: center;
     gap: 8px;
     color: var(--mint);
-    padding: 32px 64px;
+    padding: 8px 16px;
     margin-left: auto;
+    margin-top: -0.5rem;
     &>* {
         color: white;
         font-weight: bold;

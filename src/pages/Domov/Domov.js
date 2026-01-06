@@ -106,12 +106,12 @@ export default function Domov() {
                         <div className="mainACTUALContentImageContainer"><img src={Agenti} draggable="false" alt="" /></div>
                     </div>
                     <div className="mainACTUALcontentStanovy">
-                        <div class="stanovy">
+                        <div className="stanovy">
                         <a href={časnovyroman} className="časnovýroman">stanovy v times new roman</a>
                         <a href={komickýsans} className="komickýsans">stanovy v comic sans</a>
                         <a href={třetífont} className="třetífont">stanovy v tom třetím fontu</a>
                         </div>
-                        <div class="pravýtext">
+                        <div className="pravýtext">
                         <p>Jelikož nás stát nemá rád, jsme zákonem povinni na naše webovky dát stanovy. Nebylo ale nikým řečeno, jak musí vypadat, takže si můžete vybrat ze tří oku lahodících designů. </p>
                         </div>
                     </div>

@@ -218,9 +218,11 @@ div.mainACTUALContactsContainer > .nadpis {
     font-family: "Courier New", Courier, monospace; 
 }
 
-.logocsa{
-    width: 10px !important;
-
+.logocsa {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 1;
 }
 
 

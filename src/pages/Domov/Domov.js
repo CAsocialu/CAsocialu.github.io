@@ -99,7 +99,7 @@ export default function Domov() {
                             <p>Všechno začalo roku -5 před naším letopočtem, kdy svět byl ještě v pořádku. Nikdo nechodil ven, svět byl bez válek... Ale poté vstal Ježíš Kristus a nutil lidi se mít rádi. To se nelíbilo mnoha lidem, a tak vzniká Odboj proti socializaci (tzv. <i>Antikristi</i>), tímto též vzniká první předchůdce ČSA, což z nás dělá nejstarší stranu.</p>
                         </div>
                     </div>
-                    <div className="mainACTUALContentContainer">
+                    <div id="aa" className="mainACTUALContentContainer">
                         <div className="mainACTUALContentTextContainer">
                             <p>Přesuneme se do 24. května 2022, kdy se třem lidem řed očima zjevili předchozí antikristi a řekli: „Nyní je Váš úkol bojovat proti socializaci!“<br />Hned se udělali účty na sociálních sítích na šíření asocialismu a po dvou měsících mínus deset dní i Discord.</p>
                         </div>

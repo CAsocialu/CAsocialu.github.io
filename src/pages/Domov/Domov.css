@@ -100,6 +100,7 @@ div.mainACTUALContentContainer {
     }
 }
 
+
 div.mainACTUALContentContainer:not(:first-of-type) {
     background-color: var(--ne-tak-úplně-černá);
     >* {
@@ -147,14 +148,14 @@ div.mainACTUALContactsContainer > .nadpis {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 48px;
+    gap: 80px;
     padding: 24px;
     position: relative;
     font-size: 18px;
     font-weight: bold;
     border-radius: 8px;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1600px;
     height: auto;
     margin: 24px auto;
     align-items: flex-start;
@@ -175,6 +176,7 @@ div.mainACTUALContactsContainer > .nadpis {
     gap: 50px;
     flex-shrink: 0;
     user-select: none;
+    margin-left: 60px;
 }
 
 @media screen and (max-width: 768px) {

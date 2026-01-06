@@ -91,7 +91,7 @@ export default function Domov() {
                         <div className="mainACTUALContentTextContainer">
                             <p>Česká strana asociálů je 100% skutečná strana, která vše rozhodně bere vážně fr fr. Hlavní aktivita je na discordu, protože chodit ven je SOCIALIZACE. Je chronicky aktivní, můžete tam najít zastání každého politického smýšlení. Taky má sociální sítě, instagram a twitter, kde nás sledují skuteční lidé včetně politiků se smyslem pro humor. Stranu aktivně podporuje Židovsko-zednářské spiknutí, Ilumináti, Hamás, Izrael, tajný BDSM klubík pana Zeleného a taky vláda Kepleru-22b.</p>
                         </div>
-                        <img src={logo} className="logocsa" alt="Logo ČSA" draggable="false"/>
+                        <img src={logo} alt="Logo ČSA" draggable="false"/>
                     </div>
                     <div className="mainACTUALContentContainer">
                         <div className="mainACTUALContentImageContainer"><img src={Vozík} draggable="false" alt="" /></div>

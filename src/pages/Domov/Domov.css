@@ -1,4 +1,3 @@
-
 div#Hero {
     height: calc(100vh - 90px - var(--extraheaderpaddingstuff));
     margin-top: calc(40px + var(--extraheaderpaddingstuff));
@@ -94,7 +93,9 @@ div.mainACTUALContentContainer {
         }
     }
     & img {
-       height:600px;
+        max-height: 24rem;
+        width: auto;
+        object-fit: contain;
         flex-shrink: 1;
     }
 }
@@ -143,53 +144,78 @@ div.mainACTUALContactsContainer > .nadpis {
 }
 
 .mainACTUALcontentStanovy {
-  display: flex;
-  gap: 24px;
-  left: 10px;
-  padding: 24px;
-  position: relative;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 8px;
-  max-width: 900px;
-  height: 400px;
-  margin: 24px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 48px;
+    padding: 24px;
+    position: relative;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    margin: 24px auto;
+    align-items: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+    .mainACTUALcontentStanovy {
+        padding: 16px;
+        gap: 16px;
+        font-size: 16px;
+        flex-direction: column;
+    }
 }
 
 .stanovy {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  flex-shrink: 0;
- width: 220px;
- position: absolute;
- left: -250px;
- user-select: none;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    flex-shrink: 0;
+    user-select: none;
+}
+
+@media screen and (max-width: 768px) {
+    .stanovy {
+        gap: 20px;
+        width: 100%;
+    }
 }
 
 .stanovy > a {
-  background-color: black;     
-  padding: 24px 36px;          
-  color: var(--mint);              
-  font-size: 30px;           
-  width: 450px;                
-  height: 42px;                 
-  display: flex;
-  align-items: center;           
-  justify-content: center;       
-  text-align: center;
-  text-decoration: none; 
+    box-sizing: border-box;
+    background-color: black;
+    padding: 28px 42px;
+    color: var(--mint);
+    font-size: 34px;
+    width: 100%;
+    max-width: 550px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
 }
+
+@media screen and (max-width: 768px) {
+    .stanovy > a {
+        padding: 16px 24px;
+        font-size: 24px;
+        max-width: 100%;
+    }
+}
+
 .stanovy a::after {
     content: none !important;
 }
 
 .pravýtext {
-    position: relative;
-    left:550px;
-    bottom: 25px;
-    width: 500px;
-    height: 420px;
+    max-width: 550px;
+    width: 100%;
+    height: auto;
     font-size: 37px;
     background: var(--asociální-zeleň);
     border-radius: 7px;
@@ -200,22 +226,32 @@ div.mainACTUALContactsContainer > .nadpis {
     justify-content: center;
     gap: 8px;
     color: var(--mint);
-    padding: 0 64px 16px;
+    padding: 32px 64px;
+    margin-left: auto;
     &>* {
-        color: white !important;
+        color: white;
         font-weight: bold;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .pravýtext {
+        font-size: 28px;
+        padding: 24px 32px;
+        max-width: 100%;
+    }
+}
+
 .časnovýroman {
     font-family: "Times New Roman", Times, serif
 }
 
 .komickýsans {
-    font-family: "Comic Sans MS", cursive, sans-serif; 
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 .třetífont {
-    font-family: "Courier New", Courier, monospace; 
+    font-family: "Courier New", Courier, monospace;
 }
 
 .logocsa {
@@ -224,12 +260,3 @@ div.mainACTUALContactsContainer > .nadpis {
     height: auto;
     aspect-ratio: 1;
 }
-
-
-
-
-
-
-
-
-

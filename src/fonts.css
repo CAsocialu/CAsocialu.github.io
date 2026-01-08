@@ -143,3 +143,26 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family:'Klavika_Basic';
+    src: url('./fonts/fonnts.com-Klavika_Basic_Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family:'Klavika_Basic';
+    src: url('./fonts/fonnts.com-Klavika_Basic_Medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Klavika_Condensed';
+    src: url('./fonts/fonnts.com-Klavika_Condensed_Light_Italic.otf') format('opentype');
+    font-weight: light;
+    font-style: italic;
+}

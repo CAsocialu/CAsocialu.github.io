@@ -1,14 +1,21 @@
 .nadpis {
-    font-family: var(--font-avant-garde);
-    text-transform: uppercase;
+  box-sizing: border-box;
+    background-color: black;
+    padding: 28px 42px;
+    color: var(--mint);
+    font-family: var(--font-klavika-basic);
+    font-size: 60px;
+    font-weight: bold;
+    width: 100%;
+    max-width: 450px;
+    max-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin-top: 0px;
-    width: calc(100vw - 32px);
-    background: black;
-    margin-bottom: 0;
-    padding: 8px 16px;
-    z-index: 3;
-    position: relative;
+    margin-top: 2rem;
+    margin-bottom: -2rem;
+    user-select: none;
 }
 
 h3.nadpis {

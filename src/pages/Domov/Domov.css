@@ -68,8 +68,8 @@ a::after {
 }
 
 div.mainACTUALContentContainer {
-    font-size: 28px;
-    font-weight: bold;
+    font-size: 32px;
+    font-weight: normal;
     line-height: 48px;
     padding: 32px;
     display: flex;
@@ -133,7 +133,7 @@ div.mainACTUALContactsContainer {
     font-size: 32px;
     &>* {
         color: white !important;
-        font-weight: bold;
+        font-weight: normal;
     }
 }
 
@@ -150,22 +150,13 @@ div.mainACTUALContactsContainer > .nadpis {
     padding: 24px;
     position: relative;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: normal;
     border-radius: 8px;
     width: 100%;
     max-width: 1600px;
     height: auto;
     margin: 24px auto;
     align-items: flex-start;
-}
-
-@media screen and (max-width: 768px) {
-    .mainACTUALcontentStanovy {
-        padding: 16px;
-        gap: 16px;
-        font-size: 16px;
-        flex-direction: column;
-    }
 }
 
 .stanovy {
@@ -175,13 +166,6 @@ div.mainACTUALContactsContainer > .nadpis {
     flex-shrink: 0;
     user-select: none;
     margin-left: 60px;
-}
-
-@media screen and (max-width: 768px) {
-    .stanovy {
-        gap: 20px;
-        width: 100%;
-    }
 }
 
 .stanovy > a {
@@ -198,14 +182,6 @@ div.mainACTUALContactsContainer > .nadpis {
     justify-content: center;
     text-align: center;
     text-decoration: none;
-}
-
-@media screen and (max-width: 768px) {
-    .stanovy > a {
-        padding: 16px 24px;
-        font-size: 24px;
-        max-width: 100%;
-    }
 }
 
 .stanovy a::after {
@@ -231,17 +207,10 @@ div.mainACTUALContactsContainer > .nadpis {
     margin-top: -0.5rem;
     &>* {
         color: white;
-        font-weight: bold;
+        font-weight: normal;
     }
 }
 
-@media screen and (max-width: 768px) {
-    .pravýtext {
-        font-size: 28px;
-        padding: 24px 32px;
-        max-width: 100%;
-    }
-}
 
 .časnovýroman {
     font-family: "Times New Roman", Times, serif
@@ -255,9 +224,21 @@ div.mainACTUALContactsContainer > .nadpis {
     font-family: "Courier New", Courier, monospace;
 }
 
-.logocsa {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    aspect-ratio: 1;
+.logocsa{
+    
+    margin-bottom: 1rem;
+    width: 100% !important;
+    max-height: 30rem !important;
+    height: auto !important;
+   
+
 }
+
+.mainACTUALContentTextContainer:nth-of-type(1){
+    margin-right: 2rem;
+}
+
+.mainACTUALContentTextContainer:nth-of-type(2){
+    margin-right: 6rem;
+}
+

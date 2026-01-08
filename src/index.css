@@ -19,8 +19,9 @@ html:has(div#header.headerWithExtraNews),body:has(div#header.headerWithExtraNews
 div#mainContent {
 	color: var(--ghost);
 	font-size: 22px;
-	font-family: var(--font-vl-gothic);
+	font-family: var(--font-klavika-basic);
     background-color: var(--asociální-zeleň);
+    font-weight: normal;
     display: flex;
     flex-direction: column;
     align-items: center;

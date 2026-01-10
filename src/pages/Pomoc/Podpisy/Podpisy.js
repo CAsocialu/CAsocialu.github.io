@@ -32,7 +32,7 @@ export default function Podpisy() {
                 <div>
                     <Title>Chci být součástí!</Title>
                 </div>
-                <div id="signaturesNote">Zatím být nemůžes, protoze zlý stát nás pořád nescválil<br /> Zatím se však můžes podívat na Sisinu </div>
+                <div id="signaturesNote">Zatím být nemůžeš, protože zlý stát nás pořád neschválil<br /> Zatím se však můžes podívat na Sisinu </div>
                 <div className='koček'>
                 <img src={Sisina} draggable="false"  alt="" />
                 </div>

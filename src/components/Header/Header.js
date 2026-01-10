@@ -38,7 +38,7 @@ export default function Header() {
                     <Link to="/">o straně</Link>
                     {/* <Link to="/sraz2025" onClick={() => headerMenuTriggerRef.current.checked = false}>ČSA Sraz 2025</Link> */}
                     <Link to="clenove">členové</Link>
-                    <Link to="pomoc">chci pomoci</Link>
+                    <Link to="pomoc">chci být součástí</Link>
                     <Link to="program">program</Link>
                     {/* <Link to="kontakty" onClick={() => headerMenuTriggerRef.current.checked = false}>kontakt</Link> */}
                     {/* <Link to="historie" onClick={() => headerMenuTriggerRef.current.checked = false}>historie</Link> */}

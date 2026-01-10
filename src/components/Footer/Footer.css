@@ -7,7 +7,7 @@ div#footer {
     color: var(--ghost);
     padding-left: 16px;
     padding-right: 2px;
-    font-family: "Klavika_Condensed";
+    font-family: var(--font-klavika-condensed);
     bottom: 0vh;
     position: fixed;
     height: 50px;

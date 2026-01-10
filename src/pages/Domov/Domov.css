@@ -304,12 +304,13 @@ div.mainACTUALContactsContainer > * {
     font-size: 34px;
     width: 100%;
     max-width: 550px;
-    min-height: 50px;
+    max-height: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 @media screen and (max-width: 768px) {
@@ -381,6 +382,7 @@ div.mainACTUALContactsContainer > * {
 
 .třetífont {
     font-family: "Courier New", Courier, monospace;
+    
 }
 
 .logocsa {

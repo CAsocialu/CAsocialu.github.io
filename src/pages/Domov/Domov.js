@@ -102,7 +102,7 @@ export default function Domov() {
                     </div>
                     <div className="mainACTUALContentContainer"> 
                         <div className="mainACTUALContentTextContainer">
-                            <p>Přesuneme se do 24. května 2022, kdy se třem lidem řed očima zjevili předchozí antikristi a řekli: „Nyní je Váš úkol bojovat proti socializaci!"<br />Hned se udělali účty na sociálních sítích na šíření asocialismu a po dvou měsících mínus deset dní i Discord.</p>
+                            <p>Přesuneme se do 24. května 2022, kdy se třem lidem před očima zjevili předchozí antikristi a řekli: „Nyní je Váš úkol bojovat proti socializaci!"<br />Hned se udělali účty na sociálních sítích na šíření asocialismu a po dvou měsících mínus deset dní i Discord.</p>
                         </div>
                         <div className="mainACTUALContentImageContainer"><img src={Agenti} draggable="false" alt="" /></div>
                     </div>

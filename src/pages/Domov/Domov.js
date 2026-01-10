@@ -43,10 +43,6 @@ import Vozík from "../../images/home/web_onas_dobyvanicernehomostu.png"
 import Agenti from "../../images/home/web_onas_agentiGRU.png"
 import Title from "../../components/Title/Title";
 
-import časnovyroman from "../../Stanovy/ČSA Stanovy, times new roman.pdf"
-import komickýsans from "../../Stanovy/ČSA Stanovy, ale comic sans.pdf"
-import třetífont from "../../Stanovy/ČSA Stanovy, ale s fontem, který nezvládá česká písmenka.pdf"
-
 const randomPics = [RandomPic0, RandomPic1, RandomPic2, RandomPic3, RandomPic4, RandomPic5, RandomPic6, RandomPic7, RandomPic8, RandomPic9, RandomPic10, RandomPic11, RandomPic12, RandomPic13, RandomPic14, RandomPic15, RandomPic16, RandomPic17, RandomPic18, RandomPic19, RandomPic20, RandomPic21, RandomPic22, RandomPic23, RandomPic24, RandomPic25, RandomPic26, RandomPic27, RandomPic28, RandomPic29,]
 
 
@@ -108,9 +104,9 @@ export default function Domov() {
                     </div>
                     <div className="mainACTUALcontentStanovy">
                         <div className="stanovy">
-                        <a href={časnovyroman} className="časnovýroman">stanovy v times new roman</a>
-                        <a href={komickýsans} className="komickýsans">stanovy v comic sans</a>
-                        <a href={třetífont} className="třetífont">stanovy v tom třetím fontu</a>
+                        <a download={true} className="časnovýroman" href="/assets/ČSA Stanovy, times new roman.pdf">stanovy v times new roman</a>
+                        <a download={true} className="komickýsans" href="/assets/ČSA Stanovy, ale comic sans.pdf">stanovy v comic sans</a>
+                        <a download={true} className="třetífont" href="/assets/ČSA Stanovy, ale s fontem, který nezvládá česká písmenka.pdf">stanovy v tom třetím fontu</a>
                         </div>
                         <div className="pravýtext">
                         <p>Jelikož nás stát nemá rád, jsme zákonem povinni na naše webovky dát stanovy. Nebylo ale nikým řečeno, jak musí vypadat, takže si můžete vybrat ze tří oku lahodících designů. </p>

@@ -140,7 +140,7 @@ div#členové>div.člen.open>div.členContent {
         justify-content: flex-end;
         column-gap: 1.627670396744659vh;
         font-family: var(--font-klavika-condensed);
-        font-weight: light;
+        font-weight: 300;
         font-style: italic;
         & a {
             font-size: 3vh;

@@ -164,6 +164,7 @@
 @font-face {
     font-family: 'Klavika_Condensed';
     src: url('./fonts/fonnts.com-Klavika_Condensed_Light_Italic.otf') format('opentype');
-    font-weight: light;
+    font-weight: 300;
     font-style: italic;
+    font-display: swap;
 }

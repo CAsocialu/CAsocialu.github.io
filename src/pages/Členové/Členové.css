@@ -5,6 +5,7 @@ div#membersContent {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: var(--asociální-zeleň);
     width: calc(100% - calc(2*6*1.627670396744659vh));
     row-gap: 24px;
     &>h1 {
@@ -125,8 +126,9 @@ div#členové>div.člen.open>div.členContent {
         display: inline-block;
     }
     & ul {
-        font-family: var(--font-mono);
-        font-size: 2.85vh;
+        font-family: var(--font-klavika-basic);
+       font-weight: normal;
+        font-size: 4vh;
         padding-left: 4.069175991861648vh;
         & li::marker {
             content: "- ";
@@ -137,8 +139,11 @@ div#členové>div.člen.open>div.členContent {
         flex-direction: row;
         justify-content: flex-end;
         column-gap: 1.627670396744659vh;
+        font-family: var(--font-klavika-condensed);
+        font-weight: light;
+        font-style: italic;
         & a {
-            font-size: 2vh;
+            font-size: 3vh;
             color: var(--ghost);
             display: flex;
             flex-direction: row;

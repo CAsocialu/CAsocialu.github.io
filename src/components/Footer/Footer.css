@@ -8,7 +8,7 @@ div#footer {
     padding-left: 16px;
     padding-right: 2px;
     font-family: var(--font-klavika-condensed);
-    font-size: 300;
+    font-weight: 300;
     font-style: italic;
     bottom: 0vh;
     position: fixed;

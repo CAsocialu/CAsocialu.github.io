@@ -2,11 +2,6 @@ import './Program.css';
 import { Helmet } from 'react-helmet-async';
 import Title from '../../components/Title/Title'; 
 
-
-
-    
-
-
 export default function Program() {
     const programEntries = {
         "2022": [
@@ -94,6 +89,7 @@ export default function Program() {
      return (
         <div id="programmeContent">
             <Helmet>
+	     	<title>Program · ČSA</title>
                 <meta name="description" content="ČSA je recesistická politická strana, v tento moment chystající se vzniknout a poté začít nabírat členy. Více než strana je ČSA internetová mikrokomunita, kde každý člověk náhodně z internetu může přispět svým dílem." />
                 <meta property="og:title" content="Program · ČSA" />
                 <meta property="og:description" content="ČSA je recesistická politická strana, v tento moment chystající se vzniknout a poté začít nabírat členy. Více než strana je ČSA internetová mikrokomunita, kde každý člověk náhodně z internetu může přispět svým dílem." />

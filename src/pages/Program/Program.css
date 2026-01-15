@@ -135,16 +135,18 @@ div#programmeContent .rokBack {
 }
 
 div#programmeContent label.rokKarta .rokBack,
-label.rokKarta .rokKartaBackdrop {
+div#programmeContent label.rokKarta .rokKartaBackdrop {
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.3s ease;
+    margin: 0; margin-top: -25px;
+    z-index: 501;
 }
 
 div#programmeContent label.rokKarta:has(input:checked) .rokBack,
-label.rokKarta:has(input:checked) .rokKartaBackdrop {
+div#programmeContent label.rokKarta:has(input:checked) .rokKartaBackdrop {
     pointer-events: auto;
-    opacity: 100;
+    opacity: 1;
 }
 
 div#programmeContent label.rokKarta div.rokKartaBackdrop {
@@ -156,6 +158,8 @@ div#programmeContent label.rokKarta div.rokKartaBackdrop {
     height: 100vh;
     position: fixed;
     transition: opacity 0.3s ease;
+    margin: 0;
+    z-index: 500;
 }
 
 div#programmeContent label.rokKarta:has(input:checked) div.rokKartaBackdrop {
@@ -221,9 +225,8 @@ div#programmeContent label.rokKarta:hover .rokFront {
     text-align: center;
     box-sizing: border-box;
     line-height: 1.4;
-    margin: 50px auto 30px;
+    margin: 50px auto -6rem;
     height: auto;
-    margin-bottom: -6rem;
     padding: 16px 60px;
     display: flex;
     align-items: center;
@@ -231,6 +234,7 @@ div#programmeContent label.rokKarta:hover .rokFront {
     width: fit-content;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 @media screen and (max-width: 768px) {

@@ -81,7 +81,7 @@ export default function Domov() {
                 </Carousel>
             </div> */}
             <div id="mainContent">
-                    <Title>O straně </Title>
+                <Title>O straně</Title>
                 
                 <div id="mainACTUALContent">
                     <div className="mainACTUALContentContainer">

@@ -227,7 +227,7 @@ div.mainACTUALContactsContainer {
 }
 
 div.mainACTUALContactsContainer > * {
-    color: white !important;
+    color: white;
     font-weight: normal;
 }
 
@@ -277,7 +277,6 @@ div.mainACTUALContactsContainer > * {
     flex-direction: column;
     gap: 50px;
     flex-shrink: 0;
-    user-select: none;
     margin-left: 60px;
 }
 

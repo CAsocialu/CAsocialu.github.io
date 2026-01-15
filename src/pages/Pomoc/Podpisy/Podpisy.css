@@ -5,8 +5,7 @@ div#content:has(div#signaturesContent) {
 }
 
 div#helpContent:has(div#signaturesContent) {
-    margin: 0;
-    padding: 0;
+    margin: 0; padding: 0;
     min-height: calc(100vh - 106px);
 }
 
@@ -22,10 +21,14 @@ div#signaturesContent {
     min-height: 100%;
 }
 
-@media screen and (max-width: 768px) {
-    div#signaturesContent {
-        padding-left: 16px !important;
-        padding-right: 16px !important;
+a#petitionDL {
+    padding: 16px 24px;
+    background: black;
+    display: flex;
+    color: var(--mint);
+    text-decoration: none;
+    &::after {
+        content: ""
     }
 }
 
@@ -33,28 +36,11 @@ div#signaturesNote {
     font-size: 32px;
     line-height: 1.5;
     text-align: center;
+    margin-bottom: 16px;
     padding: 16px 24px;
     border: 3px var(--mint) solid;
     border-radius: 24px;
-    margin-top: 5rem;
-}
 
-@media screen and (max-width: 768px) {
-    div#signaturesNote {
-        font-size: 18px;
-        line-height: 1.4;
-        padding: 12px 16px;
-        border-radius: 16px;
-        margin-top: 2rem;
-    }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    div#signaturesNote {
-        font-size: 24px;
-        padding: 14px 20px;
-        margin-top: 3.5rem;
-    }
 }
 
 div#signaturesContentWrapper {
@@ -64,39 +50,66 @@ div#signaturesContentWrapper {
     gap: 8px;
 }
 
-div#signaturesContent .koček {
-    width: 100%;
+div#signaturesInstructionsWrapper {
     display: flex;
+    flex-direction: row;
+    align-items: start;
     justify-content: center;
-    margin-top: 2rem;
+    gap: 16px;
+    flex-wrap: wrap;
+    &>.signaturesInstructionWrapper {
+        color: transparent;
+        width: 20vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        text-align: center;
+        font-size: 16px;
+        padding: 16px;
+        border: 3px transparent solid;
+        border-radius: 24px;
+        transition: border-color 0.1s ease-in-out, color 0.1s ease-in-out;
+        &:hover {
+            border-color: var(--mint);
+            color: white;
+        }
+        &>img {
+            width: 50%;
+            aspect-ratio: 1;
+        }
+        &>ul {
+            list-style-type: none;
+            padding: 0;
+            margin-left: 24px;
+            margin-right: 12px;
+            text-align: left;
+        }
+        &>ul>li {
+            margin-bottom: 8px;
+        }
+        &>ul>li::marker {
+            content: "- "
+        }
+    }
 }
 
-div#signaturesContent .koček img {
-    width: 70%;
-    height: auto;
-    max-width: 600px;
-    min-width: 200px;
-    object-fit: contain;
-}
+@media (max-width: 1235px) {
+    div#helpContentWrapper>* {
+        width: calc(100% - 40px) !important;
+    }
 
-@media screen and (max-width: 768px) {
-    div#signaturesContent .koček {
-        margin-top: 1.5rem;
+    div#signaturesNote {
+        font-size: 1rem;
     }
-    
-    div#signaturesContent .koček img {
-        width: 80%;
-        max-width: 400px;
-    }
-}
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    div#signaturesContent .koček {
-        margin-top: 1.75rem;
-    }
-    
-    div#signaturesContent .koček img {
-        width: 50%;
-        max-width: 500px;
+    div#signaturesInstructionsWrapper {
+        &>.signaturesInstructionWrapper {
+            width: 40vw;
+            &>img {
+                width: 80%;
+            }
+        }
     }
 }

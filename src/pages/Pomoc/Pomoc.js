@@ -1,8 +1,8 @@
-import { PodpisyPack } from "../pages";
+import { VznikámePack } from "../pages";
 import './Pomoc.css'
 import { Helmet } from "react-helmet-async";
 import Title from "../../components/Title/Title";
-export default function Pomoc({ page = PodpisyPack }) {
+export default function Pomoc({ page = VznikámePack }) {
     return (
         <div id="helpContent">
             <Helmet>

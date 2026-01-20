@@ -1,6 +1,6 @@
 div#header {
     position: sticky;
-    font-family: var(--font-vl-gothic);
+    font-family: var(--font-klavika-basic);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,7 +24,7 @@ div#header {
         &>* {
             margin-top: -2px;
             color: var(--ghost);
-            font-family: var(--font-vl-gothic);
+            font-family: var(--font-klavika-basic);
             font-size: 20px;
             text-decoration: none;
             position: relative;

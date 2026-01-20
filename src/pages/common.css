@@ -1,8 +1,9 @@
 div#galleryContent, div#helpContent, div#signaturesContent {
 	padding: 16px min(96px, 7vw) 0;
 	color: var(--ghost);
-	font-size: 21px;
-	font-family: var(--font-mono);
+	font-size: 32px;
+	font-family: var(--font-klavika-basic);
+	font-weight: normal;
     display: flex;
     flex-direction: column;
     align-items: center;

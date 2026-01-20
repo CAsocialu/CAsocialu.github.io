@@ -16,7 +16,6 @@
     --font-avant-garde: "AvantGarde";
     --font-arundina-mono: "Arundina Sans Mono";
     --font-bebas: "Bebas Neue";
-    --font-vl-gothic: "VL Gothic";
     --font-vl-p-gothic: "VL PGothic";
     --asociální-zeleň: #009179;
     --mint: #76c578;
@@ -24,4 +23,6 @@
     --ne-tak-úplně-černá: #0f0f0f;
     --bělavě-šedá: #f0f0f0;
     --červená-z-loga: red;
+    --font-klavika-basic: "Klavika_Basic";
+    --font-klavika-condensed: "Klavika_Condensed";
 }

@@ -32,10 +32,8 @@ export default function Vznikáme() {
                 <div>
                     <Title>Chci být součástí!</Title>
                 </div>
-                <div id="beginningNote">Zatím být nemůžeš, protože zlý stát nás pořád neschválil<br /> Zatím se však můžes podívat na Sisinu </div>
-                <div className='koček'>
-                <img src={Sisina} draggable="false"  alt="" />
-                </div>
+	        <span className="sectionTitle">Přihláška do Strany</span>
+                <iframe src="https://socializace.asocialove.cz/embed/membership" allowTransparency="true" /> 
             </div>
         </div>
     )

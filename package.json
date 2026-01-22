@@ -3,17 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^19.2.0",
+    "react": "^19.2.3",
     "react-confetti": "^6.4.0",
-    "react-dom": "^19.2.0",
+    "react-dom": "^19.2.3",
     "react-helmet-async": "^2.0.5",
     "react-router-dom": "^7.12.0",
     "react-scripts": "5.0.1"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.22",
-    "glob": "^11.1.0",
-    "puppeteer": "^24.29.1",
+    "autoprefixer": "^10.4.23",
+    "glob": "^13.0.0",
+    "puppeteer": "^24.36.0",
     "sharp": "^0.34.5"
   },
   "scripts": {

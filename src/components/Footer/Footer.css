@@ -11,15 +11,20 @@ div#footer {
     font-weight: 300;
     font-style: italic;
     bottom: 0vh;
-    position: fixed;
-    height: 50px;
-    width: calc(100vw - 18px);
+    position: sticky;
+    bottom: 0;
+    min-height: 50px;
+    height: 100%;
+   width: 100%;
+   left: 0;
+   right: 0;
     user-select: none;
     font-size: 16px;
     transition: height var(--transition-footer);
     z-index: 100;
     overflow: hidden;
-    word-spacing: 0.4rem;
+    margin-top: -3rem;
+
 }
 
 div#footer>img {
@@ -69,3 +74,12 @@ div#footer:hover>div#footerInfo {
         display: none;
     }
 }
+ div.text{
+    word-spacing: 0.1rem;
+    word-spacing: 0.1rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+ }
+
+ 

@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 html {
-    background-color: black;
+    background-color: #0f0f0f;
 }
 
 html,body {
@@ -10,6 +10,7 @@ html,body {
     overflow-y: scroll;
     overflow-x: hidden;
     --extraheaderpaddingstuff: 0px;
+    background-color: #0f0f0f;
 }
 
 html:has(div#header.headerWithExtraNews),body:has(div#header.headerWithExtraNews) {
@@ -25,6 +26,7 @@ div#mainContent {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #f0f0f0;
     & .twitter {
         font-family: "Noto Sans Math";
         font-weight: normal;

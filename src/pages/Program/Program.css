@@ -42,8 +42,8 @@ div#programmeContent label.rokKarta {
     width: 30vw;
     height: 30vh;
     display: block;
-    background-color: black;
-    border: 24px solid white;
+    background-color:  #0f0f0f;
+    border: 24px solid var(--ghost);
     margin: -24px 0;
     transition: border-color 0.3s ease;
 }
@@ -99,7 +99,7 @@ div#programmeContent .rokBack {
     width: calc(100vw - 128px - 32px - 32px);
     height: calc(100vh - 128px - 32px - 32px);
     border: 16px solid var(--mint);
-    background-color: black;
+    background-color:  #0f0f0f;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -150,7 +150,7 @@ div#programmeContent label.rokKarta:has(input:checked) .rokKartaBackdrop {
 }
 
 div#programmeContent label.rokKarta div.rokKartaBackdrop {
-    background-color: black;
+    background-color:  #0f0f0f;
     opacity: 0;
     top: 0;
     left: 0;
@@ -216,9 +216,9 @@ div#programmeContent label.rokKarta:hover .rokFront {
 
 .nadrokovybox {
     background-color: var(--asociální-zeleň);
-    border: 3px solid var(--mint);
+   border: 0.16vw solid var(--mint);
     border-radius: 10px;
-    color: white;
+    color: var(--ghost);
     font-family: var(--font-klavika-basic);
     font-weight: normal;
     font-size: 32px;

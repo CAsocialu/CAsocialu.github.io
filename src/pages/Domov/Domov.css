@@ -74,8 +74,7 @@ div.mainACTUALContentContainer {
     justify-content: space-between;
     align-items: center;
     column-gap: 4vw;
-    text-align: center;
-    font-size: 40px;
+    font-size: 32px;
 }
 
 @media screen and (max-width: 768px) {
@@ -139,7 +138,7 @@ div.mainACTUALContentContainer img {
 }
 
 div.mainACTUALContentContainer:not(:first-of-type) {
-    background-color: var(--ne-tak-úplně-černá);
+    background-color:  #0f0f0f;
 }
 
 div.mainContactsContainer {

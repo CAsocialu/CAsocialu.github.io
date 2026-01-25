@@ -1,5 +1,5 @@
 div#header {
-    position: sticky;
+    position: fixed ;
     font-family: var(--font-klavika-basic);
     display: flex;
     align-items: center;
@@ -66,7 +66,7 @@ div#header.headerWithExtraNews {
 @media screen and (min-width: 1235px) {
     div#header {
         padding: 4px 13px;
-        background: black;
+        background:  #0f0f0f;
         width: calc(100vw - 26px);
         &>span {
             &>label,&>input{
@@ -85,11 +85,11 @@ div#header.headerWithExtraNews {
         color: var(--asexual-purple) !important;
         &>div#headerLinks {
             &>* {
-                color: black;
+                color:  #0f0f0f;
             }
     
             &>*::after {
-                background-color: black;
+                background-color:  #0f0f0f;
             }
     
             &>*:hover,

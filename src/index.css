@@ -7,10 +7,14 @@ html {
 
 html,body {
     margin: 0;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
     --extraheaderpaddingstuff: 0px;
     background-color: #0f0f0f;
+}
+
+body{
+    color: blue;
 }
 
 html:has(div#header.headerWithExtraNews),body:has(div#header.headerWithExtraNews) {
@@ -18,7 +22,6 @@ html:has(div#header.headerWithExtraNews),body:has(div#header.headerWithExtraNews
 }
 
 div#mainContent {
-	color: var(--ghost);
 	font-size: 22px;
 	font-family: var(--font-klavika-basic);
     background-color: var(--asociální-zeleň);
@@ -42,15 +45,8 @@ div#mainContent {
         bottom: 0;
         overflow: hidden auto;
         padding: 0px;
-        padding-bottom: 32px;
     }
     div#mainContent {
         padding: 16px 32px 0;
     }
 } 
-
-@media only screen and (min-width: 950px) {
-    div#content {
-        padding-bottom: 50px;
-    }
-}

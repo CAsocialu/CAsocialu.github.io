@@ -6,24 +6,15 @@ div#footer {
     background: #0F0F0F;
     color: var(--ghost);
     padding-left: 16px;
-    padding-right: 2px;
     font-family: var(--font-klavika-condensed);
     font-weight: 300;
     font-style: italic;
-    bottom: 0vh;
-    position: sticky;
-    bottom: 0;
     min-height: 50px;
     height: 100%;
-   width: 100%;
-   left: 0;
-   right: 0;
     user-select: none;
     font-size: 16px;
     transition: height var(--transition-footer);
-    z-index: 100;
     overflow: hidden;
-    margin-top: -3rem;
 
 }
 

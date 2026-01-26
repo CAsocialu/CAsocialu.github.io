@@ -67,7 +67,6 @@ div#footer:hover>div#footerInfo {
 }
  div.text{
     word-spacing: 0.1rem;
-    word-spacing: 0.1rem;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);

@@ -1,7 +1,6 @@
 import Title from '../../../components/Title/Title';
 import './Vznikáme.css';
 import { Helmet } from 'react-helmet-async';
-import Sisina from '../../../images/Koček.jpg'
 
 export function VznikámeTitle() {
     return (<></>)

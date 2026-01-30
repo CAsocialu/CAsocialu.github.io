@@ -32,7 +32,7 @@ export default function Vznikáme() {
                     <Title>Chci být součástí!</Title>
                 </div>
 	        <span className="sectionTitle">Přihláška do Strany</span>
-                <iframe src="https://socializace.asocialove.cz/embed/membership" allowTransparency="true" /> 
+                <iframe src="https://socializace.asocialove.cz/embed/membership" allowTransparency="true" title="Přihlašovací formulář do České Strany Asociálů"/> 
             </div>
         </div>
     )

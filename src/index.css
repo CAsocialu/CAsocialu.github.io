@@ -2,14 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 html {
-    background-color: black;
+    background-color: #0f0f0f;
 }
 
 html,body {
     margin: 0;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
     --extraheaderpaddingstuff: 0px;
+    background-color: #0f0f0f;
 }
 
 html:has(div#header.headerWithExtraNews),body:has(div#header.headerWithExtraNews) {
@@ -17,18 +18,22 @@ html:has(div#header.headerWithExtraNews),body:has(div#header.headerWithExtraNews
 }
 
 div#mainContent {
-	color: var(--ghost);
-	font-size: 22px;
-	font-family: var(--font-klavika-basic);
+    font-size: 22px;
+    font-family: var(--font-klavika-basic);
     background-color: var(--asociální-zeleň);
     font-weight: normal;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #f0f0f0;
     & .twitter {
         font-family: "Noto Sans Math";
         font-weight: normal;
     }
+}
+
+div#content {
+    min-height: calc(100vh - 50px - 42px);
 }
 
 @media only screen and (max-width: 949px) {
@@ -40,15 +45,8 @@ div#mainContent {
         bottom: 0;
         overflow: hidden auto;
         padding: 0px;
-        padding-bottom: 32px;
     }
     div#mainContent {
         padding: 16px 32px 0;
     }
 } 
-
-@media only screen and (min-width: 950px) {
-    div#content {
-        padding-bottom: 50px;
-    }
-}

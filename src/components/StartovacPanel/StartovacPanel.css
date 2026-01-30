@@ -4,7 +4,7 @@
     padding: 24px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     margin: 0;
-    color: color-mix(in srgb, darkslateblue, black);
+    color: color-mix(in srgb, darkslateblue,  #0f0f0f);
     & h2 {
         margin-top: 0;
         text-align: center;
@@ -28,7 +28,7 @@
 
 .progress-header strong {
     font-size: 1.5em;
-    color: color-mix(in srgb, darkslateblue, black);
+    color: color-mix(in srgb, darkslateblue,  #0f0f0f);
 }
 
 .progress-bar {
@@ -105,7 +105,7 @@
 .stat-item strong {
     display: block;
     font-size: 1.25em;
-    color: color-mix(in srgb, darkslateblue, black);
+    color: color-mix(in srgb, darkslateblue,  #0f0f0f);
 }
 
 .stat-item span {

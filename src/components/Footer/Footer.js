@@ -26,7 +26,10 @@ export default function Footer() {
         <div id="footer">
             <div id='footerInfo'>
                 <span>© Česká Strana Asociálů 2024-2026</span>
-                <span>Tento web je open-source! Více najdete na <Link to="source">našem GitHubu</Link>  :3</span>
+                <span>Tento web je open-source! Více najdete na <Link to="source">našem GitHubu</Link>     :3</span>
+            </div>
+            <div className="text">
+                <p>zadavatel: ČSA / zpracovatel: Richard Kužela, Jan Peška</p>
             </div>
             <img alt='Logo České Strany Asociálů' src={logoWhite} id='footerLogo' draggable="false" />
         </div>

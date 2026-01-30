@@ -86,7 +86,7 @@ export default function Domov() {
                 <div id="mainACTUALContent">
                     <div className="mainACTUALContentContainer">
                         <div className="mainACTUALContentTextContainer">
-                            <p>Česká strana asociálů je 100% skutečná strana, která vše rozhodně bere vážně fr fr. Hlavní aktivita je na discordu, protože chodit ven je SOCIALIZACE. Je chronicky aktivní, můžete tam najít zastání každého politického smýšlení. Taky má sociální sítě, instagram a twitter, kde nás sledují skuteční lidé včetně politiků se smyslem pro humor. Stranu aktivně podporuje Židovsko-zednářské spiknutí, Ilumináti, Hamás, Izrael, tajný BDSM klubík pana Zeleného a taky vláda Kepleru-22b.</p>
+                            <p>Česká strana asociálů je skutečná strana, která vše rozhodně bere vážně fr fr. Hlavní aktivita je na discordu, protože chodit ven je SOCIALIZACE. Je chronicky aktivní, můžete tam najít zastání každého politického smýšlení. Taky má sociální sítě, instagram a twitter, kde nás sledují skuteční lidé včetně politiků se smyslem pro humor. Stranu aktivně podporuje Židovsko-zednářské spiknutí, Ilumináti, Hamás, Izrael, tajný BDSM klubík pana Zeleného a taky vláda Kepleru-22b.</p>
                         </div>
                         <img src={logo} alt="Logo ČSA" className="logocsa" draggable="false"/>
                     </div>
@@ -103,14 +103,15 @@ export default function Domov() {
                         <div className="mainACTUALContentImageContainer"><img src={Agenti} draggable="false" alt="" /></div>
                     </div>
                     <div className="mainACTUALcontentStanovy">
+                        <div className="hornitext">
+                        <p>Jelikož nás stát nemá rád, jsme zákonem povinni na naše webovky dát stanovy. Nebylo ale nikým řečeno, jak musí vypadat, takže si můžete vybrat ze tří oku lahodících designů. </p>
+                        </div>
                         <div className="stanovy">
                         <a download={true} className="časnovýroman" href="/assets/ČSA Stanovy, times new roman.pdf">stanovy v times new roman</a>
                         <a download={true} className="komickýsans" href="/assets/ČSA Stanovy, ale comic sans.pdf">stanovy v comic sans</a>
                         <a download={true} className="třetífont" href="/assets/ČSA Stanovy, ale s fontem, který nezvládá česká písmenka.pdf">stanovy v tom třetím fontu</a>
                         </div>
-                        <div className="pravýtext">
-                        <p>Jelikož nás stát nemá rád, jsme zákonem povinni na naše webovky dát stanovy. Nebylo ale nikým řečeno, jak musí vypadat, takže si můžete vybrat ze tří oku lahodících designů. </p>
-                        </div>
+                        
                     </div>
                     <div className="mainContactsContainer" style={{backgroundImage: `url(${Hafík})`, backgroundSize: 'cover', backgroundPosition: 'center 50%', backgroundRepeat: 'no-repeat'}}>
                         <div className="mainACTUALContactsContainer">

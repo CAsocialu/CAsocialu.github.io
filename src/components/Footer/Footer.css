@@ -1,4 +1,5 @@
 div#footer {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -6,20 +7,16 @@ div#footer {
     background: #0F0F0F;
     color: var(--ghost);
     padding-left: 16px;
-    padding-right: 2px;
     font-family: var(--font-klavika-condensed);
     font-weight: 300;
     font-style: italic;
-    bottom: 0vh;
-    position: fixed;
-    height: 50px;
-    width: calc(100vw - 18px);
+    min-height: 50px;
+    height: 100%;
     user-select: none;
     font-size: 16px;
     transition: height var(--transition-footer);
-    z-index: 100;
     overflow: hidden;
-    word-spacing: 0.4rem;
+
 }
 
 div#footer>img {
@@ -69,3 +66,11 @@ div#footer:hover>div#footerInfo {
         display: none;
     }
 }
+ div.text{
+    word-spacing: 0.1rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+ }
+
+ 

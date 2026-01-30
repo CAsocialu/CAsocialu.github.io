@@ -1,15 +1,17 @@
 div#Hero {
-    height: calc(100vh - 90px - var(--extraheaderpaddingstuff));
-    margin-top: calc(40px + var(--extraheaderpaddingstuff));
+    height: calc(100vh - 8.33vh - var(--extraheaderpaddingstuff));
+    margin-top: calc(3.7vh + var(--extraheaderpaddingstuff));
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 100vw;
+    justify-content: flex-start;
+    padding-top: 6vh;
+    width: 100%;
 }
 
 @media screen and (max-width: 949px) {
     div#Hero {
         height: auto;
+        padding-top: 4vh;
     }
 }
 
@@ -18,170 +20,130 @@ div#Hero::after {
     width: 100%;
     height: 0;
     position: relative;
-    bottom: 0px;
-    border-top: solid 5px var(--asocial-green);
-    border-bottom: solid 5px var(--žlutavě-žlutá);
+    bottom: 0;
+    border-top: solid 0.46vh var(--asocial-green);
+    border-bottom: solid 0.46vh var(--žlutavě-žlutá);
     transition: bottom var(--transition-footer);
 }
 
 div#root:has(div#footer:hover) div#Hero::after {
-    position: relative;
-    bottom: calc(25px - min(25px, var(--scroll-level)));
+    bottom: calc(2.31vh - min(2.31vh, var(--scroll-level)));
 }
 
-div#Hero>div.carousel-container {
-    width: unset;
-    height: calc(100% - 10px) !important;
+div#Hero > div.carousel-container {
+    height: calc(100% - 0.93vh) !important;
 }
 
-div#Hero>*>*, div#Hero>*>*>div.carousel-content-wrapper>* {
+div#Hero > * > *,
+div#Hero > * > * > div.carousel-content-wrapper > * {
     height: 100% !important;
 }
 
-div#Hero>*>*>div>*>*>img {
+div#Hero > * > * > div > * > * > img {
     max-height: 100%;
     max-width: 100%;
 }
 
 div#Hero div.carousel-content-package {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-a:visited, a:not(:visited):hover::after {
+a:visited,
+a:not(:visited):hover::after {
     color: var(--červená-z-loga);
 }
 
-a:not(:visited), a:visited:hover::after {
+a:not(:visited),
+a:visited:hover::after {
     color: var(--žlutavě-žlutá);
 }
 
 a::after {
     content: "open_in_new";
     font-family: 'Material Symbols Outlined';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 12px;
+    font-size: 0.625vw;
     position: absolute;
 }
 
 div.mainACTUALContentContainer {
-    font-size: 32px;
-    font-weight: normal;
-    line-height: 48px;
-    padding: 32px;
+    line-height: 1.55;
+    padding: 6vh 4vw;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    column-gap: 32px;
+    column-gap: 4vw;
+    font-size: 32px;
 }
 
 @media screen and (max-width: 768px) {
     div.mainACTUALContentContainer {
-        font-size: 18px;
-        line-height: 28px;
-        padding: 16px;
+        font-size: 2.5vw;
+        line-height: 4vh;
+        padding: 3vh 2.08vw;
         flex-direction: column;
-        row-gap: 16px;
+        row-gap: 2.08vh;
         column-gap: 0;
     }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     div.mainACTUALContentContainer {
-        font-size: 24px;
-        line-height: 36px;
-        padding: 24px;
-        column-gap: 24px;
+        font-size: 2.4vw;
+        line-height: 3.8vh;
+        padding: 3.5vh 2.34vw;
+        column-gap: 2.34vw;
     }
 }
 
-div.mainACTUALContentContainer > div.mainACTUALContentTextContainer {
+div.mainACTUALContentTextContainer {
     padding: 16px 24px;
-    border-radius: 8px;
-    border: 3px solid var(--mint);
+    border-radius: 0.42vw;
+    border: 0.16vw solid var(--mint);
     height: fit-content;
     display: flex;
     align-items: center;
     text-wrap: balance;
+    max-width: 70vw;
+    flex: 1;
+}
+
+div.mainACTUALContentTextContainer > p {
+    width: 100%;
+    margin: 0;
 }
 
 @media screen and (max-width: 768px) {
-    div.mainACTUALContentContainer > div.mainACTUALContentTextContainer {
+    div.mainACTUALContentTextContainer {
         padding: 12px 16px;
         width: 100%;
-    }
-}
-
-div.mainACTUALContentContainer > div.mainACTUALContentTextContainer > p:first-child {
-    margin-top: 0;
-}
-
-div.mainACTUALContentContainer > div.mainACTUALContentTextContainer > p:last-child {
-    margin-bottom: 0;
-}
-
-div.mainACTUALContentContainer img {
-    max-height: 24rem;
-    width: auto;
-    object-fit: contain;
-    flex-shrink: 1;
-}
-
-@media screen and (max-width: 768px) {
-    div.mainACTUALContentContainer img {
-        max-height: 15rem;
         max-width: 100%;
     }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+div.mainACTUALContentContainer img {
+    max-height: 45vh;
+    max-width: 32vw;
+    width: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+    margin-bottom: -5vh;
+}
+
+@media screen and (max-width: 768px) {
     div.mainACTUALContentContainer img {
-        max-height: 18rem;
+        max-height: 20vh;
+        max-width: 100%;
     }
 }
 
 div.mainACTUALContentContainer:not(:first-of-type) {
-    background-color: var(--ne-tak-úplně-černá);
-}
-
-div.mainACTUALContentContainer:not(:first-of-type) > * {
-    margin-top: -60px;
-}
-
-@media screen and (max-width: 768px) {
-    div.mainACTUALContentContainer:not(:first-of-type) > * {
-        margin-top: 0;
-    }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    div.mainACTUALContentContainer:not(:first-of-type) > * {
-        margin-top: -40px;
-    }
-}
-
-div.mainACTUALContentContainer:nth-of-type(3) > * {
-    margin-top: -90px;
-}
-
-@media screen and (max-width: 768px) {
-    div.mainACTUALContentContainer:nth-of-type(3) > * {
-        margin-top: 0;
-    }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    div.mainACTUALContentContainer:nth-of-type(3) > * {
-        margin-top: -60px;
-    }
+    background-color:  #0f0f0f;
 }
 
 div.mainContactsContainer {
-    padding: 64px 0;
+    padding: 5.93vh 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -189,40 +151,40 @@ div.mainContactsContainer {
 
 @media screen and (max-width: 768px) {
     div.mainContactsContainer {
-        padding: 32px 16px;
+        padding: 4.17vh 2.08vw;
     }
 }
 
 div.mainACTUALContactsContainer {
     background: var(--asociální-zeleň);
-    border-radius: 16px;
-    border: 12px solid white;
+    border-radius: 0.83vw;
+    border: 0.625vw solid white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 0.74vh;
     color: white;
-    padding: 0 64px 16px;
-    font-size: 32px;
+    padding: 0 3.33vw 1.48vh;
+    font-size: 1.67vw;
 }
 
 @media screen and (max-width: 768px) {
     div.mainACTUALContactsContainer {
-        border-width: 6px;
-        border-radius: 12px;
-        padding: 0 24px 12px;
-        font-size: 20px;
-        gap: 6px;
-        width: calc(100% - 32px);
+        border-width: 0.78vw;
+        border-radius: 1.56vw;
+        padding: 0 3.13vw 1.56vh;
+        font-size: 2.6vw;
+        gap: 0.78vh;
+        width: calc(100% - 4.17vw);
     }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     div.mainACTUALContactsContainer {
-        border-width: 8px;
-        padding: 0 48px 14px;
-        font-size: 26px;
+        border-width: 0.78vw;
+        padding: 0 4.69vw 1.3vh;
+        font-size: 2.54vw;
     }
 }
 
@@ -231,79 +193,105 @@ div.mainACTUALContactsContainer > * {
     font-weight: normal;
 }
 
+.mainACTUALContactsContainer .nadpis,
+.mainACTUALContactsContainer h1.nadpis,
+.mainACTUALContactsContainer h2.nadpis,
+.mainACTUALContactsContainer h3.nadpis {
+    background-color: transparent !important;
+    margin-top: -0.46vh;
+    margin-bottom: 0.02vh;
+}
+
 @media screen and (max-width: 768px) {
-    div.mainACTUALContactsContainer > a {
-        font-size: 18px;
-        word-break: break-word;
+    .mainACTUALContactsContainer .nadpis,
+    .mainACTUALContactsContainer h1.nadpis,
+    .mainACTUALContactsContainer h2.nadpis,
+    .mainACTUALContactsContainer h3.nadpis {
+        margin-top: 0;
+        margin-bottom: 0.65vh;
+        font-size: 3.65vw;
     }
 }
 
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .mainACTUALContactsContainer .nadpis,
+    .mainACTUALContactsContainer h1.nadpis,
+    .mainACTUALContactsContainer h2.nadpis,
+    .mainACTUALContactsContainer h3.nadpis {
+        font-size: 3.91vw;
+    }
+}
 
 .mainACTUALcontentStanovy {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 80px;
-    padding: 24px;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 3vh;
+    padding: 2.22vh 1.25vw;
     position: relative;
-    font-size: 18px;
+    font-size: 0.94vw;
     font-weight: normal;
-    border-radius: 8px;
+    border-radius: 0.42vw;
     width: 100%;
-    max-width: 1600px;
+    max-width: 95vw;
     height: auto;
-    margin: 24px auto;
-    align-items: flex-start;
+    margin: 2.22vh auto;
+    align-items: center;
 }
 
 @media screen and (max-width: 768px) {
     .mainACTUALcontentStanovy {
         flex-direction: column;
-        gap: 24px;
-        padding: 16px;
+        gap: 3.13vh;
+        padding: 2.08vh 2.08vw;
         align-items: center;
     }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .mainACTUALcontentStanovy {
-        gap: 40px;
-        padding: 20px;
+        gap: 3.91vw;
+        padding: 1.85vh 1.95vw;
     }
 }
 
 .stanovy {
     display: flex;
-    flex-direction: column;
-    gap: 50px;
+    flex-direction: row;
+    gap: 2vw;
     flex-shrink: 0;
-    margin-left: 60px;
+    margin-left: 0;
+    margin-top: 3vh;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 @media screen and (max-width: 768px) {
     .stanovy {
         margin-left: 0;
-        gap: 24px;
+        gap: 3.13vh;
         width: 100%;
+        flex-direction: column;
     }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .stanovy {
-        margin-left: 30px;
-        gap: 35px;
+        margin-left: 0;
+        gap: 2vw;
     }
 }
 
 .stanovy > a {
     box-sizing: border-box;
-    background-color: black;
-    padding: 28px 42px;
+    background-color: #0f0f0f;
+    padding: 2.59vh 2.19vw;
     color: var(--mint);
-    font-size: 34px;
+    font-size: 1.77vw;
     width: 100%;
-    max-width: 550px;
-    max-height: 90px;
+    max-width: 28.65vw;
+    max-height: 8.33vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -314,16 +302,16 @@ div.mainACTUALContactsContainer > * {
 
 @media screen and (max-width: 768px) {
     .stanovy > a {
-        padding: 16px 24px;
-        font-size: 18px;
-        min-height: 40px;
+        padding: 2.08vh 3.13vw;
+        font-size: 2.34vw;
+        min-height: 5.21vh;
     }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .stanovy > a {
-        padding: 20px 32px;
-        font-size: 26px;
+        padding: 1.85vh 3.13vw;
+        font-size: 2.54vw;
     }
 }
 
@@ -331,44 +319,32 @@ div.mainACTUALContactsContainer > * {
     content: none !important;
 }
 
-.pravýtext {
-    max-width: 550px;
-    width: 100%;
-    height: auto;
-    font-size: 37px;
+.hornitext {
+    max-width: 95vw;
+    width: fit-content;
+    font-size: 1.7vw;
     background: var(--asociální-zeleň);
-    border-radius: 7px;
-    border: 2px solid var(--mint);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    color: var(--mint);
-    padding: 8px 16px;
-    margin-left: auto;
-    margin-top: -0.5rem;
+    border-radius: 0.42vw;
+    border: 0.16vw solid var(--mint);
+    padding: 16px 24px;
+    margin-bottom: 2vh;
+    text-align: center;
+    color: white;
+    line-height: 1.4;
+}
+
+.logocsa {
+    margin-bottom: 0.93vh;
+    width: 100% !important;
+    max-height: 38vh !important;
+    height: auto !important;
 }
 
 @media screen and (max-width: 768px) {
-    .pravýtext {
-        font-size: 18px;
-        margin-left: 0;
-        margin-top: 0;
-        max-width: 100%;
+    .logocsa {
+        max-height: 25vh !important;
+        margin-bottom: 0.65vh;
     }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    .pravýtext {
-        font-size: 26px;
-        margin-top: 0;
-    }
-}
-
-.pravýtext > * {
-    color: white;
-    font-weight: normal;
 }
 
 .časnovýroman {
@@ -381,80 +357,14 @@ div.mainACTUALContactsContainer > * {
 
 .třetífont {
     font-family: "Courier New", Courier, monospace;
-    
-}
-
-.logocsa {
-    margin-bottom: 1rem;
-    width: 100% !important;
-    max-height: 30rem !important;
-    height: auto !important;
-}
-
-@media screen and (max-width: 768px) {
-    .logocsa {
-        max-height: 15rem !important;
-        margin-bottom: 0.5rem;
-    }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    .logocsa {
-        max-height: 20rem !important;
-    }
 }
 
 .mainACTUALContentTextContainer:nth-of-type(1) {
-    margin-right: 2rem;
+   margin-right: 4vw;
 }
 
 .mainACTUALContentTextContainer:nth-of-type(2) {
-    margin-right: 6rem;
+   margin-right: 4vw;
+   margin-top: 4vh;
 }
 
-@media screen and (max-width: 768px) {
-    .mainACTUALContentTextContainer:nth-of-type(1),
-    .mainACTUALContentTextContainer:nth-of-type(2) {
-        margin-right: 0;
-    }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    .mainACTUALContentTextContainer:nth-of-type(1) {
-        margin-right: 1rem;
-    }
-    
-    .mainACTUALContentTextContainer:nth-of-type(2) {
-        margin-right: 3rem;
-    }
-}
-
-
-.mainACTUALContactsContainer .nadpis,
-.mainACTUALContactsContainer h1.nadpis,
-.mainACTUALContactsContainer h2.nadpis,
-.mainACTUALContactsContainer h3.nadpis {
-    background-color: transparent !important;
-    margin-top: -0.5rem;
-    margin-bottom: 0.02rem;
-}
-
-@media screen and (max-width: 768px) {
-    .mainACTUALContactsContainer .nadpis,
-    .mainACTUALContactsContainer h1.nadpis,
-    .mainACTUALContactsContainer h2.nadpis,
-    .mainACTUALContactsContainer h3.nadpis {
-        margin-top: 0;
-        margin-bottom: 0.5rem;
-        font-size: 28px;
-    }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    .mainACTUALContactsContainer .nadpis,
-    .mainACTUALContactsContainer h1.nadpis,
-    .mainACTUALContactsContainer h2.nadpis,
-    .mainACTUALContactsContainer h3.nadpis {
-        font-size: 40px;
-    }
-}

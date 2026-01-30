@@ -18,8 +18,8 @@ html:has(div#header.headerWithExtraNews),body:has(div#header.headerWithExtraNews
 }
 
 div#mainContent {
-	font-size: 22px;
-	font-family: var(--font-klavika-basic);
+    font-size: 22px;
+    font-family: var(--font-klavika-basic);
     background-color: var(--asociální-zeleň);
     font-weight: normal;
     display: flex;
@@ -30,6 +30,10 @@ div#mainContent {
         font-family: "Noto Sans Math";
         font-weight: normal;
     }
+}
+
+div#content {
+    min-height: calc(100vh - 50px - 42px);
 }
 
 @media only screen and (max-width: 949px) {

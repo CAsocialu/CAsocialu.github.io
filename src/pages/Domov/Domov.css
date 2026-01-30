@@ -77,6 +77,13 @@ div.mainACTUALContentContainer {
     font-size: 32px;
 }
 
+div.mainContactsContainerContainer {
+    backdrop-filter: brightness(0.5);
+    width: calc(100% - 2 * 5.93vh); height: 100%; padding: 5.93vh;
+    display: flex;
+    justify-content: center;
+}
+
 @media screen and (max-width: 768px) {
     div.mainACTUALContentContainer {
         font-size: 2.5vw;
@@ -143,7 +150,6 @@ div.mainACTUALContentContainer:not(:first-of-type) {
 }
 
 div.mainContactsContainer {
-    padding: 5.93vh 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -160,7 +166,6 @@ div.mainContactsContainer {
 }
 
 div.mainACTUALContactsContainer {
-    
     border-radius: 0.83vw;
     border: 0.625vw solid #009179;
     display: flex;
@@ -171,6 +176,7 @@ div.mainACTUALContactsContainer {
     color: white;
     padding: 0 3.33vw 1.48vh;
     font-size: 1.67vw;
+    flex-shrink: 1;
 }
 
 @media screen and (max-width: 768px) {

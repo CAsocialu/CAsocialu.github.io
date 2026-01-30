@@ -114,15 +114,17 @@ export default function Domov() {
                         
                     </div>
                     <div className="mainContactsContainer" style={{backgroundImage: `url(${Hafík})`}}>
-                        <div className="mainACTUALContactsContainer">
-                            <Title>Kontakty</Title>
-                            <a href="https://www.instagram.com/ceska_strana_antisocialni/" target="_blank" rel="noreferrer noopener">stranický instagram</a>
-                            <a href="https://twitter.com/CAsocialu" target="_blank" rel="noreferrer noopener">stranický twitter</a>
-                            <a href="https://www.facebook.com/people/%C4%8Cesk%C3%A1-Strana-Asoci%C3%A1l%C5%AF/61582914953606/" target="_blank" rel="noreferrer noopener">koho zajímá facebook</a>
-                            <a href="https://discord.gg/E5RK8VKpyT" target="_blank" rel="noreferrer noopener">chronicky on-line dyskord</a>
-                            <a href="https://www.youtube.com/@ceskastranaasocialu7353" target="_blank" rel="noreferrer noopener">mrtvý youtube</a>
-                            <a href="mailto:ceskastrana.asocialu@gmail.com" target="_blank" rel="noreferrer noopener">ceskastrana.asocialu@gmail.com</a>
-                        </div>
+                        <div className="mainContactsContainerContainer">
+	    		    <div className="mainACTUALContactsContainer">
+                                <Title>Kontakty</Title>
+                                <a href="https://www.instagram.com/ceska_strana_antisocialni/" target="_blank" rel="noreferrer noopener">stranický instagram</a>
+                                <a href="https://twitter.com/CAsocialu" target="_blank" rel="noreferrer noopener">stranický twitter</a>
+                                <a href="https://www.facebook.com/people/%C4%8Cesk%C3%A1-Strana-Asoci%C3%A1l%C5%AF/61582914953606/" target="_blank" rel="noreferrer noopener">koho zajímá facebook</a>
+                                <a href="https://discord.gg/E5RK8VKpyT" target="_blank" rel="noreferrer noopener">chronicky on-line dyskord</a>
+                                <a href="https://www.youtube.com/@ceskastranaasocialu7353" target="_blank" rel="noreferrer noopener">mrtvý youtube</a>
+                                <a href="mailto:ceskastrana.asocialu@gmail.com" target="_blank" rel="noreferrer noopener">ceskastrana.asocialu@gmail.com</a>
+                            </div>
+	    		</div>
                     </div>
                 </div>
             </div>

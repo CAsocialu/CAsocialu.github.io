@@ -42,6 +42,8 @@ import Hafík from "../../images/home/ČSApes.jpg"
 import Vozík from "../../images/home/web_onas_dobyvanicernehomostu.png"
 import Agenti from "../../images/home/web_onas_agentiGRU.png"
 import Title from "../../components/Title/Title";
+import Vozík2 from "../../images/home/Vozík2.jpg"
+import Agenti2 from "../../images/home/Agenti2.jpg"
 
 const randomPics = [RandomPic0, RandomPic1, RandomPic2, RandomPic3, RandomPic4, RandomPic5, RandomPic6, RandomPic7, RandomPic8, RandomPic9, RandomPic10, RandomPic11, RandomPic12, RandomPic13, RandomPic14, RandomPic15, RandomPic16, RandomPic17, RandomPic18, RandomPic19, RandomPic20, RandomPic21, RandomPic22, RandomPic23, RandomPic24, RandomPic25, RandomPic26, RandomPic27, RandomPic28, RandomPic29,]
 
@@ -91,7 +93,7 @@ export default function Domov() {
                         <img src={logo} alt="Logo ČSA" className="logocsa" draggable="false"/>
                     </div>
                     <div className="mainACTUALContentContainer">
-                        <div className="mainACTUALContentImageContainer"><img src={Vozík} draggable="false" alt="" /></div>
+                        <div className="mainACTUALContentImageContainer"><img src={Vozík2} draggable="false" alt="" /></div>
                         <div className="mainACTUALContentTextContainer">
                             <p>Všechno začalo roku -5 před naším letopočtem, kdy svět byl ještě v pořádku. Nikdo nechodil ven, svět byl bez válek... Ale poté vstal Ježíš Kristus a nutil lidi se mít rádi. To se nelíbilo mnoha lidem, a tak vzniká Odboj proti socializaci (tzv. <i>Antikristi</i>), tímto též vzniká první předchůdce ČSA, což z nás dělá nejstarší stranu.</p>
                         </div>
@@ -100,7 +102,7 @@ export default function Domov() {
                         <div className="mainACTUALContentTextContainer">
                             <p>Přesuneme se do 24. května 2022, kdy se třem lidem před očima zjevili předchozí antikristi a řekli: „Nyní je Váš úkol bojovat proti socializaci!"<br />Hned se udělaly účty na sociálních sítích na šíření asocialismu a po dvou měsících mínus deset dní i Discord.</p>
                         </div>
-                        <div className="mainACTUALContentImageContainer"><img src={Agenti} draggable="false" alt="" /></div>
+                        <div className="mainACTUALContentImageContainer"><img src={Agenti2} draggable="false" alt="" /></div>
                     </div>
                     <div className="mainACTUALcontentStanovy">
                         <div className="hornitext">

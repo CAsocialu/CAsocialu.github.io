@@ -47,7 +47,7 @@ div#header {
         &>*:hover,
         &>*:focus,
         &>*.active {
-            color: var(--mint);
+            color: var(--asociální-zeleň);
         }
         
         &>*:hover::after,

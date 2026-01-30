@@ -2,6 +2,8 @@ import './Program.css';
 import { Helmet } from 'react-helmet-async';
 import Title from '../../components/Title/Title'; 
 
+import programmeTitle from '../../images/Titles/web_program_nadpis.png'
+
 export default function Program() {
     const programEntries = {
         "2022": [
@@ -89,7 +91,6 @@ export default function Program() {
      return (
         <div id="programmeContent">
             <Helmet>
-	     	<title>Program · ČSA</title>
                 <meta name="description" content="ČSA je recesistická politická strana, v tento moment chystající se vzniknout a poté začít nabírat členy. Více než strana je ČSA internetová mikrokomunita, kde každý člověk náhodně z internetu může přispět svým dílem." />
                 <meta property="og:title" content="Program · ČSA" />
                 <meta property="og:description" content="ČSA je recesistická politická strana, v tento moment chystající se vzniknout a poté začít nabírat členy. Více než strana je ČSA internetová mikrokomunita, kde každý člověk náhodně z internetu může přispět svým dílem." />
@@ -100,8 +101,8 @@ export default function Program() {
                 <meta name="twitter:description" content="ČSA je recesistická politická strana, v tento moment chystající se vzniknout a poté začít nabírat členy. Více než strana je ČSA internetová mikrokomunita, kde každý člověk náhodně z internetu může přispět svým dílem." />
                 <meta name="twitter:image" content={`${process.env.PUBLIC_URL}/assets/banner.png`} />
             </Helmet>
-            <div className='title'>
-                <Title>Program</Title>
+            <div className='programmeTitle'>
+                <img src={programmeTitle} draggable="false" alt=''></img>
             </div>
     <div className="nadrokovybox">
         Klikni na rok, abys zjistil program pro daný rok. Strana si totiž tyčí<br />

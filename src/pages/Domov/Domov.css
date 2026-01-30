@@ -136,6 +136,8 @@ div.mainACTUALContentContainer img {
     object-fit: contain;
     flex-shrink: 0;
     margin-bottom: -5vh;
+    border-radius: 0.83vw;
+    
 }
 
 @media screen and (max-width: 768px) {
@@ -167,7 +169,7 @@ div.mainContactsContainer {
 
 div.mainACTUALContactsContainer {
     border-radius: 0.83vw;
-    border: 0.625vw solid #009179;
+    border: 0.625vw solid var(--asociální-zeleň);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -210,7 +212,7 @@ div.mainACTUALContactsContainer > * {
     background-color: transparent !important;
     margin-top: -0.46vh;
     margin-bottom: 0.02vh;
-    color: #009179;
+    color: var(--asociální-zeleň);
     font-weight: bold;
     font-size: 8vh;
 }

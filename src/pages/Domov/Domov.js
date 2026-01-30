@@ -113,9 +113,9 @@ export default function Domov() {
                         </div>
                         
                     </div>
-                    <div className="mainContactsContainer" style={{backgroundImage: `url(${Hafík})`, backgroundSize: 'cover', backgroundPosition: 'center 50%', backgroundRepeat: 'no-repeat'}}>
+                    <div className="mainContactsContainer" style={{backgroundImage: `url(${Hafík})`}}>
                         <div className="mainACTUALContactsContainer">
-                            <Title>KONTAKTY</Title>
+                            <Title>Kontakty</Title>
                             <a href="https://www.instagram.com/ceska_strana_antisocialni/" target="_blank" rel="noreferrer noopener">stranický instagram</a>
                             <a href="https://twitter.com/CAsocialu" target="_blank" rel="noreferrer noopener">stranický twitter</a>
                             <a href="https://www.facebook.com/people/%C4%8Cesk%C3%A1-Strana-Asoci%C3%A1l%C5%AF/61582914953606/" target="_blank" rel="noreferrer noopener">koho zajímá facebook</a>

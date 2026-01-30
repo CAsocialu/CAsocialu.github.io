@@ -147,7 +147,11 @@ div.mainContactsContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-size: cover;
+    background-position: center 50%;
+    background-repeat: no-repeat;
 }
+
 
 @media screen and (max-width: 768px) {
     div.mainContactsContainer {
@@ -156,9 +160,9 @@ div.mainContactsContainer {
 }
 
 div.mainACTUALContactsContainer {
-    background: var(--asociální-zeleň);
+    
     border-radius: 0.83vw;
-    border: 0.625vw solid white;
+    border: 0.625vw solid #009179;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -200,6 +204,9 @@ div.mainACTUALContactsContainer > * {
     background-color: transparent !important;
     margin-top: -0.46vh;
     margin-bottom: 0.02vh;
+    color: #009179;
+    font-weight: bold;
+    font-size: 8vh;
 }
 
 @media screen and (max-width: 768px) {

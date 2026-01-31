@@ -7,6 +7,7 @@ import Tomáš from '../../images/members/tomas.webp'
 import pepa from '../../images/members/pepa.webp'
 import InstagramLogo from '../../images/instagramLogo.svg'
 import Title from '../../components/Title/Title'
+import clenoveTitle from '../../images/Titles/web_clenove_nadpis.png'
 
 const members = [
     {
@@ -107,8 +108,8 @@ export default function Členové() {
                 <meta name="twitter:description" content="ČSA je recesistická politická strana, v tento moment chystající se vzniknout a poté začít nabírat členy. Více než strana je ČSA internetová mikrokomunita, kde každý člověk náhodně z internetu může přispět svým dílem." />
                 <meta name="twitter:image" content={`${process.env.PUBLIC_URL}/assets/banner.png`} />
             </Helmet>
-            <div>
-            <Title>Členové</Title>
+            <div className='clenoveTitle'>
+            <img src={clenoveTitle} draggable="false" alt=''></img>
             </div>
             <div id="členové">
                 {members.map((member, index) => (

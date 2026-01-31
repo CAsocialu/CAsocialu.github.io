@@ -44,6 +44,7 @@ import Agenti from "../../images/home/web_onas_agentiGRU.png"
 import Title from "../../components/Title/Title";
 import Vozík2 from "../../images/home/Vozík2.jpg"
 import Agenti2 from "../../images/home/Agenti2.jpg"
+import mainTitle from "../../images/Titles/web_ostrane_nadpis.png"
 
 const randomPics = [RandomPic0, RandomPic1, RandomPic2, RandomPic3, RandomPic4, RandomPic5, RandomPic6, RandomPic7, RandomPic8, RandomPic9, RandomPic10, RandomPic11, RandomPic12, RandomPic13, RandomPic14, RandomPic15, RandomPic16, RandomPic17, RandomPic18, RandomPic19, RandomPic20, RandomPic21, RandomPic22, RandomPic23, RandomPic24, RandomPic25, RandomPic26, RandomPic27, RandomPic28, RandomPic29,]
 
@@ -82,8 +83,10 @@ export default function Domov() {
                     <img src={pepa} alt="" draggable="false"/>
                 </Carousel>
             </div> */}
+            <div className="mainTitle">
+                    <img src={mainTitle} draggable="false" alt=""></img>
+                </div>
             <div id="mainContent">
-                <Title>O straně</Title>
                 
                 <div id="mainACTUALContent">
                     <div className="mainACTUALContentContainer">
@@ -104,7 +107,7 @@ export default function Domov() {
                         </div>
                         <div className="mainACTUALContentImageContainer"><img src={Agenti2} draggable="false" alt="" /></div>
                     </div>
-                    <div className="mainACTUALcontentStanovy">
+                    <div className="mainACTUALcontentStanovy"> 
                         <div className="hornitext">
                         <p>Jelikož nás stát nemá rád, jsme zákonem povinni na naše webovky dát stanovy. Nebylo ale nikým řečeno, jak musí vypadat, takže si můžete vybrat ze tří oku lahodících designů. </p>
                         </div>

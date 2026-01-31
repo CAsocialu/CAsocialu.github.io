@@ -114,3 +114,39 @@ div#beginningContent .koček img {
         max-width: 500px;
     }
 }
+
+.begginingTitle{
+    width: 100vw;
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 949px) {
+    .begginingTitle {
+        margin-top: -16px;
+    }
+}
+
+@media screen and (min-width: 950px) {
+    .begginingTitle{
+        margin-top: -16px;
+    }
+}
+
+.begginingTitle > img {
+    width: 100%;
+    max-width: 100vw;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+

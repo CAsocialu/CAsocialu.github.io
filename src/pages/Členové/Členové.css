@@ -176,8 +176,6 @@ div#členové>div.člen.open>div.backdrop {
     justify-content: center;
     align-items: center;
     position: relative;
-    left: 50%;
-    right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
     box-sizing: border-box;
@@ -201,4 +199,8 @@ div#členové>div.člen.open>div.backdrop {
     height: auto;
     display: block;
     object-fit: cover;
+}
+
+html.dark div#membersContent{
+    background-color: var(--ne-tak-úplně-černá);
 }

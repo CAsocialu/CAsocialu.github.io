@@ -5,7 +5,7 @@ import Kája from "../../images/main-page-carousel/kaja.png";
 import Konrád from "../../images/main-page-carousel/konrad.png"
 import Filip from "../../images/main-page-carousel/filip.png"
 import pepa from "../../images/main-page-carousel/pepa.png" */
-import logo from "../../images/home/logo.webp";
+import logo from "../../images/home/logo-border.png";
 import './Domov.css'
 
 import RandomPic0 from "../../images/home/randompics/0.jpg";
@@ -39,11 +39,9 @@ import RandomPic27 from "../../images/home/randompics/27.jpg";
 import RandomPic28 from "../../images/home/randompics/28.jpg";
 import RandomPic29 from "../../images/home/randompics/29.jpg";
 import Hafík from "../../images/home/ČSApes.jpg"
-import Vozík from "../../images/home/web_onas_dobyvanicernehomostu.png"
-import Agenti from "../../images/home/web_onas_agentiGRU.png"
 import Title from "../../components/Title/Title";
-import Vozík2 from "../../images/home/Vozík2.jpg"
-import Agenti2 from "../../images/home/Agenti2.jpg"
+import Vozík from "../../images/home/Vozík2.jpg"
+import Agenti from "../../images/home/Agenti2.jpg"
 import mainTitle from "../../images/Titles/web_ostrane_nadpis.png"
 
 const randomPics = [RandomPic0, RandomPic1, RandomPic2, RandomPic3, RandomPic4, RandomPic5, RandomPic6, RandomPic7, RandomPic8, RandomPic9, RandomPic10, RandomPic11, RandomPic12, RandomPic13, RandomPic14, RandomPic15, RandomPic16, RandomPic17, RandomPic18, RandomPic19, RandomPic20, RandomPic21, RandomPic22, RandomPic23, RandomPic24, RandomPic25, RandomPic26, RandomPic27, RandomPic28, RandomPic29,]
@@ -93,19 +91,28 @@ export default function Domov() {
                         <div className="mainACTUALContentTextContainer">
                             <p>Česká strana asociálů je skutečná strana, která vše rozhodně bere vážně fr fr. Hlavní aktivita je na discordu, protože chodit ven je SOCIALIZACE. Je chronicky aktivní, můžete tam najít zastání každého politického smýšlení. Taky má sociální sítě, instagram a twitter, kde nás sledují skuteční lidé včetně politiků se smyslem pro humor. Stranu aktivně podporuje Židovsko-zednářské spiknutí, Ilumináti, Hamás, Izrael, tajný BDSM klubík pana Zeleného a taky vláda Kepleru-22b.</p>
                         </div>
+                        <div>
                         <img src={logo} alt="Logo ČSA" className="logocsa" draggable="false"/>
+                        </div>
                     </div>
                     <div className="mainACTUALContentContainer">
-                        <div className="mainACTUALContentImageContainer"><img src={Vozík2} draggable="false" alt="" /></div>
+                        <div className="mainACTUALContentImageContainer"><img src={Vozík} draggable="false" alt="" /></div>
+                        <div>
+                            <hr className="cara"/>
+                            <div className="nadpisHistorie"> 
+                            <p>Rozhodně skutečné dějiny strany</p>
+                            </div>
                         <div className="mainACTUALContentTextContainer">
                             <p>Všechno začalo roku -5 před naším letopočtem, kdy svět byl ještě v pořádku. Nikdo nechodil ven, svět byl bez válek... Ale poté vstal Ježíš Kristus a nutil lidi se mít rádi. To se nelíbilo mnoha lidem, a tak vzniká Odboj proti socializaci (tzv. <i>Antikristi</i>), tímto též vzniká první předchůdce ČSA, což z nás dělá nejstarší stranu.</p>
+                            </div>
+                            
                         </div>
                     </div>
                     <div className="mainACTUALContentContainer"> 
                         <div className="mainACTUALContentTextContainer">
                             <p>Přesuneme se do 24. května 2022, kdy se třem lidem před očima zjevili předchozí antikristi a řekli: „Nyní je Váš úkol bojovat proti socializaci!"<br />Hned se udělaly účty na sociálních sítích na šíření asocialismu a po dvou měsících mínus deset dní i Discord.</p>
                         </div>
-                        <div className="mainACTUALContentImageContainer"><img src={Agenti2} draggable="false" alt="" /></div>
+                        <div className="mainACTUALContentImageContainer"><img src={Agenti} draggable="false" alt="" /></div>
                     </div>
                     <div className="mainACTUALcontentStanovy"> 
                         <div className="hornitext">

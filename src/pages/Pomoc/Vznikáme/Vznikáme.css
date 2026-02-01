@@ -149,4 +149,10 @@ div#beginningContent .koček img {
     object-fit: cover;
 }
 
+html.dark div#beginningContent{
+    background-color: var(--ne-tak-úplně-černá);
+}
 
+html.dark .sectionTitle{
+    color: var(--asociální-zeleň)
+}

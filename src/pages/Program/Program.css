@@ -301,3 +301,44 @@ div#programmeContent:not(:has(.rokKarta input:checked)) .nadrokovybox {
     display: block;
     object-fit: cover;
 }
+
+/*tmavý*/
+html.dark div#programmeContent {
+    background-color: #0f0f0f;
+    color: var(--bělavě-šedá)
+}
+
+html.dark div#programmeContent ul li {
+    color: var(--bělavě-šedá)
+}
+
+html.dark div#programmeContent label.rokKarta {
+    background-color: #0f0f0f;
+}
+
+html.dark div#programmeContent label.rokKarta:hover {
+    border-color: var(--mint);
+}
+
+html.dark div#programmeContent label.rokKarta .rokFront {
+    color: var(--bělavě-šedá);
+}
+
+html.dark div#programmeContent .rokBack {
+    background-color: #0f0f0f;
+    color: var(--bělavě-šedá);
+    border-color: var(--mint);
+}
+
+html.dark div#programmeContent label.rokKarta div.rokKartaBackdrop {
+    background-color: #000;
+}
+
+html.dark div#programmeContent .nadrokovybox {
+    background-color: #111;
+    color: var(--bělavě-šedá);
+    border-color: var(--mint);
+}
+
+
+

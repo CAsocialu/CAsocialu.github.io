@@ -86,7 +86,29 @@ export default function Program() {
             "Každou válku vyřešíme hodem mincí.",
             "Pivo poteče z kohoutků.",
             "Znělka z kouzelné školky jako státní hymna."
-        ]
+        ],
+         "2026": [
+           "Snížit počet senátorů na 67.",
+           "Řešit volební program.",
+            "Navrátíme klimatickou krizi.",
+            "Pošleme děti do bitcoinových dolů v Turově.",
+            "Podpora agentů KGB a GRU (potřebujeme porazit Petra Cibulku).",
+            "Zavedeme groše jako měnu.",
+            "Budeme podporovat ekonomickou recesi, protože sranda musí být.",
+            "Přijmeme co nejvíce migrantů, hlavně zločinců, aby se lidé báli chodit ven (absolutní asocializace).",
+            "Zrušíme pravopis, posílíme svobodu slova.",
+            "Zregulujeme věk dožití na 31 let (po třicítce jsme všichni chodící mrtvoly + 31 je turecký symbol pro masturbaci).",
+            "Jsme pro migraci, protože nám migranti seberou p#áci a my nebudeme muset p#acovat.",
+            "Necháme vyvinout nové druhy zvířat, abychom je mohli nechat vyhynout.",
+            "Uděláme revizi státních znaků.",
+            "Změníme hlavní město na Aš, ať jsme co nejdál od Zlováků.",
+            "Vyměníme Kundu za Havířov, tím získáme přístup k moři. #ceskojevkunde",
+            "Snížíme počet názorů na 4.",
+            "Uděláme asociální síť Ř.",
+            "Napadneme Vatikán kvůli nerostným surovinám.",
+            "Osvobodíme Moravu od krutovlády Slezska.",
+            "Osvobodíme Slezsko od krutovlády Moravy.",
+        ],
     }
      return (
         <div id="programmeContent">

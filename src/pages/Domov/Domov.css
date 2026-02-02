@@ -465,12 +465,17 @@ html.dark .cara{
 .cara2{
     
     border:0.46vh solid var(--ne-tak-úplně-černá);
-    
+    width: 60vw;
+    margin-right: 37vw;
+    border-radius: 0.42vw;
+    margin-top: -1.4vw;
 }
 
 html.dark .cara2{
     border:0.46vh solid var(--asociální-zeleň);
 }
+
+
 
 
 

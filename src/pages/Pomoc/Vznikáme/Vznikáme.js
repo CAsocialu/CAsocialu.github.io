@@ -1,4 +1,3 @@
-import Title from '../../../components/Title/Title';
 import './Vznikáme.css';
 import { Helmet } from 'react-helmet-async';
 import begginingtitle from "../../../images/Titles/web_soucast_nadpis.png"
@@ -29,7 +28,7 @@ export default function Vznikáme() {
                 <meta name="twitter:image" content={`${process.env.PUBLIC_URL}/assets/bannerNECHCETEMIPODEPSATPETICI.png`} />
             </Helmet>
             <div className='begginingTitle'>
-                <img src={begginingtitle}></img>
+                <img src={begginingtitle} alt='' draggable="false"></img>
             </div>
             <div id="beginningContentWrapper">
 	        <span className="sectionTitle">Přihláška do Strany</span>

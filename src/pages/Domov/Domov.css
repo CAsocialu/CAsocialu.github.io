@@ -351,9 +351,7 @@ div.mainACTUALContactsContainer > * {
     max-height: 38vh !important;
     height: auto !important;
     border-radius: 0.83vw;
-
 }
-
 
 @media screen and (max-width: 768px) {
     .logocsa {
@@ -446,24 +444,23 @@ html.dark .hornitext{
 }
 
 html.dark .stanovy > a {
-background-color: var(--cerise);
-color: var(--bělavě-šedá);
+    background-color: var(--cerise);
+    color: var(--bělavě-šedá);
 }
 
-html.dark div.mainACTUALContentTextContainer{
+html.dark div.mainACTUALContentTextContainer {
      border: 0.16vw solid var(--asociální-zeleň);
 }
 
-html.dark .nadpisHistorie{
+html.dark .nadpisHistorie {
     color: var(--asociální-zeleň);
 }
 
-html.dark .cara{
+html.dark .cara {
     border:0.46vh solid var(--asociální-zeleň);
 }
 
-.cara2{
-    
+.cara2 {
     border:0.46vh solid var(--ne-tak-úplně-černá);
     width: 60vw;
     margin-right: 37vw;
@@ -471,17 +468,6 @@ html.dark .cara{
     margin-top: -1.4vw;
 }
 
-html.dark .cara2{
+html.dark .cara2 {
     border:0.46vh solid var(--asociální-zeleň);
 }
-
-
-
-
-
-
-
-
-
-
-

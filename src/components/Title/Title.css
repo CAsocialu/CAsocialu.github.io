@@ -1,6 +1,6 @@
 .nadpis {
   box-sizing: border-box;
-    background-color:  hsl(0, 0%, 6%);
+    background-color: var(--ne-tak-úplně-černá);
     padding-top: 1vh;
     color: var(--cerise);
     font-family: var(--font-klavika-basic);

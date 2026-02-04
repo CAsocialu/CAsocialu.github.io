@@ -1,4 +1,5 @@
 import './Vznikáme.css';
+import { useLayoutEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import begginingtitle from "../../../images/Titles/web_soucast_nadpis.png"
 
@@ -13,6 +14,19 @@ export function VznikámeNotifikace() {
 }
 
 export default function Vznikáme() {
+	const iframeRef = useRef(null);
+	useLayoutEffect(() => {
+		const resizeIframe = () => {if (!iframeRef?.current) return; iframeRef.current.style.height = iframeRef.current.contentWindow.document.body.scrollHeight}
+		
+		const checkInterval = setInterval(resizeIframe, 1000);
+		const windowEvent = window.addEventListener("resize", resizeIframe);
+
+		return () => {
+			clearInterval(checkInterval);
+			window.removeEventListener("resize", resizeIframe)
+		}
+	}, [])
+	
     return (
         <div id='beginningContent'>
             <Helmet>
@@ -32,7 +46,7 @@ export default function Vznikáme() {
             </div>
             <div id="beginningContentWrapper">
 	        <span className="sectionTitle">Přihláška do Strany</span>
-                <iframe src="https://socializace.asocialove.cz/embed/membership" allowTransparency="true" title="Přihlašovací formulář do České Strany Asociálů"/> 
+                <iframe ref={iframeRef} src="https://socializace.asocialove.cz/embed/membership" allowTransparency="true" title="Přihlašovací formulář do České Strany Asociálů"/> 
             </div>
         </div>
     )

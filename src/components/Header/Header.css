@@ -30,7 +30,7 @@ div#header {
             position: relative;
             transition: color 0.3s ease 0s;
             padding: 4px 8px;
-            border: 1px solid var(--mint);
+            border: 1px solid var(--asociální-zeleň);
             border-radius: 6px;
         }
         &>*::after {
@@ -47,7 +47,7 @@ div#header {
         &>*:hover,
         &>*:focus,
         &>*.active {
-            color: var(--mint);
+            color: var(--asociální-zeleň);
         }
         
         &>*:hover::after,
@@ -135,3 +135,11 @@ div#extraHeaderNews {
     white-space-collapse: break-spaces;
     transition: margin-top 0.33s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.material-symbols-outlined {
+    background-color: var(--asociální-zeleň);
+    border: solid var(--asociální-zeleň);
+    border-radius: 0.50vw;
+}
+
+

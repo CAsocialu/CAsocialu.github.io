@@ -66,8 +66,26 @@ div#programmeContent label.rokKarta {
     }
 }
 
+div#programmeContent label.rokKarta:last-child {
+    margin-left: auto;
+    margin-right: auto;
+    flex-basis: 30vw;
+}
+
+@media screen and (max-width: 768px) {
+    div#programmeContent label.rokKarta:last-child {
+        flex-basis: 80vw;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    div#programmeContent label.rokKarta:last-child {
+        flex-basis: 40vw;
+    }
+}
+
 div#programmeContent label.rokKarta:hover {
-    border-color: var(--mint);
+    border-color: var(--cerise);
 }
 
 div#programmeContent label.rokKarta input {
@@ -98,8 +116,8 @@ div#programmeContent .rokBack {
     left: 64px;
     width: calc(100vw - 128px - 32px - 32px);
     height: calc(100vh - 128px - 32px - 32px);
-    border: 16px solid var(--mint);
-    background-color:  #0f0f0f;
+    border: 16px solid var(--cerise);
+    background-color: var(--ne-tak-úplně-černá);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -139,7 +157,7 @@ div#programmeContent label.rokKarta .rokKartaBackdrop {
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.3s ease;
-    margin: 0; margin-top: -25px;
+    margin-top: -25px;
     z-index: 501;
 }
 
@@ -186,8 +204,10 @@ div#programmeContent div.rokyContainer {
     justify-content: center;
     align-items: center;
     column-gap: 64px;
-    height: calc(100vh - 32px - 24px - 32px - 32px - 64px);
-    padding: 32px 0;
+    row-gap: 64px;
+    height: auto;
+    min-height: calc(100vh - 32px - 24px - 32px - 32px - 64px);
+    padding: 32px 0 64px;
     margin-top: 80px;
 }
 
@@ -195,9 +215,8 @@ div#programmeContent div.rokyContainer {
     div#programmeContent div.rokyContainer {
         column-gap: 16px;
         row-gap: 16px;
-        height: auto;
         min-height: calc(100vh - 100px);
-        padding: 16px 0;
+        padding: 16px 0 32px;
         margin-top: 40px;
     }
 }
@@ -206,17 +225,18 @@ div#programmeContent div.rokyContainer {
     div#programmeContent div.rokyContainer {
         column-gap: 32px;
         row-gap: 32px;
+        padding: 24px 0 48px;
         margin-top: 60px;
     }
 }
 
 div#programmeContent label.rokKarta:hover .rokFront {
-    color: var(--mint);
+    color: var(--cerise);
 }
 
 .nadrokovybox {
     background-color: var(--asociální-zeleň);
-   border: 0.16vw solid var(--mint);
+   border: 0.16vw solid var(--ne-tak-úplně-černá);
     border-radius: 10px;
     color: var(--ghost);
     font-family: var(--font-klavika-basic);
@@ -225,7 +245,7 @@ div#programmeContent label.rokKarta:hover .rokFront {
     text-align: center;
     box-sizing: border-box;
     line-height: 1.4;
-    margin: 50px auto -6rem;
+    margin: 50px auto -2vh;
     height: auto;
     padding: 16px 60px;
     display: flex;
@@ -268,8 +288,65 @@ div#programmeContent:not(:has(.rokKarta input:checked)) .nadrokovybox {
     pointer-events: auto;
 }
 
-.title{
+.programmeTitle {
+    width: 100vw;
+    max-width: 100vw;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 949px) {
+    .programmeTitle {
+        margin-top: -16px;
+    }
+}
+
+@media screen and (min-width: 950px) {
+    .programmeTitle {
+        margin-top: -16px;
+    }
+}
+
+.programmeTitle > img {
+    width: 100%;
+    max-width: 100vw;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+
+html.dark div#programmeContent {
+    background-color: var(--ne-tak-úplně-černá);
+    color: var(--bělavě-šedá);
+}
+
+html.dark div#programmeContent ul li {
+    color: var(--bělavě-šedá);
+}
+
+html.dark div#programmeContent label.rokKarta {
+    background-color: var(--ne-tak-úplně-černá);
+}
+
+html.dark div#programmeContent label.rokKarta:hover {
+    border-color: var(--cerise);
+}
+
+
+html.dark div#programmeContent label.rokKarta div.rokKartaBackdrop {
+    background-color: var(--ne-tak-úplně-černá);
+}
+
+html.dark div#programmeContent .nadrokovybox {
+    background-color: #111;
+    color: var(--bělavě-šedá);
+    border-color: var(--asociální-zeleň);
 }

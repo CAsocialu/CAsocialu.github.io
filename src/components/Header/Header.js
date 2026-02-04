@@ -34,7 +34,7 @@ export default function Header() {
 
     return (
         <>
-            <div id="header" className={`${false ? ' ace' : ''}`}>
+            <div id="header">
                 <div id="headerLinks" ref={headerLinksRef}>
                     <Link to="/">o straně</Link>
                     <Link to="clenove">členové</Link>

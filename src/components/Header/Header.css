@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=dark_mode);
 div#header {
     position: fixed ;
     font-family: var(--font-klavika-basic);
@@ -137,9 +136,7 @@ div#extraHeaderNews {
     transition: margin-top 0.33s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=dark_mode);
-
-.material-symbols-outlined{
+.material-symbols-outlined {
     background-color: var(--asociální-zeleň);
     border: solid var(--asociální-zeleň);
     border-radius: 0.50vw;

@@ -325,11 +325,11 @@ div#programmeContent:not(:has(.rokKarta input:checked)) .nadrokovybox {
 
 html.dark div#programmeContent {
     background-color: var(--ne-tak-úplně-černá);
-    color: var(--bělavě-šedá)
+    color: var(--bělavě-šedá);
 }
 
 html.dark div#programmeContent ul li {
-    color: var(--bělavě-šedá)
+    color: var(--bělavě-šedá);
 }
 
 html.dark div#programmeContent label.rokKarta {

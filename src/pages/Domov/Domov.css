@@ -298,7 +298,7 @@ div.mainACTUALContactsContainer > * {
     box-sizing: border-box;
     background-color: #0f0f0f;
     padding: 2.59vh 2.19vw;
-    color: var(--mint);
+    color: var(--bělavě-šedá);
     font-size: 1.77vw;
     width: 100%;
     max-width: 28.65vw;
@@ -444,8 +444,7 @@ html.dark .hornitext{
 }
 
 html.dark .stanovy > a {
-    background-color: var(--cerise);
-    color: var(--bělavě-šedá);
+background-color: var(--asociální-zeleň);
 }
 
 html.dark div.mainACTUALContentTextContainer {

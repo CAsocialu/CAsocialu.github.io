@@ -107,7 +107,7 @@ div#členové>div.člen.open>div.členContent {
     overflow: visible;
     background-color:  #0f0f0f;
     padding: 24px 48px 24px 32px;
-    border: 16px solid var(--mint);
+    border: 16px solid var(--asociální-zeleň);
     &>img {
         height: 256px;
         opacity: 1;

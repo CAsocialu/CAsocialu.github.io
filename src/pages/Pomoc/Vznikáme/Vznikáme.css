@@ -156,3 +156,13 @@ html.dark div#beginningContent{
 html.dark .sectionTitle{
     color: var(--asociální-zeleň);
 }
+
+html.light div#beginningContent{
+    background-color: var(--bělavě-šedá);
+}
+
+html.light .sectionTitle{
+    color: var(--asociální-zeleň);
+}
+
+

@@ -67,6 +67,12 @@ a::after {
     position: absolute;
 }
 
+div.mainACTUALContactsContainer a::after,
+div.mainContactsContainer a::after,
+div.mainContactsContainerContainer a::after {
+    content: none !important;
+}
+
 div.mainACTUALContentContainer {
     line-height: 1.55;
     padding: 6vh 4vw;
@@ -312,6 +318,10 @@ div.mainACTUALContactsContainer > * {
     border-radius: 0.83vw;
 }
 
+.stanovy > a:hover{
+    background-color: var(--cerise);
+}
+
 @media screen and (max-width: 768px) {
     .stanovy > a {
         padding: 2.08vh 3.13vw;
@@ -469,4 +479,45 @@ html.dark .cara {
 
 html.dark .cara2 {
     border:0.46vh solid var(--asociální-zeleň);
+}
+html.dark .stanovy > a:hover{
+    background-color: var(--cerise);
+}
+
+
+
+html.light div#mainContent{
+    background-color: var(--bělavě-šedá);
+}
+
+html.light .hornitext{
+    background-color: var(--bělavě-šedá);
+    border: 0.16vw solid var(--asocial-green);
+    color: var(--ne-tak-úplně-černá);
+}
+
+
+html.light .stanovy > a {
+background-color: var(--asociální-zeleň);
+color: var(--ne-tak-úplně-černá);
+}
+
+html.light div.mainACTUALContentTextContainer {
+     border: 0.16vw solid var(--asociální-zeleň);
+}
+
+html.light .nadpisHistorie {
+    color: var(--asociální-zeleň);
+}
+
+html.light .cara {
+    border:0.46vh solid var(--asociální-zeleň);
+}
+
+html.light .cara2 {
+    border:0.46vh solid var(--asociální-zeleň);
+}
+
+html.light .stanovy > a:hover{
+    background-color: var(--cerise);
 }

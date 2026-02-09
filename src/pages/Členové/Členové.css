@@ -204,3 +204,7 @@ div#členové>div.člen.open>div.backdrop {
 html.dark div#membersContent{
     background-color: var(--ne-tak-úplně-černá);
 }
+
+html.light div#membersContent{
+    background-color: var(--bělavě-šedá);
+}

@@ -1,11 +1,14 @@
-import { useLayoutEffect, useRef, useEffect } from 'react';
+import { useLayoutEffect, useRef, useEffect, useState } from 'react';
 import "./Header.css"
 import { Link, useLocation } from 'react-router-dom';
 
 export default function Header() {
     const location = useLocation(),
         headerLinksRef = useRef(null);
-    
+    const [themeMode, setThemeMode] = useState(() => {
+        return localStorage.getItem("themeMode") || "default";
+    });
+
     useLayoutEffect(() => {
         document.documentElement.setAttribute('data-location', location.pathname.replace(/(?<!^)\/$/, ''));
         headerLinksRef.current?.querySelectorAll('a').forEach(link => {
@@ -22,27 +25,47 @@ export default function Header() {
     }, [location]);
 
     useEffect(() => {
-        if (localStorage.getItem("isDark") === "true") {
+        if (themeMode === "dark") {
             document.documentElement.classList.add("dark");
+            document.documentElement.classList.remove("light");
+        } else if (themeMode === "light") {
+            document.documentElement.classList.add("light");
+            document.documentElement.classList.remove("dark");
+        } else { // default
+            document.documentElement.classList.remove("dark", "light");
         }
-    }, []);
-
-    const toggleTheme = () => {
-        document.documentElement.classList.toggle("dark");
-        localStorage.setItem("isDark", document.documentElement.classList.contains("dark"));
-    };
+        localStorage.setItem("themeMode", themeMode);
+    }, [themeMode]);
 
     return (
         <>
             <div id="header">
+                <div className='tlačítka'>
+                    <button 
+                        className={`theme-default ${themeMode === 'default' ? 'active' : ''}`}
+                        onClick={() => setThemeMode('default')}
+                    >
+                        
+                    </button>
+                    <button 
+                        className={`theme-light ${themeMode === 'light' ? 'active' : ''}`}
+                        onClick={() => setThemeMode('light')}
+                    >
+                        
+                    </button>
+                    <button 
+                        className={`theme-dark ${themeMode === 'dark' ? 'active' : ''}`}
+                        onClick={() => setThemeMode('dark')}
+                    >
+                        
+                    </button>
+                </div>
                 <div id="headerLinks" ref={headerLinksRef}>
                     <Link to="/">o straně</Link>
                     <Link to="clenove">členové</Link>
                     <Link to="pomoc">chci být součástí</Link>
                     <Link to="program">program</Link>
                 </div>
-                <button className="material-symbols-outlined" onClick={toggleTheme}> dark_mode
-                    </button>
             </div>
         </>
     )

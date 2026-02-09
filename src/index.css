@@ -51,3 +51,7 @@ div#content {
         padding: 16px 32px 0;
     }
 } 
+
+html.light div#mainContent{
+    color: var(--ne-tak-úplně-černá);
+}

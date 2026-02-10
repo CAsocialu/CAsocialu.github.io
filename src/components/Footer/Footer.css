@@ -4,7 +4,7 @@ div#footer {
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    background: #0F0F0F;
+    background: var(--ne-tak-úplně-černá);
     color: var(--ghost);
     padding-left: 16px;
     font-family: var(--font-klavika-condensed);

@@ -67,7 +67,7 @@ div#programmeContent label.rokKarta {
     width: 30vw;
     height: 30vh;
     display: block;
-    background-color:  #0f0f0f;
+    background-color:  var(--ne-tak-úplně-černá);
     border: 24px solid var(--ghost);
     margin: -24px 0;
     transition: border-color 0.3s ease;
@@ -180,7 +180,7 @@ div#programmeContent label.rokKarta:has(input:checked) .rokKartaBackdrop {
     opacity: 1;
 }
 div#programmeContent label.rokKarta div.rokKartaBackdrop {
-    background-color:  #0f0f0f;
+    background-color:  var(--ne-tak-úplně-černá);
     opacity: 0;
     top: 0;
     left: 0;

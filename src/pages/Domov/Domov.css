@@ -302,7 +302,7 @@ div.mainACTUALContactsContainer > * {
 
 .stanovy > a {
     box-sizing: border-box;
-    background-color: #0f0f0f;
+    background-color: var(--ne-tak-úplně-černá);
     padding: 2.59vh 2.19vw;
     color: var(--bělavě-šedá);
     font-size: 1.77vw;

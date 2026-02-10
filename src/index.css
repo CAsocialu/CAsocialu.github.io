@@ -3,7 +3,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=dark_mode);
 
 html {
-    background-color: #0f0f0f;
+    background-color: var(--ne-tak-úplně-černá);
 }
 
 html,body {
@@ -11,7 +11,7 @@ html,body {
     overflow-y: auto;
     overflow-x: hidden;
     --extraheaderpaddingstuff: 0px;
-    background-color: #0f0f0f;
+    background-color: var(--ne-tak-úplně-černá);
 }
 
 html:has(div#header.headerWithExtraNews),body:has(div#header.headerWithExtraNews) {
@@ -26,7 +26,7 @@ div#mainContent {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #f0f0f0;
+    color: var(--bělavě-šedá);
     & .twitter {
         font-family: "Noto Sans Math";
         font-weight: normal;

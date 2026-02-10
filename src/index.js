@@ -30,7 +30,7 @@ function rawr(event) {
   else if (stringcolonthree.toLowerCase().includes("rawr x3")) {
     stringcolonthree = "";
     document.removeEventListener("keypress", event => rawr(event));
-    document.querySelector("html").style = "background:  #0f0f0f";
+    document.querySelector("html").style = "background:  var(--ne-tak-úplně-černá)";
     var rawrx3 = document.createElement("div");
     rawrx3.id = "rawrx3";
     rawrx3.style = "width: 100%; height: 100%; display: flex; flex-direction: row; justify-content: center; align-items: center;"
@@ -57,7 +57,7 @@ function rawr(event) {
                 setTimeout(() => {
                   document.querySelector("img#whOwOps").setAttribute("src", document.querySelector("img#whOwOps").getAttribute("src").replace(/(\D+)(\d+)(\.png$)/, (match, prefix, num, suffix) => `${prefix}${parseInt(num, 10) + 1}${suffix}`));
                   setTimeout(() => {
-                    document.querySelector("html").style = "background:  #0f0f0f"
+                    document.querySelector("html").style = "background:  var(--ne-tak-úplně-černá)"
                     setTimeout(() => {
                       document.location.reload()
                     }, Math.random() * 3000);

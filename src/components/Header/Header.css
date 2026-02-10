@@ -17,8 +17,36 @@ div#header {
     
     & > .tlačítka {
         position: absolute;
-        left: 13px; 
+        left: 13px;
+        display: flex;
+        gap: 8px;
     }
+    
+    & > .tlačítka > button {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 2px solid var(--ne-tak-úplně-černá);
+        cursor: pointer;
+    }
+    
+    & > .tlačítka > button.theme-default {
+        background-color: var(--asociální-zeleň);
+    }
+    
+    & > .tlačítka > button.theme-light {
+        background-color: #ffffff;
+    }
+    
+    & > .tlačítka > button.theme-dark {
+        background-color: var(--ne-tak-úplně-černá);
+    }
+    
+    & > .tlačítka > button.active {
+        border: 3px solid var(--cerise);
+        transform: scale(1.1);
+    }
+    
     &>span {
         font-size: 20px;
         font-weight: 700;
@@ -36,7 +64,7 @@ div#header {
             position: relative;
             transition: color 0.3s ease 0s;
             padding: 4px 8px;
-            border: 1px solid #0f0f0f;
+            border: 1px solid var(--ne-tak-úplně-černá);
             border-radius: 6px;
         }
         &>*::after {
@@ -53,7 +81,7 @@ div#header {
         &>*:hover,
         &>*:focus,
         &>*.active {
-            color: #0f0f0f;
+            color: var(--ne-tak-úplně-černá);
         }
         
         &>*:hover::after,
@@ -91,11 +119,11 @@ div#header.headerWithExtraNews {
         color: var(--asexual-purple) !important;
         &>div#headerLinks {
             &>* {
-                color:  #0f0f0f;
+                color:  var(--ne-tak-úplně-černá);
             }
     
             &>*::after {
-                background-color:  #0f0f0f;
+                background-color:  var(--ne-tak-úplně-černá);
             }
     
             &>*:hover,
@@ -142,42 +170,8 @@ div#extraHeaderNews {
     transition: margin-top 0.33s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-div#header > .tlačítka {
-    display: flex;
-    gap: 8px;
-}
-
-div#header > .tlačítka > button {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: 2px solid var(--ne-tak-úplně-černá);
-    cursor: pointer;
-}
-
-div#header > .tlačítka > button.theme-default {
-    background-color: var(--asociální-zeleň);
-}
-
-div#header > .tlačítka > button.theme-light {
-    background-color: #ffffff;
-}
-
-div#header > .tlačítka > button.theme-dark {
-    background-color: #0f0f0f;
-}
-
-div#header > .tlačítka > button.active {
-    border: 3px solid var(--cerise);
-    transform: scale(1.1);
-}
-
 html:not(.dark):not(.light) div#header {
-    background-color: #0f0f0f;
-}
-
-html:not(.dark):not(.light) div#header {
-    background-color: #0f0f0f;
+    background-color: var(--ne-tak-úplně-černá);
     &>div#headerLinks{
          &>* {
             border: 1px solid var(--asociální-zeleň);

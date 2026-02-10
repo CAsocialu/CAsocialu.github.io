@@ -105,7 +105,7 @@ div#členové>div.člen.open>div.členContent {
     transform: translate(-50%, -50%);
     border-radius: 16px;
     overflow: visible;
-    background-color:  #0f0f0f;
+    background-color:  var(--ne-tak-úplně-černá);
     padding: 24px 48px 24px 32px;
     border: 16px solid var(--asociální-zeleň);
     &>img {

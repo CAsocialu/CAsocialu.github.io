@@ -45,7 +45,7 @@
     width: 48px;
     height: 48px;
     border-radius: 24px;
-    background-color:  #0f0f0f;
+    background-color:  var(--ne-tak-úplně-černá);
     border: 3px solid #ddd;
     cursor: pointer;
     color: var(--ghost);

@@ -67,6 +67,12 @@ a::after {
     position: absolute;
 }
 
+div.mainACTUALContactsContainer a::after,
+div.mainContactsContainer a::after,
+div.mainContactsContainerContainer a::after {
+    content: none !important;
+}
+
 div.mainACTUALContentContainer {
     line-height: 1.55;
     padding: 6vh 4vw;
@@ -296,7 +302,7 @@ div.mainACTUALContactsContainer > * {
 
 .stanovy > a {
     box-sizing: border-box;
-    background-color: #0f0f0f;
+    background-color: var(--ne-tak-úplně-černá);
     padding: 2.59vh 2.19vw;
     color: var(--bělavě-šedá);
     font-size: 1.77vw;
@@ -310,6 +316,10 @@ div.mainACTUALContactsContainer > * {
     text-decoration: none;
     white-space: nowrap;
     border-radius: 0.83vw;
+}
+
+.stanovy > a:hover{
+    background-color: var(--cerise);
 }
 
 @media screen and (max-width: 768px) {
@@ -382,16 +392,16 @@ div.mainACTUALContactsContainer > * {
 
 
 .mainTitle {
-    width: 100vw;
-    max-width: 100vw;
+    width: calc(100vw - 8vw);
+    max-width: calc(100vw - 8vw);
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     left: 50%;
     right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    margin-left: calc(-50vw + 4vw);
+    margin-right: calc(-50vw + 4vw);
     box-sizing: border-box;
     height: calc(93vh - 48px);
     background-position: center bottom;
@@ -416,6 +426,7 @@ div.mainACTUALContactsContainer > * {
     height: auto;
     display: block;
     object-fit: cover;
+    border-radius: 2vh;
 }
 
 .cara{
@@ -469,4 +480,45 @@ html.dark .cara {
 
 html.dark .cara2 {
     border:0.46vh solid var(--asociální-zeleň);
+}
+html.dark .stanovy > a:hover{
+    background-color: var(--cerise);
+}
+
+
+
+html.light div#mainContent{
+    background-color: var(--bělavě-šedá);
+}
+
+html.light .hornitext{
+    background-color: var(--bělavě-šedá);
+    border: 0.16vw solid var(--asocial-green);
+    color: var(--ne-tak-úplně-černá);
+}
+
+
+html.light .stanovy > a {
+background-color: var(--asociální-zeleň);
+color: var(--ne-tak-úplně-černá);
+}
+
+html.light div.mainACTUALContentTextContainer {
+     border: 0.16vw solid var(--asociální-zeleň);
+}
+
+html.light .nadpisHistorie {
+    color: var(--asociální-zeleň);
+}
+
+html.light .cara {
+    border:0.46vh solid var(--asociální-zeleň);
+}
+
+html.light .cara2 {
+    border:0.46vh solid var(--asociální-zeleň);
+}
+
+html.light .stanovy > a:hover{
+    background-color: var(--cerise);
 }

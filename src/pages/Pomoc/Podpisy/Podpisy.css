@@ -23,7 +23,7 @@ div#signaturesContent {
 
 a#petitionDL {
     padding: 16px 24px;
-    background:  #0f0f0f;
+    background:  var(--ne-tak-úplně-černá);
     display: flex;
     color: var(--mint);
     text-decoration: none;

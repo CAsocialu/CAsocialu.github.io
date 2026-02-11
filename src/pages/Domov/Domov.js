@@ -72,15 +72,6 @@ export default function Domov() {
                 <meta name="twitter:description" content="ČSA je recesistická politická strana, v tento moment chystající se vzniknout a poté začít nabírat členy. Více než strana je ČSA internetová mikrokomunita, kde každý člověk náhodně z internetu může přispět svým dílem." />
                 <meta name="twitter:image" content={`${process.env.PUBLIC_URL}/assets/banner.png`} />
             </Helmet>
-            {/* <div id="Hero">
-                <Carousel show={1}>
-                    <img src={HlavníBanner} alt="" draggable="false"/>
-                    <img src={Kája} alt="" draggable="false"/>
-                    <img src={Konrád} alt="" draggable="false"/>
-                    <img src={Filip} alt="" draggable="false"/>
-                    <img src={pepa} alt="" draggable="false"/>
-                </Carousel>
-            </div> */}
             <div className="mainTitle">
                     <img src={mainTitle} draggable="false" alt=""></img>
                 </div>

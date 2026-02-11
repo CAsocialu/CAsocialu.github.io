@@ -7,7 +7,7 @@
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     background-color: var(--ghost);
-    color:  #0f0f0f;
+    color:  var(--ne-tak-úplně-černá);
     text-align: left;
     border-radius: 16px 16px 32px 32px;
 }

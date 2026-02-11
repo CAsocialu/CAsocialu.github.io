@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import "./Carousel.css"
 
 export default function Carousel(props) {
@@ -8,45 +8,15 @@ export default function Carousel(props) {
     const [touchPosition, setTouchPosition] = useState(null);
     const [autoScrollEnabled, setAutoScrollEnabled] = useState(true);
 
-    const handleTouchStart = (e) => {
-        const touchDown = e.touches[0].clientX;
-        setTouchPosition(touchDown);
-    }
-
-    const handleTouchMove = (e) => {
-        const touchDown = touchPosition;
-    
-        if (touchDown === null) {
-            return;
-        }
-    
-        const currentTouch = e.touches[0].clientX;
-        const diff = touchDown - currentTouch;
-    
-        if (diff > 5) {
-            next();
-        }
-    
-        if (diff < -5) {
-            prev();
-        }
-    
-        setTouchPosition(null);
-        setAutoScrollEnabled(false);
-        setTimeout(() => {
-            setAutoScrollEnabled(true);
-        }, 500);
-    }
-
-    const next = () => {
+    const next = useCallback(() => {
         if (currentIndex < (length - show)) {
             setCurrentIndex(prevState => prevState + 1);
         } else {
             setCurrentIndex(0);
         }
-    }
-    
-    const prev = () => {
+    }, [currentIndex, length, show]);
+
+    const prev = useCallback(() => {
         setAutoScrollEnabled(false);
         if (currentIndex > 0) {
             setCurrentIndex(prevState => prevState - 1);
@@ -55,7 +25,32 @@ export default function Carousel(props) {
         }
         setTimeout(() => {
             setAutoScrollEnabled(true); 
-          }, 500);
+        }, 500);
+    }, [currentIndex, length, show]);
+
+    const handleTouchStart = (e) => {
+        const touchDown = e.touches[0].clientX;
+        setTouchPosition(touchDown);
+    }
+
+    const handleTouchMove = (e) => {
+        const touchDown = touchPosition;
+        if (touchDown === null) {
+            return;
+        }
+        const currentTouch = e.touches[0].clientX;
+        const diff = touchDown - currentTouch;
+        if (diff > 5) {
+            next();
+        }
+        if (diff < -5) {
+            prev();
+        }
+        setTouchPosition(null);
+        setAutoScrollEnabled(false);
+        setTimeout(() => {
+            setAutoScrollEnabled(true);
+        }, 500);
     }
 
     useEffect(() => {
@@ -64,13 +59,12 @@ export default function Carousel(props) {
 
     useEffect(() => {
         if (autoScrollEnabled) {
-          const intervalId = setInterval(next, 5000);
-          return () => {
-            clearInterval(intervalId);
-          };
+            const intervalId = setInterval(next, 5000);
+            return () => {
+                clearInterval(intervalId);
+            };
         }
-      
-      }, [autoScrollEnabled, currentIndex, length]);
+    }, [autoScrollEnabled, next]);
 
     return (
         <div className='carousel-container'>

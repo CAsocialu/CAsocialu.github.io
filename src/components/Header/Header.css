@@ -35,7 +35,7 @@ div#header {
     }
     
     & > .tlačítka > button.theme-light {
-        background-color: #ffffff;
+        background-color: var(--bělavě-šedá);
     }
     
     & > .tlačítka > button.theme-dark {
@@ -91,6 +91,12 @@ div#header {
         }
     }
     transition: margin-top 0.33s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 768px) {
+    div#header > .tlačítka {
+        display: none;
+    }
 }
 
 div#header.headerWithExtraNews {

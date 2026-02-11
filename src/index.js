@@ -30,7 +30,6 @@ function rawr(event) {
   else if (stringcolonthree.toLowerCase().includes("rawr x3")) {
     stringcolonthree = "";
     document.removeEventListener("keypress", event => rawr(event));
-    document.querySelector("html").style = "background:  var(--ne-tak-úplně-černá)";
     var rawrx3 = document.createElement("div");
     rawrx3.id = "rawrx3";
     rawrx3.style = "width: 100%; height: 100%; display: flex; flex-direction: row; justify-content: center; align-items: center;"

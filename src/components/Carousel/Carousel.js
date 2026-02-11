@@ -54,7 +54,7 @@ export default function Carousel(props) {
             setCurrentIndex(length - show);
         }
         setTimeout(() => {
-            setAutoScrollEnabled(true); // re-enable auto scroll after a short delay
+            setAutoScrollEnabled(true); 
           }, 500);
     }
 
@@ -69,7 +69,7 @@ export default function Carousel(props) {
             clearInterval(intervalId);
           };
         }
-      // eslint-disable-next-line react-hooks/exhaustive-deps
+      
       }, [autoScrollEnabled, currentIndex, length]);
 
     return (

@@ -98,17 +98,19 @@ max-width: 500px;
     }
 }
 .begginingTitle{
-width: 100vw;
-max-width: 100vw;
+width: calc(100vw - 8vw);
+max-width: calc(100vw - 8vw);
 display: flex;
 justify-content: center;
 align-items: center;
 position: relative;
-left: 50%;
-right: 50%;
-margin-left: -50vw;
-margin-right: -50vw;
+margin-left: auto;
+margin-right: auto;
 box-sizing: border-box;
+}
+
+.begginingTitle > img{
+    border-radius: 2vh;
 }
 @media screen and (max-width: 949px) {
 .begginingTitle {

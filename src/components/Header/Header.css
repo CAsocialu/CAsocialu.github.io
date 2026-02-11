@@ -182,7 +182,9 @@ html:not(.dark):not(.light) div#header {
          &>* {
             border: 1px solid var(--asociální-zeleň);
          }
-           &>*.active {
+         &>*:hover,
+         &>*:focus,
+         &>*.active {
             color: var(--asociální-zeleň);
         }
     }

@@ -170,14 +170,14 @@ div#členové>div.člen.open>div.backdrop {
 }
 
 .clenoveTitle{
-    width: 100vw;
-    max-width: 100vw;
+    width: calc(100vw - 8vw);
+    max-width: calc(100vw - 8vw);
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    margin-left: auto;
+    margin-right: auto;
     box-sizing: border-box;
 }
 
@@ -199,6 +199,7 @@ div#členové>div.člen.open>div.backdrop {
     height: auto;
     display: block;
     object-fit: cover;
+    border-radius: 2vh;
 }
 
 html.dark div#membersContent{

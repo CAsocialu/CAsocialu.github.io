@@ -11,7 +11,7 @@ html,body {
     overflow-y: auto;
     overflow-x: hidden;
     --extraheaderpaddingstuff: 0px;
-    background-color: var(--ne-tak-úplně-černá);
+    background-color: var(--asociální-zeleň);
 }
 
 html:has(div#header.headerWithExtraNews),body:has(div#header.headerWithExtraNews) {
@@ -55,3 +55,10 @@ div#content {
 html.light div#mainContent{
     color: var(--ne-tak-úplně-černá);
 }
+ html.dark body{
+    background-color: var(--ne-tak-úplně-černá);
+ }
+
+ html.light body{
+    background-color: var(--bělavě-šedá);
+ }

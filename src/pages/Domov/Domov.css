@@ -392,22 +392,25 @@ div.mainACTUALContactsContainer > * {
 
 
 .mainTitle {
-    width: 100vw;
-    max-width: 100vw;
+    width: calc(100vw - 8vw);
+    max-width: calc(100vw - 8vw);
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     left: 50%;
     right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    margin-left: calc(-50vw + 4vw);
+    margin-right: calc(-50vw + 4vw);
     box-sizing: border-box;
     height: calc(93vh - 48px);
     background-position: center bottom;
     margin-bottom: 14vh;
 }
 
+.mainTitle > img{
+    border-radius: 2vh;
+}
 @media screen and (max-width: 949px) {
     .mainTitle {
         margin-top: -16px;

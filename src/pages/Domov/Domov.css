@@ -408,9 +408,6 @@ div.mainACTUALContactsContainer > * {
     margin-bottom: 14vh;
 }
 
-.mainTitle > img{
-    border-radius: 2vh;
-}
 @media screen and (max-width: 949px) {
     .mainTitle {
         margin-top: -16px;
@@ -429,6 +426,7 @@ div.mainACTUALContactsContainer > * {
     height: auto;
     display: block;
     object-fit: cover;
+    border-radius: 2vh;
 }
 
 .cara{

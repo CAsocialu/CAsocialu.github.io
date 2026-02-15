@@ -1,7 +1,7 @@
-import './Historie.css';
-import { Helmet } from 'react-helmet-async';
-import Title from '../../components/Title/Title';
-import Argonaut from "../../images/history/argonautmemory.png"
+import "./Historie.css";
+import { Helmet } from "react-helmet-async";
+import Title from "../../components/Title/Title";
+import Argonaut from "../../images/history/argonautmemory.png";
 
 export default function Historie() {
     const historyEntries = {
@@ -37,16 +37,20 @@ export default function Historie() {
             <Title>Historie</Title>
             <ol>
                 {historyEntries.main.map((entry, index) => (
-                    <li key={index} data-date={entry.date}>{entry.text}</li>
+                    <li key={index} data-date={entry.date}>
+                        {entry.text}
+                    </li>
                 ))}
             </ol>
             <Title small>Zajímavosti z Historie</Title>
             <ol>
                 {historyEntries.extras.map((entry, index) => (
-                    <li key={index} data-date={entry.date}>{entry.text}</li>
+                    <li key={index} data-date={entry.date}>
+                        {entry.text}
+                    </li>
                 ))}
             </ol>
-            <img src={ Argonaut } id='argonaut' alt="Hospoda Argonaut, 24. Srpna '24" draggable="false" />
+            <img src={Argonaut} id="argonaut" alt="Hospoda Argonaut, 24. Srpna '24" draggable="false" />
         </div>
-    )
+    );
 }

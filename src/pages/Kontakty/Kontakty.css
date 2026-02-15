@@ -1,8 +1,8 @@
 div#contactsContent {
-	padding: 16px 96px 0;
-	color: var(--ghost);
-	font-size: 21px;
-	font-family: var(--font-mono);
+    padding: 16px 96px 0;
+    color: var(--ghost);
+    font-size: 21px;
+    font-family: var(--font-mono);
     text-align: center;
     & .twitter {
         font-family: "chirp";
@@ -26,11 +26,12 @@ div#contactsContent {
     flex-wrap: nowrap;
     margin-top: -8px;
 
-    &>span {
+    & > span {
         margin-right: 4px;
         padding-top: 8px;
     }
-    &>span.twitter, img {
+    & > span.twitter,
+    img {
         margin-right: 8px;
         padding-top: 8px;
     }
@@ -46,10 +47,10 @@ div#contactsContent {
 }
 
 #profilesWrapper {
-	display: flex;
-	flex-direction: row;
-	column-gap: 32px;
-	align-items: center;
+    display: flex;
+    flex-direction: row;
+    column-gap: 32px;
+    align-items: center;
     flex-wrap: wrap;
     justify-content: center;
     row-gap: 16px;

@@ -1,20 +1,33 @@
 @import url(fonts.css);
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-@import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=dark_mode);
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=dark_mode");
 
-html {
-    background-color: #0f0f0f;
+@font-face {
+    font-family: "Comic Sans MS";
+    src: url("https://db.onlinewebfonts.com/t/e0083f919fd8abba5ee1cddf51de2cf8.eot");
+    src:
+        url("https://db.onlinewebfonts.com/t/e0083f919fd8abba5ee1cddf51de2cf8.eot?#iefix") format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/e0083f919fd8abba5ee1cddf51de2cf8.woff2") format("woff2"),
+        url("https://db.onlinewebfonts.com/t/e0083f919fd8abba5ee1cddf51de2cf8.woff") format("woff"),
+        url("https://db.onlinewebfonts.com/t/e0083f919fd8abba5ee1cddf51de2cf8.ttf") format("truetype"),
+        url("https://db.onlinewebfonts.com/t/e0083f919fd8abba5ee1cddf51de2cf8.svg#Comic Sans MS") format("svg");
 }
 
-html,body {
+html {
+    background-color: var(--ne-tak-úplně-černá);
+}
+
+html,
+body {
     margin: 0;
     overflow-y: auto;
     overflow-x: hidden;
     --extraheaderpaddingstuff: 0px;
-    background-color: #0f0f0f;
+    background-color: var(--asociální-zeleň);
 }
 
-html:has(div#header.headerWithExtraNews),body:has(div#header.headerWithExtraNews) {
+html:has(div#header.headerWithExtraNews),
+body:has(div#header.headerWithExtraNews) {
     --extraheaderpaddingstuff: 33px;
 }
 
@@ -26,7 +39,7 @@ div#mainContent {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #f0f0f0;
+    color: var(--bělavě-šedá);
     & .twitter {
         font-family: "Noto Sans Math";
         font-weight: normal;
@@ -50,4 +63,15 @@ div#content {
     div#mainContent {
         padding: 16px 32px 0;
     }
-} 
+}
+
+html.light div#mainContent {
+    color: var(--ne-tak-úplně-černá);
+}
+html.dark body {
+    background-color: var(--ne-tak-úplně-černá);
+}
+
+html.light body {
+    background-color: var(--bělavě-šedá);
+}

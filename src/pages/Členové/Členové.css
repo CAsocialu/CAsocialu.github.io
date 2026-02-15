@@ -1,21 +1,21 @@
 div#membersContent {
-	padding: 1.627670396744659vh calc(6*1.627670396744659vh) calc(2*1.627670396744659vh);
-	color: var(--ghost);
-	font-family: var(--font-mono);
+    padding: 1.627670396744659vh calc(6 * 1.627670396744659vh) calc(2 * 1.627670396744659vh);
+    color: var(--ghost);
+    font-family: var(--font-mono);
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--asociální-zeleň);
-    width: calc(100% - calc(2*6*1.627670396744659vh));
+    width: calc(100% - calc(2 * 6 * 1.627670396744659vh));
     row-gap: 24px;
-    &>h1 {
+    & > h1 {
         font-size: 42px;
     }
 }
 
 div#content:has(div#členové) {
-	display: flex;
-	justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 div#členové {
@@ -34,7 +34,7 @@ div.členInfo {
     justify-content: space-between;
 }
 
-div#členové>div.člen:not(.open) {
+div#členové > div.člen:not(.open) {
     width: 20vw;
     display: flex;
     column-gap: 16px;
@@ -44,7 +44,9 @@ div#členové>div.člen:not(.open) {
     filter: grayscale(50%);
     aspect-ratio: 1;
     flex: 1 1 auto;
-    transition: width var(--transition-members), filter var(--transition-members);
+    transition:
+        width var(--transition-members),
+        filter var(--transition-members);
     & h1 {
         font-family: var(--font-brand);
         font-size: 48px;
@@ -59,32 +61,32 @@ div#členové>div.člen:not(.open) {
     }
 }
 
-div#členové:not(:has(div.člen.open)):has(div.člen:hover)>div.člen:not(:hover) {
+div#členové:not(:has(div.člen.open)):has(div.člen:hover) > div.člen:not(:hover) {
     width: 15vw;
     aspect-ratio: 1;
     filter: grayscale(100%);
 }
 
-div#členové:not(:has(div.člen.open)):has(div.člen:hover)>div.člen:hover {
+div#členové:not(:has(div.člen.open)):has(div.člen:hover) > div.člen:hover {
     width: 25vw;
     aspect-ratio: 1;
     filter: grayscale(0%);
 }
 
-div#členové>div.člen>img {
+div#členové > div.člen > img {
     height: 100%;
     aspect-ratio: 1;
 }
 
-div#členové>div.člen:not(.open)>div.členInfo {
+div#členové > div.člen:not(.open) > div.členInfo {
     display: none;
 }
 
-div#členové>div.člen {
+div#členové > div.člen {
     flex-direction: row;
 }
 
-div#členové>div.člen.open {
+div#členové > div.člen.open {
     position: absolute;
     top: 0;
     left: 0;
@@ -93,7 +95,7 @@ div#členové>div.člen.open {
     height: 100%;
 }
 
-div#členové>div.člen.open>div.členContent {
+div#členové > div.člen.open > div.členContent {
     z-index: 10;
     display: flex;
     flex-direction: row;
@@ -105,10 +107,10 @@ div#členové>div.člen.open>div.členContent {
     transform: translate(-50%, -50%);
     border-radius: 16px;
     overflow: visible;
-    background-color:  #0f0f0f;
+    background-color: var(--ne-tak-úplně-černá);
     padding: 24px 48px 24px 32px;
     border: 16px solid var(--asociální-zeleň);
-    &>img {
+    & > img {
         height: 256px;
         opacity: 1;
         position: absolute;
@@ -127,7 +129,7 @@ div#členové>div.člen.open>div.členContent {
     }
     & ul {
         font-family: var(--font-klavika-basic);
-       font-weight: normal;
+        font-weight: normal;
         font-size: 4vh;
         padding-left: 4.069175991861648vh;
         & li::marker {
@@ -149,7 +151,7 @@ div#členové>div.člen.open>div.členContent {
             flex-direction: row;
             column-gap: 0.8138351983723296vh;
             align-items: center;
-            &>img {
+            & > img {
                 height: 2.5vh;
             }
         }
@@ -159,7 +161,7 @@ div#členové>div.člen.open>div.členContent {
     }
 }
 
-div#členové>div.člen.open>div.backdrop {
+div#členové > div.člen.open > div.backdrop {
     position: fixed;
     top: 50px;
     left: 0;
@@ -169,15 +171,15 @@ div#členové>div.člen.open>div.backdrop {
     z-index: 5;
 }
 
-.clenoveTitle{
-    width: 100vw;
-    max-width: 100vw;
+.clenoveTitle {
+    width: calc(100vw - 8vw);
+    max-width: calc(100vw - 8vw);
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    margin-left: auto;
+    margin-right: auto;
     box-sizing: border-box;
 }
 
@@ -188,7 +190,7 @@ div#členové>div.člen.open>div.backdrop {
 }
 
 @media screen and (min-width: 950px) {
-    .clenoveTitle{
+    .clenoveTitle {
         margin-top: -16px;
     }
 }
@@ -199,8 +201,13 @@ div#členové>div.člen.open>div.backdrop {
     height: auto;
     display: block;
     object-fit: cover;
+    border-radius: 2vh;
 }
 
-html.dark div#membersContent{
+html.dark div#membersContent {
     background-color: var(--ne-tak-úplně-černá);
+}
+
+html.light div#membersContent {
+    background-color: var(--bělavě-šedá);
 }

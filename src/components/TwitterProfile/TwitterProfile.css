@@ -1,8 +1,8 @@
 .twtprofile-profile-container {
-    background-color: color-mix(in srgb,  #0f0f0f 90%, var(--asexual-purple));
+    background-color: color-mix(in srgb, var(--ne-tak-úplně-černá) 90%, var(--asexual-purple));
     max-width: 600px;
     padding: 20px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     text-align: initial;
     border-radius: 16px 16px 32px 32px;
 }
@@ -54,7 +54,7 @@
 }
 
 .twtprofile-follow-btn:hover {
-    color: var(--asocial-green)
+    color: var(--asocial-green);
 }
 
 .twtprofile-profile-info h1 {
@@ -93,6 +93,7 @@
     text-decoration: none;
 }
 
-.twtprofile-profile-details a::after, a.twtprofile-follow-btn::after {
+.twtprofile-profile-details a::after,
+a.twtprofile-follow-btn::after {
     display: none;
 }

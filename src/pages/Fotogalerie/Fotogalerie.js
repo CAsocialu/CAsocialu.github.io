@@ -20,5 +20,5 @@ export default function Fotogalerie() {
             <Title>Sisinina Galerie Slávy</Title>
             <h3>Kaming sůn :3</h3>
         </div>
-    )
+    );
 }

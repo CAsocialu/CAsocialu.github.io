@@ -1,5 +1,5 @@
 div#header {
-    position: fixed ;
+    position: fixed;
     font-family: var(--font-klavika-basic);
     display: flex;
     align-items: center;
@@ -13,15 +13,49 @@ div#header {
     z-index: 100;
     height: 48px;
     top: 0;
-    &>span {
+    background-color: var(--asociální-zeleň);
+
+    & > .tlačítka {
+        position: absolute;
+        left: 13px;
+        display: flex;
+        gap: 8px;
+    }
+
+    & > .tlačítka > button {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 2px solid var(--ne-tak-úplně-černá);
+        cursor: pointer;
+    }
+
+    & > .tlačítka > button.theme-default {
+        background-color: var(--asociální-zeleň);
+    }
+
+    & > .tlačítka > button.theme-light {
+        background-color: var(--bělavě-šedá);
+    }
+
+    & > .tlačítka > button.theme-dark {
+        background-color: var(--ne-tak-úplně-černá);
+    }
+
+    & > .tlačítka > button.active {
+        border: 3px solid var(--cerise);
+        transform: scale(1.1);
+    }
+
+    & > span {
         font-size: 20px;
         font-weight: 700;
         margin-top: -2px;
     }
-    &>div#headerLinks {
+    & > div#headerLinks {
         display: flex;
         column-gap: 16px;
-        &>* {
+        & > * {
             margin-top: -2px;
             color: var(--ghost);
             font-family: var(--font-klavika-basic);
@@ -30,33 +64,39 @@ div#header {
             position: relative;
             transition: color 0.3s ease 0s;
             padding: 4px 8px;
-            border: 1px solid var(--asociální-zeleň);
+            border: 1px solid var(--ne-tak-úplně-černá);
             border-radius: 6px;
         }
-        &>*::after {
+        & > *::after {
             content: none;
         }
-        &>[href="/sraz2025"] {
-            color: var(--červená-z-loga)
+        & > [href="/sraz2025"] {
+            color: var(--červená-z-loga);
         }
-        &>.disabled {
+        & > .disabled {
             pointer-events: none;
             opacity: 0.5;
         }
-        
-        &>*:hover,
-        &>*:focus,
-        &>*.active {
-            color: var(--asociální-zeleň);
+
+        & > *:hover,
+        & > *:focus,
+        & > *.active {
+            color: var(--ne-tak-úplně-černá);
         }
-        
-        &>*:hover::after,
-        &>*:focus::after,
-        &>*.active::after {
+
+        & > *:hover::after,
+        & > *:focus::after,
+        & > *.active::after {
             display: none;
         }
     }
     transition: margin-top 0.33s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 768px) {
+    div#header > .tlačítka {
+        display: none;
+    }
 }
 
 div#header.headerWithExtraNews {
@@ -66,14 +106,15 @@ div#header.headerWithExtraNews {
 @media screen and (min-width: 1235px) {
     div#header {
         padding: 4px 13px;
-        background:  #0f0f0f;
+        background: var(--asociální-zeleň);
         width: calc(100vw - 26px);
-        &>span {
-            &>label,&>input{
+        & > span {
+            & > label,
+            & > input {
                 display: none;
             }
         }
-        &>div#headerLinks {
+        & > div#headerLinks {
             display: flex;
             column-gap: 16px;
         }
@@ -83,24 +124,24 @@ div#header.headerWithExtraNews {
         background-image: url(./ace.svg);
         background-size: contain;
         color: var(--asexual-purple) !important;
-        &>div#headerLinks {
-            &>* {
-                color:  #0f0f0f;
+        & > div#headerLinks {
+            & > * {
+                color: var(--ne-tak-úplně-černá);
             }
-    
-            &>*::after {
-                background-color:  #0f0f0f;
+
+            & > *::after {
+                background-color: var(--ne-tak-úplně-černá);
             }
-    
-            &>*:hover,
-            &>*:focus,
-            &>*.active {
+
+            & > *:hover,
+            & > *:focus,
+            & > *.active {
                 color: var(--asexual-purple);
             }
-    
-            &>*:hover::after,
-            &>*:focus::after,
-            &>*.active::after {
+
+            & > *:hover::after,
+            & > *:focus::after,
+            & > *.active::after {
                 background-color: var(--asexual-purple);
             }
         }
@@ -108,7 +149,7 @@ div#header.headerWithExtraNews {
 }
 
 html[data-location="/sraz2025"]:has(div#extraHeaderNews[data-target-path="/sraz2025"]),
-html[data-location="/sraz2025"]:has(div#extraHeaderNews[data-target-path="/sraz2025"])>body {
+html[data-location="/sraz2025"]:has(div#extraHeaderNews[data-target-path="/sraz2025"]) > body {
     --extraheaderpaddingstuff: 0px !important;
 }
 
@@ -136,10 +177,29 @@ div#extraHeaderNews {
     transition: margin-top 0.33s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.material-symbols-outlined {
-    background-color: var(--asociální-zeleň);
-    border: solid var(--asociální-zeleň);
-    border-radius: 0.50vw;
+html:not(.dark):not(.light) div#header {
+    background-color: var(--ne-tak-úplně-černá);
+    & > div#headerLinks {
+        & > * {
+            border: 1px solid var(--asociální-zeleň);
+        }
+        & > *:hover,
+        & > *:focus,
+        & > *.active {
+            color: var(--asociální-zeleň);
+        }
+    }
 }
 
+html:not(.dark):not(.light) div#header > .tlačítka > button {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid var(--asociální-zeleň);
+    cursor: pointer;
+}
 
+html:not(.dark):not(.light) div#header > .tlačítka > button.active {
+    border: 3px solid var(--cerise);
+    transform: scale(1.1);
+}

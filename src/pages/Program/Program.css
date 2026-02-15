@@ -4,7 +4,6 @@ div#programmeContent {
     font-size: 21px;
     font-family: var(--font-klavika-basic);
 }
-
 @media screen and (max-width: 949px) {
     div#programmeContent {
         padding: 16px 16px 0;
@@ -13,7 +12,6 @@ div#programmeContent {
         width: calc(100% - 32px);
     }
 }
-
 @media screen and (min-width: 950px) {
     div#programmeContent {
         padding: 16px 32px 0;
@@ -23,31 +21,57 @@ div#programmeContent {
     }
 }
 
-div#programmeContent ul {
-    list-style: none;
-    counter-reset: listCounter;
+div#programmeContent ol.programmeSeznam {
+    column-count: 2;
+    column-gap: 3vw;
+    width: 90%;
+    max-width: 1500px;
+    padding: 0;
+    margin: 20px auto;
+    list-style-position: inside;
+    text-align: left;
+    font-size: 3vh;
 }
 
+div#programmeContent ol.programmeSeznam li {
+    counter-increment: programme;
+}
+
+div#programmeContent ol.programmeSeznam li::marker {
+    content: counter(programme) ". ";
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    div#programmeContent ol.programmeSeznam {
+        column-count: 1;
+        width: 90%;
+    }
+}
+div#programmeContent ol li {
+    position: relative;
+    margin-bottom: 10px;
+    break-inside: avoid;
+}
 div#programmeContent ul li {
     position: relative;
     margin-bottom: 10px;
+    break-inside: avoid;
+    text-align: center;
 }
-
 div#programmeContent ul li::marker {
     content: "";
     font-weight: bold;
 }
-
 div#programmeContent label.rokKarta {
     width: 30vw;
     height: 30vh;
     display: block;
-    background-color:  #0f0f0f;
+    background-color: var(--ne-tak-úplně-černá);
     border: 24px solid var(--ghost);
     margin: -24px 0;
     transition: border-color 0.3s ease;
 }
-
 @media screen and (max-width: 768px) {
     div#programmeContent label.rokKarta {
         width: 80vw;
@@ -56,7 +80,6 @@ div#programmeContent label.rokKarta {
         margin: -16px 0;
     }
 }
-
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     div#programmeContent label.rokKarta {
         width: 40vw;
@@ -65,36 +88,30 @@ div#programmeContent label.rokKarta {
         margin: -20px 0;
     }
 }
-
 div#programmeContent label.rokKarta:last-child {
     margin-left: auto;
     margin-right: auto;
     flex-basis: 30vw;
 }
-
 @media screen and (max-width: 768px) {
     div#programmeContent label.rokKarta:last-child {
         flex-basis: 80vw;
     }
 }
-
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     div#programmeContent label.rokKarta:last-child {
         flex-basis: 40vw;
     }
 }
-
 div#programmeContent label.rokKarta:hover {
     border-color: var(--cerise);
 }
-
 div#programmeContent label.rokKarta input {
     visibility: hidden;
     height: 0;
     width: 0;
     position: absolute;
 }
-
 div#programmeContent div.rokFront {
     font-size: 7.5vw;
     display: flex;
@@ -103,19 +120,17 @@ div#programmeContent div.rokFront {
     width: 100%;
     height: 100%;
 }
-
 @media screen and (max-width: 768px) {
     div#programmeContent div.rokFront {
         font-size: 15vw;
     }
 }
-
 div#programmeContent .rokBack {
     position: fixed;
     top: 64px;
     left: 64px;
     width: calc(100vw - 128px - 32px - 32px);
-    height: calc(100vh - 128px - 32px - 32px);
+    height: calc(100vh - 128px - 64px - 64px);
     border: 16px solid var(--cerise);
     background-color: var(--ne-tak-úplně-černá);
     display: flex;
@@ -126,9 +141,10 @@ div#programmeContent .rokBack {
     font-size: min(1.5vw, 2vh);
     text-align: center;
     z-index: 100;
-    padding: 16px;
+    overflow-y: auto;
+    padding-top: 7vh;
+    padding-bottom: 6vh;
 }
-
 @media screen and (max-width: 768px) {
     div#programmeContent .rokBack {
         top: 16px;
@@ -140,7 +156,6 @@ div#programmeContent .rokBack {
         font-size: min(3.5vw, 2.5vh);
     }
 }
-
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     div#programmeContent .rokBack {
         top: 32px;
@@ -151,7 +166,6 @@ div#programmeContent .rokBack {
         font-size: min(2.5vw, 2.2vh);
     }
 }
-
 div#programmeContent label.rokKarta .rokBack,
 div#programmeContent label.rokKarta .rokKartaBackdrop {
     pointer-events: none;
@@ -160,15 +174,13 @@ div#programmeContent label.rokKarta .rokKartaBackdrop {
     margin-top: -25px;
     z-index: 501;
 }
-
 div#programmeContent label.rokKarta:has(input:checked) .rokBack,
 div#programmeContent label.rokKarta:has(input:checked) .rokKartaBackdrop {
     pointer-events: auto;
     opacity: 1;
 }
-
 div#programmeContent label.rokKarta div.rokKartaBackdrop {
-    background-color:  #0f0f0f;
+    background-color: var(--ne-tak-úplně-černá);
     opacity: 0;
     top: 0;
     left: 0;
@@ -179,24 +191,20 @@ div#programmeContent label.rokKarta div.rokKartaBackdrop {
     margin: 0;
     z-index: 500;
 }
-
 div#programmeContent label.rokKarta:has(input:checked) div.rokKartaBackdrop {
     opacity: 0.5;
 }
-
 div#programmeContent .rokBack h3.nadpis {
     width: fit-content;
     margin-bottom: 16px;
     margin-top: -24px;
 }
-
 @media screen and (max-width: 768px) {
     div#programmeContent .rokBack h3.nadpis {
         margin-top: -12px;
         margin-bottom: 12px;
     }
 }
-
 div#programmeContent div.rokyContainer {
     display: flex;
     flex-direction: row;
@@ -210,7 +218,6 @@ div#programmeContent div.rokyContainer {
     padding: 32px 0 64px;
     margin-top: 80px;
 }
-
 @media screen and (max-width: 768px) {
     div#programmeContent div.rokyContainer {
         column-gap: 16px;
@@ -220,7 +227,6 @@ div#programmeContent div.rokyContainer {
         margin-top: 40px;
     }
 }
-
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     div#programmeContent div.rokyContainer {
         column-gap: 32px;
@@ -229,14 +235,12 @@ div#programmeContent div.rokyContainer {
         margin-top: 60px;
     }
 }
-
 div#programmeContent label.rokKarta:hover .rokFront {
     color: var(--cerise);
 }
-
 .nadrokovybox {
     background-color: var(--asociální-zeleň);
-   border: 0.16vw solid var(--ne-tak-úplně-černá);
+    border: 0.16vw solid var(--ne-tak-úplně-černá);
     border-radius: 10px;
     color: var(--ghost);
     font-family: var(--font-klavika-basic);
@@ -256,7 +260,6 @@ div#programmeContent label.rokKarta:hover .rokFront {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-
 @media screen and (max-width: 768px) {
     .nadrokovybox {
         font-size: 18px;
@@ -267,7 +270,6 @@ div#programmeContent label.rokKarta:hover .rokFront {
         max-width: 90vw;
     }
 }
-
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .nadrokovybox {
         font-size: 24px;
@@ -276,29 +278,24 @@ div#programmeContent label.rokKarta:hover .rokFront {
         margin-bottom: -5rem;
     }
 }
-
 div#programmeContent .nadrokovybox {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
 }
-
 div#programmeContent:not(:has(.rokKarta input:checked)) .nadrokovybox {
     opacity: 1;
     pointer-events: auto;
 }
-
 .programmeTitle {
-    width: 100vw;
-    max-width: 100vw;
+    width: calc(100vw - 8vw);
+    max-width: calc(100vw - 8vw);
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    margin-left: auto;
+    margin-right: auto;
     box-sizing: border-box;
 }
 
@@ -307,46 +304,55 @@ div#programmeContent:not(:has(.rokKarta input:checked)) .nadrokovybox {
         margin-top: -16px;
     }
 }
-
 @media screen and (min-width: 950px) {
     .programmeTitle {
         margin-top: -16px;
     }
 }
-
 .programmeTitle > img {
     width: 100%;
     max-width: 100vw;
     height: auto;
     display: block;
     object-fit: cover;
+    border-radius: 2vh;
 }
-
-
 html.dark div#programmeContent {
     background-color: var(--ne-tak-úplně-černá);
     color: var(--bělavě-šedá);
 }
-
 html.dark div#programmeContent ul li {
     color: var(--bělavě-šedá);
 }
-
 html.dark div#programmeContent label.rokKarta {
     background-color: var(--ne-tak-úplně-černá);
 }
-
 html.dark div#programmeContent label.rokKarta:hover {
     border-color: var(--cerise);
 }
-
-
 html.dark div#programmeContent label.rokKarta div.rokKartaBackdrop {
     background-color: var(--ne-tak-úplně-černá);
 }
-
 html.dark div#programmeContent .nadrokovybox {
-    background-color: #111;
+    background-color: var(--ne-tak-úplně-černá);
     color: var(--bělavě-šedá);
     border-color: var(--asociální-zeleň);
+}
+
+html.light div#programmeContent {
+    background-color: var(--bělavě-šedá);
+}
+
+html.light div#programmeContent .nadrokovybox {
+    background-color: var(--bělavě-šedá);
+    color: var(--ne-tak-úplně-černá);
+    border-color: var(--asociální-zeleň);
+}
+
+html.light div#programmeContent label.rokKarta {
+    border: 24px solid var(--asociální-zeleň);
+}
+
+html.light div#programmeContent label.rokKarta:hover {
+    border-color: var(--cerise);
 }

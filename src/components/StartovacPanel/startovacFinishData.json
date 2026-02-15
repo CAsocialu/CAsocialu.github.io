@@ -1,7 +1,1 @@
-[
-    {
-        "requested": "10000",
-        "reached": "12467",
-        "contributors": "34"
-    }
-]
+[{ "requested": "10000", "reached": "12467", "contributors": "34" }]

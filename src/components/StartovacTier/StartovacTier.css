@@ -1,7 +1,7 @@
 .startovac-tier {
     background: white;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 0px;
     transition: transform 0.2s ease;
 }
@@ -65,7 +65,7 @@
         font-size: 0.75em;
         margin-bottom: 12px;
     }
-    &>:last-child {
+    & > :last-child {
         margin-bottom: 0;
     }
 }
@@ -105,11 +105,12 @@
             height: 90px;
             width: 75%;
             padding-left: 25%;
-            background-image: linear-gradient(270deg,  var(--ne-tak-úplně-černá), transparent);
+            background-image: linear-gradient(270deg, var(--ne-tak-úplně-černá), transparent);
             align-items: flex-end;
             justify-content: center;
         }
         & img {
-        display: none;
-    }}
+            display: none;
+        }
+    }
 }

@@ -1,91 +1,89 @@
 name: React Build Check
 
 permissions:
-  contents: write
-  id-token: write
-  actions: write
+    contents: write
+    id-token: write
+    actions: write
 
 on:
-  pull_request:
-    branches:
-      - main
+    pull_request:
+        branches:
+            - main
 
 jobs:
-  build-node:
-    runs-on: ubuntu-22.04
+    build-node:
+        runs-on: ubuntu-22.04
 
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          token: ${{ secrets.ACTIONS_TOKEN }}
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+                  token: ${{ secrets.ACTIONS_TOKEN }}
 
-      - name: Determine Workflow Branch
-        run: echo "TARGET_BRANCH=${{ github.event.pull_request.head.ref || github.ref_name }}" >> $GITHUB_ENV
+            - name: Determine Workflow Branch
+              run: echo "TARGET_BRANCH=${{ github.event.pull_request.head.ref || github.ref_name }}" >> $GITHUB_ENV
 
-      - name: Install dependencies
-        run: npm install --force
+            - name: Install dependencies
+              run: npm install --force
 
-      - name: Build React app
-        run: CI=true npm run node:build
-        
-      - name: Upload extra artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: webpify-results-node
-          path: ./webp-conversion-results.json
+            - name: Build React app
+              run: CI=true npm run node:build
 
-      - name: Upload Pages Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-node
-          path: ./build
+            - name: Upload extra artifacts
+              uses: actions/upload-artifact@v4
+              with:
+                  name: webpify-results-node
+                  path: ./webp-conversion-results.json
 
-      - name: Upload post-build repo state
-        uses: actions/upload-artifact@v4
-        with:
-          name: "Repo after Build - node.js"
-          path: ./
+            - name: Upload Pages Artifact
+              uses: actions/upload-artifact@v4
+              with:
+                  name: build-node
+                  path: ./build
 
-  
+            - name: Upload post-build repo state
+              uses: actions/upload-artifact@v4
+              with:
+                  name: "Repo after Build - node.js"
+                  path: ./
 
-  build-bun:
-    runs-on: ubuntu-22.04
-    
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          token: ${{ secrets.ACTIONS_TOKEN }}
+    build-bun:
+        runs-on: ubuntu-22.04
 
-      - name: Determine Workflow Branch
-        run: echo "TARGET_BRANCH=${{ github.event.pull_request.head.ref || github.ref_name }}" >> $GITHUB_ENV
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+                  token: ${{ secrets.ACTIONS_TOKEN }}
 
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
-          
-      - name: Install dependencies
-        run: bun install --force
-    
-      - name: Build React app
-        run: CI=true bun run bun:build
+            - name: Determine Workflow Branch
+              run: echo "TARGET_BRANCH=${{ github.event.pull_request.head.ref || github.ref_name }}" >> $GITHUB_ENV
 
-      - name: Upload extra artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: webpify-results-bun
-          path: ./webp-conversion-results.json
+            - name: Setup Bun
+              uses: oven-sh/setup-bun@v2
 
-      - name: Upload Pages Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-bun
-          path: ./build
+            - name: Install dependencies
+              run: bun install --force
 
-      - name: Upload post-build repo state
-        uses: actions/upload-artifact@v4
-        with:
-          name: "Repo after Build - Bun"
-          path: ./
+            - name: Build React app
+              run: CI=true bun run bun:build
+
+            - name: Upload extra artifacts
+              uses: actions/upload-artifact@v4
+              with:
+                  name: webpify-results-bun
+                  path: ./webp-conversion-results.json
+
+            - name: Upload Pages Artifact
+              uses: actions/upload-artifact@v4
+              with:
+                  name: build-bun
+                  path: ./build
+
+            - name: Upload post-build repo state
+              uses: actions/upload-artifact@v4
+              with:
+                  name: "Repo after Build - Bun"
+                  path: ./

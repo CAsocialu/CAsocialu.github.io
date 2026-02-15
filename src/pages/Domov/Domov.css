@@ -62,7 +62,7 @@ a:visited:hover::after {
 
 a::after {
     content: "open_in_new";
-    font-family: 'Material Symbols Outlined';
+    font-family: "Material Symbols Outlined";
     font-size: 0.625vw;
     position: absolute;
 }
@@ -85,7 +85,9 @@ div.mainACTUALContentContainer {
 
 div.mainContactsContainerContainer {
     backdrop-filter: brightness(0.5);
-    width: calc(100% - 2 * 5.93vh); height: 100%; padding: 5.93vh;
+    width: calc(100% - 2 * 5.93vh);
+    height: 100%;
+    padding: 5.93vh;
     display: flex;
     justify-content: center;
 }
@@ -143,7 +145,6 @@ div.mainACTUALContentContainer img {
     flex-shrink: 0;
     margin-bottom: -5vh;
     border-radius: 0.83vw;
-    
 }
 
 @media screen and (max-width: 768px) {
@@ -161,7 +162,6 @@ div.mainContactsContainer {
     background-position: center 50%;
     background-repeat: no-repeat;
 }
-
 
 @media screen and (max-width: 768px) {
     div.mainContactsContainer {
@@ -318,7 +318,7 @@ div.mainACTUALContactsContainer > * {
     border-radius: 0.83vw;
 }
 
-.stanovy > a:hover{
+.stanovy > a:hover {
     background-color: var(--cerise);
 }
 
@@ -383,13 +383,12 @@ div.mainACTUALContactsContainer > * {
 }
 
 .mainACTUALContentTextContainer:nth-of-type(1) {
-   margin-right: 13vw;
+    margin-right: 13vw;
 }
 
 .mainACTUALContentTextContainer:nth-of-type(2) {
-   margin-right: 13vw; 
+    margin-right: 13vw;
 }
-
 
 .mainTitle {
     width: calc(100vw - 8vw);
@@ -429,13 +428,13 @@ div.mainACTUALContactsContainer > * {
     border-radius: 2vh;
 }
 
-.cara{
-    border:0.46vh solid var(--ne-tak-úplně-černá);
+.cara {
+    border: 0.46vh solid var(--ne-tak-úplně-černá);
     border-radius: 0.42vw;
     margin-bottom: -2vh;
 }
 
-.nadpisHistorie{
+.nadpisHistorie {
     text-align: left;
     align-self: center;
     color: var(--ne-tak-úplně-černá);
@@ -443,23 +442,21 @@ div.mainACTUALContactsContainer > * {
     margin-bottom: -4vh;
 }
 
-
-
-html.dark div#mainContent{
+html.dark div#mainContent {
     background-color: var(--ne-tak-úplně-černá);
 }
 
-html.dark .hornitext{
+html.dark .hornitext {
     background-color: var(--ne-tak-úplně-černá);
     border: 0.16vw solid var(--asocial-green);
 }
 
 html.dark .stanovy > a {
-background-color: var(--asociální-zeleň);
+    background-color: var(--asociální-zeleň);
 }
 
 html.dark div.mainACTUALContentTextContainer {
-     border: 0.16vw solid var(--asociální-zeleň);
+    border: 0.16vw solid var(--asociální-zeleň);
 }
 
 html.dark .nadpisHistorie {
@@ -467,11 +464,11 @@ html.dark .nadpisHistorie {
 }
 
 html.dark .cara {
-    border:0.46vh solid var(--asociální-zeleň);
+    border: 0.46vh solid var(--asociální-zeleň);
 }
 
 .cara2 {
-    border:0.46vh solid var(--ne-tak-úplně-černá);
+    border: 0.46vh solid var(--ne-tak-úplně-černá);
     width: 60vw;
     margin-right: 37vw;
     border-radius: 0.42vw;
@@ -479,32 +476,29 @@ html.dark .cara {
 }
 
 html.dark .cara2 {
-    border:0.46vh solid var(--asociální-zeleň);
+    border: 0.46vh solid var(--asociální-zeleň);
 }
-html.dark .stanovy > a:hover{
+html.dark .stanovy > a:hover {
     background-color: var(--cerise);
 }
 
-
-
-html.light div#mainContent{
+html.light div#mainContent {
     background-color: var(--bělavě-šedá);
 }
 
-html.light .hornitext{
+html.light .hornitext {
     background-color: var(--bělavě-šedá);
     border: 0.16vw solid var(--asocial-green);
     color: var(--ne-tak-úplně-černá);
 }
 
-
 html.light .stanovy > a {
-background-color: var(--asociální-zeleň);
-color: var(--ne-tak-úplně-černá);
+    background-color: var(--asociální-zeleň);
+    color: var(--ne-tak-úplně-černá);
 }
 
 html.light div.mainACTUALContentTextContainer {
-     border: 0.16vw solid var(--asociální-zeleň);
+    border: 0.16vw solid var(--asociální-zeleň);
 }
 
 html.light .nadpisHistorie {
@@ -512,13 +506,13 @@ html.light .nadpisHistorie {
 }
 
 html.light .cara {
-    border:0.46vh solid var(--asociální-zeleň);
+    border: 0.46vh solid var(--asociální-zeleň);
 }
 
 html.light .cara2 {
-    border:0.46vh solid var(--asociální-zeleň);
+    border: 0.46vh solid var(--asociální-zeleň);
 }
 
-html.light .stanovy > a:hover{
+html.light .stanovy > a:hover {
     background-color: var(--cerise);
 }

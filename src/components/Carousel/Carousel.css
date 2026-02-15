@@ -21,8 +21,8 @@
 .carousel-content {
     display: flex;
     transition: all 500ms ease-in-out;
-    -ms-overflow-style: none; 
-    scrollbar-width: none;  
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .carousel-content::-webkit-scrollbar {
@@ -35,7 +35,8 @@
     flex-grow: 1;
 }
 
-.left-arrow, .right-arrow {
+.left-arrow,
+.right-arrow {
     position: absolute;
     z-index: 5;
     top: 50%;
@@ -43,7 +44,7 @@
     width: 48px;
     height: 48px;
     border-radius: 24px;
-    background-color:  var(--ne-tak-úplně-černá);
+    background-color: var(--ne-tak-úplně-černá);
     border: 3px solid #ddd;
     cursor: pointer;
     color: var(--ghost);
@@ -59,7 +60,8 @@
 }
 
 @media (hover: none) and (pointer: coarse) {
-    .left-arrow, .right-arrow {
+    .left-arrow,
+    .right-arrow {
         display: none;
     }
 }

@@ -1,54 +1,53 @@
 {
-  "name": "src",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^19.2.0",
-    "react-confetti": "^6.4.0",
-    "react-dom": "^19.2.0",
-    "react-helmet-async": "^2.0.5",
-    "react-router-dom": "^7.12.0",
-    "react-scripts": "5.0.1"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.22",
-    "glob": "^11.1.0",
-    "puppeteer": "^24.29.1",
-    "sharp": "^0.34.5"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-
-    "prenode:build": "node expire-old-content.js && node node.webpify-multithread.js",
-    "node:build": "react-scripts build",
-    "postnode:build": "node pre-render.js",
-
-    "prebun:build": "bun run expire-old-content.js && bun run bun.webpify-multithread.js",
-    "bun:build": "bun run bun-build.js",
-    "postbun:build": "bun run pre-render.js",
-
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "engines": {
-    "node": ">=18"
-  }
+    "name": "src",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "react": "^19.2.0",
+        "react-confetti": "^6.4.0",
+        "react-dom": "^19.2.0",
+        "react-helmet-async": "^2.0.5",
+        "react-router-dom": "^7.12.0",
+        "react-scripts": "5.0.1"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.22",
+        "glob": "^11.1.0",
+        "pretty-quick": "^4.2.2",
+        "puppeteer": "^24.29.1",
+        "sharp": "^0.34.5",
+        "simple-git-hooks": "^2.13.1"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "prenode:build": "node expire-old-content.js && node node.webpify-multithread.js",
+        "node:build": "react-scripts build",
+        "postnode:build": "node pre-render.js",
+        "prebun:build": "bun run expire-old-content.js && bun run bun.webpify-multithread.js",
+        "bun:build": "bun run bun-build.js",
+        "postbun:build": "bun run pre-render.js",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "engines": {
+        "node": ">=18"
+    }
 }

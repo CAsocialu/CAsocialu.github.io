@@ -3,7 +3,9 @@ body {
     padding-top: 4vh;
 }
 
-html:has(noscript), body:has(noscript), noscript {
+html:has(noscript),
+body:has(noscript),
+noscript {
     background-color: var(--ne-tak-úplně-černá);
     color: var(--ghost);
     width: 100%;
@@ -31,10 +33,9 @@ noscript {
         display: none;
     }
 }
-  
+
 @supports (-moz-appearance: none) {
     .JSFixChromeWebkitBlink {
         display: none;
     }
 }
-

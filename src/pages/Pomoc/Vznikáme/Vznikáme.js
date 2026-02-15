@@ -85,7 +85,7 @@ export default function Vznikáme() {
                 <iframe
                     ref={iframeRef}
                     src="https://socializace.asocialove.cz/embed/membership"
-                    allowTransparency="true"
+                    allowtransparency="true"
                     title="Přihlašovací formulář do České Strany Asociálů"
                 />
             </div>

@@ -36,12 +36,13 @@
         script-src 'self' 'unsafe-eval' blob:
             'sha256-G4NDT5+z2VIj+3FB9Q+jXBda38In14rZMJOAS32zxsU=';
         style-src 'self' 'unsafe-inline' 
-            https://fonts.googleapis.com 
-            https://deadcode.is-a.dev;
+            https://fonts.googleapis.com
+            https://deadcode.is-a.dev; 
         font-src 'self' data:
             https://fonts.gstatic.com 
-            https://deadcode.is-a.dev;
-        img-src 'self' data: blob:;
+            https://deadcode.is-a.dev
+	    https://db.onlinewebfonts.com;
+	img-src 'self' data: blob:;
         connect-src 'self' blob:
             https://api.allorigins.win/;
         base-uri 'self';

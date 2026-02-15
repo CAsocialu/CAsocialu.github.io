@@ -24,8 +24,8 @@ div#programmeContent {
 div#programmeContent ol.programmeSeznam {
     column-count: 2;
     column-gap: 3vw;
-    width: 80%;
-    max-width: 1200px;
+    width: 90%;
+    max-width: 1500px;
     padding: 0;
     margin: 20px auto;
     list-style-position: inside;
@@ -130,7 +130,7 @@ div#programmeContent .rokBack {
     top: 64px;
     left: 64px;
     width: calc(100vw - 128px - 32px - 32px);
-    height: calc(100vh - 128px - 32px - 32px);
+    height: calc(100vh - 128px - 64px - 64px);
     border: 16px solid var(--cerise);
     background-color: var(--ne-tak-úplně-černá);
     display: flex;

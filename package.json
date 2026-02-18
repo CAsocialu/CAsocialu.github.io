@@ -12,9 +12,9 @@
     },
     "devDependencies": {
         "autoprefixer": "^10.4.24",
-        "glob": "^13.0.3",
+        "glob": "^13.0.5",
         "pretty-quick": "^4.2.2",
-        "puppeteer": "^24.37.3",
+        "puppeteer": "^24.37.4",
         "sharp": "^0.34.5",
         "simple-git-hooks": "^2.13.1"
     },

@@ -148,8 +148,8 @@ export default function Domov() {
                                 <a href="https://www.youtube.com/@ceskastranaasocialu7353" target="_blank" rel="noreferrer noopener">
                                     mrtvý youtube
                                 </a>
-                                 <a href="strana@asocialove.cz" target="_blank" rel="noreferrer noopener">strana@asocialove.cz</a>
-                                <a href="admin@asocialove.cz" target="_blank" rel="noreferrer noopener">admin@asocialove.cz</a>
+                                <a href="mailto:strana@asocialove.cz" target="_blank" rel="noreferrer noopener">strana@asocialove.cz</a>
+                                <a href="mailto:admin@asocialove.cz" target="_blank" rel="noreferrer noopener">admin@asocialove.cz</a>
                             </div>
                         </div>
                     </div>

@@ -202,6 +202,16 @@ div#členové>div.člen.open>div.backdrop {
     border-radius: 2vh;
 }
 
+.nadpis{
+    text-align: left;
+    color: var(--bělavě-šedá);
+    font-size: 6vh;
+    border-radius: 10px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    background-color: var(--ne-tak-úplně-černá);
+}
+
 html.dark div#membersContent{
     background-color: var(--ne-tak-úplně-černá);
 }
@@ -209,3 +219,55 @@ html.dark div#membersContent{
 html.light div#membersContent{
     background-color: var(--bělavě-šedá);
 }
+
+.členováTabulka {
+    margin-top: 2rem;
+    font-family: var( --font-klavika-basic);
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 3px solid var(--bělavě-šedá);
+    white-space: pre-line;
+}
+
+.členováTabulka table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: none;
+    background-color: var(--ne-tak-úplně-černá);
+}
+
+.členováTabulka thead tr {
+    background-color: var(--asociální-zeleň);
+    color: var(--ne-tak-úplně-černá);
+    font-size: 1.05rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+}
+
+.členováTabulka thead th {
+    padding: 14px 18px;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    white-space: nowrap;
+    border-right: 1px solid var(--bělavě-šedá);
+}
+
+.členováTabulka tbody td {
+    padding: 10px 18px;
+    vertical-align: middle;
+}
+
+.členováTabulka tbody td:first-child {
+    padding: 0;
+    width: 60px;
+    height: 60px;
+}
+
+tbody tr:hover {
+    background-color: var(--cerise);
+}
+

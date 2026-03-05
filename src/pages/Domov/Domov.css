@@ -438,9 +438,13 @@ div.mainACTUALContactsContainer > * {
 .nadpisHistorie{
     text-align: left;
     align-self: center;
-    color: var(--ne-tak-úplně-černá);
+    color: var(--bělavě-šedá);
     font-size: 6vh;
     margin-bottom: -4vh;
+    border-radius: 10px;
+    margin-right: 16vw;
+    padding-left: 1vw;
+    background-color: var(--ne-tak-úplně-černá);
 }
 
 
@@ -463,7 +467,7 @@ html.dark div.mainACTUALContentTextContainer {
 }
 
 html.dark .nadpisHistorie {
-    color: var(--asociální-zeleň);
+    background-color: var(--asociální-zeleň);
 }
 
 html.dark .cara {
@@ -500,7 +504,7 @@ html.light .hornitext{
 
 html.light .stanovy > a {
 background-color: var(--asociální-zeleň);
-color: var(--ne-tak-úplně-černá);
+color: var(--bělavě-šedá);
 }
 
 html.light div.mainACTUALContentTextContainer {
@@ -508,7 +512,8 @@ html.light div.mainACTUALContentTextContainer {
 }
 
 html.light .nadpisHistorie {
-    color: var(--asociální-zeleň);
+    background-color: var(--asociální-zeleň);
+    
 }
 
 html.light .cara {

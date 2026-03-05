@@ -126,7 +126,8 @@ export default function Domov() {
                                 <a href="https://www.facebook.com/people/%C4%8Cesk%C3%A1-Strana-Asoci%C3%A1l%C5%AF/61582914953606/" target="_blank" rel="noreferrer noopener">koho zajímá facebook</a>
                                 <a href="https://discord.gg/E5RK8VKpyT" target="_blank" rel="noreferrer noopener">chronicky on-line dyskord</a>
                                 <a href="https://www.youtube.com/@ceskastranaasocialu7353" target="_blank" rel="noreferrer noopener">mrtvý youtube</a>
-                                <a href="mailto:ceskastrana.asocialu@gmail.com" target="_blank" rel="noreferrer noopener">ceskastrana.asocialu@gmail.com</a>
+                                <a href="mailto:strana@asocialove.cz" target="_blank" rel="noreferrer noopener">strana@asocialove.cz</a>
+                                <a href="mailto:admin@asocialove.cz" target="_blank" rel="noreferrer noopener">admin@asocialove.cz</a>
                             </div>
 	    		</div>
                     </div>

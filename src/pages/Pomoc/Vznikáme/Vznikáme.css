@@ -26,8 +26,13 @@ min-height: 100%;
 padding-bottom: 32px;
 }
 div#beginningContent span.sectionTitle {
+font-size: 6vh;
 margin-top: 64px;
 margin-bottom: 32px;
+border-radius: 10px;
+padding-left: 1vw;
+background-color: var(--ne-tak-úplně-černá);
+padding-right: 1vw;
 }
 @media screen and (max-width: 768px) {
 div#beginningContent {
@@ -131,12 +136,13 @@ border-radius: 2vh;
 html.dark div#beginningContent{
 background-color: var(--ne-tak-úplně-černá);
 }
-#beginningContent html.dark .sectionTitle{
-color: var(--asociální-zeleň);
+html.dark div#beginningContent span.sectionTitle{
+background-color: var(--asociální-zeleň);
+
 }
 html.light div#beginningContent{
 background-color: var(--bělavě-šedá);
 }
-#beginningContent html.light .sectionTitle{
-color: var(--asociální-zeleň);
+html.light div#beginningContent span.sectionTitle {
+background-color: var(--asociální-zeleň);
 }

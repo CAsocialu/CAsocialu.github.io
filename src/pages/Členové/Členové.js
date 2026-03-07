@@ -11,7 +11,7 @@ import clenoveTitle from "../../images/Titles/web_clenove_nadpis.png";
 const members = [
     { img: Konrád, name: "Konrád Koulemastník", description: ["předseda strany", "student zdravotnické školy", "pastafarián", "správce stranického instagramu", "zajímá se o politiku, psychologii, filozofii a fotbal"], sns: { ig: "konrad_z_csa" } },
     { img: Karel, name: "Karel Hrubián", description: ["první místopředseda", "student průmyslové školy (nenávidí svoji školu)", "nemá personalitu, jen posílá obrázky kočky", "správce stranického twitteru", "reálně nic neumí"], sns: { ig: "karel_hrubian" } },
-    { img: Tomáš, name: "Tomáš Novák", description: ["druhý místopředseda", "student IT", "vyskytuje se všude jen ne ve svém domě", "hrdý uživatel Fabie 1.2 HTP 2006", "umí udělat prdel z čehokoliv a z kohokoliv"], sns: { ig: "girix_ii" } },
+    { img: Tomáš, name: "Tomáš Novák", description: ["druhý místopředseda", "student IT", "vyskytuje se všude jen ne ve svém domě", "hrdý uživatel Fabie 1.2 HTP 2006", "umí udělat prdel z čehokoliv a z kohokoliv"], sns: { ig: "tomas_z_csa" } },
     { img: pepa, name: "pepa troska", description: ["neúspěšný kandidát na prezidenta", "bývalý potápěč do fazolí a řezač motorovou pilou", "vyřešil světovou plotovou krizi", "jeho jméno se píše s malými písmeny", "důchodce"], sns: { ig: "pepa_troska" } }
 ];
 

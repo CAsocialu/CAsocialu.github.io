@@ -1,37 +1,39 @@
-import React, { useLayoutEffect } from 'react';
-import { Link } from 'react-router-dom';
-import "./Footer.css"
-import logoWhite from "../../images/logo-white.png"
+import React, { useLayoutEffect } from "react";
+import { Link } from "react-router-dom";
+import "./Footer.css";
+import logoWhite from "../../images/logo-white.png";
 
 export default function Footer() {
     useLayoutEffect(() => {
-        const linkUniSans = document.createElement('link');
-        linkUniSans.rel = 'stylesheet';
-        linkUniSans.href = 'https://deadcode.is-a.dev/fonts/Uni%20Sans/stylesheet.css';
-      
-        const linkMontserrat = document.createElement('link');
-        linkMontserrat.rel = 'stylesheet';
-        linkMontserrat.href = 'https://deadcode.is-a.dev/fonts/Montserrat/stylesheet.css';
-      
+        const linkUniSans = document.createElement("link");
+        linkUniSans.rel = "stylesheet";
+        linkUniSans.href = "https://deadcode.is-a.dev/fonts/Uni%20Sans/stylesheet.css";
+
+        const linkMontserrat = document.createElement("link");
+        linkMontserrat.rel = "stylesheet";
+        linkMontserrat.href = "https://deadcode.is-a.dev/fonts/Montserrat/stylesheet.css";
+
         document.head.appendChild(linkUniSans);
         document.head.appendChild(linkMontserrat);
-      
+
         // Optional: Cleanup when the component unmounts
         return () => {
-          document.head.removeChild(linkUniSans);
-          document.head.removeChild(linkMontserrat);
+            document.head.removeChild(linkUniSans);
+            document.head.removeChild(linkMontserrat);
         };
-      }, []);
+    }, []);
     return (
         <div id="footer">
-            <div id='footerInfo'>
+            <div id="footerInfo">
                 <span>© Česká Strana Asociálů 2024-2026</span>
-                <span>Tento web je open-source! Více najdete na <Link to="source">našem GitHubu</Link>     :3</span>
+                <span>
+                    Tento web je open-source! Více najdete na <Link to="source">našem GitHubu</Link> :3
+                </span>
             </div>
             <div className="text">
                 <p>zadavatel: ČSA / zpracovatel: Richard Kužela, Jan Peška</p>
             </div>
-            <img alt='Logo České Strany Asociálů' src={logoWhite} id='footerLogo' draggable="false" />
+            <img alt="Logo České Strany Asociálů" src={logoWhite} id="footerLogo" draggable="false" />
         </div>
-    )
+    );
 }

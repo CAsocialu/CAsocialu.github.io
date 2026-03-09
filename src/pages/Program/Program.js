@@ -1,6 +1,6 @@
-import './Program.css';
-import { Helmet } from 'react-helmet-async';
-import Title from '../../components/Title/Title'; 
+import "./Program.css";
+import { Helmet } from "react-helmet-async";
+import Title from "../../components/Title/Title";
 
 import programmeTitle from '../../images/Titles/web_program_nadpis.png';
 
@@ -129,8 +129,9 @@ const programEntries = {
             </div>
 
             <div className="nadrokovybox">
-               Klikni na rok, abys zjistil program pro daný rok. Strana si totiž tyčí<br />
-        nové cíle každý rok. Zvládneš kliknout na obdélníček, ne..?
+                Klikni na rok, abys zjistil program pro daný rok. Strana si totiž tyčí
+                <br />
+                nové cíle každý rok. Zvládneš kliknout na obdélníček, ne..?
             </div>
 
             <div className="rokyContainer">

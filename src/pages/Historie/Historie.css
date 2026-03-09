@@ -1,7 +1,7 @@
 div#historyContent {
-	color: var(--ghost);
-	font-size: 21px;
-	font-family: var(--font-mono);
+    color: var(--ghost);
+    font-size: 21px;
+    font-family: var(--font-mono);
 }
 
 @media screen and (max-width: 949px) {

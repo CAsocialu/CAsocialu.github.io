@@ -2,17 +2,17 @@
     --font-brand: "Neue Machina", "JetBrains Mono", monospace;
     --font-mono: "JetBrains Mono", monospace;
     --font-title: "Bebas Neue", "JetBrains Mono", monospace;
-    --night: #0F0F0F;
-    --ghost: #F0F0F0;
-    --asocial-green-light: #8CB8AA;
+    --night: #0f0f0f;
+    --ghost: #f0f0f0;
+    --asocial-green-light: #8cb8aa;
     --asocial-green: #009074;
-    --asocial-green-dark: #005C41;
+    --asocial-green-dark: #005c41;
     --asexual-purple-light: #955895;
     --asexual-purple: #800080;
-    --asexual-purple-dark: #4C004C;
-    --transition-footer: 0.5s cubic-bezier(.79,.14,.15,.86);
-    --transition-members: 0.333s cubic-bezier(.19,1,.22,1);
-   /* new */
+    --asexual-purple-dark: #4c004c;
+    --transition-footer: 0.5s cubic-bezier(0.79, 0.14, 0.15, 0.86);
+    --transition-members: 0.333s cubic-bezier(0.19, 1, 0.22, 1);
+    /* new */
     --font-avant-garde: "AvantGarde";
     --font-arundina-mono: "Arundina Sans Mono";
     --font-bebas: "Bebas Neue";

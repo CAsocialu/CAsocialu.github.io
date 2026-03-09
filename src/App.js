@@ -1,14 +1,14 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import "./App.css";
 import Header from "./components/Header/Header.js";
 import Footer from "./components/Footer/Footer.js";
-import { Domov, Členové, Kontakty, Fotogalerie, Historie, ZbírkaPack, PodpisyPack, Sraz2025Pack, VznikámePack, Zdroj, Pomoc, Program } from './pages/pages.js';
+import { Domov, Členové, Kontakty, Fotogalerie, Historie, ZbírkaPack, PodpisyPack, Sraz2025Pack, VznikámePack, Zdroj, Pomoc, Program } from "./pages/pages.js";
 
 // export const CelebrationContext = createContext()
 
 function App() {
-/*  const [celebrationStatus, setCelebrationStatus] = useState({
+    /*  const [celebrationStatus, setCelebrationStatus] = useState({
     aceCelebration: false,
     czechoslovakIndependency: false
   });
@@ -50,35 +50,35 @@ function App() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);*/
-  return (
-    <HelmetProvider>
-      {/*<CelebrationContext.Provider value={celebrationStatus}>*/}
-        <div id="App">
-          <Router basename='/'>
-            <Header />
-            <div id='content'>
-              <Routes>
-                <Route path="/" element={<Domov />} />
-                <Route path="/sraz2025" element={<Pomoc page={Sraz2025Pack} />} />
-                <Route path="clenove" element={<Členové />} />
-                <Route path="kontakty" element={<Kontakty />} />
-                <Route path="historie" element={<Historie />} />
-                <Route path="foto" element={<Fotogalerie />} />
-                <Route path="pomoc" element={<Pomoc />} />
-                <Route path="pomoc/zbirka" element={<Pomoc page={ZbírkaPack} />} />
-                <Route path="pomoc/podpisy" element={<Pomoc page={PodpisyPack} />} />
-                <Route path="pomoc/vznikame" element={<Pomoc page={VznikámePack} />} />
-                <Route path='source' element={<Zdroj />} />
-                <Route path="program" element={<Program />} />
-                <Route path="*" element={<Navigate to="/" replace />} />
-              </Routes>
+    return (
+        <HelmetProvider>
+            {/*<CelebrationContext.Provider value={celebrationStatus}>*/}
+            <div id="App">
+                <Router basename="/">
+                    <Header />
+                    <div id="content">
+                        <Routes>
+                            <Route path="/" element={<Domov />} />
+                            <Route path="/sraz2025" element={<Pomoc page={Sraz2025Pack} />} />
+                            <Route path="clenove" element={<Členové />} />
+                            <Route path="kontakty" element={<Kontakty />} />
+                            <Route path="historie" element={<Historie />} />
+                            <Route path="foto" element={<Fotogalerie />} />
+                            <Route path="pomoc" element={<Pomoc />} />
+                            <Route path="pomoc/zbirka" element={<Pomoc page={ZbírkaPack} />} />
+                            <Route path="pomoc/podpisy" element={<Pomoc page={PodpisyPack} />} />
+                            <Route path="pomoc/vznikame" element={<Pomoc page={VznikámePack} />} />
+                            <Route path="source" element={<Zdroj />} />
+                            <Route path="program" element={<Program />} />
+                            <Route path="*" element={<Navigate to="/" replace />} />
+                        </Routes>
+                    </div>
+                    <Footer />
+                </Router>
             </div>
-            <Footer />
-          </Router>
-        </div>
-        {/*</CelebrationContext.Provider>*/}
-      </HelmetProvider>
-  );
+            {/*</CelebrationContext.Provider>*/}
+        </HelmetProvider>
+    );
 }
 
 export default App;

@@ -1,12 +1,12 @@
-import './Sraz2025.css';
-import Liberec from '../../images/sraz2025/liberec.png';
-import Praha from '../../images/sraz2025/praha.png';
-import { Helmet } from 'react-helmet-async';
-import Title from '../../components/Title/Title';
-import Notification from '../../components/Notification/Notification';
+import "./Sraz2025.css";
+import Liberec from "../../images/sraz2025/liberec.png";
+import Praha from "../../images/sraz2025/praha.png";
+import { Helmet } from "react-helmet-async";
+import Title from "../../components/Title/Title";
+import Notification from "../../components/Notification/Notification";
 
 export function Sraz2025Title() {
-    return (<Title>ČSA Sraz 2025</Title>);
+    return <Title>ČSA Sraz 2025</Title>;
 }
 
 export function Sraz2025Notification() {
@@ -19,7 +19,7 @@ export function Sraz2025Notification() {
 
 export default function Sraz2025() {
     return (
-        <div id='sraz2025Content'>
+        <div id="sraz2025Content">
             <Helmet>
                 <title>ČSA Sraz 2025 · ČSA</title>
                 <meta name="description" content="Oficiální sraz České Strany Asociálů v roce 2025. Přijďte na přednášku, divadlo, pokec, nebo jen koukat do zdi!" />
@@ -38,7 +38,9 @@ export default function Sraz2025() {
                         <img src={Praha} alt="Plakát Praha 2025" className="sraz2025-poster" />
                         <div className="sraz2025-event-info">
                             <h2>PRAHA</h2>
-                            <p><strong>19. ČERVENEC</strong></p>
+                            <p>
+                                <strong>19. ČERVENEC</strong>
+                            </p>
                             <p>ŠLIKOVA ULICE 402/15</p>
                         </div>
                     </div>
@@ -51,14 +53,18 @@ export default function Sraz2025() {
                             <li>🍻 Opít se (18+)</li>
                             <li>🚷 Koukat do zdi bez jediného řečeného slova</li>
                         </ul>
-                        <p className="sraz2025-term-note"><em>máme dva termíny!</em></p>
+                        <p className="sraz2025-term-note">
+                            <em>máme dva termíny!</em>
+                        </p>
                         <p className="sraz2025-program-note">*program zveřejníme v průběhu června*</p>
                     </div>
                     <div className="sraz2025-event">
                         <img src={Liberec} alt="Plakát Liberec 2025" className="sraz2025-poster" />
                         <div className="sraz2025-event-info">
                             <h2>LIBEREC</h2>
-                            <p><strong>16. SRPEN</strong></p>
+                            <p>
+                                <strong>16. SRPEN</strong>
+                            </p>
                             <p>CHRASTAVSKÁ ULICE 513/16a</p>
                         </div>
                     </div>
@@ -66,4 +72,4 @@ export default function Sraz2025() {
             </div>
         </div>
     );
-} 
+}

@@ -1,11 +1,12 @@
-@import '../../common.css';
+@import "../../common.css";
 
 div#content:has(div#signaturesContent) {
     min-height: calc(100vh - 106px);
 }
 
 div#helpContent:has(div#signaturesContent) {
-    margin: 0; padding: 0;
+    margin: 0;
+    padding: 0;
     min-height: calc(100vh - 106px);
 }
 
@@ -23,12 +24,12 @@ div#signaturesContent {
 
 a#petitionDL {
     padding: 16px 24px;
-    background:  var(--ne-tak-úplně-černá);
+    background: var(--ne-tak-úplně-černá);
     display: flex;
     color: var(--mint);
     text-decoration: none;
     &::after {
-        content: ""
+        content: "";
     }
 }
 
@@ -40,7 +41,6 @@ div#signaturesNote {
     padding: 16px 24px;
     border: 3px var(--mint) solid;
     border-radius: 24px;
-
 }
 
 div#signaturesContentWrapper {
@@ -57,7 +57,7 @@ div#signaturesInstructionsWrapper {
     justify-content: center;
     gap: 16px;
     flex-wrap: wrap;
-    &>.signaturesInstructionWrapper {
+    & > .signaturesInstructionWrapper {
         color: transparent;
         width: 20vw;
         display: flex;
@@ -70,33 +70,35 @@ div#signaturesInstructionsWrapper {
         padding: 16px;
         border: 3px transparent solid;
         border-radius: 24px;
-        transition: border-color 0.1s ease-in-out, color 0.1s ease-in-out;
+        transition:
+            border-color 0.1s ease-in-out,
+            color 0.1s ease-in-out;
         &:hover {
             border-color: var(--mint);
             color: white;
         }
-        &>img {
+        & > img {
             width: 50%;
             aspect-ratio: 1;
         }
-        &>ul {
+        & > ul {
             list-style-type: none;
             padding: 0;
             margin-left: 24px;
             margin-right: 12px;
             text-align: left;
         }
-        &>ul>li {
+        & > ul > li {
             margin-bottom: 8px;
         }
-        &>ul>li::marker {
-            content: "- "
+        & > ul > li::marker {
+            content: "- ";
         }
     }
 }
 
 @media (max-width: 1235px) {
-    div#helpContentWrapper>* {
+    div#helpContentWrapper > * {
         width: calc(100% - 40px) !important;
     }
 
@@ -105,9 +107,9 @@ div#signaturesInstructionsWrapper {
     }
 
     div#signaturesInstructionsWrapper {
-        &>.signaturesInstructionWrapper {
+        & > .signaturesInstructionWrapper {
             width: 40vw;
-            &>img {
+            & > img {
                 width: 80%;
             }
         }

@@ -4,7 +4,7 @@
     width: fit-content;
     height: fit-content;
 }
-  
+
 .image-container:not([data-alt=""])::after {
     content: attr(data-alt);
     position: absolute;

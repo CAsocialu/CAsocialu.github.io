@@ -1,16 +1,16 @@
 version: 2
 updates:
-  - package-ecosystem: "npm"
-    directory: "/"
-    schedule:
-      interval: "daily"
-    commit-message:
-      prefix: "chore"          # to categorize the PRs
-    open-pull-requests-limit: 1 # limit the number of open PRs at once
-    rebase-strategy: "auto"    # automatically rebase if required
-    versioning-strategy: "increase" # this bundles updates together (default for npm)
+    - package-ecosystem: "npm"
+      directory: "/"
+      schedule:
+          interval: "daily"
+      commit-message:
+          prefix: "chore" # to categorize the PRs
+      open-pull-requests-limit: 1 # limit the number of open PRs at once
+      rebase-strategy: "auto" # automatically rebase if required
+      versioning-strategy: "increase" # this bundles updates together (default for npm)
 
-    groups:
-      dev-dependencies:
-        patterns: 
-          - "*"
+      groups:
+          dev-dependencies:
+              patterns:
+                  - "*"

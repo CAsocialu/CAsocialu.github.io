@@ -1,8 +1,9 @@
 import { useState } from "react";
-import "./InstagramProfile.css"
+import "./InstagramProfile.css";
 
 export default function InstagramProfile() {
-    const [clickedFollowed, setClickedFollowed] = useState(false), handleFollow = () => setClickedFollowed(true);
+    const [clickedFollowed, setClickedFollowed] = useState(false),
+        handleFollow = () => setClickedFollowed(true);
     return (
         <header className="igprofile-header">
             <div className="igprofile-profile-picture">
@@ -12,20 +13,29 @@ export default function InstagramProfile() {
                 <h2 className="igprofile-username">
                     ceska_strana_asocialu
                     <div className="igprofile-actions">
-                        <a className="igprofile-follow-btn" href="https://www.instagram.com/ceska_strana_asocialu/" target="_blank" rel="noreferrer noopener" onClick={handleFollow} style={{ padding: clickedFollowed ? "5px 12.5px 5px 15px" : "5px 15px" }}>{ clickedFollowed ? "Děkujeme! 🤍" : "Sledujte nás!" }</a>
+                        <a className="igprofile-follow-btn" href="https://www.instagram.com/ceska_strana_asocialu/" target="_blank" rel="noreferrer noopener" onClick={handleFollow} style={{ padding: clickedFollowed ? "5px 12.5px 5px 15px" : "5px 15px" }}>
+                            {clickedFollowed ? "Děkujeme! 🤍" : "Sledujte nás!"}
+                        </a>
                     </div>
                 </h2>
                 <div className="igprofile-details">
                     <h1 className="igprofile-full-name">Česká strana asociálů</h1>
                     <p className="igprofile-category">Political Party</p>
                     <p className="igprofile-bio">
-                        Největší recesistická strana v ČR!<br />
-                        Vznikneme již v roce 2025<br />
-                        NE socializaci!<br />
-                        NE gravitaci!<br />
-                        NE důchodcům!<br />
-                        NE socialismu!<br />
-                        ANO mikrovlnkám!<br />
+                        Největší recesistická strana v ČR!
+                        <br />
+                        Vznikneme již v roce 2025
+                        <br />
+                        NE socializaci!
+                        <br />
+                        NE gravitaci!
+                        <br />
+                        NE důchodcům!
+                        <br />
+                        NE socialismu!
+                        <br />
+                        ANO mikrovlnkám!
+                        <br />
                         MÁME LINKTREE
                     </p>
                     <a href="https://linktr.ee/ceska_strana_asocialu" target="_blank" rel="noopener noreferrer" className="igprofile-link">
@@ -39,5 +49,5 @@ export default function InstagramProfile() {
                 </div>
             </div>
         </header>
-    )
+    );
 }

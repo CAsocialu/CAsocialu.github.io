@@ -1,4 +1,4 @@
-@import '../../common.css';
+@import "../../common.css";
 div#beginningContent iframe {
 max-width: 42rem;
 border: none;
@@ -88,30 +88,30 @@ object-fit: contain;
 div#beginningContent .koček {
 margin-top: 1.5rem;
     }
-div#beginningContent .koček img {
-width: 80%;
-max-width: 400px;
+    div#beginningContent .koček img {
+        width: 80%;
+        max-width: 400px;
     }
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
 div#beginningContent .koček {
 margin-top: 1.75rem;
     }
-div#beginningContent .koček img {
-width: 50%;
-max-width: 500px;
+    div#beginningContent .koček img {
+        width: 50%;
+        max-width: 500px;
     }
 }
-.begginingTitle{
-width: calc(100vw - 8vw);
-max-width: calc(100vw - 8vw);
-display: flex;
-justify-content: center;
-align-items: center;
-position: relative;
-margin-left: auto;
-margin-right: auto;
-box-sizing: border-box;
+.begginingTitle {
+    width: calc(100vw - 8vw);
+    max-width: calc(100vw - 8vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
 }
 
 @media screen and (max-width: 949px) {

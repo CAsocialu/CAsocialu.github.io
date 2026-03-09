@@ -1,9 +1,9 @@
-import './Kontakty.css';
-import { Helmet } from 'react-helmet-async';
-import Title from '../../components/Title/Title';
-import Instagram from '../../images/instagramLogo.svg';
-import TwitterProfile from '../../components/TwitterProfile/TwitterProfile';
-import InstagramProfile from '../../components/InstagramProfile/InstagramProfile';
+import "./Kontakty.css";
+import { Helmet } from "react-helmet-async";
+import Title from "../../components/Title/Title";
+import Instagram from "../../images/instagramLogo.svg";
+import TwitterProfile from "../../components/TwitterProfile/TwitterProfile";
+import InstagramProfile from "../../components/InstagramProfile/InstagramProfile";
 
 export default function Kontakty() {
     return (
@@ -20,17 +20,26 @@ export default function Kontakty() {
                 <meta name="twitter:description" content="ČSA je recesistická politická strana, v tento moment chystající se vzniknout a poté začít nabírat členy. Více než strana je ČSA internetová mikrokomunita, kde každý člověk náhodně z internetu může přispět svým dílem." />
                 <meta name="twitter:image" content={`${process.env.PUBLIC_URL}/assets/banner.png`} />
             </Helmet>
-            <Title><em>Fuj, </em>Kontakty!</Title>
+            <Title>
+                <em>Fuj, </em>Kontakty!
+            </Title>
             <p>Můžete más kdykoliv kontaktovat přes email, Twitter, a Instagram.</p>
-            <div id='contactsMain'>
-                <span className="contactLine"><span className="material-symbols-outlined">alternate_email</span> <a href="mailto:ceskastrana.asocialu@gmail.com">ceskastrana.asocialu@gmail.com</a></span>
-                <span className="contactLine"><span className="twitter"></span> <a href="https://x.com/CAsocialu">@CAsocialu</a></span>
-                <span className="contactLine"><img src={ Instagram } height="24px" alt='' draggable="false"></img><a href="https://www.instagram.com/ceska_strana_asocialu/">@ceska_strana_asocialu</a></span>
+            <div id="contactsMain">
+                <span className="contactLine">
+                    <span className="material-symbols-outlined">alternate_email</span> <a href="mailto:ceskastrana.asocialu@gmail.com">ceskastrana.asocialu@gmail.com</a>
+                </span>
+                <span className="contactLine">
+                    <span className="twitter"></span> <a href="https://x.com/CAsocialu">@CAsocialu</a>
+                </span>
+                <span className="contactLine">
+                    <img src={Instagram} height="24px" alt="" draggable="false"></img>
+                    <a href="https://www.instagram.com/ceska_strana_asocialu/">@ceska_strana_asocialu</a>
+                </span>
             </div>
-            <div id='profilesWrapper'>
+            <div id="profilesWrapper">
                 <TwitterProfile />
                 <InstagramProfile />
             </div>
         </div>
-    )
+    );
 }

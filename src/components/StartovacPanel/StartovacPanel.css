@@ -2,9 +2,9 @@
     background: #fff;
     border-radius: 8px;
     padding: 24px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 0;
-    color: color-mix(in srgb, darkslateblue,  var(--ne-tak-úplně-černá));
+    color: color-mix(in srgb, darkslateblue, var(--ne-tak-úplně-černá));
     & h2 {
         margin-top: 0;
         text-align: center;
@@ -14,7 +14,7 @@
 .project-stats {
     max-width: 600px;
     margin: 0 auto;
-    &>:last-child {
+    & > :last-child {
         margin-bottom: 0;
     }
 }
@@ -28,7 +28,7 @@
 
 .progress-header strong {
     font-size: 1.5em;
-    color: color-mix(in srgb, darkslateblue,  var(--ne-tak-úplně-černá));
+    color: color-mix(in srgb, darkslateblue, var(--ne-tak-úplně-černá));
 }
 
 .progress-bar {
@@ -67,19 +67,21 @@
     & > .stat-item {
         flex: 1;
     }
-    &>.stat-item * {
+    & > .stat-item * {
         text-align: center;
         width: 100%;
         display: block;
     }
-    &>.stat-item:first-child {
-        text-align: left;
-    } &>.stat-item:first-child * {
+    & > .stat-item:first-child {
         text-align: left;
     }
-    &>.stat-item:last-child {
+    & > .stat-item:first-child * {
+        text-align: left;
+    }
+    & > .stat-item:last-child {
         text-align: right;
-    } &>.stat-item:last-child * {
+    }
+    & > .stat-item:last-child * {
         text-align: right;
     }
 }
@@ -105,7 +107,7 @@
 .stat-item strong {
     display: block;
     font-size: 1.25em;
-    color: color-mix(in srgb, darkslateblue,  var(--ne-tak-úplně-černá));
+    color: color-mix(in srgb, darkslateblue, var(--ne-tak-úplně-černá));
 }
 
 .stat-item span {
@@ -128,4 +130,4 @@
 
 .contribute-button:hover {
     background: var(--asocial-green-dark);
-} 
+}

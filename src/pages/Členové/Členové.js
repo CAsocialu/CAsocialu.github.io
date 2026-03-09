@@ -7,6 +7,14 @@ import Tomáš from "../../images/members/web_clenove_tomas-cervena.png";
 import pepa from "../../images/members/web_clenove_pepa-cervena.png";
 import InstagramLogo from "../../images/instagramLogo.svg";
 import clenoveTitle from "../../images/Titles/web_clenove_nadpis.png";
+import Martin from '../../images/members/Tabulka/Martin_M.png'
+import Tom from '../../images/members/Tabulka/Tom_S.png'
+import Jan from '../../images/members/Tabulka/jan_pesek.jpg'
+import Matěj from '../../images/members/Tabulka/Matej_Kaderabek.jpg'
+import Martin_H from '../../images/members/Tabulka/Martin_Hublar.jpg'
+import JanPr from '../../images/members/Tabulka/Jan_Prokeš.jpg'
+import Dan from '../../images/members/Tabulka/Dan.png'
+import Tonda from '../../images/members/Tabulka/Tonda.png'
 
 const members = [
     { img: Konrád, name: "Konrád Koulemastník", description: ["předseda strany", "student zdravotnické školy", "pastafarián", "správce stranického instagramu", "zajímá se o politiku, psychologii, filozofii a fotbal"], sns: { ig: "konrad_z_csa" } },

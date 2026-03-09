@@ -437,9 +437,13 @@ div.mainACTUALContactsContainer > * {
 .nadpisHistorie {
     text-align: left;
     align-self: center;
-    color: var(--ne-tak-úplně-černá);
+    color: var(--bělavě-šedá);
     font-size: 6vh;
     margin-bottom: -4vh;
+    border-radius: 10px;
+    margin-right: 16vw;
+    padding-left: 1vw;
+    background-color: var(--ne-tak-úplně-černá);
 }
 
 html.dark div#mainContent {
@@ -460,7 +464,7 @@ html.dark div.mainACTUALContentTextContainer {
 }
 
 html.dark .nadpisHistorie {
-    color: var(--asociální-zeleň);
+    background-color: var(--asociální-zeleň);
 }
 
 html.dark .cara {
@@ -478,6 +482,7 @@ html.dark .cara {
 html.dark .cara2 {
     border: 0.46vh solid var(--asociální-zeleň);
 }
+
 html.dark .stanovy > a:hover {
     background-color: var(--cerise);
 }

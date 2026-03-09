@@ -68,6 +68,7 @@ div#content {
 html.light div#mainContent {
     color: var(--ne-tak-úplně-černá);
 }
+
 html.dark body {
     background-color: var(--ne-tak-úplně-černá);
 }

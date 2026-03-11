@@ -15,6 +15,10 @@ import Martin_H from '../../images/members/Tabulka/Martin_Hublar.jpg'
 import JanPr from '../../images/members/Tabulka/Jan_Prokeš.jpg'
 import Dan from '../../images/members/Tabulka/Dan.png'
 import Tonda from '../../images/members/Tabulka/Tonda.png'
+import Ezi from '../../images/members/Tabulka/Ezi.png'
+import Michaela from '../../images/members/Tabulka/Michaela.jpg'
+import Vladimir from '../../images/members/Tabulka/Vladimir.jpg'
+import Neni from '../../images/logo-white.png'
 
 const members = [
     { img: Konrád, name: "Konrád Koulemastník", description: ["předseda strany", "student zdravotnické školy", "pastafarián", "správce stranického instagramu", "zajímá se o politiku, psychologii, filozofii a fotbal"], sns: { ig: "konrad_z_csa" } },
@@ -60,17 +64,17 @@ const clenove = [
     [Jan, "Jan", "Pešek", "Jihočeský", "Užívač nikotinu, Strojař, Užívač najíždění do cyklozmrdů, Kofeinový závislák, Metalák", "řadový člen"],
     [Matěj, "Matěj", "Kadeřábek", "Středočeský", "introvert, asociál, zajímám se o hudbu, taky píšu, věnuju se taky game designu, bydlim pod kamenem, rád cestuju", "řadový člen"],
     [Martin_H, "Martin", "Hublar", "Olomoucký", "Linux uživatel, mám rád procházky a tůry, občas stříhám videa a dělám memy", "řadový člen"],
-    [null, "Daniel", "Skalka", "Jihočeský", "", "řadový člen"],
-    [null, "Ezi", "Herman", "Pardubický", "", "řadový člen"],
-    [null, "Matěj", "Wied", "Ústecký", "", "řadový člen"],
-    [null, "Natálie", "Lokvencová", "Královéhradecký", "", "řadový člen"],
-    [null, "Petr", "Juráň", "Zlínský", "", "řadový člen"],
-    [null, "Svatoslav", "Selucký", "Liberecký", "", "řadový člen"],
-    [null, "Vladimír", "Škaroupka", "Jihomoravský", "", "řadový člen"],
-    [null, "Daniel", "Peuker", "Liberecký", "", "řadový člen"],
+    [Neni, "Daniel", "Skalka", "Jihočeský", "nebyl schopen o sobě cokoli napsat", "řadový člen"],
+    [Ezi, "Ezi", "Herman", "Pardubický", "milovník umění a majitel videoher, literární fyzika brainrot, nic jiného neumím a neznám, haf já štěkám (part-time furry), jak kamarádka říká: handsum funny inspiring captivating intelligent  ", "řadový člen"],
+    [Neni, "Matěj", "Wied", "Ústecký", "nebyl schopen o sobě cokoli napsat", "řadový člen"],
+    [Neni, "Natálie", "Lokvencová", "Královéhradecký", "nebyl schopen o sobě cokoli napsat", "řadový člen"],
+    [Neni, "Petr", "Juráň", "Zlínský", "nebyl schopen o sobě cokoli napsat", "řadový člen"],
+    [Neni, "Svatoslav", "Selucký", "Liberecký", "nebyl schopen o sobě cokoli napsat", "řadový člen"],
+    [Vladimir, "Vladimír", "Škaroupka IV.", "Jihomoravský", "Filozof (bytoslovec, záskutečník a amatérský teolog), Spisovatel, který se snaží dostat do TOP 10 - TOP 10 důvodů, proč se zabít, Jediný člověk, který uznává Ladislava Klímu jako svého Pána a Spasitele, Životní motto: Když posloucháš lidem pod okny, leccos slyšíš, Debilobijec.", "řadový člen"],
     [JanPr, "Jan", "Prokeš", "Liberecký", "Instuktor lyžování, chudý student(beru úplatky) podporovatel federativní EU", "řadový člen"],
     [Dan, "Dan", "Peuker", "Liberecký", "Nejmenší člen strany, Budete znát spíše jeho psa, Čím hloupější nápad, tím spíše se v něm bude angažovat", "řadový člen"],
     [Tonda, "Tonda", "Baťa", "Pardubický", "Král Suméru a Akkadu, Pardubice>Mechov, Profesionální kráječ rajčat", "řadový člen" ],
+    [Michaela, "Michaela Kristýna", "Máchová", "Liberecký", "Profesionální moderátorka a odbornice na maďarsko", "řadový člen" ]
 ]
 
 function ČlenovéTabulka() {

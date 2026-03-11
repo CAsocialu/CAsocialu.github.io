@@ -18,7 +18,12 @@ import Tonda from '../../images/members/Tabulka/Tonda.png'
 import Ezi from '../../images/members/Tabulka/Ezi.png'
 import Michaela from '../../images/members/Tabulka/Michaela.jpg'
 import Vladimir from '../../images/members/Tabulka/Vladimir.jpg'
+import Natalie from '../../images/members/Tabulka/Natalie.jpg'
+import Matěj_W from '../../images/members/Tabulka/Matěj_W.png'
+import Daniel from '../../images/members/Tabulka/Daniel.jpg'
+import pepa2 from '../../images/members/Tabulka/pepa2.png'
 import Neni from '../../images/logo-white.png'
+
 
 const members = [
     { img: Konrád, name: "Konrád Koulemastník", description: ["předseda strany", "student zdravotnické školy", "pastafarián", "správce stranického instagramu", "zajímá se o politiku, psychologii, filozofii a fotbal"], sns: { ig: "konrad_z_csa" } },
@@ -59,15 +64,15 @@ function Člen({ img, name, sns, description }) {
 
 const clenove = [
     [Martin, "Martin", "Minařík", "Jihomoravský", "šílený síťař, PC enthusiast, CPU dealer", "řadový člen"],
-    [pepa, "pepa", "troska", "Liberecký", "Neúspěšný kandidát na prezidenta \n bývalý potapěč do fazolí a řezač motorovou pilou \n vyřešil světovou plotovou krizi \n jeho jméno se píše s malými písmeny \n důchodce", "zbytečný starec" ],
+    [pepa2, "pepa", "troska", "Liberecký", "Neúspěšný kandidát na prezidenta \n bývalý potapěč do fazolí a řezač motorovou pilou \n vyřešil světovou plotovou krizi \n jeho jméno se píše s malými písmeny \n důchodce", "zbytečný starec" ],
     [Tom, "Tomáš", "Satsunský", "Plzeňeský", "Programuji - Je to geniální výmluva, proč na nikoho nemluvit a jen zírat do monitoru. \n Formule 1 – Fascinuje mě rychlost monopostů. Ideálně takovou rychlostí zmizím ze všech společenských akcí. \n Nejde mi učit se novým jazykům, ale jsem docela expert v používání Google překladače. \n Pracuji jako elektrikář - V práci izoluji dráty, ve volném čase izoluji sám sebe od zbytku společnosti.  ", "řadový člen"],
     [Jan, "Jan", "Pešek", "Jihočeský", "Užívač nikotinu, Strojař, Užívač najíždění do cyklozmrdů, Kofeinový závislák, Metalák", "řadový člen"],
     [Matěj, "Matěj", "Kadeřábek", "Středočeský", "introvert, asociál, zajímám se o hudbu, taky píšu, věnuju se taky game designu, bydlim pod kamenem, rád cestuju", "řadový člen"],
     [Martin_H, "Martin", "Hublar", "Olomoucký", "Linux uživatel, mám rád procházky a tůry, občas stříhám videa a dělám memy", "řadový člen"],
-    [Neni, "Daniel", "Skalka", "Jihočeský", "nebyl schopen o sobě cokoli napsat", "řadový člen"],
+    [Daniel, "Daniel", "Skalka", "Jihočeský", "Amatérský fotograf, Společenské tance enjoyer @starttabor, Postižený gymplák syndrom, Meme it till you make it,  Buglej Děda je real!", "řadový člen"],
     [Ezi, "Ezi", "Herman", "Pardubický", "milovník umění a majitel videoher, literární fyzika brainrot, nic jiného neumím a neznám, haf já štěkám (part-time furry), jak kamarádka říká: handsum funny inspiring captivating intelligent  ", "řadový člen"],
-    [Neni, "Matěj", "Wied", "Ústecký", "nebyl schopen o sobě cokoli napsat", "řadový člen"],
-    [Neni, "Natálie", "Lokvencová", "Královéhradecký", "nebyl schopen o sobě cokoli napsat", "řadový člen"],
+    [Matěj_W, "Matěj", "Wied", "Ústecký", "Básník, Vědec, Chomutovský rodák, kandidát, umí anglicky", "řadový člen"],
+    [Natalie, "Natálie", "Lokvencová", "Královéhradecký", "Zmizela do Irska protože proč dělat malé změny, když můžeš rovnou změnit celou zemi, Dokážu mít existenciální krizi a zárověň se u toho učit nový jazyk. Multitasking, Kombinace empatie + analytického myšlení + ADHD ze mě dělá zvláštní mix: trochu filozof, trochu stratég, trochu chaos, Navštěvuji public speakers club ikdyž mě to šileně stresuje - což je v podstatě hardcore mód osobního rozvoje.  ", "řadový člen"],
     [Neni, "Petr", "Juráň", "Zlínský", "nebyl schopen o sobě cokoli napsat", "řadový člen"],
     [Neni, "Svatoslav", "Selucký", "Liberecký", "nebyl schopen o sobě cokoli napsat", "řadový člen"],
     [Vladimir, "Vladimír", "Škaroupka IV.", "Jihomoravský", "Filozof (bytoslovec, záskutečník a amatérský teolog), Spisovatel, který se snaží dostat do TOP 10 - TOP 10 důvodů, proč se zabít, Jediný člověk, který uznává Ladislava Klímu jako svého Pána a Spasitele, Životní motto: Když posloucháš lidem pod okny, leccos slyšíš, Debilobijec.", "řadový člen"],

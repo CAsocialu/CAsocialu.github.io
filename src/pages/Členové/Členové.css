@@ -218,6 +218,7 @@ html.dark div#membersContent {
     background-color: var(--ne-tak-úplně-černá);
 }
 
+
 html.light div#membersContent{
     background-color: var(--bělavě-šedá);
 }
@@ -242,7 +243,7 @@ html.light div#membersContent{
 
 .členováTabulka thead tr {
     background-color: var(--asociální-zeleň);
-    color: var(--ne-tak-úplně-černá);
+    color: var(--bělavě-šedá);
     font-size: 1.05rem;
     font-weight: 800;
     letter-spacing: 0.04em;
@@ -272,4 +273,5 @@ html.light div#membersContent{
 tbody tr:hover {
     background-color: var(--cerise);
 }
+
 

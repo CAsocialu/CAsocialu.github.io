@@ -163,10 +163,10 @@ div#členové > div.člen.open > div.členContent {
 
 div#členové > div.člen.open > div.backdrop {
     position: fixed;
-    top: 50px;
+    top: 0;        
     left: 0;
     width: 100vw !important;
-    height: calc(100vh - 100px) !important;
+    height: 100vh !important;  
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 5;
 }

@@ -43,6 +43,12 @@ import Title from "../../components/Title/Title";
 import Vozík from "../../images/home/Vozík2.jpg";
 import Agenti from "../../images/home/Agenti2.jpg";
 import mainTitle from "../../images/Titles/web_ostrane_nadpis.png";
+import InstagramLogo from "../../images/instagramLogo.svg";
+import TwitterLogo from "../../images/TwitterLogo.svg";
+import FacebookLogo from "../../images/FacebookLogo.svg";
+import DyskordLogo from "../../images/DyskordLogo.svg";
+import YoutubeLogo from "../../images/YoutubeLogo.svg";
+import MailLogo from "../../images/MailLogo.svg";
 
 const randomPics = [RandomPic0, RandomPic1, RandomPic2, RandomPic3, RandomPic4, RandomPic5, RandomPic6, RandomPic7, RandomPic8, RandomPic9, RandomPic10, RandomPic11, RandomPic12, RandomPic13, RandomPic14, RandomPic15, RandomPic16, RandomPic17, RandomPic18, RandomPic19, RandomPic20, RandomPic21, RandomPic22, RandomPic23, RandomPic24, RandomPic25, RandomPic26, RandomPic27, RandomPic28, RandomPic29];
 
@@ -134,22 +140,33 @@ export default function Domov() {
                             <div className="mainACTUALContactsContainer">
                                 <Title>Kontakty</Title>
                                 <a href="https://www.instagram.com/ceska_strana_antisocialni/" target="_blank" rel="noreferrer noopener">
+                                    <img src={InstagramLogo} alt="" width={40} height={40} style={{ paddingRight: "0.6vw", marginBottom: "-1vh" }} />
                                     stranický instagram
                                 </a>
                                 <a href="https://twitter.com/CAsocialu" target="_blank" rel="noreferrer noopener">
+                                    <img src={TwitterLogo} alt="" width={40} height={40} style={{ paddingRight: "0.6vw", marginBottom: "-1vh" }} />
                                     stranický twitter
                                 </a>
                                 <a href="https://www.facebook.com/people/%C4%8Cesk%C3%A1-Strana-Asoci%C3%A1l%C5%AF/61582914953606/" target="_blank" rel="noreferrer noopener">
+                                    <img src={FacebookLogo} alt="" width={40} height={40} style={{ paddingRight: "0.6vw", marginBottom: "-0.5vh" }} />
                                     koho zajímá facebook
                                 </a>
                                 <a href="https://discord.gg/E5RK8VKpyT" target="_blank" rel="noreferrer noopener">
+                                    <img src={DyskordLogo} alt="" width={40} height={40} style={{ paddingRight: "0.6vw", marginBottom: "-1vh" }} />
                                     chronicky on-line dyskord
                                 </a>
                                 <a href="https://www.youtube.com/@ceskastranaasocialu7353" target="_blank" rel="noreferrer noopener">
+                                    <img src={YoutubeLogo} alt="" width={40} height={40} style={{ paddingRight: "0.6vw", marginBottom: "-1vh" }} />
                                     mrtvý youtube
                                 </a>
-                                <a href="mailto:strana@asocialove.cz" target="_blank" rel="noreferrer noopener">strana@asocialove.cz</a>
-                                <a href="mailto:admin@asocialove.cz" target="_blank" rel="noreferrer noopener">admin@asocialove.cz</a>
+                                <a href="mailto:strana@asocialove.cz" target="_blank" rel="noreferrer noopener">
+                                    <img src={MailLogo} alt="" width={40} height={40} style={{ paddingRight: "0.6vw", marginBottom: "-1vh" }} />
+                                    strana@asocialove.cz
+                                </a>
+                                <a href="mailto:admin@asocialove.cz" target="_blank" rel="noreferrer noopener">
+                                    <img src={MailLogo} alt="" width={40} height={40} style={{ paddingRight: "0.6vw", marginBottom: "-1vh" }} />
+                                    admin@asocialove.cz
+                                </a>
                             </div>
                         </div>
                     </div>

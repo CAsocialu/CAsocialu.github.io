@@ -15,6 +15,8 @@ div#header {
     top: 0;
     background-color: var(--asociální-zeleň);
 
+    
+
     & > .tlačítka {
         position: absolute;
         left: 13px;
@@ -64,8 +66,8 @@ div#header {
             position: relative;
             transition: color 0.3s ease 0s;
             padding: 4px 8px;
-            border: 1px solid var(--ne-tak-úplně-černá);
-            border-radius: 6px;
+            border: 0.02vw solid var(--bělavě-šedá);
+            border-radius: 7px;
         }
         & > *::after {
             content: none;
@@ -81,7 +83,11 @@ div#header {
         & > *:hover,
         & > *:focus,
         & > *.active {
-            color: var(--ne-tak-úplně-černá);
+            color: var(--asociální-zeleň);
+        }
+
+        & > *.active {
+            border-color: var(--asociální-zeleň);
         }
 
         & > *:hover::after,
@@ -180,9 +186,6 @@ div#extraHeaderNews {
 html:not(.dark):not(.light) div#header {
     background-color: var(--ne-tak-úplně-černá);
     & > div#headerLinks {
-        & > * {
-            border: 1px solid var(--asociální-zeleň);
-        }
         & > *:hover,
         & > *:focus,
         & > *.active {

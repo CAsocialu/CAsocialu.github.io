@@ -146,3 +146,14 @@ background-color: var(--bělavě-šedá);
 html.light div#beginningContent span.sectionTitle {
 background-color: var(--asociální-zeleň);
 }
+
+.textPrihlaska{
+    background-color: var(--asociální-zeleň);
+    border: 0.16vw solid var(--ne-tak-úplně-černá);
+    border-radius: 10px;
+    color: var(--ghost);
+    text-align: center;
+    box-sizing: border-box;
+    line-height: 1.4;
+    width: 80vw ;
+}

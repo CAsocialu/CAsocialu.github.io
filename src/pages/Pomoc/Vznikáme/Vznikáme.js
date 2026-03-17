@@ -61,6 +61,9 @@ export default function Vznikáme() {
             </div>
             <div id="beginningContentWrapper">
                 <span className="sectionTitle">Přihláška do Strany</span>
+                <div className="textPrihlaska">
+                <p>Po vyplnění formuláře se připoj na náš discord. V sekci Chci se přidat do strany jdi do kanálu Přihláška do strany. Klikni na ticket, abys kontaktoval předsednicto. Bude následovat pohovor, kde ti řekneme, že se doživotně zavazuješ Židovsko-zednářskému spiknutí platit alimenty v hodnotě 100Kč, dvou rohlíků a braníku 2l PET.</p>
+                </div>
                 <iframe ref={iframeRef} src="https://socializace.asocialove.cz/embed/membership" allowtransparency="true" title="Přihlašovací formulář do České Strany Asociálů" />
             </div>
         </div>

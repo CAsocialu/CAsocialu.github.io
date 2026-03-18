@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=dark_mode,light_mode');
 div#header {
     position: fixed;
     font-family: var(--font-klavika-basic);
@@ -15,8 +17,6 @@ div#header {
     top: 0;
     background-color: var(--asociální-zeleň);
 
-    
-
     & > .tlačítka {
         position: absolute;
         left: 13px;
@@ -30,23 +30,6 @@ div#header {
         border-radius: 50%;
         border: 2px solid var(--ne-tak-úplně-černá);
         cursor: pointer;
-    }
-
-    & > .tlačítka > button.theme-default {
-        background-color: var(--asociální-zeleň);
-    }
-
-    & > .tlačítka > button.theme-light {
-        background-color: var(--bělavě-šedá);
-    }
-
-    & > .tlačítka > button.theme-dark {
-        background-color: var(--ne-tak-úplně-černá);
-    }
-
-    & > .tlačítka > button.active {
-        border: 3px solid var(--cerise);
-        transform: scale(1.1);
     }
 
     & > span {
@@ -183,7 +166,13 @@ div#extraHeaderNews {
     transition: margin-top 0.33s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-html:not(.dark):not(.light) div#header {
+.material-symbols-outlined{
+    background-color: var(--asociální-zeleň);
+    border: solid var(--asociální-zeleň);
+    border-radius: 0.50vw;
+}
+
+html:not(.dark) div#header {
     background-color: var(--ne-tak-úplně-černá);
     & > div#headerLinks {
         & > *:hover,
@@ -194,15 +183,26 @@ html:not(.dark):not(.light) div#header {
     }
 }
 
-html:not(.dark):not(.light) div#header > .tlačítka > button {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: 2px solid var(--asociální-zeleň);
-    cursor: pointer;
+html.dark div#header {
+    & > div#headerLinks {
+        & > *:hover,
+        & > *:focus,
+        & > *.active {
+            color: var(--bělavě-šedá);
+        }
+        & > *.active {
+            border-color: var(--ne-tak-úplně-černá);
+        }
+    }
 }
 
-html:not(.dark):not(.light) div#header > .tlačítka > button.active {
-    border: 3px solid var(--cerise);
-    transform: scale(1.1);
+html.dark .material-symbols-outlined{
+    background-color: var(--ne-tak-úplně-černá);
+    border: solid var(--ne-tak-úplně-černá);
+    border-radius: 0.50vw;
+    color: var(--asociální-zeleň);
+}
+
+.material-symbols-outlined:hover{
+    cursor: pointer;
 }

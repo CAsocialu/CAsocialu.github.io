@@ -22,6 +22,8 @@ import Natalie from '../../images/members/Tabulka/Natalie.jpg'
 import Matěj_W from '../../images/members/Tabulka/Matěj_W.png'
 import Daniel from '../../images/members/Tabulka/Daniel.jpg'
 import pepa2 from '../../images/members/Tabulka/pepa2.png'
+import Selucký from '../../images/members/Tabulka/Selucky.png'
+import Mojmír from '../../images/members/Tabulka/matous_trefil.jpg'
 import Neni from '../../images/logo-white.png'
 
 
@@ -79,7 +81,10 @@ const clenove = [
     [JanPr, "Jan", "Prokeš", "Liberecký", "Instuktor lyžování, chudý student(beru úplatky) podporovatel federativní EU", "řadový člen"],
     [Dan, "Dan", "Peuker", "Liberecký", "Nejmenší člen strany, Budete znát spíše jeho psa, Čím hloupější nápad, tím spíše se v něm bude angažovat", "řadový člen"],
     [Tonda, "Tonda", "Baťa", "Pardubický", "Král Suméru a Akkadu, Pardubice>Mechov, Profesionální kráječ rajčat", "řadový člen" ],
-    [Michaela, "Michaela Kristýna", "Máchová", "Liberecký", "Profesionální moderátorka a odbornice na maďarsko", "řadový člen" ]
+    [Michaela, "Michaela Kristýna", "Máchová", "Liberecký", "Profesionální moderátorka a odbornice na maďarsko", "řadový člen" ],
+    [Selucký, "S.A", "Selucký", "Liberecký", "Historik, Amaterský meteorolog a milovník filmů ", "řadový člen"],
+    [Mojmír, "Mojmír", "Trávníček", "Zlínský", "Mám rád vláčky 🚂 🚂 🚂 🚂 🚂, Antisociál snažící se posunout tuhle stranu dál od socializace, Moje oblíbená lokomotiva je Union Pacific Big Boy, Osobně mám nejradši stožár vysokého napětí: kočka, Chci dostat do programu ČSA vytvoření maglevové dráhy mezi Seninkou a Novou Vsí v Horách.", "řadový člen"],
+    [Neni, "Slavomír", "Chudoba", "Středočeský", "vlastním Billa Bonus Klub kartičku, pravděpodobně mám kontakt na vaší mamku, narozdíl od Zdeňka Hřiba plán nemám, aktivní odpůrce a kritik M*ďarů, existuju (asi) (nevím)", "řadový člen"],
 ]
 
 function ČlenovéTabulka() {

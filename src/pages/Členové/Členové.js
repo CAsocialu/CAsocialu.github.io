@@ -24,6 +24,8 @@ import Daniel from '../../images/members/Tabulka/Daniel.jpg'
 import pepa2 from '../../images/members/Tabulka/pepa2.png'
 import Selucký from '../../images/members/Tabulka/Selucky.png'
 import Mojmír from '../../images/members/Tabulka/matous_trefil.jpg'
+import Sysel from '../../images/members/Tabulka/Sysel.png'
+
 import Neni from '../../images/logo-white.png'
 
 
@@ -85,6 +87,7 @@ const clenove = [
     [Selucký, "S.A", "Selucký", "Liberecký", "Historik, Amaterský meteorolog a milovník filmů ", "řadový člen"],
     [Mojmír, "Mojmír", "Trávníček", "Zlínský", "Mám rád vláčky 🚂 🚂 🚂 🚂 🚂, Antisociál snažící se posunout tuhle stranu dál od socializace, Moje oblíbená lokomotiva je Union Pacific Big Boy, Osobně mám nejradši stožár vysokého napětí: kočka, Chci dostat do programu ČSA vytvoření maglevové dráhy mezi Seninkou a Novou Vsí v Horách.", "řadový člen"],
     [Neni, "Slavomír", "Chudoba", "Středočeský", "vlastním Billa Bonus Klub kartičku, pravděpodobně mám kontakt na vaší mamku, narozdíl od Zdeňka Hřiba plán nemám, aktivní odpůrce a kritik M*ďarů, existuju (asi) (nevím)", "řadový člen"],
+    [Sysel, "Vojtěch Svysel", "Seč", "Aktivně prosazuji práva hlodavců, profesionální F1/MotoGP yapper, občas dokážu strávit 21 hodin sledováním čínských animovaných pohádek, mým snem je stát se (ne)vládním zmocněncem pro výzkum anime kočkoholek s ocasem", "Plzeňský", "řadový člen" ]
 ]
 
 function ČlenovéTabulka() {

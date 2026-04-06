@@ -25,6 +25,8 @@ import pepa2 from '../../images/members/Tabulka/pepa2.png'
 import Selucký from '../../images/members/Tabulka/Selucky.png'
 import Mojmír from '../../images/members/Tabulka/matous_trefil.jpg'
 import Sysel from '../../images/members/Tabulka/Sysel.png'
+import Hugo from '../../images/members/Tabulka/Hugo.webp'
+import Tomáš_sv from '../../images/members/Tabulka/Tomas_Svojanovsky.jpg'
 
 import Neni from '../../images/logo-white.png'
 
@@ -86,8 +88,9 @@ const clenove = [
     [Michaela, "Michaela Kristýna", "Máchová", "Liberecký", "Profesionální moderátorka a odbornice na maďarsko", "řadový člen" ],
     [Selucký, "S.A", "Selucký", "Liberecký", "Historik, Amaterský meteorolog a milovník filmů ", "řadový člen"],
     [Mojmír, "Mojmír", "Trávníček", "Zlínský", "Mám rád vláčky 🚂 🚂 🚂 🚂 🚂, Antisociál snažící se posunout tuhle stranu dál od socializace, Moje oblíbená lokomotiva je Union Pacific Big Boy, Osobně mám nejradši stožár vysokého napětí: kočka, Chci dostat do programu ČSA vytvoření maglevové dráhy mezi Seninkou a Novou Vsí v Horách.", "řadový člen"],
-    [Neni, "Slavomír", "Chudoba", "Středočeský", "vlastním Billa Bonus Klub kartičku, pravděpodobně mám kontakt na vaší mamku, narozdíl od Zdeňka Hřiba plán nemám, aktivní odpůrce a kritik M*ďarů, existuju (asi) (nevím)", "řadový člen"],
-    [Sysel, "Vojtěch Svysel", "Seč", "Aktivně prosazuji práva hlodavců, profesionální F1/MotoGP yapper, občas dokážu strávit 21 hodin sledováním čínských animovaných pohádek, mým snem je stát se (ne)vládním zmocněncem pro výzkum anime kočkoholek s ocasem", "Plzeňský", "řadový člen" ]
+    [Sysel, "Vojtěch Svysel", "Seč", "Plzeňský", "Aktivně prosazuji práva hlodavců, profesionální F1/MotoGP yapper, občas dokážu strávit 21 hodin sledováním čínských animovaných pohádek, mým snem je stát se (ne)vládním zmocněncem pro výzkum anime kočkoholek s ocasem", "řadový člen" ],
+    [Hugo, "Hugo", "Štolba", "Praha", "Elektrotechnik, Pyrotechnik, Alkoholik, už je to 5 bodů?", "řadový člen"],
+    [Tomáš_sv, "Tomáš", "Svojan ze Svojanova", "Jihomoravský", "Myslitel (ale moc mi to nejde), Vysoký široký a bystrozraký v jednom, Chronické ADHD, Student IT, (Mimochodem používám Linux)", "řadový člen"],
 ]
 
 function ČlenovéTabulka() {

@@ -2,9 +2,7 @@ name: Dependabot auto-merge
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened, closed]
-  pull_request_target:
-    types: [closed]
+    types: [opened, synchronize, reopened]
 
 permissions:
   contents: write
@@ -18,9 +16,7 @@ concurrency:
 jobs:
   enable-automerge:
     runs-on: ubuntu-latest
-    if: |
-      github.event.pull_request.user.login == 'dependabot[bot]' &&
-      github.event.pull_request.state == 'open'
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
 
     steps:
       - name: Fetch Dependabot metadata
@@ -34,33 +30,4 @@ jobs:
         run: gh pr merge --auto --merge "$PR_URL"
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  rebase-next:
-    runs-on: ubuntu-latest
-    if: |
-      github.event.pull_request.merged == true &&
-      github.event.pull_request.user.login == 'dependabot[bot]'
-
-    steps:
-      - name: Find next Dependabot PR
-        id: nextpr
-        run: |
-          NEXT_PR=$(gh pr list \
-            --state open \
-            --author "app/dependabot" \
-            --limit 1 \
-            --json number \
-            --jq '.[0].number')
-
-          echo "number=$NEXT_PR" >> $GITHUB_OUTPUT
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Trigger rebase
-        if: steps.nextpr.outputs.number != ''
-        run: |
-          gh pr comment ${{ steps.nextpr.outputs.number }} \
-            --body "@dependabot rebase"
-        env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

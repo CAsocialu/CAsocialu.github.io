@@ -3,6 +3,8 @@ name: Dependabot auto-merge
 on:
   pull_request:
     types: [opened, synchronize, reopened]
+  check_suite:
+    types: [completed]
 
 permissions:
   contents: write
@@ -16,7 +18,9 @@ jobs:
   dependabot:
     runs-on: ubuntu-latest
 
-    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    if: |
+      github.event.pull_request.user.login == 'dependabot[bot]' &&
+      github.event.check_suite.conclusion == 'success'
 
     steps:
       - name: Fetch Dependabot metadata
@@ -25,7 +29,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Enable auto-merge for patch/minor updates
+      - name: Enable auto-merge
         if: |
           steps.metadata.outputs.update-type == 'version-update:semver-patch' ||
           steps.metadata.outputs.update-type == 'version-update:semver-minor'

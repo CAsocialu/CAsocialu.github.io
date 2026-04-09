@@ -505,20 +505,14 @@ div#mainContent {
 
 html.dark .dejinyStranyBlok {
     border: 2px solid var(--asociální-zeleň);
+    background-color: var(--dark-purple);
 }
 
 html.dark .stanovyBlok {
     border: 2px solid var(--asociální-zeleň);
+    background-color: var(--dark-purple);
 }
 
 html.dark div.mainACTUALContentTextContainer {
-    background-color: var(--dark-purple);
-}
-
-html.dark .stanovyBlok {
-    background-color: var(--dark-purple);
-}
-
-html.dark .dejinyStranyBlok {
     background-color: var(--dark-purple);
 }

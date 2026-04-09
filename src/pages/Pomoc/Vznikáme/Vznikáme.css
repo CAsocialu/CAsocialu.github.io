@@ -65,7 +65,7 @@ padding: 14px 20px;
 margin-top: 3.5rem;
     }
 }
-div#beginningContentWrapper {
+div#beginningContentWrapperPřihláška {
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -140,15 +140,8 @@ html.dark div#beginningContent span.sectionTitle{
 background-color: var(--asociální-zeleň);
 
 }
-html.light div#beginningContent{
-background-color: var(--bělavě-šedá);
-}
-html.light div#beginningContent span.sectionTitle {
-background-color: var(--asociální-zeleň);
-}
-
 .textPrihlaska{
-    background-color: var(--asociální-zeleň);
+    background-color: var(--zlatá);
     border: 0.16vw solid var(--ne-tak-úplně-černá);
     border-radius: 10px;
     color: var(--ghost);
@@ -156,4 +149,42 @@ background-color: var(--asociální-zeleň);
     box-sizing: border-box;
     line-height: 1.4;
     width: 80vw ;
+    padding-left: 1vw;
+    margin-bottom: 2vh;
 }
+
+html.dark .textPrihlaska{
+    border: 0.16vw solid var(--asociální-zeleň);
+    background-color: var(--dark-purple);
+}
+
+.komunalkyTitle{
+   font-size: 6vh;
+   border-radius: 10px;
+   padding-left: 1vw;
+   margin: auto;
+   width: fit-content;
+   background-color: var(--ne-tak-úplně-černá);
+   padding-right: 1vw;
+}
+
+.komunalkyText{
+    background-color: var(--zlatá);
+    border: 0.16vw solid var(--ne-tak-úplně-černá);
+    border-radius: 10px;
+    color: var(--ghost);
+    text-align: center;
+    box-sizing: border-box;
+    width: fit-content;
+    padding-left: 1vw;
+    margin: auto;
+    padding-right: 1vw;
+    margin-top: -3vh;
+}
+
+.komunalkyText a{
+    color: var(--asociální-zeleň);
+    content: none !important;
+   
+}
+

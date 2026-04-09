@@ -1,54 +1,50 @@
-import { useLayoutEffect, useRef, useEffect, useState } from 'react';
-import "./Header.css"
-import { Link, useLocation } from 'react-router-dom';
+import { useLayoutEffect, useRef, useEffect, useState } from "react";
+import "./Header.css";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Header() {
     const location = useLocation(),
         headerLinksRef = useRef(null);
-        const [isDark, setIsDark] = useState(false);
-    
+    const [isDark, setIsDark] = useState(false);
+
     useLayoutEffect(() => {
-        document.documentElement.setAttribute('data-location', location.pathname.replace(/(?<!^)\/$/, ''));
-        headerLinksRef.current?.querySelectorAll('a').forEach(link => {
-            if (
-                (link.getAttribute('href') === "/" && document.documentElement.getAttribute('data-location') === "/")
-                ||
-                (document.documentElement.getAttribute('data-location') !== "/" && link.getAttribute('href') !== "/" && document.documentElement.getAttribute('data-location').startsWith(link.getAttribute('href')))
-            ) {
-                link.classList.add('active');
+        document.documentElement.setAttribute("data-location", location.pathname.replace(/(?<!^)\/$/, ""));
+        headerLinksRef.current?.querySelectorAll("a").forEach((link) => {
+            if ((link.getAttribute("href") === "/" && document.documentElement.getAttribute("data-location") === "/") || (document.documentElement.getAttribute("data-location") !== "/" && link.getAttribute("href") !== "/" && document.documentElement.getAttribute("data-location").startsWith(link.getAttribute("href")))) {
+                link.classList.add("active");
             } else {
-                link.classList.remove('active');
+                link.classList.remove("active");
             }
         });
     }, [location]);
 
     useEffect(() => {
-    const dark = localStorage.getItem("isDark") === "true";
-    if (dark) {
-        document.documentElement.classList.add("dark");
-    }
-    setIsDark(dark); 
-}, []);
+        const dark = localStorage.getItem("isDark") === "true";
+        if (dark) {
+            document.documentElement.classList.add("dark");
+        }
+        setIsDark(dark);
+    }, []);
 
-const toggleTheme = () => {
-    document.documentElement.classList.toggle("dark");
-    const dark = document.documentElement.classList.contains("dark");
-    localStorage.setItem("isDark", dark);
-    setIsDark(dark); 
-};
+    const toggleTheme = () => {
+        document.documentElement.classList.toggle("dark");
+        const dark = document.documentElement.classList.contains("dark");
+        localStorage.setItem("isDark", dark);
+        setIsDark(dark);
+    };
     return (
         <>
-        
-            <div id="header" className={`${false ? ' ace' : ''}`}>
+            <div id="header" className={`${false ? " ace" : ""}`}>
                 <div id="headerLinks" ref={headerLinksRef}>
                     <Link to="/">o straně</Link>
                     <Link to="clenove">členové</Link>
                     <Link to="pomoc">chci být součástí</Link>
                     <Link to="program">program</Link>
                 </div>
-                <button className="material-symbols-outlined" onClick={toggleTheme}> {isDark ? "dark_mode" : "light_mode"}
-                    </button>
+                <button className="material-symbols-outlined" onClick={toggleTheme}>
+                    {isDark ? "dark_mode" : "light_mode"}
+                </button>
             </div>
         </>
-    )
+    );
 }

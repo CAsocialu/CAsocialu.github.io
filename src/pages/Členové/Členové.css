@@ -218,11 +218,6 @@ html.dark div#membersContent {
     background-color: var(--ne-tak-úplně-černá);
 }
 
-
-html.light div#membersContent{
-    background-color: var(--bělavě-šedá);
-}
-
 .členováTabulka {
     margin-top: 2rem;
     font-family: var( --font-klavika-basic);

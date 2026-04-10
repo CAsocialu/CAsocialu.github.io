@@ -21,7 +21,13 @@ import Vladimir from '../../images/members/Tabulka/Vladimir.jpg'
 import Natalie from '../../images/members/Tabulka/Natalie.jpg'
 import Matěj_W from '../../images/members/Tabulka/Matěj_W.png'
 import Daniel from '../../images/members/Tabulka/Daniel.jpg'
-import pepa from '../../images/members/Tabulka/pepa2.png'
+import pepa2 from '../../images/members/Tabulka/pepa2.png'
+import Selucký from '../../images/members/Tabulka/Selucky.png'
+import Mojmír from '../../images/members/Tabulka/matous_trefil.jpg'
+import Sysel from '../../images/members/Tabulka/Sysel.png'
+import Hugo from '../../images/members/Tabulka/Hugo.webp'
+import Tomáš_sv from '../../images/members/Tabulka/Tomas_Svojanovsky.jpg'
+
 import Neni from '../../images/logo-white.png'
 
 const members = [
@@ -82,8 +88,13 @@ const clenove = [
     [Vladimir, "Vladimír", "Škaroupka IV.", "Jihomoravský", "Filozof (bytoslovec, záskutečník a amatérský teolog), Spisovatel, který se snaží dostat do TOP 10 - TOP 10 důvodů, proč se zabít, Jediný člověk, který uznává Ladislava Klímu jako svého Pána a Spasitele, Životní motto: Když posloucháš lidem pod okny, leccos slyšíš, Debilobijec.", "řadový člen"],
     [JanPr, "Jan", "Prokeš", "Liberecký", "Instuktor lyžování, chudý student(beru úplatky) podporovatel federativní EU", "řadový člen"],
     [Dan, "Dan", "Peuker", "Liberecký", "Nejmenší člen strany, Budete znát spíše jeho psa, Čím hloupější nápad, tím spíše se v něm bude angažovat", "řadový člen"],
-    [Tonda, "Tonda", "Baťa", "Pardubický", "Král Suméru a Akkadu, Pardubice>Mechov, Profesionální kráječ rajčat", "řadový člen"],
-    [Michaela, "Michaela Kristýna", "Máchová", "Liberecký", "Profesionální moderátorka a odbornice na maďarsko", "řadový člen"]
+    [Tonda, "Tonda", "Baťa", "Pardubický", "Král Suméru a Akkadu, Pardubice>Mechov, Profesionální kráječ rajčat", "řadový člen" ],
+    [Michaela, "Michaela Kristýna", "Máchová", "Liberecký", "Profesionální moderátorka a odbornice na maďarsko", "řadový člen" ],
+    [Selucký, "S.A", "Selucký", "Liberecký", "Historik, Amaterský meteorolog a milovník filmů ", "řadový člen"],
+    [Mojmír, "Mojmír", "Trávníček", "Zlínský", "Mám rád vláčky 🚂 🚂 🚂 🚂 🚂, Antisociál snažící se posunout tuhle stranu dál od socializace, Moje oblíbená lokomotiva je Union Pacific Big Boy, Osobně mám nejradši stožár vysokého napětí: kočka, Chci dostat do programu ČSA vytvoření maglevové dráhy mezi Seninkou a Novou Vsí v Horách.", "řadový člen"],
+    [Sysel, "Vojtěch Svysel", "Seč", "Plzeňský", "Aktivně prosazuji práva hlodavců, profesionální F1/MotoGP yapper, občas dokážu strávit 21 hodin sledováním čínských animovaných pohádek, mým snem je stát se (ne)vládním zmocněncem pro výzkum anime kočkoholek s ocasem", "řadový člen" ],
+    [Hugo, "Hugo", "Štolba", "Praha", "Elektrotechnik, Pyrotechnik, Alkoholik, už je to 5 bodů?", "řadový člen"],
+    [Tomáš_sv, "Tomáš", "Svojan ze Svojanova", "Jihomoravský", "Myslitel (ale moc mi to nejde), Vysoký široký a bystrozraký v jednom, Chronické ADHD, Student IT, (Mimochodem používám Linux)", "řadový člen"],
 ]
 
 function ČlenovéTabulka() {

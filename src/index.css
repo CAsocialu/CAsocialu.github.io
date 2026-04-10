@@ -31,6 +31,10 @@ body:has(div#header.headerWithExtraNews) {
     --extraheaderpaddingstuff: 33px;
 }
 
+div#App {
+    width: 100vw;
+}
+
 div#mainContent {
     font-size: 22px;
     font-family: var(--font-klavika-basic);
@@ -65,14 +69,6 @@ div#content {
     }
 }
 
-html.light div#mainContent {
-    color: var(--ne-tak-úplně-černá);
-}
-
 html.dark body {
     background-color: var(--ne-tak-úplně-černá);
-}
-
-html.light body {
-    background-color: var(--bělavě-šedá);
 }

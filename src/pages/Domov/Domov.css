@@ -50,6 +50,10 @@ div#Hero div.carousel-content-package {
     align-items: center;
 }
 
+a {
+    position: relative;
+}
+
 a:visited,
 a:not(:visited):hover::after {
     color: var(--červená-z-loga);
@@ -114,19 +118,24 @@ div.mainContactsContainerContainer {
 
 div.mainACTUALContentTextContainer {
     padding: 16px 24px;
-    border-radius: 0.42vw;
-    border: 0.16vw solid var(--ne-tak-úplně-černá);
     height: fit-content;
     display: flex;
     align-items: center;
     text-wrap: balance;
     max-width: 70vw;
     flex: 1;
+    background-color: var(--zlatá);
 }
 
 div.mainACTUALContentTextContainer > p {
     width: 100%;
     margin: 0;
+}
+
+div.mainACTUALContactsContainer > a {
+    display: flex;
+    align-items: flex-start;
+    text-decoration-line: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -345,9 +354,7 @@ div.mainACTUALContactsContainer > * {
     max-width: 95vw;
     width: fit-content;
     font-size: 1.7vw;
-    background: var(--asociální-zeleň);
     border-radius: 0.42vw;
-    border: 0.16vw solid var(--ne-tak-úplně-černá);
     padding: 16px 24px;
     margin-bottom: 2vh;
     text-align: center;
@@ -380,14 +387,6 @@ div.mainACTUALContactsContainer > * {
 
 .třetífont {
     font-family: "Courier New", Courier, monospace;
-}
-
-.mainACTUALContentTextContainer:nth-of-type(1) {
-    margin-right: 13vw;
-}
-
-.mainACTUALContentTextContainer:nth-of-type(2) {
-    margin-right: 13vw;
 }
 
 .mainTitle {
@@ -435,36 +434,43 @@ div.mainACTUALContactsContainer > * {
 }
 
 .nadpisHistorie {
-    text-align: left;
-    align-self: center;
+    text-align: center;
     color: var(--bělavě-šedá);
-    font-size: 6vh;
-    margin-bottom: -4vh;
-    border-radius: 10px;
-    margin-right: 16vw;
-    padding-left: 1vw;
+    font-size: 5vh;
+    font-weight: bold;
+    border-radius: 0.83vw 0.83vw 0 0;
+    padding: 1vh 1vw;
     background-color: var(--ne-tak-úplně-černá);
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nadpisHistorie > p {
+    margin: 0;
+}
+
+.ma_border {
+    border-radius: 0.42vw;
+    border: 0.16vw solid var(--ne-tak-úplně-černá);
 }
 
 html.dark div#mainContent {
     background-color: var(--ne-tak-úplně-černá);
 }
 
-html.dark .hornitext {
-    background-color: var(--ne-tak-úplně-černá);
-    border: 0.16vw solid var(--asocial-green);
-}
-
 html.dark .stanovy > a {
     background-color: var(--asociální-zeleň);
 }
 
-html.dark div.mainACTUALContentTextContainer {
+html.dark .ma_border {
+    border-radius: 0.42vw;
     border: 0.16vw solid var(--asociální-zeleň);
 }
 
 html.dark .nadpisHistorie {
     background-color: var(--asociální-zeleň);
+    color: var(--ne-tak-úplně-černá);
 }
 
 html.dark .cara {
@@ -487,37 +493,36 @@ html.dark .stanovy > a:hover {
     background-color: var(--cerise);
 }
 
-html.light div#mainContent {
+div#mainContent {
     background-color: var(--bělavě-šedá);
 }
 
-html.light .hornitext {
-    background-color: var(--bělavě-šedá);
-    border: 0.16vw solid var(--asocial-green);
-    color: var(--ne-tak-úplně-černá);
+.dejinyStranyBlok {
+    border: 2px solid var(--ne-tak-úplně-černá);
+    border-radius: 0.83vw;
+    margin: 2vw;
+    overflow: hidden;
+    background-color: var(--zlatá);
 }
 
-html.light .stanovy > a {
-    background-color: var(--asociální-zeleň);
-    color: var(--bělavě-šedá);
+.stanovyBlok {
+    border: 2px solid var(--asociální-zeleň);
+    border-radius: 0.83vw;
+    margin: 2vw;
+    overflow: hidden;
+    background-color: var(--zlatá);
 }
 
-html.light div.mainACTUALContentTextContainer {
-    border: 0.16vw solid var(--asociální-zeleň);
+html.dark .dejinyStranyBlok {
+    border: 2px solid var(--asociální-zeleň);
+    background-color: var(--dark-purple);
 }
 
-html.light .nadpisHistorie {
-    color: var(--asociální-zeleň);
+html.dark .stanovyBlok {
+    border: 2px solid var(--asociální-zeleň);
+    background-color: var(--dark-purple);
 }
 
-html.light .cara {
-    border: 0.46vh solid var(--asociální-zeleň);
-}
-
-html.light .cara2 {
-    border: 0.46vh solid var(--asociální-zeleň);
-}
-
-html.light .stanovy > a:hover {
-    background-color: var(--cerise);
+html.dark div.mainACTUALContentTextContainer {
+    background-color: var(--dark-purple);
 }

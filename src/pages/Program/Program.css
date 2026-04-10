@@ -268,7 +268,7 @@ div#programmeContent label.rokKarta:hover .rokFront {
 }
 
 .nadrokovybox {
-    background-color: var(--asociální-zeleň);
+    background-color: var(--zlatá);
     border: 0.16vw solid var(--ne-tak-úplně-černá);
     border-radius: 10px;
     color: var(--ghost);
@@ -375,25 +375,7 @@ html.dark div#programmeContent label.rokKarta div.rokKartaBackdrop {
 }
 
 html.dark div#programmeContent .nadrokovybox {
-    background-color: var(--ne-tak-úplně-černá);
+    background-color: var(--dark-purple);
     color: var(--bělavě-šedá);
     border-color: var(--asociální-zeleň);
-}
-
-html.light div#programmeContent {
-    background-color: var(--bělavě-šedá);
-}
-
-html.light div#programmeContent .nadrokovybox {
-    background-color: var(--bělavě-šedá);
-    color: var(--ne-tak-úplně-černá);
-    border-color: var(--asociální-zeleň);
-}
-
-html.light div#programmeContent label.rokKarta {
-    border: 24px solid var(--asociální-zeleň);
-}
-
-html.light div#programmeContent label.rokKarta:hover {
-    border-color: var(--cerise);
 }

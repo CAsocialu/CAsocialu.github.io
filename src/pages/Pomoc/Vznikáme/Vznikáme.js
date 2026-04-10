@@ -59,9 +59,23 @@ export default function Vznikáme() {
             <div className="begginingTitle">
                 <img src={begginingtitle} alt="" draggable="false"></img>
             </div>
-            <div id="beginningContentWrapper">
+            <div id="beginningContentWrapperPřihláška">
                 <span className="sectionTitle">Přihláška do Strany</span>
+                <div className="textPrihlaska">
+                <p>Po vyplnění formuláře se připoj na náš discord. V sekci Chci se přidat do strany jdi do kanálu Přihláška do strany. Klikni na ticket, abys kontaktoval předsednicto. Bude následovat pohovor, kde ti řekneme, že se doživotně zavazuješ Židovsko-zednářskému spiknutí platit alimenty v hodnotě 100Kč, dvou rohlíků a braníku 2l PET.</p>
+                </div>
                 <iframe ref={iframeRef} src="https://socializace.asocialove.cz/embed/membership" allowtransparency="true" title="Přihlašovací formulář do České Strany Asociálů" />
+            </div>
+            <div id="beginningContentWrapperKomunalky">
+                <div className="komunalkyTitle">
+                    <p>KANDIDUJ DO KOMUNÁLEK</p>
+                </div>
+                <div className="komunalkyText">
+                    <p>
+                        
+                        Kandiduj za nás, i když jsi v jiné straně... nebo nejsi v žádné. <a className="odkazKomunalky" href="https://cryptpad.fr/form/#/2/form/view/lVp+5vDlXl94eTv6EDLbck7YeUHrzvN5sVktNDwCMYE/" target="_blank" rel="noreferrer noopener">Klikni sem</a> pro formulář
+                    </p>
+                </div>
             </div>
         </div>
     );

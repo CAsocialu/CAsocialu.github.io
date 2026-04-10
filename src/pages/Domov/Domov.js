@@ -1,10 +1,4 @@
 import { Helmet } from "react-helmet-async";
-/* import Carousel from "../../components/Carousel/Carousel.js";
-import HlavníBanner from "../../images/main-page-carousel/banner.png";
-import Kája from "../../images/main-page-carousel/kaja.png";
-import Konrád from "../../images/main-page-carousel/konrad.png"
-import Filip from "../../images/main-page-carousel/filip.png"
-import pepa from "../../images/main-page-carousel/pepa.png" */
 import logo from "../../images/home/logo-border.png";
 import "./Domov.css";
 
@@ -43,6 +37,11 @@ import Title from "../../components/Title/Title";
 import Vozík from "../../images/home/Vozík2.jpg";
 import Agenti from "../../images/home/Agenti2.jpg";
 import mainTitle from "../../images/Titles/web_ostrane_nadpis.png";
+import InstagramLogo from "../../images/instagramLogo.svg";
+import TwitterLogo from "../../images/TwitterLogo.svg";
+import FacebookLogo from "../../images/FacebookLogo.svg";
+import DyskordLogo from "../../images/DyskordLogo.svg";
+import YoutubeLogo from "../../images/YoutubeLogo.svg";
 
 const randomPics = [RandomPic0, RandomPic1, RandomPic2, RandomPic3, RandomPic4, RandomPic5, RandomPic6, RandomPic7, RandomPic8, RandomPic9, RandomPic10, RandomPic11, RandomPic12, RandomPic13, RandomPic14, RandomPic15, RandomPic16, RandomPic17, RandomPic18, RandomPic19, RandomPic20, RandomPic21, RandomPic22, RandomPic23, RandomPic24, RandomPic25, RandomPic26, RandomPic27, RandomPic28, RandomPic29];
 
@@ -77,21 +76,21 @@ export default function Domov() {
             <div id="mainContent">
                 <div id="mainACTUALContent">
                     <div className="mainACTUALContentContainer">
-                        <div className="mainACTUALContentTextContainer">
+                        <div className="mainACTUALContentTextContainer ma_border">
                             <p>Česká strana asociálů je skutečná strana, která vše rozhodně bere vážně fr fr. Hlavní aktivita je na discordu, protože chodit ven je SOCIALIZACE. Je chronicky aktivní, můžete tam najít zastání každého politického smýšlení. Taky má sociální sítě, instagram a twitter, kde nás sledují skuteční lidé včetně politiků se smyslem pro humor. Stranu aktivně podporuje Židovsko-zednářské spiknutí, Ilumináti, Hamás, Izrael, tajný BDSM klubík pana Zeleného a taky vláda Kepleru-22b.</p>
                         </div>
                         <div>
                             <img src={logo} alt="Logo ČSA" className="logocsa" draggable="false" />
                         </div>
                     </div>
-                    <div className="mainACTUALContentContainer">
-                        <div className="mainACTUALContentImageContainer">
-                            <img src={Vozík} draggable="false" alt="" />
+
+                    <div className="dejinyStranyBlok">
+                        <div className="nadpisHistorie">
+                            <p>Rozhodně skutečné dějiny strany</p>
                         </div>
-                        <div>
-                            <hr className="cara" />
-                            <div className="nadpisHistorie">
-                                <p>Rozhodně skutečné dějiny strany</p>
+                        <div className="mainACTUALContentContainer">
+                            <div className="mainACTUALContentImageContainer">
+                                <img src={Vozík} draggable="false" alt="" />
                             </div>
                             <div className="mainACTUALContentTextContainer">
                                 <p>
@@ -99,34 +98,35 @@ export default function Domov() {
                                 </p>
                             </div>
                         </div>
+                        <div className="mainACTUALContentContainer">
+                            <div className="mainACTUALContentTextContainer">
+                                <p>
+                                    Přesuneme se do 24. května 2022, kdy se třem lidem před očima zjevili předchozí antikristi a řekli: „Nyní je Váš úkol bojovat proti socializaci!"
+                                    <br />
+                                    Hned se udělaly účty na sociálních sítích na šíření asocialismu a po dvou měsících mínus deset dní i Discord.
+                                </p>
+                            </div>
+                            <div className="mainACTUALContentImageContainer">
+                                <img src={Agenti} draggable="false" alt="" />
+                            </div>
+                        </div>
                     </div>
-                    <div className="mainACTUALContentContainer">
-                        <div className="mainACTUALContentTextContainer">
-                            <p>
-                                Přesuneme se do 24. května 2022, kdy se třem lidem před očima zjevili předchozí antikristi a řekli: „Nyní je Váš úkol bojovat proti socializaci!"
-                                <br />
-                                Hned se udělaly účty na sociálních sítích na šíření asocialismu a po dvou měsících mínus deset dní i Discord.
-                            </p>
-                        </div>
-                        <div className="mainACTUALContentImageContainer">
-                            <img src={Agenti} draggable="false" alt="" />
-                        </div>
-                    </div>
-                    <hr className="cara2" />
-                    <div className="mainACTUALcontentStanovy">
-                        <div className="hornitext">
-                            <p>Jelikož nás stát nemá rád, jsme zákonem povinni na naše webovky dát stanovy. Nebylo ale nikým řečeno, jak musí vypadat, takže si můžete vybrat ze tří oku lahodících designů. </p>
-                        </div>
-                        <div className="stanovy">
-                            <a download={true} className="časnovýroman" href="/assets/ČSA Stanovy, times new roman.pdf">
-                                stanovy v times new roman
-                            </a>
-                            <a download={true} className="komickýsans" href="/assets/ČSA Stanovy, ale comic sans.pdf">
-                                stanovy v comic sans
-                            </a>
-                            <a download={true} className="třetífont" href="/assets/ČSA Stanovy, ale s fontem, který nezvládá česká písmenka.pdf">
-                                stanovy v tom třetím fontu
-                            </a>
+                    <div className="stanovyBlok">
+                        <div className="mainACTUALcontentStanovy">
+                            <div className="hornitext">
+                                <p>Jelikož nás stát nemá rád, jsme zákonem povinni na naše webovky dát stanovy. Nebylo ale nikým řečeno, jak musí vypadat, takže si můžete vybrat ze tří oku lahodících designů. </p>
+                            </div>
+                            <div className="stanovy">
+                                <a download={true} className="časnovýroman" href="/assets/ČSA Stanovy, times new roman.pdf">
+                                    stanovy v times new roman
+                                </a>
+                                <a download={true} className="komickýsans" href="/assets/ČSA Stanovy, ale comic sans.pdf">
+                                    stanovy v comic sans
+                                </a>
+                                <a download={true} className="třetífont" href="/assets/ČSA Stanovy, ale s fontem, který nezvládá česká písmenka.pdf">
+                                    stanovy v tom třetím fontu
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div className="mainContactsContainer" style={{ backgroundImage: `url(${Hafík})` }}>
@@ -134,22 +134,37 @@ export default function Domov() {
                             <div className="mainACTUALContactsContainer">
                                 <Title>Kontakty</Title>
                                 <a href="https://www.instagram.com/ceska_strana_antisocialni/" target="_blank" rel="noreferrer noopener">
+                                    <img src={InstagramLogo} alt="" width={40} height={40} style={{ paddingRight: "0.6vw", marginBottom: "-1vh" }} />
                                     stranický instagram
                                 </a>
                                 <a href="https://twitter.com/CAsocialu" target="_blank" rel="noreferrer noopener">
+                                    <img src={TwitterLogo} alt="" width={40} height={40} style={{ paddingRight: "0.6vw", marginBottom: "-1vh" }} />
                                     stranický twitter
                                 </a>
                                 <a href="https://www.facebook.com/people/%C4%8Cesk%C3%A1-Strana-Asoci%C3%A1l%C5%AF/61582914953606/" target="_blank" rel="noreferrer noopener">
+                                    <img src={FacebookLogo} alt="" width={40} height={40} style={{ paddingRight: "0.6vw", marginBottom: "-0.5vh" }} />
                                     koho zajímá facebook
                                 </a>
                                 <a href="https://discord.gg/E5RK8VKpyT" target="_blank" rel="noreferrer noopener">
+                                    <img src={DyskordLogo} alt="" width={40} height={40} style={{ paddingRight: "0.6vw", marginBottom: "-1vh" }} />
                                     chronicky on-line dyskord
                                 </a>
                                 <a href="https://www.youtube.com/@ceskastranaasocialu7353" target="_blank" rel="noreferrer noopener">
+                                    <img src={YoutubeLogo} alt="" width={40} height={40} style={{ paddingRight: "0.6vw", marginBottom: "-1vh" }} />
                                     mrtvý youtube
                                 </a>
-                                <a href="mailto:strana@asocialove.cz" target="_blank" rel="noreferrer noopener">strana@asocialove.cz</a>
-                                <a href="mailto:admin@asocialove.cz" target="_blank" rel="noreferrer noopener">admin@asocialove.cz</a>
+                                <a href="mailto:strana@asocialove.cz" target="_blank" rel="noreferrer noopener">
+                                    <span className="material-symbols-outlined" style={{ paddingRight: "0.6vw", marginBottom: "-1vh", fontSize: "40px" }}>
+                                        mail
+                                    </span>
+                                    strana@asocialove.cz
+                                </a>
+                                <a href="mailto:admin@asocialove.cz" target="_blank" rel="noreferrer noopener">
+                                    <span className="material-symbols-outlined" style={{ paddingRight: "0.6vw", marginBottom: "-1vh", fontSize: "40px" }}>
+                                        mail
+                                    </span>
+                                    admin@asocialove.cz
+                                </a>
                             </div>
                         </div>
                     </div>

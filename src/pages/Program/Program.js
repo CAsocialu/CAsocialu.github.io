@@ -135,7 +135,7 @@ const programEntries = {
             </div>
 
             <div className="rokyContainer">
-                {Object.entries(programEntries).map(([year, entries]) => (
+                {Object.entries(programEntries).reverse().map(([year, entries]) => (
                     <label className="rokKarta" key={year}>
                         <input type="checkbox" className="rokKartaTrigger" />
 

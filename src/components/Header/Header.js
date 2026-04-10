@@ -5,10 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 export default function Header() {
     const location = useLocation(),
         headerLinksRef = useRef(null);
-
-    const [themeMode, setThemeMode] = useState(() => {
-        return localStorage.getItem("themeMode") || "default";
-    });
+    const [isDark, setIsDark] = useState(false);
 
     useLayoutEffect(() => {
         document.documentElement.setAttribute("data-location", location.pathname.replace(/(?<!^)\/$/, ""));
@@ -22,32 +19,32 @@ export default function Header() {
     }, [location]);
 
     useEffect(() => {
-        if (themeMode === "dark") {
+        const dark = localStorage.getItem("isDark") === "true";
+        if (dark) {
             document.documentElement.classList.add("dark");
-            document.documentElement.classList.remove("light");
-        } else if (themeMode === "light") {
-            document.documentElement.classList.add("light");
-            document.documentElement.classList.remove("dark");
-        } else {
-            // default
-            document.documentElement.classList.remove("dark", "light");
         }
-        localStorage.setItem("themeMode", themeMode);
-    }, [themeMode]);
+        setIsDark(dark);
+    }, []);
 
+    const toggleTheme = () => {
+        document.documentElement.classList.toggle("dark");
+        const dark = document.documentElement.classList.contains("dark");
+        localStorage.setItem("isDark", dark);
+        setIsDark(dark);
+    };
     return (
-        <div id="header">
-            <div className="tlačítka">
-                <button type="button" aria-label="Set theme to default" title="Set theme to default" className={`theme-default ${themeMode === "default" ? "active" : ""}`} onClick={() => setThemeMode("default")}></button>
-                <button type="button" aria-label="Set theme to light" title="Set theme to light" className={`theme-light ${themeMode === "light" ? "active" : ""}`} onClick={() => setThemeMode("light")}></button>
-                <button type="button" aria-label="Set theme to dark" title="Set theme to dark" className={`theme-dark ${themeMode === "dark" ? "active" : ""}`} onClick={() => setThemeMode("dark")}></button>
+        <>
+            <div id="header" className={`${false ? " ace" : ""}`}>
+                <div id="headerLinks" ref={headerLinksRef}>
+                    <Link to="/">o straně</Link>
+                    <Link to="clenove">členové</Link>
+                    <Link to="pomoc">chci být součástí</Link>
+                    <Link to="program">program</Link>
+                </div>
+                <button className="material-symbols-outlined" onClick={toggleTheme}>
+                    {isDark ? "dark_mode" : "light_mode"}
+                </button>
             </div>
-            <div id="headerLinks" ref={headerLinksRef}>
-                <Link to="/">o straně</Link>
-                <Link to="clenove">členové</Link>
-                <Link to="pomoc">chci být součástí</Link>
-                <Link to="program">program</Link>
-            </div>
-        </div>
+        </>
     );
 }

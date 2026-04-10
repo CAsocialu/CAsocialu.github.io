@@ -30,23 +30,6 @@ div#header {
         cursor: pointer;
     }
 
-    & > .tlačítka > button.theme-default {
-        background-color: var(--asociální-zeleň);
-    }
-
-    & > .tlačítka > button.theme-light {
-        background-color: var(--bělavě-šedá);
-    }
-
-    & > .tlačítka > button.theme-dark {
-        background-color: var(--ne-tak-úplně-černá);
-    }
-
-    & > .tlačítka > button.active {
-        border: 3px solid var(--cerise);
-        transform: scale(1.1);
-    }
-
     & > span {
         font-size: 20px;
         font-weight: 700;
@@ -62,17 +45,14 @@ div#header {
             font-size: 20px;
             text-decoration: none;
             position: relative;
-            transition: color 0.3s ease 0s;
             padding: 4px 8px;
-            border: 1px solid var(--ne-tak-úplně-černá);
-            border-radius: 6px;
+            border: 1px solid var(--bělavě-šedá);
+            border-radius: 7px;
         }
         & > *::after {
             content: none;
         }
-        & > [href="/sraz2025"] {
-            color: var(--červená-z-loga);
-        }
+
         & > .disabled {
             pointer-events: none;
             opacity: 0.5;
@@ -81,7 +61,7 @@ div#header {
         & > *:hover,
         & > *:focus,
         & > *.active {
-            color: var(--ne-tak-úplně-černá);
+            color: var(--asociální-zeleň);
         }
 
         & > *:hover::after,
@@ -164,7 +144,7 @@ div#extraHeaderNews {
     width: 100%;
     height: 33px;
     margin-top: calc(-33px + var(--extraheaderpaddingstuff));
-    background-color: var(--červená-z-loga);
+    background-color: var(--asociální-zeleň);
     z-index: 99;
     display: flex;
     align-items: center;
@@ -177,29 +157,41 @@ div#extraHeaderNews {
     transition: margin-top 0.33s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-html:not(.dark):not(.light) div#header {
+html:not(.dark) div#header {
     background-color: var(--ne-tak-úplně-černá);
     & > div#headerLinks {
-        & > * {
-            border: 1px solid var(--asociální-zeleň);
-        }
         & > *:hover,
         & > *:focus,
         & > *.active {
             color: var(--asociální-zeleň);
+            border-color: var(--asociální-zeleň);
         }
+    }
+
+    & > .material-symbols-outlined {
+        background-color: var(--asociální-zeleň);
+        border: solid var(--asociální-zeleň);
+        border-radius: 0.5vw;
+    }
+
+    & > .material-symbols-outlined:hover {
+        cursor: pointer;
     }
 }
 
-html:not(.dark):not(.light) div#header > .tlačítka > button {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: 2px solid var(--asociální-zeleň);
-    cursor: pointer;
-}
-
-html:not(.dark):not(.light) div#header > .tlačítka > button.active {
-    border: 3px solid var(--cerise);
-    transform: scale(1.1);
+html.dark div#header {
+    & > div#headerLinks {
+        & > *:hover,
+        & > *:focus,
+        & > *.active {
+            color: var(--ne-tak-úplně-černá);
+            border-color: var(--ne-tak-úplně-černá);
+        }
+    }
+    & > .material-symbols-outlined {
+        background-color: var(--ne-tak-úplně-černá);
+        border: solid var(--ne-tak-úplně-černá);
+        border-radius: 8px;
+        color: var(--asociální-zeleň);
+    }
 }

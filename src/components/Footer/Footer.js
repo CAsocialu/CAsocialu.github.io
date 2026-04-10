@@ -27,7 +27,7 @@ export default function Footer() {
             <div id="footerInfo">
                 <span>© Česká Strana Asociálů 2024-2026</span>
                 <span>
-                    Tento web je open-source! Více najdete na <Link to="source">našem GitHubu</Link> :3
+                    Tento web je open-source! Více najdete na <Link to="source">našem GitHubu</Link>     :3
                 </span>
             </div>
             <div className="text">

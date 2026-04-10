@@ -5,7 +5,6 @@ import Konrád from "../../images/members/web_clenove_komrd-cervena.png";
 import Karel from "../../images/members/web_clenove_kaja-cervena.png";
 import Tomáš from "../../images/members/web_clenove_tomas-cervena.png";
 import InstagramLogo from "../../images/instagramLogo.svg";
-import MailLogo from "../../images/MailLogo.svg"
 import clenoveTitle from "../../images/Titles/web_clenove_nadpis.png";
 import Martin from '../../images/members/Tabulka/Martin_M.png'
 import Tom from '../../images/members/Tabulka/Tom_S.png'
@@ -55,7 +54,7 @@ function Člen({ img, name, sns, description }) {
                             )}
                             {sns.email && (
                                 <a href={`mailto:${sns.email}`}>
-                                    <img src={MailLogo} alt="" />
+                                    <span className="material-symbols-outlined">mail</span>
                                 </a>
                             )}
                         </div>

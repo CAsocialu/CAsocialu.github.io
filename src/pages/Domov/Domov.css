@@ -50,6 +50,10 @@ div#Hero div.carousel-content-package {
     align-items: center;
 }
 
+a {
+    position: relative;
+}
+
 a:visited,
 a:not(:visited):hover::after {
     color: var(--červená-z-loga);
@@ -126,6 +130,12 @@ div.mainACTUALContentTextContainer {
 div.mainACTUALContentTextContainer > p {
     width: 100%;
     margin: 0;
+}
+
+div.mainACTUALContactsContainer > a {
+    display: flex;
+    align-items: flex-start;
+    text-decoration-line: none;
 }
 
 @media screen and (max-width: 768px) {

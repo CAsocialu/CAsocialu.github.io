@@ -42,7 +42,6 @@ import TwitterLogo from "../../images/TwitterLogo.svg";
 import FacebookLogo from "../../images/FacebookLogo.svg";
 import DyskordLogo from "../../images/DyskordLogo.svg";
 import YoutubeLogo from "../../images/YoutubeLogo.svg";
-import MailLogo from "../../images/MailLogo.svg";
 
 const randomPics = [RandomPic0, RandomPic1, RandomPic2, RandomPic3, RandomPic4, RandomPic5, RandomPic6, RandomPic7, RandomPic8, RandomPic9, RandomPic10, RandomPic11, RandomPic12, RandomPic13, RandomPic14, RandomPic15, RandomPic16, RandomPic17, RandomPic18, RandomPic19, RandomPic20, RandomPic21, RandomPic22, RandomPic23, RandomPic24, RandomPic25, RandomPic26, RandomPic27, RandomPic28, RandomPic29];
 
@@ -155,11 +154,15 @@ export default function Domov() {
                                     mrtvý youtube
                                 </a>
                                 <a href="mailto:strana@asocialove.cz" target="_blank" rel="noreferrer noopener">
-                                    <img src={MailLogo} alt="" width={40} height={40} style={{ paddingRight: "0.6vw", marginBottom: "-1vh" }} />
+                                    <span className="material-symbols-outlined" style={{ paddingRight: "0.6vw", marginBottom: "-1vh", fontSize: "40px" }}>
+                                        mail
+                                    </span>
                                     strana@asocialove.cz
                                 </a>
                                 <a href="mailto:admin@asocialove.cz" target="_blank" rel="noreferrer noopener">
-                                    <img src={MailLogo} alt="" width={40} height={40} style={{ paddingRight: "0.6vw", marginBottom: "-1vh" }} />
+                                    <span className="material-symbols-outlined" style={{ paddingRight: "0.6vw", marginBottom: "-1vh", fontSize: "40px" }}>
+                                        mail
+                                    </span>
                                     admin@asocialove.cz
                                 </a>
                             </div>

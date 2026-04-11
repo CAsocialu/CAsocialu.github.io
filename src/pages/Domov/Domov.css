@@ -470,7 +470,6 @@ html.dark .ma_border {
 
 html.dark .nadpisHistorie {
     background-color: var(--asociální-zeleň);
-    color: var(--ne-tak-úplně-černá);
 }
 
 html.dark .cara {
@@ -506,7 +505,7 @@ div#mainContent {
 }
 
 .stanovyBlok {
-    border: 2px solid var(--asociální-zeleň);
+    border: 2px solid var(--ne-tak-úplně-černá);
     border-radius: 0.83vw;
     margin: 2vw;
     overflow: hidden;

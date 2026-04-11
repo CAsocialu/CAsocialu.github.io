@@ -186,3 +186,12 @@ html.dark .textPrihlaska{
     color: var(--asociální-zeleň);
 }
 
+html.dark .komunalkyText{
+    background-color: var(--dark-purple);
+    border: 0.16vw solid var(--asociální-zeleň);
+}
+
+html.dark .komunalkyTitle{
+    background-color: var(--asociální-zeleň);
+}
+

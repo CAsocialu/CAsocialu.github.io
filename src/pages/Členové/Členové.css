@@ -212,6 +212,11 @@ div#členové > div.člen.open > div.backdrop {
     padding-left: 1vw;
     padding-right: 1vw;
     background-color: var(--ne-tak-úplně-černá);
+
+}
+
+html.dark #membersContent .nadpis{
+    background-color: var(--asociální-zeleň);
 }
 
 html.dark div#membersContent {

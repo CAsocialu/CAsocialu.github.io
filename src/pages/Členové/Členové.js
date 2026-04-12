@@ -26,6 +26,7 @@ import Mojmír from '../../images/members/Tabulka/matous_trefil.jpg'
 import Sysel from '../../images/members/Tabulka/Sysel.png'
 import Hugo from '../../images/members/Tabulka/Hugo.webp'
 import Tomáš_sv from '../../images/members/Tabulka/Tomas_Svojanovsky.jpg'
+import Jakub from '../../images/members/Tabulka/Jakub.jpg'
 
 import Neni from '../../images/logo-white.png'
 
@@ -94,6 +95,7 @@ const clenove = [
     [Sysel, "Vojtěch Svysel", "Seč", "Plzeňský", "Aktivně prosazuji práva hlodavců, profesionální F1/MotoGP yapper, občas dokážu strávit 21 hodin sledováním čínských animovaných pohádek, mým snem je stát se (ne)vládním zmocněncem pro výzkum anime kočkoholek s ocasem", "řadový člen" ],
     [Hugo, "Hugo", "Štolba", "Praha", "Elektrotechnik, Pyrotechnik, Alkoholik, už je to 5 bodů?", "řadový člen"],
     [Tomáš_sv, "Tomáš", "Svojan ze Svojanova", "Jihomoravský", "Myslitel (ale moc mi to nejde), Vysoký široký a bystrozraký v jednom, Chronické ADHD, Student IT, (Mimochodem používám Linux)", "řadový člen"],
+    [Jakub, "Jakub", "Uher", "Jihočeský", "Mám rád hranolky a dinosaury, nemám rád střevní potíže, nezaměstnaný alkoholik (student VŠ)", "řadový člen" ]
 ]
 
 function ČlenovéTabulka() {

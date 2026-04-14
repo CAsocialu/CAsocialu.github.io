@@ -7,11 +7,11 @@
         "react-confetti": "^6.4.0",
         "react-dom": "^19.2.5",
         "react-helmet-async": "^3.0.0",
-        "react-router-dom": "^7.14.0",
+        "react-router-dom": "^7.14.1",
         "react-scripts": "5.0.1"
     },
     "devDependencies": {
-        "autoprefixer": "^10.4.27",
+        "autoprefixer": "^10.5.0",
         "glob": "^13.0.6",
         "pretty-quick": "^4.2.2",
         "puppeteer": "^24.40.0",

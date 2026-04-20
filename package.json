@@ -14,7 +14,7 @@
         "autoprefixer": "^10.5.0",
         "glob": "^13.0.6",
         "pretty-quick": "^4.2.2",
-        "puppeteer": "^24.41.0",
+        "puppeteer": "^24.42.0",
         "sharp": "^0.34.5",
         "simple-git-hooks": "^2.13.1"
     },

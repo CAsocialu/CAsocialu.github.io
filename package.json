@@ -7,7 +7,7 @@
         "react-confetti": "^6.4.0",
         "react-dom": "^19.2.5",
         "react-helmet-async": "^3.0.0",
-        "react-router-dom": "^7.14.1",
+        "react-router-dom": "^7.14.2",
         "react-scripts": "5.0.1"
     },
     "devDependencies": {
